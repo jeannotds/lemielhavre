@@ -18,12 +18,28 @@
 
 ### 3. Configurer la variable d'environnement
 
+#### Pour le développement local :
+
 1. Créez un fichier `.env.local` à la racine du projet
 2. Ajoutez votre clé API :
 
 ```env
 RESEND_API_KEY=re_votre_cle_api_ici
 ```
+
+#### Pour Vercel (Production) :
+
+1. Allez sur votre projet dans [Vercel Dashboard](https://vercel.com)
+2. Cliquez sur **Settings** → **Environment Variables**
+3. Ajoutez une nouvelle variable :
+   - **Name**: `RESEND_API_KEY`
+   - **Value**: `re_votre_cle_api_ici` (votre clé API Resend)
+   - **Environment**: Sélectionnez **Production**, **Preview**, et **Development**
+4. Cliquez sur **Save**
+5. **Important** : Redéployez votre application pour que les changements prennent effet
+   - Allez dans **Deployments**
+   - Cliquez sur les trois points (⋯) du dernier déploiement
+   - Sélectionnez **Redeploy**
 
 ### 4. Vérifier votre domaine (Optionnel mais recommandé)
 
