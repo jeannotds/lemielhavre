@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Heart, Search, Moon, Sun, Menu, X } from 'lucide-react';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 
 export function Header() {
@@ -9,11 +10,8 @@ export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navLinks = [
-    { href: '#', label: 'Home' },
-    { href: '#about', label: 'About' },
-    { href: '#pages', label: 'Pages' },
-    { href: '#blog', label: 'Blog' },
-    { href: '#contact', label: 'Contact' },
+    { href: '/', label: 'Home' },
+    { href: '/about', label: 'About' },
   ];
 
   return (
@@ -32,7 +30,7 @@ export function Header() {
 
           <nav className="hidden lg:flex items-center gap-8">
             {navLinks.map((link, index) => (
-              <a
+              <Link
                 key={index}
                 href={link.href}
                 className={`relative text-sm font-medium transition-colors hover:text-orange-500 ${
@@ -43,7 +41,7 @@ export function Header() {
                 {index === 0 && (
                   <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-orange-500 rounded-full" />
                 )}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -80,7 +78,7 @@ export function Header() {
           <div className="lg:hidden border-t border-slate-200 py-4 animate-in slide-in-from-top-2 duration-200">
             <nav className="flex flex-col gap-2">
               {navLinks.map((link, index) => (
-                <a
+                <Link
                   key={index}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
@@ -91,7 +89,7 @@ export function Header() {
                   }`}
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
               <div className="flex items-center gap-3 px-4 pt-2">
                 <Button className="flex-1 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white py-2.5 rounded-lg">
