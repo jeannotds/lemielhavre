@@ -1,8 +1,14 @@
 'use client';
 
 import { useState } from 'react';
-import { ChevronLeft, ChevronRight, Check } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Check, FileText, Mail, UserCheck, Clock, Users, MapPin, DollarSign, Shield, Gift } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
 
 export function SponsorMatch() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -10,17 +16,17 @@ export function SponsorMatch() {
   const slides = [
     {
       id: 1,
-      image: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      image: 'https://images.unsplash.com/photo-1516627145497-ae6968895b74?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
       title: 'Rencontrez Votre Enfant Parrainé',
     },
     {
       id: 2,
-      image: 'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      image: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
       title: 'Construisez une Connexion Durable',
     },
     {
       id: 3,
-      image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      image: 'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
       title: 'Soutenez Leur Avenir',
     },
   ];
@@ -164,17 +170,77 @@ export function SponsorMatch() {
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-slate-50 to-white rounded-2xl p-8 md:p-12 max-w-4xl mx-auto shadow-xl border border-slate-100">
-            <div className="space-y-6">
-              <p className="text-lg md:text-xl text-slate-700 leading-relaxed">
-                The sponsor-child matching process may take several months, as staff carefully work to ensure every sponsor is paired with the right child. After a child enters Le Miel Havre Scholarship program, staff collect information on their background, health, and education to create a personal profile for review.
+          {/* Processus de Matching Moderne */}
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h3 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
+                Le Processus de{' '}
+                <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
+                  Parrainage
+                </span>
+              </h3>
+              <p className="text-slate-600 text-lg max-w-2xl mx-auto">
+                Découvrez comment nous créons des connexions durables entre les parrains et les enfants
               </p>
-              <p className="text-lg md:text-xl text-slate-700 leading-relaxed">
-                Once a match is confirmed, the onboarding process begins. Sponsors receive a welcome packet with the child's photo, personal story, background details, and Le Miel Havre identification number.
-              </p>
-              <p className="text-lg md:text-xl text-slate-700 leading-relaxed">
-                After onboarding is complete, sponsors will begin receiving letters from their assigned child and can communicate through letters or via email using the child's scholarship identification number.
-              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
+              {/* Étape 1 */}
+              <div className="group relative bg-gradient-to-br from-white to-orange-50 rounded-2xl p-6 md:p-8 border border-orange-100 hover:border-orange-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                <div className="absolute top-4 right-4 w-16 h-16 bg-gradient-to-br from-orange-500/10 to-red-500/10 rounded-full blur-xl group-hover:blur-2xl transition-all" />
+                <div className="relative">
+                  <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl mb-4 shadow-lg group-hover:scale-110 transition-transform">
+                    <FileText className="w-7 h-7 text-white" />
+                  </div>
+                  <h4 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-orange-600 transition-colors">
+                    Évaluation & Profil
+                  </h4>
+                  <p className="text-slate-600 leading-relaxed">
+                    Le processus de jumelage peut prendre plusieurs mois. Notre équipe collecte soigneusement les informations sur l&apos;historique, la santé et l&apos;éducation de chaque enfant pour créer un profil personnel détaillé.
+                  </p>
+                </div>
+              </div>
+
+              {/* Étape 2 */}
+              <div className="group relative bg-gradient-to-br from-white to-blue-50 rounded-2xl p-6 md:p-8 border border-blue-100 hover:border-blue-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                <div className="absolute top-4 right-4 w-16 h-16 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-full blur-xl group-hover:blur-2xl transition-all" />
+                <div className="relative">
+                  <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl mb-4 shadow-lg group-hover:scale-110 transition-transform">
+                    <UserCheck className="w-7 h-7 text-white" />
+                  </div>
+                  <h4 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">
+                    Confirmation & Onboarding
+                  </h4>
+                  <p className="text-slate-600 leading-relaxed">
+                    Une fois le jumelage confirmé, le processus d&apos;intégration commence. Les parrains reçoivent un paquet de bienvenue avec la photo de l&apos;enfant, son histoire personnelle, ses détails et son numéro d&apos;identification Le Miel Havre.
+                  </p>
+                </div>
+              </div>
+
+              {/* Étape 3 */}
+              <div className="group relative bg-gradient-to-br from-white to-green-50 rounded-2xl p-6 md:p-8 border border-green-100 hover:border-green-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                <div className="absolute top-4 right-4 w-16 h-16 bg-gradient-to-br from-green-500/10 to-emerald-500/10 rounded-full blur-xl group-hover:blur-2xl transition-all" />
+                <div className="relative">
+                  <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl mb-4 shadow-lg group-hover:scale-110 transition-transform">
+                    <Mail className="w-7 h-7 text-white" />
+                  </div>
+                  <h4 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-green-600 transition-colors">
+                    Communication & Suivi
+                  </h4>
+                  <p className="text-slate-600 leading-relaxed">
+                    Après l&apos;intégration, les parrains commencent à recevoir des lettres de leur enfant assigné et peuvent communiquer par lettres ou par email en utilisant le numéro d&apos;identification de bourse de l&apos;enfant.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Timeline visuelle */}
+            <div className="hidden md:flex items-center justify-center gap-4 mb-8">
+              <div className="flex-1 h-1 bg-gradient-to-r from-orange-500 to-blue-500 rounded-full" />
+              <div className="w-3 h-3 bg-orange-500 rounded-full border-2 border-white shadow-lg" />
+              <div className="flex-1 h-1 bg-gradient-to-r from-blue-500 to-green-500 rounded-full" />
+              <div className="w-3 h-3 bg-green-500 rounded-full border-2 border-white shadow-lg" />
+              <div className="flex-1 h-1 bg-gradient-to-r from-green-500 to-transparent rounded-full" />
             </div>
           </div>
         </div>
@@ -218,36 +284,67 @@ export function SponsorMatch() {
           </div>
         </div>
 
-        <div>
+        {/* Section FAQ Moderne */}
+        <div className="mt-20">
           <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-50 rounded-full border border-orange-100 mb-4">
+              <span className="w-2 h-2 bg-orange-500 rounded-full animate-pulse" />
+              <span className="text-sm font-semibold text-orange-600">QUESTIONS FRÉQUENTES</span>
+            </div>
             <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
-              FREQUENTLY ASKED{' '}
+              Questions{' '}
               <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
-                QUESTIONS
+                Fréquentes
               </span>
             </h3>
-            <p className="text-slate-600 max-w-2xl mx-auto">
-              Find answers to common questions about our sponsorship program
+            <p className="text-slate-600 max-w-2xl mx-auto text-lg">
+              Trouvez des réponses aux questions courantes sur notre programme de parrainage
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto space-y-4">
-            {faqs.map((faq, index) => (
-              <div 
-                key={index} 
-                className="group bg-white border border-slate-200 rounded-xl p-6 md:p-8 hover:shadow-xl hover:border-orange-200 transition-all duration-300"
-              >
-                <h4 className="text-lg md:text-xl font-bold text-slate-900 mb-4 flex items-start gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center mt-1">
-                    <Check className="w-4 h-4 text-white" />
-                  </div>
-                  <span className="group-hover:text-orange-600 transition-colors">{faq.question}</span>
-                </h4>
-                <p className="text-slate-600 leading-relaxed ml-9 text-base md:text-lg">
-                  {faq.answer}
-                </p>
-              </div>
-            ))}
+          <div className="max-w-5xl mx-auto">
+            <Accordion type="single" collapsible className="w-full space-y-4">
+              {faqs.map((faq, index) => {
+                // Icônes différentes pour chaque question
+                const icons = [
+                  <Users className="w-5 h-5" key="users" />,
+                  <Users className="w-5 h-5" key="users2" />,
+                  <MapPin className="w-5 h-5" key="map" />,
+                  <UserCheck className="w-5 h-5" key="usercheck" />,
+                  <DollarSign className="w-5 h-5" key="dollar" />,
+                  <Shield className="w-5 h-5" key="shield" />,
+                  <Gift className="w-5 h-5" key="gift" />,
+                ];
+
+                return (
+                  <AccordionItem
+                    key={index}
+                    value={`item-${index}`}
+                    className="bg-white border border-slate-200 rounded-xl px-6 hover:border-orange-300 transition-all duration-300 hover:shadow-lg"
+                  >
+                    <AccordionTrigger className="hover:no-underline py-6">
+                      <div className="flex items-start gap-4 text-left">
+                        <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center mt-1 shadow-md">
+                          <div className="text-white">
+                            {icons[index] || <Check className="w-5 h-5" />}
+                          </div>
+                        </div>
+                        <span className="text-lg md:text-xl font-bold text-slate-900 group-hover:text-orange-600 transition-colors">
+                          {faq.question}
+                        </span>
+                      </div>
+                    </AccordionTrigger>
+                    <AccordionContent className="pb-6">
+                      <div className="ml-14">
+                        <p className="text-slate-600 leading-relaxed text-base md:text-lg">
+                          {faq.answer}
+                        </p>
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+                );
+              })}
+            </Accordion>
           </div>
         </div>
 

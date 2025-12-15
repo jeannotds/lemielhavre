@@ -7,25 +7,25 @@ export function CharityCauses() {
   const causes = [
     {
       title: 'Nourriture pour les Affamés',
-      image: 'https://images.unsplash.com/photo-1593113598332-cd288d649433?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1516627145497-ae6968895b74?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       icon: Utensils,
       color: 'from-orange-500 to-red-500',
     },
     {
       title: 'Éducation pour Tous',
-      image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       icon: GraduationCap,
       color: 'from-blue-500 to-cyan-500',
     },
     {
       title: 'Aide Médicale',
-      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       icon: Heart,
       color: 'from-pink-500 to-rose-500',
     },
     {
       title: 'Eau Potable pour Tous',
-      image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       icon: Droplets,
       color: 'from-cyan-500 to-blue-500',
     },
