@@ -170,22 +170,22 @@ export function SponsorMatch() {
             </div>
           </div>
 
-          {/* Processus de Matching Moderne */}
+          {/* Modern Matching Process */}
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <h3 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
-                Le Processus de{' '}
+                The{' '}
                 <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
-                  Parrainage
+                  Sponsorship Process
                 </span>
               </h3>
               <p className="text-slate-600 text-lg max-w-2xl mx-auto">
-                Découvrez comment nous créons des connexions durables entre les parrains et les enfants
+                Discover how we create lasting connections between sponsors and children
               </p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-6 mb-8">
-              {/* Étape 1 */}
+              {/* Step 1 */}
               <div className="group relative bg-gradient-to-br from-white to-orange-50 rounded-2xl p-6 md:p-8 border border-orange-100 hover:border-orange-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                 <div className="absolute top-4 right-4 w-16 h-16 bg-gradient-to-br from-orange-500/10 to-red-500/10 rounded-full blur-xl group-hover:blur-2xl transition-all" />
                 <div className="relative">
@@ -193,15 +193,15 @@ export function SponsorMatch() {
                     <FileText className="w-7 h-7 text-white" />
                   </div>
                   <h4 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-orange-600 transition-colors">
-                    Évaluation & Profil
+                    Assessment & Profile
                   </h4>
                   <p className="text-slate-600 leading-relaxed">
-                    Le processus de jumelage peut prendre plusieurs mois. Notre équipe collecte soigneusement les informations sur l&apos;historique, la santé et l&apos;éducation de chaque enfant pour créer un profil personnel détaillé.
+                    The matching process may take several months. Our team carefully collects information on each child&apos;s background, health, and education to create a detailed personal profile.
                   </p>
                 </div>
               </div>
 
-              {/* Étape 2 */}
+              {/* Step 2 */}
               <div className="group relative bg-gradient-to-br from-white to-blue-50 rounded-2xl p-6 md:p-8 border border-blue-100 hover:border-blue-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                 <div className="absolute top-4 right-4 w-16 h-16 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-full blur-xl group-hover:blur-2xl transition-all" />
                 <div className="relative">
@@ -212,12 +212,12 @@ export function SponsorMatch() {
                     Confirmation & Onboarding
                   </h4>
                   <p className="text-slate-600 leading-relaxed">
-                    Une fois le jumelage confirmé, le processus d&apos;intégration commence. Les parrains reçoivent un paquet de bienvenue avec la photo de l&apos;enfant, son histoire personnelle, ses détails et son numéro d&apos;identification Le Miel Havre.
+                    Once the match is confirmed, the onboarding process begins. Sponsors receive a welcome packet with the child&apos;s photo, personal story, background details, and Le Miel Havre identification number.
                   </p>
                 </div>
               </div>
 
-              {/* Étape 3 */}
+              {/* Step 3 */}
               <div className="group relative bg-gradient-to-br from-white to-green-50 rounded-2xl p-6 md:p-8 border border-green-100 hover:border-green-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                 <div className="absolute top-4 right-4 w-16 h-16 bg-gradient-to-br from-green-500/10 to-emerald-500/10 rounded-full blur-xl group-hover:blur-2xl transition-all" />
                 <div className="relative">
@@ -225,10 +225,10 @@ export function SponsorMatch() {
                     <Mail className="w-7 h-7 text-white" />
                   </div>
                   <h4 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-green-600 transition-colors">
-                    Communication & Suivi
+                    Communication & Follow-up
                   </h4>
                   <p className="text-slate-600 leading-relaxed">
-                    Après l&apos;intégration, les parrains commencent à recevoir des lettres de leur enfant assigné et peuvent communiquer par lettres ou par email en utilisant le numéro d&apos;identification de bourse de l&apos;enfant.
+                    After onboarding is complete, sponsors will begin receiving letters from their assigned child and can communicate through letters or via email using the child&apos;s scholarship identification number.
                   </p>
                 </div>
               </div>
