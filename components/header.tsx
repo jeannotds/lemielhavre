@@ -3,11 +3,13 @@
 import { useState } from 'react';
 import { Heart, Search, Moon, Sun, Menu, X } from 'lucide-react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 
 export function Header() {
   const [isDark, setIsDark] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const navLinks = [
     { href: '/', label: 'Home' },
@@ -30,20 +32,23 @@ export function Header() {
           </div>
 
           <nav className="hidden lg:flex items-center gap-8">
-            {navLinks.map((link, index) => (
-              <Link
-                key={index}
-                href={link.href}
-                className={`relative text-sm font-medium transition-colors hover:text-orange-500 ${
-                  index === 0 ? 'text-orange-500' : 'text-slate-700'
-                }`}
-              >
-                {link.label}
-                {index === 0 && (
-                  <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-orange-500 rounded-full" />
-                )}
-              </Link>
-            ))}
+            {navLinks.map((link, index) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={index}
+                  href={link.href}
+                  className={`relative text-sm font-medium transition-colors hover:text-orange-500 ${
+                    isActive ? 'text-orange-500' : 'text-slate-700'
+                  }`}
+                >
+                  {link.label}
+                  {isActive && (
+                    <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-orange-500 rounded-full" />
+                  )}
+                </Link>
+              );
+            })}
           </nav>
 
           <div className="flex items-center gap-3">
@@ -59,7 +64,7 @@ export function Header() {
             </Button>
             <button
               onClick={() => setIsDark(!isDark)}
-              className="hidden md:flex w-10 h-10 rounded-lg border border-slate-200 flex items-center justify-center hover:border-orange-500 hover:bg-orange-50 transition-all"
+              className="hidden md:flex w-10 h-10 rounded-lg border border-slate-200 items-center justify-center hover:border-orange-500 hover:bg-orange-50 transition-all"
               aria-label="Toggle theme"
             >
               {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
@@ -78,20 +83,23 @@ export function Header() {
         {isMobileMenuOpen && (
           <div className="lg:hidden border-t border-slate-200 py-4 animate-in slide-in-from-top-2 duration-200">
             <nav className="flex flex-col gap-2">
-              {navLinks.map((link, index) => (
-                <Link
-                  key={index}
-                  href={link.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className={`px-4 py-3 rounded-lg text-sm font-medium transition-all ${
-                    index === 0
-                      ? 'bg-orange-50 text-orange-500'
-                      : 'text-slate-700 hover:bg-slate-50 hover:text-orange-500'
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {navLinks.map((link, index) => {
+                const isActive = pathname === link.href;
+                return (
+                  <Link
+                    key={index}
+                    href={link.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className={`px-4 py-3 rounded-lg text-sm font-medium transition-all ${
+                      isActive
+                        ? 'bg-orange-50 text-orange-500'
+                        : 'text-slate-700 hover:bg-slate-50 hover:text-orange-500'
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                );
+              })}
               <div className="flex items-center gap-3 px-4 pt-2">
                 <Button className="flex-1 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white py-2.5 rounded-lg">
                   <Heart className="w-4 h-4 mr-2 fill-white" />

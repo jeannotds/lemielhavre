@@ -1,80 +1,9 @@
-'use client';
-
-import { useState } from 'react';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { ScrollToTop } from '@/components/scroll-to-top';
-import { Heart, Phone, Mail, MapPin, Clock, MessageCircle, Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
+import { Heart, Phone, Mail, MapPin, Clock, MessageCircle } from 'lucide-react';
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: '',
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<{ type: 'success' | 'error' | null; message: string }>({
-    type: null,
-    message: '',
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.id]: e.target.value,
-    });
-  };
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus({ type: null, message: '' });
-
-    try {
-      const response = await fetch('/api/send-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await response.json();
-
-      if (response.ok) {
-        setSubmitStatus({
-          type: 'success',
-          message: data.message || 'Votre message a été envoyé avec succès! Nous vous répondrons bientôt.',
-        });
-        // Réinitialiser le formulaire
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          subject: '',
-          message: '',
-        });
-      } else {
-        setSubmitStatus({
-          type: 'error',
-          message: data.error || 'Une erreur est survenue. Veuillez réessayer.',
-        });
-      }
-    } catch (error) {
-      console.error('Erreur:', error);
-      setSubmitStatus({
-        type: 'error',
-        message: 'Une erreur est survenue. Veuillez réessayer plus tard.',
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
   const contactInfo = [
     {
       icon: Phone,
@@ -143,9 +72,21 @@ export default function Contact() {
       </section>
 
       {/* Contact Information Cards */}
-      <section className="bg-white py-20 md:py-28">
+      <section className="bg-gradient-to-b from-white to-slate-50 py-20 md:py-28">
         <div className="container mx-auto px-4 lg:px-6">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
+              Nos{' '}
+              <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
+                Moyens de Contact
+              </span>
+            </h2>
+            <p className="text-slate-600 max-w-2xl mx-auto text-lg">
+              Choisissez le moyen qui vous convient le mieux pour nous joindre. Nous sommes disponibles pour répondre à toutes vos questions.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
             {contactInfo.map((info, index) => {
               const Icon = info.icon;
               return (
@@ -154,18 +95,19 @@ export default function Contact() {
                   href={info.link}
                   target={info.link.startsWith('http') ? '_blank' : undefined}
                   rel={info.link.startsWith('http') ? 'noopener noreferrer' : undefined}
-                  className="group bg-white rounded-2xl p-6 border border-slate-100 hover:border-orange-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+                  className="group bg-white rounded-2xl p-8 border-2 border-slate-100 hover:border-orange-300 hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 relative overflow-hidden"
                 >
-                  <div className={`inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br ${info.color} mb-4 shadow-lg group-hover:scale-110 transition-transform`}>
-                    <Icon className="w-7 h-7 text-white" />
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-orange-100/50 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${info.color} mb-5 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}>
+                    <Icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-lg font-bold text-slate-800 mb-2 group-hover:text-orange-500 transition-colors">
+                  <h3 className="text-xl font-bold text-slate-800 mb-3 group-hover:text-orange-500 transition-colors">
                     {info.title}
                   </h3>
-                  <p className="text-slate-600 text-sm mb-1 font-medium">
+                  <p className="text-slate-700 text-base mb-2 font-semibold">
                     {info.content}
                   </p>
-                  <p className="text-slate-500 text-xs">
+                  <p className="text-slate-500 text-sm">
                     {info.description}
                   </p>
                 </a>
@@ -173,221 +115,95 @@ export default function Contact() {
             })}
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
-            {/* <div className="space-y-6">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
-                  Envoyez-nous un{' '}
-                  <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
-                    Message
-                  </span>
-                </h2>
-                <p className="text-slate-600">
-                  Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.
-                </p>
-              </div>
-              <form onSubmit={handleSubmit} className="space-y-4">
-                {submitStatus.type && (
-                  <div
-                    className={`p-4 rounded-lg flex items-start gap-3 ${
-                      submitStatus.type === 'success'
-                        ? 'bg-green-50 border border-green-200'
-                        : 'bg-red-50 border border-red-200'
-                    }`}
-                  >
-                    {submitStatus.type === 'success' ? (
-                      <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                    ) : (
-                      <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
-                    )}
-                    <p
-                      className={`text-sm ${
-                        submitStatus.type === 'success' ? 'text-green-800' : 'text-red-800'
-                      }`}
-                    >
-                      {submitStatus.message}
-                    </p>
-                  </div>
-                )}
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">
-                      Nom complet
-                    </label>
-                    <Input
-                      id="name"
-                      type="text"
-                      placeholder="Votre nom"
-                      className="h-12"
-                      value={formData.name}
-                      onChange={handleChange}
-                      required
-                      disabled={isSubmitting}
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
-                      Email
-                    </label>
-                    <Input
-                      id="email"
-                      type="email"
-                      placeholder="votre@email.com"
-                      className="h-12"
-                      value={formData.email}
-                      onChange={handleChange}
-                      required
-                      disabled={isSubmitting}
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-slate-700 mb-2">
-                    Téléphone
-                  </label>
-                  <Input
-                    id="phone"
-                    type="tel"
-                    placeholder="+243 XXX XXX XXX"
-                    className="h-12"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    disabled={isSubmitting}
-                  />
-                </div>
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-slate-700 mb-2">
-                    Sujet
-                  </label>
-                  <Input
-                    id="subject"
-                    type="text"
-                    placeholder="Sujet de votre message"
-                    className="h-12"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    required
-                    disabled={isSubmitting}
-                  />
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-2">
-                    Message
-                  </label>
-                  <Textarea
-                    id="message"
-                    placeholder="Votre message..."
-                    className="min-h-[150px] resize-none"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    disabled={isSubmitting}
-                  />
-                </div>
-                <Button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white h-12 text-base font-semibold rounded-lg shadow-lg shadow-orange-500/30 hover:shadow-xl hover:shadow-orange-500/40 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {isSubmitting ? (
-                    <>
-                      <Loader2 className="w-5 h-5 mr-2 animate-spin" />
-                      Envoi en cours...
-                    </>
-                  ) : (
-                    <>
-                      <Send className="w-5 h-5 mr-2" />
-                      Envoyer le Message
-                    </>
-                  )}
-                </Button>
-              </form>
-            </div> */}
+          {/* Additional Information Section */}
+          <div className="mb-16">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
+                Informations{' '}
+                <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
+                  Pratiques
+                </span>
+              </h2>
+              <p className="text-slate-600 max-w-2xl mx-auto text-lg">
+                Tout ce que vous devez savoir pour nous contacter efficacement.
+              </p>
+            </div>
 
-            {/* Additional Information */}
-            <div className="space-y-6">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
-                  Informations{' '}
-                  <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
-                    Importantes
-                  </span>
-                </h2>
-                <p className="text-slate-600 mb-6">
-                  Voici quelques informations utiles pour nous contacter et en savoir plus sur nos services.
-                </p>
-              </div>
-
+            <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
               {/* Office Hours */}
-              <div className="bg-gradient-to-br from-slate-50 to-white rounded-2xl p-6 border border-slate-100">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center">
-                    <Clock className="w-6 h-6 text-white" />
+              <div className="bg-gradient-to-br from-white to-orange-50/30 rounded-3xl p-8 border-2 border-orange-100 hover:border-orange-200 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center shadow-lg">
+                    <Clock className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-800">Heures d&apos;ouverture</h3>
+                  <h3 className="text-2xl font-bold text-slate-800">Heures d&apos;ouverture</h3>
                 </div>
-                <div className="space-y-3">
+                <div className="space-y-4">
                   {officeHours.map((schedule, index) => (
-                    <div key={index} className="flex justify-between items-center py-2 border-b border-slate-100 last:border-0">
-                      <span className="text-slate-700 font-medium">{schedule.day}</span>
-                      <span className="text-slate-600">{schedule.time}</span>
+                    <div key={index} className="flex justify-between items-center py-3 px-4 bg-white/60 rounded-xl border border-orange-100">
+                      <span className="text-slate-700 font-semibold text-base">{schedule.day}</span>
+                      <span className="text-slate-600 font-medium">{schedule.time}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
               {/* Response Time */}
-              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-6 border border-blue-100">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center">
-                    <Mail className="w-6 h-6 text-white" />
+              <div className="bg-gradient-to-br from-white to-blue-50/30 rounded-3xl p-8 border-2 border-blue-100 hover:border-blue-200 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center shadow-lg">
+                    <Mail className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-800">Temps de réponse</h3>
+                  <h3 className="text-2xl font-bold text-slate-800">Temps de réponse</h3>
                 </div>
-                <p className="text-slate-600 leading-relaxed">
-                  Nous nous efforçons de répondre à tous les messages dans un délai de <span className="font-semibold text-slate-800">24 à 48 heures</span>. 
+                <p className="text-slate-600 leading-relaxed text-base">
+                  Nous nous efforçons de répondre à tous les messages dans un délai de <span className="font-bold text-slate-800 text-lg">24 à 48 heures</span>. 
+                </p>
+                <p className="text-slate-600 leading-relaxed text-base mt-3">
                   Pour les questions urgentes, veuillez nous appeler directement.
                 </p>
               </div>
 
               {/* Location Info */}
-              <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-6 border border-green-100">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center">
-                    <MapPin className="w-6 h-6 text-white" />
+              <div className="bg-gradient-to-br from-white to-green-50/30 rounded-3xl p-8 border-2 border-green-100 hover:border-green-200 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center shadow-lg">
+                    <MapPin className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-800">Nos bureaux</h3>
+                  <h3 className="text-2xl font-bold text-slate-800">Nos bureaux</h3>
                 </div>
-                <div className="space-y-2 text-slate-600">
-                  <p className="font-semibold text-slate-800">Bureau principal :</p>
-                  <p>Kinshasa, République Démocratique du Congo</p>
-                  <p className="font-semibold text-slate-800 mt-4">Programme actif :</p>
-                  <p>Goma, République Démocratique du Congo</p>
+                <div className="space-y-4">
+                  <div className="bg-white/60 rounded-xl p-4 border border-green-100">
+                    <p className="font-bold text-slate-800 mb-2 text-base">Bureau principal :</p>
+                    <p className="text-slate-600">Kinshasa, République Démocratique du Congo</p>
+                  </div>
+                  <div className="bg-white/60 rounded-xl p-4 border border-green-100">
+                    <p className="font-bold text-slate-800 mb-2 text-base">Programme actif :</p>
+                    <p className="text-slate-600">Goma, République Démocratique du Congo</p>
+                  </div>
                 </div>
               </div>
 
               {/* Social Media */}
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6 border border-purple-100">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">
-                    <MessageCircle className="w-6 h-6 text-white" />
+              <div className="bg-gradient-to-br from-white to-purple-50/30 rounded-3xl p-8 border-2 border-purple-100 hover:border-purple-200 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center shadow-lg">
+                    <MessageCircle className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-800">Suivez-nous</h3>
+                  <h3 className="text-2xl font-bold text-slate-800">Suivez-nous</h3>
                 </div>
-                <p className="text-slate-600 leading-relaxed mb-4">
+                <p className="text-slate-600 leading-relaxed mb-6 text-base">
                   Restez connecté avec nous sur nos réseaux sociaux pour suivre nos actualités et nos projets.
                 </p>
-                <div className="flex gap-3">
-                  <a
-                    href="https://wa.me/243825910778"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex-1 bg-green-500 hover:bg-green-600 text-white px-4 py-3 rounded-lg font-semibold text-center transition-all shadow-lg hover:shadow-xl"
-                  >
-                    WhatsApp
-                  </a>
-                </div>
+                <a
+                  href="https://wa.me/243825910778"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white px-6 py-4 rounded-xl font-bold text-center transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+                >
+                  <MessageCircle className="w-5 h-5" />
+                  WhatsApp
+                </a>
               </div>
             </div>
           </div>
@@ -395,25 +211,33 @@ export default function Contact() {
       </section>
 
       {/* Map Section */}
-      <section className="bg-gradient-to-b from-white to-slate-50 py-20">
+      <section className="bg-gradient-to-b from-slate-50 to-white py-20 md:py-28">
         <div className="container mx-auto px-4 lg:px-6">
-          <div className="text-center mb-12">
+          <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
-              Où nous trouver
+              Où nous{' '}
+              <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
+                trouver
+              </span>
             </h2>
-            <p className="text-slate-600 max-w-2xl mx-auto">
+            <p className="text-slate-600 max-w-2xl mx-auto text-lg">
               Notre bureau principal est situé à Kinshasa, et nous opérons également à Goma pour nos programmes de bourses.
             </p>
           </div>
-          <div className="bg-slate-200 rounded-2xl h-96 flex items-center justify-center">
-            <div className="text-center">
-              <MapPin className="w-16 h-16 text-slate-400 mx-auto mb-4" />
-              <p className="text-slate-600 text-lg">
-                Carte interactive à venir
-              </p>
-              <p className="text-slate-500 text-sm mt-2">
-                Kinshasa, DR Congo
-              </p>
+          <div className="max-w-5xl mx-auto">
+            <div className="bg-gradient-to-br from-slate-100 to-slate-200 rounded-3xl h-[500px] flex items-center justify-center border-2 border-slate-200 shadow-xl relative overflow-hidden">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(251,146,60,0.1),transparent_70%)]" />
+              <div className="text-center relative z-10">
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl mb-6 shadow-lg">
+                  <MapPin className="w-10 h-10 text-white" />
+                </div>
+                <p className="text-slate-700 text-xl font-semibold mb-2">
+                  Carte interactive à venir
+                </p>
+                <p className="text-slate-600 text-base">
+                  Kinshasa, République Démocratique du Congo
+                </p>
+              </div>
             </div>
           </div>
         </div>
