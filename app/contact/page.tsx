@@ -1,14 +1,80 @@
 'use client';
 
+import { useState } from 'react';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { ScrollToTop } from '@/components/scroll-to-top';
-import { Heart, Phone, Mail, MapPin, Clock, MessageCircle, Send } from 'lucide-react';
+import { Heart, Phone, Mail, MapPin, Clock, MessageCircle, Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: '',
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{ type: 'success' | 'error' | null; message: string }>({
+    type: null,
+    message: '',
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.id]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: '' });
+
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setSubmitStatus({
+          type: 'success',
+          message: data.message || 'Votre message a été envoyé avec succès! Nous vous répondrons bientôt.',
+        });
+        // Réinitialiser le formulaire
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: '',
+        });
+      } else {
+        setSubmitStatus({
+          type: 'error',
+          message: data.error || 'Une erreur est survenue. Veuillez réessayer.',
+        });
+      }
+    } catch (error) {
+      console.error('Erreur:', error);
+      setSubmitStatus({
+        type: 'error',
+        message: 'Une erreur est survenue. Veuillez réessayer plus tard.',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   const contactInfo = [
     {
       icon: Phone,
@@ -109,7 +175,7 @@ export default function Contact() {
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div className="space-y-6">
+            {/* <div className="space-y-6">
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
                   Envoyez-nous un{' '}
@@ -121,7 +187,29 @@ export default function Contact() {
                   Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.
                 </p>
               </div>
-              <form className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-4">
+                {submitStatus.type && (
+                  <div
+                    className={`p-4 rounded-lg flex items-start gap-3 ${
+                      submitStatus.type === 'success'
+                        ? 'bg-green-50 border border-green-200'
+                        : 'bg-red-50 border border-red-200'
+                    }`}
+                  >
+                    {submitStatus.type === 'success' ? (
+                      <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                    ) : (
+                      <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+                    )}
+                    <p
+                      className={`text-sm ${
+                        submitStatus.type === 'success' ? 'text-green-800' : 'text-red-800'
+                      }`}
+                    >
+                      {submitStatus.message}
+                    </p>
+                  </div>
+                )}
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">
@@ -132,7 +220,10 @@ export default function Contact() {
                       type="text"
                       placeholder="Votre nom"
                       className="h-12"
+                      value={formData.name}
+                      onChange={handleChange}
                       required
+                      disabled={isSubmitting}
                     />
                   </div>
                   <div>
@@ -144,7 +235,10 @@ export default function Contact() {
                       type="email"
                       placeholder="votre@email.com"
                       className="h-12"
+                      value={formData.email}
+                      onChange={handleChange}
                       required
+                      disabled={isSubmitting}
                     />
                   </div>
                 </div>
@@ -157,6 +251,9 @@ export default function Contact() {
                     type="tel"
                     placeholder="+243 XXX XXX XXX"
                     className="h-12"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    disabled={isSubmitting}
                   />
                 </div>
                 <div>
@@ -168,7 +265,10 @@ export default function Contact() {
                     type="text"
                     placeholder="Sujet de votre message"
                     className="h-12"
+                    value={formData.subject}
+                    onChange={handleChange}
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
                 <div>
@@ -179,18 +279,31 @@ export default function Contact() {
                     id="message"
                     placeholder="Votre message..."
                     className="min-h-[150px] resize-none"
+                    value={formData.message}
+                    onChange={handleChange}
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
                 <Button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white h-12 text-base font-semibold rounded-lg shadow-lg shadow-orange-500/30 hover:shadow-xl hover:shadow-orange-500/40 transition-all"
+                  disabled={isSubmitting}
+                  className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white h-12 text-base font-semibold rounded-lg shadow-lg shadow-orange-500/30 hover:shadow-xl hover:shadow-orange-500/40 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  <Send className="w-5 h-5 mr-2" />
-                  Envoyer le Message
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="w-5 h-5 mr-2 animate-spin" />
+                      Envoi en cours...
+                    </>
+                  ) : (
+                    <>
+                      <Send className="w-5 h-5 mr-2" />
+                      Envoyer le Message
+                    </>
+                  )}
                 </Button>
               </form>
-            </div>
+            </div> */}
 
             {/* Additional Information */}
             <div className="space-y-6">

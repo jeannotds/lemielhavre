@@ -5,6 +5,7 @@ import { Inter } from 'next/font/google';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
   title: 'Le Miel Havre - Charity, Faith and Hope',
   description: 'Le Miel Havre is dedicated to making a meaningful difference in the lives of those in need. Join us in building a brighter future through education, support, and compassion.',
   keywords: 'charity, NGO, education, children, sponsorship, humanitarian aid, Le Miel Havre',
