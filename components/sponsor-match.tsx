@@ -10,18 +10,18 @@ export function SponsorMatch() {
   const slides = [
     {
       id: 1,
-      image: 'https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&cs=tinysrgb&w=800',
-      title: 'Meet Your Sponsored Child',
+      image: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      title: 'Rencontrez Votre Enfant Parrainé',
     },
     {
       id: 2,
-      image: 'https://images.pexels.com/photos/3729571/pexels-photo-3729571.jpeg?auto=compress&cs=tinysrgb&w=800',
-      title: 'Build a Lasting Connection',
+      image: 'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      title: 'Construisez une Connexion Durable',
     },
     {
       id: 3,
-      image: 'https://images.pexels.com/photos/3808014/pexels-photo-3808014.jpeg?auto=compress&cs=tinysrgb&w=800',
-      title: 'Support Their Future',
+      image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      title: 'Soutenez Leur Avenir',
     },
   ];
 

@@ -6,26 +6,26 @@ import { Button } from '@/components/ui/button';
 export function CharityCauses() {
   const causes = [
     {
-      title: 'Food for Hungry',
-      image: 'https://images.pexels.com/photos/8422087/pexels-photo-8422087.jpeg?auto=compress&cs=tinysrgb&w=800',
+      title: 'Nourriture pour les Affamés',
+      image: 'https://images.unsplash.com/photo-1593113598332-cd288d649433?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       icon: Utensils,
       color: 'from-orange-500 to-red-500',
     },
     {
-      title: 'Education for all',
-      image: 'https://images.pexels.com/photos/8613261/pexels-photo-8613261.jpeg?auto=compress&cs=tinysrgb&w=800',
+      title: 'Éducation pour Tous',
+      image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       icon: GraduationCap,
       color: 'from-blue-500 to-cyan-500',
     },
     {
-      title: 'Help from Injuries',
-      image: 'https://images.pexels.com/photos/5793996/pexels-photo-5793996.jpeg?auto=compress&cs=tinysrgb&w=800',
+      title: 'Aide Médicale',
+      image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       icon: Heart,
       color: 'from-pink-500 to-rose-500',
     },
     {
-      title: 'Clean water for all',
-      image: 'https://images.pexels.com/photos/8612992/pexels-photo-8612992.jpeg?auto=compress&cs=tinysrgb&w=800',
+      title: 'Eau Potable pour Tous',
+      image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       icon: Droplets,
       color: 'from-cyan-500 to-blue-500',
     },
@@ -51,15 +51,15 @@ export function CharityCauses() {
               <span className="text-orange-500 font-semibold">Send your Details.</span>
             </p>
             <p className="text-slate-600 leading-relaxed">
-              We are committed to making a lasting impact in communities around the world. 
-              Through our various programs, we address critical needs and empower individuals 
-              to build better futures for themselves and their families.
+              Nous nous engageons à avoir un impact durable dans les communautés de la République Démocratique du Congo. 
+              Grâce à nos différents programmes, nous répondons aux besoins critiques et permettons aux enfants 
+              de construire de meilleurs avenirs pour eux-mêmes et leurs familles.
             </p>
             <Button
               variant="outline"
               className="group border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-8 py-6 text-lg rounded-lg transition-all shadow-lg hover:shadow-xl hover:scale-105"
             >
-              Contact Us
+              Contactez-Nous
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
