@@ -73,18 +73,25 @@ export function Hero() {
   return (
     <>
      <section style={{borderRadius: '0 0 10% 10%'}} className="relative mt-20 pt-32 md:pt-48 pb-24 md:pb-40 flex items-center justify-start min-h-[500px] md:max-h-[730px] overflow-hidden">
-  <div
-    className="absolute inset-0"
-    style={{
-      backgroundImage:
-        'url(https://images.unsplash.com/photo-1516627145497-ae6968895b74?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80)',
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      borderRadius: '0 0 10% 10%',
-    }}
-  />
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-slate-800/70 to-slate-900/80" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(251,146,60,0.1),transparent_50%)]" />
+        {/* Slides Container */}
+        <div className="absolute inset-0" style={{ borderRadius: '0 0 10% 10%' }}>
+          {slides.map((slide, index) => (
+            <div
+              key={slide.id}
+              className={`absolute inset-0 transition-opacity duration-1000 ${
+                index === currentSlide ? 'opacity-100 z-0' : 'opacity-0 z-0'
+              }`}
+              style={{
+                backgroundImage: `url(${slide.image})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                borderRadius: '0 0 10% 10%',
+              }}
+            />
+          ))}
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-slate-800/70 to-slate-900/80 z-10" style={{ borderRadius: '0 0 10% 10%' }} />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(251,146,60,0.1),transparent_50%)] z-10" style={{ borderRadius: '0 0 10% 10%' }} />
 
         <div className="relative z-10 container mx-auto px-4 lg:px-6">
           <div className="max-w-3xl">
@@ -119,16 +126,40 @@ export function Hero() {
         </div>
 
         <div className="absolute bottom-8 right-4 md:right-8 z-20 flex gap-3">
-          <button className="w-12 h-12 md:w-14 md:h-14 rounded-full border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-orange-500 hover:border-orange-500 transition-all flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110">
+          <button 
+            onClick={prevSlide}
+            className="w-12 h-12 md:w-14 md:h-14 rounded-full border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-orange-500 hover:border-orange-500 transition-all flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110"
+            aria-label="Previous slide"
+          >
             <ChevronLeft className="w-6 h-6" />
           </button>
-          <button className="w-12 h-12 md:w-14 md:h-14 rounded-full border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-orange-500 hover:border-orange-500 transition-all flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110">
+          <button 
+            onClick={nextSlide}
+            className="w-12 h-12 md:w-14 md:h-14 rounded-full border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-orange-500 hover:border-orange-500 transition-all flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110"
+            aria-label="Next slide"
+          >
             <ChevronRight className="w-6 h-6" />
           </button>
         </div>
+
+        {/* Slide Indicators */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`h-2 rounded-full transition-all ${
+                index === currentSlide ? 'bg-white w-8 shadow-lg' : 'bg-white/50 w-2 hover:bg-white/70'
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
       </section>
 
-      <section className="bg-gradient-to-b from-white to-slate-50">
+      {/* <section className="bg-gradient-to-b from-white to-slate-50"> */}
+      <section className="bg-gradient-to-b from-white to-slate-50 -mt-24 relative z-30">
+
         <div className="container mx-auto px-4 lg:px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 -translate-y-12 md:-translate-y-16">
             {features.map((feature, index) => {
