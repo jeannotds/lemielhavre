@@ -20,7 +20,7 @@ export function Newsletter() {
   return (
     <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20 md:py-28 relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(251,146,60,0.1),transparent_70%)]" />
-      <div className="container mx-auto px-4 lg:px-6 relative z-10">
+      <div className="container mx-auto px-6 lg:px-10 relative z-10">
         <div className="max-w-6xl mx-auto bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-3xl shadow-2xl p-8 md:p-12 lg:p-16 border border-white/20 dark:border-slate-700/20">
           <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div className="space-y-6">

@@ -106,7 +106,7 @@ export function SponsorMatch() {
 
   return (
     <section className="bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-800 py-20 md:py-28">
-      <div className="container mx-auto px-4 lg:px-6">
+      <div className="container mx-auto px-6 lg:px-10">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-slate-800 rounded-full border border-brand-cream dark:border-slate-700 mb-4">
             <span className="w-2 h-2 bg-brand-orange rounded-full animate-pulse" />

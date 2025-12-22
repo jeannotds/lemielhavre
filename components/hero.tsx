@@ -86,7 +86,7 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-slate-800/70 to-slate-900/80" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(251,146,60,0.1),transparent_50%)]" />
 
-        <div className="relative z-10 container mx-auto px-4 lg:px-6">
+        <div className="relative z-10 container mx-auto px-6 lg:px-10">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-6 animate-in fade-in slide-in-from-top-4 duration-700">
               <Heart className="w-4 h-4 text-brand-orange-light fill-brand-orange-light" />
@@ -129,7 +129,7 @@ export function Hero() {
       </section>
 
       <section className="bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-800">
-        <div className="container mx-auto px-4 lg:px-6">
+        <div className="container mx-auto px-6 lg:px-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 -translate-y-12 md:-translate-y-16">
             {features.map((feature, index) => {
               const Icon = feature.icon;

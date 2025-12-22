@@ -33,7 +33,7 @@ export function CharityCauses() {
 
   return (
     <section className="bg-white dark:bg-slate-900 py-20 md:py-28">
-      <div className="container mx-auto px-4 lg:px-6">
+      <div className="container mx-auto px-6 lg:px-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="space-y-6">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-slate-800 rounded-full border border-brand-cream dark:border-slate-700 mb-4">

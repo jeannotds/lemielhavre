@@ -36,7 +36,7 @@ export function Stats() {
 
   return (
     <section className="bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-800 py-20 md:py-24">
-      <div className="container mx-auto px-4 lg:px-6">
+      <div className="container mx-auto px-6 lg:px-10">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-800 dark:text-slate-200 mb-3">
             Our Impact in Numbers

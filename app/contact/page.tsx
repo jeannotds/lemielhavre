@@ -52,7 +52,7 @@ export default function Contact() {
       {/* Hero Section */}
       <section className="relative mt-20 pt-32 md:pt-48 pb-24 md:pb-40 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(251,146,60,0.1),transparent_50%)]" />
-        <div className="relative z-10 container mx-auto px-4 lg:px-6">
+        <div className="relative z-10 container mx-auto px-6 lg:px-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-6">
               <Heart className="w-4 h-4 text-brand-orange-light fill-brand-orange-light" />
@@ -73,7 +73,7 @@ export default function Contact() {
 
       {/* Contact Information Cards */}
       <section className="bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-800 py-20 md:py-28">
-        <div className="container mx-auto px-4 lg:px-6">
+        <div className="container mx-auto px-6 lg:px-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-800 dark:text-slate-200 mb-4">
               Nos{' '}
@@ -212,7 +212,7 @@ export default function Contact() {
 
       {/* Map Section */}
       <section className="bg-gradient-to-b from-slate-50 to-white py-20 md:py-28">
-        <div className="container mx-auto px-4 lg:px-6">
+        <div className="container mx-auto px-6 lg:px-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-800 dark:text-slate-200 mb-4">
               Où nous{' '}

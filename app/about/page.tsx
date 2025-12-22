@@ -58,7 +58,7 @@ export default function About() {
       {/* Hero Section */}
       <section className="relative mt-20 pt-32 md:pt-48 pb-24 md:pb-40 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(251,146,60,0.1),transparent_50%)]" />
-        <div className="relative z-10 container mx-auto px-4 lg:px-6">
+        <div className="relative z-10 container mx-auto px-6 lg:px-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-6">
               <Heart className="w-4 h-4 text-brand-orange-light fill-brand-orange-light" />
@@ -79,7 +79,7 @@ export default function About() {
 
       {/* Mission Section */}
       <section className="bg-white dark:bg-slate-900 py-20 md:py-28">
-        <div className="container mx-auto px-4 lg:px-6">
+        <div className="container mx-auto px-6 lg:px-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-slate-800 rounded-full border border-brand-cream dark:border-slate-700 mb-4">
@@ -120,7 +120,7 @@ export default function About() {
 
       {/* Values Section */}
       <section className="bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-800 py-20 md:py-28">
-        <div className="container mx-auto px-4 lg:px-6">
+        <div className="container mx-auto px-6 lg:px-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-800 dark:text-slate-200 mb-4">
               Our Core{' '}
@@ -158,7 +158,7 @@ export default function About() {
 
       {/* Timeline Section */}
       <section className="bg-white dark:bg-slate-900 py-20 md:py-28">
-        <div className="container mx-auto px-4 lg:px-6">
+        <div className="container mx-auto px-6 lg:px-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-800 dark:text-slate-200 mb-4">
               Our{' '}
@@ -196,7 +196,7 @@ export default function About() {
 
       {/* Location Section */}
       <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20 md:py-28">
-        <div className="container mx-auto px-4 lg:px-6">
+        <div className="container mx-auto px-6 lg:px-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-brand-orange to-brand-orange-dark rounded-2xl mb-6 shadow-xl">
               <Globe className="w-10 h-10 text-white" />
