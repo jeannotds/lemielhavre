@@ -30,6 +30,13 @@ export function Hero() {
     },
   ];
 
+  // Helper function to encode image URLs for CSS background
+  const encodeImageUrl = (url: string) => {
+    // Encode the path parts but keep the leading slash
+    const parts = url.split('/').filter(part => part !== '');
+    return '/' + parts.map(part => encodeURIComponent(part)).join('/');
+  };
+
   // Auto-slide functionality
   useEffect(() => {
     const interval = setInterval(() => {
@@ -82,7 +89,7 @@ export function Hero() {
                 index === currentSlide ? 'opacity-100 z-0' : 'opacity-0 z-0'
               }`}
               style={{
-                backgroundImage: `url(${slide.image})`,
+                backgroundImage: `url(${encodeImageUrl(slide.image)})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 borderRadius: '0 0 10% 10%',
