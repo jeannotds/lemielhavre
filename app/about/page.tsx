@@ -52,7 +52,7 @@ export default function About() {
   ];
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-white dark:bg-slate-900">
       <Header />
       
       {/* Hero Section */}
@@ -78,27 +78,27 @@ export default function About() {
       </section>
 
       {/* Mission Section */}
-      <section className="bg-white py-20 md:py-28">
+      <section className="bg-white dark:bg-slate-900 py-20 md:py-28">
         <div className="container mx-auto px-4 lg:px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream rounded-full border border-brand-cream mb-4">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-slate-800 rounded-full border border-brand-cream dark:border-slate-700 mb-4">
                 <span className="w-2 h-2 bg-brand-orange rounded-full animate-pulse" />
-                <span className="text-sm font-semibold text-brand-orange-dark">OUR MISSION</span>
+                <span className="text-sm font-semibold text-brand-orange-dark dark:text-brand-orange">OUR MISSION</span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-slate-800 leading-tight">
+              <h2 className="text-4xl md:text-5xl font-bold text-slate-800 dark:text-slate-200 leading-tight">
                 Our Mission &{' '}
                 <span className="bg-gradient-to-r from-brand-orange to-brand-orange-dark bg-clip-text text-transparent">
                   Vision
                 </span>
               </h2>
-              <p className="text-lg text-slate-600 leading-relaxed">
+              <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
                 Le Miel Havre is a non-profit organization committed to improving the lives of children in the Democratic Republic of Congo through education and comprehensive support programs.
               </p>
-              <p className="text-lg text-slate-600 leading-relaxed">
+              <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
                 Our mission is to provide educational opportunities, essential resources, and a stable, loving environment for children who come from extreme poverty or have been abandoned or removed from their families.
               </p>
-              <p className="text-lg text-slate-600 leading-relaxed">
+              <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
                 We envision a future where every child in the DRC has access to quality education, proper healthcare, and the support they need to thrive and become self-sufficient adults.
               </p>
             </div>
@@ -119,16 +119,16 @@ export default function About() {
       </section>
 
       {/* Values Section */}
-      <section className="bg-gradient-to-b from-white to-slate-50 py-20 md:py-28">
+      <section className="bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-800 py-20 md:py-28">
         <div className="container mx-auto px-4 lg:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-800 dark:text-slate-200 mb-4">
               Our Core{' '}
               <span className="bg-gradient-to-r from-brand-orange to-brand-orange-dark bg-clip-text text-transparent">
                 Values
               </span>
             </h2>
-            <p className="text-slate-600 max-w-2xl mx-auto text-lg">
+            <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg">
               The principles that guide everything we do
             </p>
           </div>
@@ -143,10 +143,10 @@ export default function About() {
                   <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${value.color} mb-6 shadow-lg group-hover:scale-110 transition-transform`}>
                     <Icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-800 mb-3 group-hover:text-brand-orange transition-colors">
+                  <h3 className="text-xl font-bold text-slate-800 dark:text-slate-200 mb-3 group-hover:text-brand-orange transition-colors">
                     {value.title}
                   </h3>
-                  <p className="text-slate-600 leading-relaxed">
+                  <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
                     {value.description}
                   </p>
                 </div>
@@ -157,16 +157,16 @@ export default function About() {
       </section>
 
       {/* Timeline Section */}
-      <section className="bg-white py-20 md:py-28">
+      <section className="bg-white dark:bg-slate-900 py-20 md:py-28">
         <div className="container mx-auto px-4 lg:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-800 dark:text-slate-200 mb-4">
               Our{' '}
               <span className="bg-gradient-to-r from-brand-orange to-brand-orange-dark bg-clip-text text-transparent">
                 Journey
               </span>
             </h2>
-            <p className="text-slate-600 max-w-2xl mx-auto text-lg">
+            <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg">
               Key milestones in our mission to help children in the DRC
             </p>
           </div>
@@ -179,11 +179,11 @@ export default function About() {
                       <span className="text-white font-bold text-lg">{milestone.year}</span>
                     </div>
                   </div>
-                  <div className="flex-1 pb-8 border-b border-slate-200 last:border-0">
-                    <h3 className="text-2xl font-bold text-slate-800 mb-2">
+                  <div className="flex-1 pb-8 border-b border-slate-200 dark:border-slate-700 last:border-0">
+                    <h3 className="text-2xl font-bold text-slate-800 dark:text-slate-200 mb-2">
                       {milestone.title}
                     </h3>
-                    <p className="text-slate-600 leading-relaxed">
+                    <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
                       {milestone.description}
                     </p>
                   </div>

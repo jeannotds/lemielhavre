@@ -32,25 +32,25 @@ export function CharityCauses() {
   ];
 
   return (
-    <section className="bg-white py-20 md:py-28">
+    <section className="bg-white dark:bg-slate-900 py-20 md:py-28">
       <div className="container mx-auto px-4 lg:px-6">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="space-y-6">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream rounded-full border border-brand-cream mb-4">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-slate-800 rounded-full border border-brand-cream dark:border-slate-700 mb-4">
               <span className="w-2 h-2 bg-brand-orange rounded-full animate-pulse" />
-              <span className="text-sm font-semibold text-brand-orange-dark">OUR CAUSES</span>
+              <span className="text-sm font-semibold text-brand-orange-dark dark:text-brand-orange">OUR CAUSES</span>
             </div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 leading-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 dark:text-slate-200 leading-tight">
               Our Charity{' '}
               <span className="bg-gradient-to-r from-brand-orange to-brand-orange-dark bg-clip-text text-transparent">
                 Causes
               </span>
             </h2>
-            <p className="text-lg md:text-xl text-slate-600 leading-relaxed">
-              <span className="text-slate-800 font-medium">If you want to work with Le Miel Havre charity?</span>{' '}
+            <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 leading-relaxed">
+              <span className="text-slate-800 dark:text-slate-200 font-medium">If you want to work with Le Miel Havre charity?</span>{' '}
               <span className="text-brand-orange font-semibold">Send your Details.</span>
             </p>
-            <p className="text-slate-600 leading-relaxed">
+            <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
               Nous nous engageons à avoir un impact durable dans les communautés de la République Démocratique du Congo. 
               Grâce à nos différents programmes, nous répondons aux besoins critiques et permettons aux enfants 
               de construire de meilleurs avenirs pour eux-mêmes et leurs familles.

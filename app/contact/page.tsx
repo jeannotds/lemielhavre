@@ -46,7 +46,7 @@ export default function Contact() {
   ];
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-white dark:bg-slate-900">
       <Header />
       
       {/* Hero Section */}
@@ -72,16 +72,16 @@ export default function Contact() {
       </section>
 
       {/* Contact Information Cards */}
-      <section className="bg-gradient-to-b from-white to-slate-50 py-20 md:py-28">
+      <section className="bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-800 py-20 md:py-28">
         <div className="container mx-auto px-4 lg:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 dark:text-slate-200 mb-4">
               Nos{' '}
               <span className="bg-gradient-to-r from-brand-orange to-brand-orange-dark bg-clip-text text-transparent">
                 Moyens de Contact
               </span>
             </h2>
-            <p className="text-slate-600 max-w-2xl mx-auto text-lg">
+            <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg">
               Choisissez le moyen qui vous convient le mieux pour nous joindre. Nous sommes disponibles pour répondre à toutes vos questions.
             </p>
           </div>
@@ -95,19 +95,19 @@ export default function Contact() {
                   href={info.link}
                   target={info.link.startsWith('http') ? '_blank' : undefined}
                   rel={info.link.startsWith('http') ? 'noopener noreferrer' : undefined}
-                  className="group bg-white rounded-2xl p-8 border-2 border-slate-100 hover:border-brand-orange-dark hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 relative overflow-hidden"
+                  className="group bg-white dark:bg-slate-800 rounded-2xl p-8 border-2 border-slate-100 dark:border-slate-700 hover:border-brand-orange-dark dark:hover:border-brand-orange hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 relative overflow-hidden"
                 >
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-brand-cream/50 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-brand-cream/50 dark:from-slate-700/50 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${info.color} mb-5 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}>
                     <Icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-800 mb-3 group-hover:text-brand-orange transition-colors">
+                  <h3 className="text-xl font-bold text-slate-800 dark:text-slate-200 mb-3 group-hover:text-brand-orange dark:group-hover:text-brand-orange-light transition-colors">
                     {info.title}
                   </h3>
-                  <p className="text-slate-700 text-base mb-2 font-semibold">
+                  <p className="text-slate-700 dark:text-slate-300 text-base mb-2 font-semibold">
                     {info.content}
                   </p>
-                  <p className="text-slate-500 text-sm">
+                  <p className="text-slate-500 dark:text-slate-400 text-sm">
                     {info.description}
                   </p>
                 </a>
@@ -118,81 +118,81 @@ export default function Contact() {
           {/* Additional Information Section */}
           <div className="mb-16">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-800 dark:text-slate-200 mb-4">
                 Informations{' '}
                 <span className="bg-gradient-to-r from-brand-orange to-brand-orange-dark bg-clip-text text-transparent">
                   Pratiques
                 </span>
               </h2>
-              <p className="text-slate-600 max-w-2xl mx-auto text-lg">
+              <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg">
                 Tout ce que vous devez savoir pour nous contacter efficacement.
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
               {/* Office Hours */}
-              <div className="bg-gradient-to-br from-white to-brand-cream/30 rounded-3xl p-8 border-2 border-brand-cream hover:border-brand-orange shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="bg-gradient-to-br from-white dark:from-slate-800 to-brand-cream/30 rounded-3xl p-8 border-2 border-brand-cream hover:border-brand-orange shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-14 h-14 bg-gradient-to-br from-brand-orange to-brand-orange-dark rounded-2xl flex items-center justify-center shadow-lg">
                     <Clock className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-slate-800">Heures d&apos;ouverture</h3>
+                  <h3 className="text-2xl font-bold text-slate-800 dark:text-slate-200">Heures d&apos;ouverture</h3>
                 </div>
                 <div className="space-y-4">
                   {officeHours.map((schedule, index) => (
-                    <div key={index} className="flex justify-between items-center py-3 px-4 bg-white/60 rounded-xl border border-brand-cream">
-                      <span className="text-slate-700 font-semibold text-base">{schedule.day}</span>
-                      <span className="text-slate-600 font-medium">{schedule.time}</span>
+                    <div key={index} className="flex justify-between items-center py-3 px-4 bg-white/60 dark:bg-slate-800/60 rounded-xl border border-brand-cream">
+                      <span className="text-slate-700 dark:text-slate-300 font-semibold text-base">{schedule.day}</span>
+                      <span className="text-slate-600 dark:text-slate-400 font-medium">{schedule.time}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
               {/* Response Time */}
-              <div className="bg-gradient-to-br from-white to-blue-50/30 rounded-3xl p-8 border-2 border-blue-100 hover:border-blue-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="bg-gradient-to-br from-white dark:from-slate-800 to-blue-50/30 rounded-3xl p-8 border-2 border-blue-100 hover:border-blue-200 shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center shadow-lg">
                     <Mail className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-slate-800">Temps de réponse</h3>
+                  <h3 className="text-2xl font-bold text-slate-800 dark:text-slate-200">Temps de réponse</h3>
                 </div>
-                <p className="text-slate-600 leading-relaxed text-base">
-                  Nous nous efforçons de répondre à tous les messages dans un délai de <span className="font-bold text-slate-800 text-lg">24 à 48 heures</span>. 
+                <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-base">
+                  Nous nous efforçons de répondre à tous les messages dans un délai de <span className="font-bold text-slate-800 dark:text-slate-200 text-lg">24 à 48 heures</span>. 
                 </p>
-                <p className="text-slate-600 leading-relaxed text-base mt-3">
+                <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-base mt-3">
                   Pour les questions urgentes, veuillez nous appeler directement.
                 </p>
               </div>
 
               {/* Location Info */}
-              <div className="bg-gradient-to-br from-white to-green-50/30 rounded-3xl p-8 border-2 border-green-100 hover:border-green-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="bg-gradient-to-br from-white dark:from-slate-800 to-green-50/30 rounded-3xl p-8 border-2 border-green-100 hover:border-green-200 shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center shadow-lg">
                     <MapPin className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-slate-800">Nos bureaux</h3>
+                  <h3 className="text-2xl font-bold text-slate-800 dark:text-slate-200">Nos bureaux</h3>
                 </div>
                 <div className="space-y-4">
-                  <div className="bg-white/60 rounded-xl p-4 border border-green-100">
-                    <p className="font-bold text-slate-800 mb-2 text-base">Bureau principal :</p>
-                    <p className="text-slate-600">Kinshasa, République Démocratique du Congo</p>
+                  <div className="bg-white/60 dark:bg-slate-800/60 rounded-xl p-4 border border-green-100">
+                    <p className="font-bold text-slate-800 dark:text-slate-200 mb-2 text-base">Bureau principal :</p>
+                    <p className="text-slate-600 dark:text-slate-400">Kinshasa, République Démocratique du Congo</p>
                   </div>
-                  <div className="bg-white/60 rounded-xl p-4 border border-green-100">
-                    <p className="font-bold text-slate-800 mb-2 text-base">Programme actif :</p>
-                    <p className="text-slate-600">Goma, République Démocratique du Congo</p>
+                  <div className="bg-white/60 dark:bg-slate-800/60 rounded-xl p-4 border border-green-100">
+                    <p className="font-bold text-slate-800 dark:text-slate-200 mb-2 text-base">Programme actif :</p>
+                    <p className="text-slate-600 dark:text-slate-400">Goma, République Démocratique du Congo</p>
                   </div>
                 </div>
               </div>
 
               {/* Social Media */}
-              <div className="bg-gradient-to-br from-white to-purple-50/30 rounded-3xl p-8 border-2 border-purple-100 hover:border-purple-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="bg-gradient-to-br from-white dark:from-slate-800 to-purple-50/30 rounded-3xl p-8 border-2 border-purple-100 hover:border-purple-200 shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center shadow-lg">
                     <MessageCircle className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-slate-800">Suivez-nous</h3>
+                  <h3 className="text-2xl font-bold text-slate-800 dark:text-slate-200">Suivez-nous</h3>
                 </div>
-                <p className="text-slate-600 leading-relaxed mb-6 text-base">
+                <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-6 text-base">
                   Restez connecté avec nous sur nos réseaux sociaux pour suivre nos actualités et nos projets.
                 </p>
                 <a
@@ -214,13 +214,13 @@ export default function Contact() {
       <section className="bg-gradient-to-b from-slate-50 to-white py-20 md:py-28">
         <div className="container mx-auto px-4 lg:px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 dark:text-slate-200 mb-4">
               Où nous{' '}
               <span className="bg-gradient-to-r from-brand-orange to-brand-orange-dark bg-clip-text text-transparent">
                 trouver
               </span>
             </h2>
-            <p className="text-slate-600 max-w-2xl mx-auto text-lg">
+            <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg">
               Notre bureau principal est situé à Kinshasa, et nous opérons également à Goma pour nos programmes de bourses.
             </p>
           </div>
@@ -231,10 +231,10 @@ export default function Contact() {
                 <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-brand-orange to-brand-orange-dark rounded-2xl mb-6 shadow-lg">
                   <MapPin className="w-10 h-10 text-white" />
                 </div>
-                <p className="text-slate-700 text-xl font-semibold mb-2">
+                <p className="text-slate-700 dark:text-slate-300 text-xl font-semibold mb-2">
                   Carte interactive à venir
                 </p>
-                <p className="text-slate-600 text-base">
+                <p className="text-slate-600 dark:text-slate-400 text-base">
                   Kinshasa, République Démocratique du Congo
                 </p>
               </div>

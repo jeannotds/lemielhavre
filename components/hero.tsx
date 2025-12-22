@@ -128,7 +128,7 @@ export function Hero() {
         </div>
       </section>
 
-      <section className="bg-gradient-to-b from-white to-slate-50">
+      <section className="bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-800">
         <div className="container mx-auto px-4 lg:px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 -translate-y-12 md:-translate-y-16">
             {features.map((feature, index) => {
@@ -136,12 +136,12 @@ export function Hero() {
               return (
                 <div
                   key={index}
-                  className="group bg-white rounded-xl  shadow-lg hover:shadow-xl p-4 md:py-10 md:w-[400px] text-center transition-all duration-300 hover:-translate-y-1 border border-slate-100"
+                  className="group bg-white dark:bg-slate-800 rounded-xl shadow-lg hover:shadow-xl p-4 md:py-10 md:w-[400px] text-center transition-all duration-300 hover:-translate-y-1 border border-slate-100 dark:border-slate-700"
                 >
                   {/* <div className={`inline-flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-xl bg-gradient-to-br ${feature.gradient} mb-4 shadow-md group-hover:scale-110 transition-transform`}>
                     <Icon className="w-6 h-6 md:w-7 md:h-7 text-white" />
                   </div> */}
-                  <h3 className="text-lg md:text-xl font-bold text-slate-800 mb-2 group-hover:text-brand-orange transition-colors">
+                  <h3 className="text-lg md:text-xl font-bold text-slate-800 dark:text-slate-200 mb-2 group-hover:text-brand-orange dark:group-hover:text-brand-orange-light transition-colors">
                     {feature.title}
                   </h3>
                   {/* <p className="text-slate-600 text-xs md:text-sm leading-relaxed">
