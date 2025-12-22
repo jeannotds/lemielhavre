@@ -55,8 +55,8 @@ export function Header() {
               <Image
                 src="/logo-white.svg"
                 alt="Le Miel Havre Logo"
-                width={100}
-                height={100}
+                width={80}
+                height={80}
                 className="object-contain"
                 priority
               />
