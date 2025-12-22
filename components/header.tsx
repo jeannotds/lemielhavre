@@ -1,8 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Heart, Search, Moon, Sun, Menu, X } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 
@@ -11,6 +12,34 @@ export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
+  // Charger la préférence depuis localStorage au démarrage
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const shouldBeDark = savedTheme === 'dark' || (!savedTheme && prefersDark);
+    
+    setIsDark(shouldBeDark);
+    if (shouldBeDark) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, []);
+
+  // Toggle dark mode et sauvegarder la préférence
+  const toggleDarkMode = () => {
+    const newIsDark = !isDark;
+    setIsDark(newIsDark);
+    
+    if (newIsDark) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
+  };
+
   const navLinks = [
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About' },
@@ -18,18 +47,21 @@ export function Header() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-md z-50 border-b border-slate-200/50 shadow-sm">
-      <div className="container mx-auto px-4 lg:px-6">
+    <header className="fixed top-0 left-0 right-0 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md z-50 border-b border-slate-200/50 dark:border-slate-700/50 shadow-sm">
+      <div className="container mx-auto px-6 lg:px-10">
         <div className="flex items-center justify-between h-20">
-          <div className="flex items-center gap-3">
-            <div className="relative">
-              <Heart className="w-9 h-9 text-orange-500 fill-orange-500 animate-pulse" />
-              <div className="absolute inset-0 bg-orange-500/20 rounded-full blur-xl" />
+          <Link href="/" className="flex items-center gap-3 hover:opacity-90 transition-opacity">
+            <div className="relative w-50 h-50">
+              <Image
+                src="/logo-white.svg"
+                alt="Le Miel Havre Logo"
+                width={100}
+                height={100}
+                className="object-contain"
+                priority
+              />
             </div>
-            <span className="text-2xl font-bold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
-              Le Miel Havre
-            </span>
-          </div>
+          </Link>
 
           <nav className="hidden lg:flex items-center gap-8">
             {navLinks.map((link, index) => {
@@ -38,13 +70,13 @@ export function Header() {
                 <Link
                   key={index}
                   href={link.href}
-                  className={`relative text-sm font-medium transition-colors hover:text-orange-500 ${
-                    isActive ? 'text-orange-500' : 'text-slate-700'
+                  className={`relative text-sm font-medium transition-colors hover:text-brand-orange dark:hover:text-brand-orange-light ${
+                    isActive ? 'text-brand-orange dark:text-brand-orange-light' : 'text-brand-green dark:text-slate-300'
                   }`}
                 >
                   {link.label}
                   {isActive && (
-                    <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-orange-500 rounded-full" />
+                    <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-brand-orange rounded-full" />
                   )}
                 </Link>
               );
@@ -53,25 +85,25 @@ export function Header() {
 
           <div className="flex items-center gap-3">
             <button
-              className="hidden md:flex w-10 h-10 items-center justify-center text-slate-600 hover:text-orange-500 hover:bg-orange-50 rounded-lg transition-all"
+              className="hidden md:flex w-10 h-10 items-center justify-center text-brand-green dark:text-slate-300 hover:text-brand-orange dark:hover:text-brand-orange-light hover:bg-brand-cream dark:hover:bg-slate-800 rounded-lg transition-all"
               aria-label="Search"
             >
               <Search className="w-5 h-5" />
             </button>
-            <Button className="hidden md:flex bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 py-2.5 rounded-lg shadow-lg shadow-orange-500/30 hover:shadow-xl hover:shadow-orange-500/40 transition-all">
+            <Button className="hidden md:flex bg-gradient-to-r from-brand-green to-brand-green-dark hover:from-brand-green-dark hover:to-brand-green text-white px-6 py-2.5 rounded-lg shadow-lg shadow-brand-green/30 hover:shadow-xl hover:shadow-brand-green/40 transition-all">
               <Heart className="w-4 h-4 mr-2 fill-white" />
               Donate
             </Button>
             <button
-              onClick={() => setIsDark(!isDark)}
-              className="hidden md:flex w-10 h-10 rounded-lg border border-slate-200 items-center justify-center hover:border-orange-500 hover:bg-orange-50 transition-all"
+              onClick={toggleDarkMode}
+              className="hidden md:flex w-10 h-10 rounded-lg border border-slate-200 dark:border-slate-700 items-center justify-center hover:border-brand-orange hover:bg-brand-cream dark:hover:bg-slate-800 transition-all text-brand-green dark:text-slate-300"
               aria-label="Toggle theme"
             >
               {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
             </button>
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden w-10 h-10 flex items-center justify-center text-slate-700 hover:text-orange-500 hover:bg-orange-50 rounded-lg transition-all"
+              className="lg:hidden w-10 h-10 flex items-center justify-center text-brand-green dark:text-slate-300 hover:text-brand-orange dark:hover:text-brand-orange-light hover:bg-brand-cream dark:hover:bg-slate-800 rounded-lg transition-all"
               aria-label="Toggle menu"
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -81,7 +113,7 @@ export function Header() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden border-t border-slate-200 py-4 animate-in slide-in-from-top-2 duration-200">
+          <div className="lg:hidden border-t border-slate-200 dark:border-slate-700 py-4 animate-in slide-in-from-top-2 duration-200 bg-white dark:bg-slate-900">
             <nav className="flex flex-col gap-2">
               {navLinks.map((link, index) => {
                 const isActive = pathname === link.href;
@@ -92,8 +124,8 @@ export function Header() {
                     onClick={() => setIsMobileMenuOpen(false)}
                     className={`px-4 py-3 rounded-lg text-sm font-medium transition-all ${
                       isActive
-                        ? 'bg-orange-50 text-orange-500'
-                        : 'text-slate-700 hover:bg-slate-50 hover:text-orange-500'
+                        ? 'bg-brand-cream dark:bg-slate-800 text-brand-orange dark:text-brand-orange-light'
+                        : 'text-brand-green dark:text-slate-300 hover:bg-brand-cream dark:hover:bg-slate-800 hover:text-brand-orange dark:hover:text-brand-orange-light'
                     }`}
                   >
                     {link.label}
@@ -101,13 +133,13 @@ export function Header() {
                 );
               })}
               <div className="flex items-center gap-3 px-4 pt-2">
-                <Button className="flex-1 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white py-2.5 rounded-lg">
+                <Button className="flex-1 bg-gradient-to-r from-brand-green to-brand-green-dark hover:from-brand-green-dark hover:to-brand-green text-white py-2.5 rounded-lg">
                   <Heart className="w-4 h-4 mr-2 fill-white" />
                   Donate
                 </Button>
                 <button
-                  onClick={() => setIsDark(!isDark)}
-                  className="w-10 h-10 rounded-lg border border-slate-200 flex items-center justify-center hover:border-orange-500 hover:bg-orange-50 transition-all"
+                  onClick={toggleDarkMode}
+                  className="w-10 h-10 rounded-lg border border-slate-200 dark:border-slate-700 flex items-center justify-center hover:border-brand-orange hover:bg-brand-cream dark:hover:bg-slate-800 transition-all text-brand-green dark:text-slate-300"
                 >
                   {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
                 </button>

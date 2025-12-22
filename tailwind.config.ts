@@ -60,6 +60,24 @@ const config: Config = {
           '4': 'hsl(var(--chart-4))',
           '5': 'hsl(var(--chart-5))',
         },
+        // Couleurs de la charte graphique Le Miel Havre
+        brand: {
+          green: {
+            DEFAULT: '#1a5f3f',
+            dark: '#144a32',
+            light: '#2d8659',
+          },
+          orange: {
+            DEFAULT: '#ffa500',
+            dark: '#d2691e',
+            light: '#ffb84d',
+          },
+          cream: {
+            DEFAULT: '#f5f5dc',
+            light: '#fff8e1',
+            dark: '#e6e6d0',
+          },
+        },
       },
       keyframes: {
         'accordion-down': {
