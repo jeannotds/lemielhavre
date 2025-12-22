@@ -79,7 +79,7 @@ export function Hero() {
 
   return (
     <>
-     <section style={{borderRadius: '0 0 10% 10%'}} className="relative mt-20 pt-32 md:pt-48 pb-24 md:pb-40 flex items-center justify-start min-h-[500px] md:max-h-[730px] overflow-hidden">
+     <section style={{borderRadius: '0 0 10% 10%'}} className="relative mt-20 pt-32 md:pt-48 pb-24 md:pb-40 flex items-center justify-start min-h-[500px] md:min-h-[850px] overflow-hidden">
         {/* Slides Container */}
         <div className="absolute inset-0" style={{ borderRadius: '0 0 10% 10%' }}>
           {slides.map((slide, index) => (
@@ -122,12 +122,6 @@ export function Hero() {
               <Button className="bg-gradient-to-r from-brand-orange to-brand-orange-dark hover:from-brand-orange-dark hover:to-brand-green text-white px-8 py-6 text-base font-semibold rounded-lg shadow-xl shadow-brand-orange/30 hover:shadow-2xl hover:shadow-brand-orange/40 transition-all transform hover:scale-105">
                 Read More
               </Button>
-              {/* <Button 
-                variant="outline" 
-                className="border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 hover:border-white/50 px-8 py-6 text-base font-semibold rounded-lg transition-all"
-              >
-                Learn More
-              </Button> */}
             </div>
           </div>
         </div>
@@ -150,32 +144,6 @@ export function Hero() {
               aria-label={`Go to slide ${index + 1}`}
             />
           ))}
-        </div>
-      </section>
-
-      <section className="bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-800">
-        <div className="container mx-auto px-6 lg:px-10">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 -translate-y-12 md:-translate-y-16">
-            {features.map((feature, index) => {
-              const Icon = feature.icon;
-              return (
-                <div
-                  key={index}
-                  className="group bg-white dark:bg-slate-800 rounded-xl shadow-lg hover:shadow-xl p-4 md:py-10 md:w-[400px] text-center transition-all duration-300 hover:-translate-y-1 border border-slate-100 dark:border-slate-700"
-                >
-                  {/* <div className={`inline-flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-xl bg-gradient-to-br ${feature.gradient} mb-4 shadow-md group-hover:scale-110 transition-transform`}>
-                    <Icon className="w-6 h-6 md:w-7 md:h-7 text-white" />
-                  </div> */}
-                  <h3 className="text-lg md:text-xl font-bold text-slate-800 dark:text-slate-200 mb-2 group-hover:text-brand-orange dark:group-hover:text-brand-orange-light transition-colors">
-                    {feature.title}
-                  </h3>
-                  {/* <p className="text-slate-600 text-xs md:text-sm leading-relaxed">
-                    {feature.description}
-                  </p> */}
-                </div>
-              );
-            })}
-          </div>
         </div>
       </section>
     </>
