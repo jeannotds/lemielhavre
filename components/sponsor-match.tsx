@@ -202,7 +202,7 @@ export function SponsorMatch() {
               </div>
 
               {/* Step 2 */}
-              <div className="group relative bg-gradient-to-br from-white to-blue-50 rounded-2xl p-6 md:p-8 border border-blue-100 hover:border-blue-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <div className="group relative bg-gradient-to-br from-white dark:from-slate-800 to-blue-50 dark:to-slate-700 rounded-2xl p-6 md:p-8 border border-blue-100 dark:border-slate-700 hover:border-blue-300 dark:hover:border-blue-400 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                 <div className="absolute top-4 right-4 w-16 h-16 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-full blur-xl group-hover:blur-2xl transition-all" />
                 <div className="relative">
                   <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl mb-4 shadow-lg group-hover:scale-110 transition-transform">
@@ -218,7 +218,7 @@ export function SponsorMatch() {
               </div>
 
               {/* Step 3 */}
-              <div className="group relative bg-gradient-to-br from-white to-green-50 rounded-2xl p-6 md:p-8 border border-green-100 hover:border-green-300 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <div className="group relative bg-gradient-to-br from-white dark:from-slate-800 to-green-50 dark:to-slate-700 rounded-2xl p-6 md:p-8 border border-green-100 dark:border-slate-700 hover:border-green-300 dark:hover:border-green-400 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                 <div className="absolute top-4 right-4 w-16 h-16 bg-gradient-to-br from-green-500/10 to-emerald-500/10 rounded-full blur-xl group-hover:blur-2xl transition-all" />
                 <div className="relative">
                   <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl mb-4 shadow-lg group-hover:scale-110 transition-transform">

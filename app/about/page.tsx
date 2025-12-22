@@ -138,7 +138,7 @@ export default function About() {
               return (
                 <div
                   key={index}
-                  className="group bg-white rounded-2xl p-6 md:p-8 border border-slate-100 hover:border-brand-orange hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+                  className="group bg-white dark:bg-slate-800 rounded-2xl p-6 md:p-8 border border-slate-100 dark:border-slate-700 hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
                 >
                   <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${value.color} mb-6 shadow-lg group-hover:scale-110 transition-transform`}>
                     <Icon className="w-8 h-8 text-white" />
