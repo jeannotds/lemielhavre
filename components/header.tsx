@@ -51,12 +51,12 @@ export function Header() {
       <div className="container mx-auto px-4 lg:px-6">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center gap-3 hover:opacity-90 transition-opacity">
-            <div className="relative w-20 h-20">
+            <div className="relative w-50 h-50">
               <Image
                 src="/logo-white.svg"
                 alt="Le Miel Havre Logo"
-                width={80}
-                height={80}
+                width={100}
+                height={100}
                 className="object-contain"
                 priority
               />
