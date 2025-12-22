@@ -79,7 +79,7 @@ export function Hero() {
 
   return (
     <>
-     <section style={{borderRadius: '0 0 10% 10%'}} className="relative mt-20 pt-32 md:pt-48 pb-24 md:pb-40 flex items-center justify-start min-h-[500px] md:min-h-[850px] overflow-hidden">
+     <section style={{borderRadius: '0 0 10% 10%'}} className="relative mt-20 pt-32 md:pt-48 pb-24 md:pb-40 flex items-center justify-start min-h-[500px] md:min-h-[800px] overflow-hidden">
         {/* Slides Container */}
         <div className="absolute inset-0" style={{ borderRadius: '0 0 10% 10%' }}>
           {slides.map((slide, index) => (
