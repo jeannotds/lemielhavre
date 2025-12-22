@@ -35,7 +35,7 @@ export default function Contact() {
       content: 'Kinshasa, DR Congo',
       link: '#',
       description: 'Bureau principal',
-      color: 'from-orange-500 to-red-500',
+      color: 'from-brand-orange to-brand-orange-dark',
     },
   ];
 
@@ -55,12 +55,12 @@ export default function Contact() {
         <div className="relative z-10 container mx-auto px-4 lg:px-6">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-6">
-              <Heart className="w-4 h-4 text-orange-400 fill-orange-400" />
+              <Heart className="w-4 h-4 text-brand-orange-light fill-brand-orange-light" />
               <p className="text-white text-sm font-semibold tracking-wider">CONTACTEZ-NOUS</p>
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white">
               Contactez{' '}
-              <span className="bg-gradient-to-r from-orange-400 to-orange-200 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-brand-orange-light to-brand-orange bg-clip-text text-transparent">
                 Le Miel Havre
               </span>
             </h1>
@@ -77,7 +77,7 @@ export default function Contact() {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
               Nos{' '}
-              <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-brand-orange to-brand-orange-dark bg-clip-text text-transparent">
                 Moyens de Contact
               </span>
             </h2>
@@ -95,13 +95,13 @@ export default function Contact() {
                   href={info.link}
                   target={info.link.startsWith('http') ? '_blank' : undefined}
                   rel={info.link.startsWith('http') ? 'noopener noreferrer' : undefined}
-                  className="group bg-white rounded-2xl p-8 border-2 border-slate-100 hover:border-orange-300 hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 relative overflow-hidden"
+                  className="group bg-white rounded-2xl p-8 border-2 border-slate-100 hover:border-brand-orange-dark hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 relative overflow-hidden"
                 >
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-orange-100/50 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-brand-cream/50 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${info.color} mb-5 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}>
                     <Icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-800 mb-3 group-hover:text-orange-500 transition-colors">
+                  <h3 className="text-xl font-bold text-slate-800 mb-3 group-hover:text-brand-orange transition-colors">
                     {info.title}
                   </h3>
                   <p className="text-slate-700 text-base mb-2 font-semibold">
@@ -120,7 +120,7 @@ export default function Contact() {
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
                 Informations{' '}
-                <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-brand-orange to-brand-orange-dark bg-clip-text text-transparent">
                   Pratiques
                 </span>
               </h2>
@@ -131,16 +131,16 @@ export default function Contact() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
               {/* Office Hours */}
-              <div className="bg-gradient-to-br from-white to-orange-50/30 rounded-3xl p-8 border-2 border-orange-100 hover:border-orange-200 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="bg-gradient-to-br from-white to-brand-cream/30 rounded-3xl p-8 border-2 border-brand-cream hover:border-brand-orange shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center shadow-lg">
+                  <div className="w-14 h-14 bg-gradient-to-br from-brand-orange to-brand-orange-dark rounded-2xl flex items-center justify-center shadow-lg">
                     <Clock className="w-7 h-7 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-slate-800">Heures d&apos;ouverture</h3>
                 </div>
                 <div className="space-y-4">
                   {officeHours.map((schedule, index) => (
-                    <div key={index} className="flex justify-between items-center py-3 px-4 bg-white/60 rounded-xl border border-orange-100">
+                    <div key={index} className="flex justify-between items-center py-3 px-4 bg-white/60 rounded-xl border border-brand-cream">
                       <span className="text-slate-700 font-semibold text-base">{schedule.day}</span>
                       <span className="text-slate-600 font-medium">{schedule.time}</span>
                     </div>
@@ -216,7 +216,7 @@ export default function Contact() {
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
               Où nous{' '}
-              <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-brand-orange to-brand-orange-dark bg-clip-text text-transparent">
                 trouver
               </span>
             </h2>
@@ -228,7 +228,7 @@ export default function Contact() {
             <div className="bg-gradient-to-br from-slate-100 to-slate-200 rounded-3xl h-[500px] flex items-center justify-center border-2 border-slate-200 shadow-xl relative overflow-hidden">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(251,146,60,0.1),transparent_70%)]" />
               <div className="text-center relative z-10">
-                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl mb-6 shadow-lg">
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-brand-orange to-brand-orange-dark rounded-2xl mb-6 shadow-lg">
                   <MapPin className="w-10 h-10 text-white" />
                 </div>
                 <p className="text-slate-700 text-xl font-semibold mb-2">

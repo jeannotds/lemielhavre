@@ -26,7 +26,7 @@ export function Newsletter() {
             <div className="space-y-6">
               <div className="flex items-start gap-6">
                 <div className="relative flex-shrink-0">
-                  <div className="w-20 h-20 md:w-24 md:h-24 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center shadow-xl shadow-orange-500/30">
+                  <div className="w-20 h-20 md:w-24 md:h-24 bg-gradient-to-br from-brand-orange to-brand-orange-dark rounded-2xl flex items-center justify-center shadow-xl shadow-brand-orange/30">
                     <Mail className="w-10 h-10 md:w-12 md:h-12 text-white" />
                   </div>
                   <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center border-2 border-white">
@@ -51,14 +51,14 @@ export function Newsletter() {
                   placeholder="Enter Your Email Address"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="h-14 md:h-16 px-6 text-base md:text-lg border-2 border-slate-200 rounded-xl focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all"
+                  className="h-14 md:h-16 px-6 text-base md:text-lg border-2 border-slate-200 rounded-xl focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/20 transition-all"
                   required
                 />
                 <Mail className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
               </div>
               <Button
                 type="submit"
-                className="w-full h-14 md:h-16 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white text-base md:text-lg font-semibold rounded-xl shadow-lg shadow-orange-500/30 hover:shadow-xl hover:shadow-orange-500/40 transition-all transform hover:scale-[1.02]"
+                className="w-full h-14 md:h-16 bg-gradient-to-r from-brand-orange to-brand-orange-dark hover:from-brand-orange-dark hover:to-brand-green text-white text-base md:text-lg font-semibold rounded-xl shadow-lg shadow-brand-orange/30 hover:shadow-xl hover:shadow-brand-orange/40 transition-all transform hover:scale-[1.02]"
               >
                 {isSubmitted ? (
                   <>

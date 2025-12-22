@@ -66,7 +66,7 @@ export function Hero() {
       title: 'Request a Quote', 
       // icon: MessageCircle,
       description: '',
-      gradient: 'from-orange-500 to-red-500'
+      gradient: 'from-brand-orange to-brand-orange-dark'
     },
   ];
 
@@ -89,23 +89,23 @@ export function Hero() {
         <div className="relative z-10 container mx-auto px-4 lg:px-6">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-6 animate-in fade-in slide-in-from-top-4 duration-700">
-              <Heart className="w-4 h-4 text-orange-400 fill-orange-400" />
+              <Heart className="w-4 h-4 text-brand-orange-light fill-brand-orange-light" />
               <p className="text-white text-sm font-semibold tracking-wider">CHARITY LIFE</p>
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold mb-6 leading-tight text-white animate-in fade-in slide-in-from-left duration-1000">
-              <span className="bg-gradient-to-r from-white via-orange-100 to-orange-200 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-white via-brand-cream to-brand-orange bg-clip-text text-transparent">
                 Charity, Faith and Hope.
               </span>
               <br />
               <span className="text-white">Help the Homeless.</span>
               <br />
-              <span className="text-orange-400">Charity life.</span>
+              <span className="text-brand-orange-light">Charity life.</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-200 mb-8 max-w-2xl leading-relaxed animate-in fade-in slide-in-from-left duration-1000 delay-200">
               Rejoignez-nous pour faire une différence significative dans la vie des enfants de la RDC. Ensemble, nous pouvons construire un avenir meilleur pour les enfants du Congo.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in slide-in-from-left duration-1000 delay-300">
-              <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-8 py-6 text-base font-semibold rounded-lg shadow-xl shadow-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/40 transition-all transform hover:scale-105">
+              <Button className="bg-gradient-to-r from-brand-orange to-brand-orange-dark hover:from-brand-orange-dark hover:to-brand-green text-white px-8 py-6 text-base font-semibold rounded-lg shadow-xl shadow-brand-orange/30 hover:shadow-2xl hover:shadow-brand-orange/40 transition-all transform hover:scale-105">
                 Read More
               </Button>
               {/* <Button 
@@ -119,10 +119,10 @@ export function Hero() {
         </div>
 
         <div className="absolute bottom-8 right-4 md:right-8 z-20 flex gap-3">
-          <button className="w-12 h-12 md:w-14 md:h-14 rounded-full border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-orange-500 hover:border-orange-500 transition-all flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110">
+          <button className="w-12 h-12 md:w-14 md:h-14 rounded-full border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-brand-orange hover:border-brand-orange transition-all flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110">
             <ChevronLeft className="w-6 h-6" />
           </button>
-          <button className="w-12 h-12 md:w-14 md:h-14 rounded-full border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-orange-500 hover:border-orange-500 transition-all flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110">
+          <button className="w-12 h-12 md:w-14 md:h-14 rounded-full border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-brand-orange hover:border-brand-orange transition-all flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110">
             <ChevronRight className="w-6 h-6" />
           </button>
         </div>
@@ -141,7 +141,7 @@ export function Hero() {
                   {/* <div className={`inline-flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-xl bg-gradient-to-br ${feature.gradient} mb-4 shadow-md group-hover:scale-110 transition-transform`}>
                     <Icon className="w-6 h-6 md:w-7 md:h-7 text-white" />
                   </div> */}
-                  <h3 className="text-lg md:text-xl font-bold text-slate-800 mb-2 group-hover:text-orange-500 transition-colors">
+                  <h3 className="text-lg md:text-xl font-bold text-slate-800 mb-2 group-hover:text-brand-orange transition-colors">
                     {feature.title}
                   </h3>
                   {/* <p className="text-slate-600 text-xs md:text-sm leading-relaxed">

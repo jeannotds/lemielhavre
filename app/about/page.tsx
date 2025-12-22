@@ -11,7 +11,7 @@ export default function About() {
       icon: Heart,
       title: 'Compassion',
       description: 'We approach every child with empathy, understanding, and genuine care for their well-being.',
-      color: 'from-orange-500 to-red-500',
+      color: 'from-brand-orange to-brand-orange-dark',
     },
     {
       icon: Target,
@@ -61,12 +61,12 @@ export default function About() {
         <div className="relative z-10 container mx-auto px-4 lg:px-6">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-6">
-              <Heart className="w-4 h-4 text-orange-400 fill-orange-400" />
+              <Heart className="w-4 h-4 text-brand-orange-light fill-brand-orange-light" />
               <p className="text-white text-sm font-semibold tracking-wider">ABOUT US</p>
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white">
               About{' '}
-              <span className="bg-gradient-to-r from-orange-400 to-orange-200 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-brand-orange-light to-brand-orange bg-clip-text text-transparent">
                 Le Miel Havre
               </span>
             </h1>
@@ -82,13 +82,13 @@ export default function About() {
         <div className="container mx-auto px-4 lg:px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-50 rounded-full border border-orange-100 mb-4">
-                <span className="w-2 h-2 bg-orange-500 rounded-full animate-pulse" />
-                <span className="text-sm font-semibold text-orange-600">OUR MISSION</span>
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream rounded-full border border-brand-cream mb-4">
+                <span className="w-2 h-2 bg-brand-orange rounded-full animate-pulse" />
+                <span className="text-sm font-semibold text-brand-orange-dark">OUR MISSION</span>
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-slate-800 leading-tight">
                 Our Mission &{' '}
-                <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-brand-orange to-brand-orange-dark bg-clip-text text-transparent">
                   Vision
                 </span>
               </h2>
@@ -110,7 +110,7 @@ export default function About() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl shadow-xl flex items-center justify-center">
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-brand-orange to-brand-orange-dark rounded-2xl shadow-xl flex items-center justify-center">
                 <HandHeart className="w-16 h-16 text-white" />
               </div>
             </div>
@@ -124,7 +124,7 @@ export default function About() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-4">
               Our Core{' '}
-              <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-brand-orange to-brand-orange-dark bg-clip-text text-transparent">
                 Values
               </span>
             </h2>
@@ -138,12 +138,12 @@ export default function About() {
               return (
                 <div
                   key={index}
-                  className="group bg-white rounded-2xl p-6 md:p-8 border border-slate-100 hover:border-orange-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+                  className="group bg-white rounded-2xl p-6 md:p-8 border border-slate-100 hover:border-brand-orange hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
                 >
                   <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${value.color} mb-6 shadow-lg group-hover:scale-110 transition-transform`}>
                     <Icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-800 mb-3 group-hover:text-orange-500 transition-colors">
+                  <h3 className="text-xl font-bold text-slate-800 mb-3 group-hover:text-brand-orange transition-colors">
                     {value.title}
                   </h3>
                   <p className="text-slate-600 leading-relaxed">
@@ -162,7 +162,7 @@ export default function About() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-800 mb-4">
               Our{' '}
-              <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-brand-orange to-brand-orange-dark bg-clip-text text-transparent">
                 Journey
               </span>
             </h2>
@@ -175,7 +175,7 @@ export default function About() {
               {milestones.map((milestone, index) => (
                 <div key={index} className="flex gap-6">
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center shadow-lg">
+                    <div className="w-16 h-16 bg-gradient-to-br from-brand-orange to-brand-orange-dark rounded-xl flex items-center justify-center shadow-lg">
                       <span className="text-white font-bold text-lg">{milestone.year}</span>
                     </div>
                   </div>
@@ -198,15 +198,15 @@ export default function About() {
       <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20 md:py-28">
         <div className="container mx-auto px-4 lg:px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl mb-6 shadow-xl">
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-brand-orange to-brand-orange-dark rounded-2xl mb-6 shadow-xl">
               <Globe className="w-10 h-10 text-white" />
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Where We Operate
             </h2>
             <p className="text-lg md:text-xl text-slate-200 mb-8 leading-relaxed">
-              Our Head Office is located in <span className="text-orange-400 font-semibold">Kinshasa, DR Congo</span>. 
-              We work with in-country partners who help us administrate our scholarship program in <span className="text-orange-400 font-semibold">Goma</span>.
+              Our Head Office is located in <span className="text-brand-orange-light font-semibold">Kinshasa, DR Congo</span>. 
+              We work with in-country partners who help us administrate our scholarship program in <span className="text-brand-orange-light font-semibold">Goma</span>.
             </p>
             <p className="text-lg md:text-xl text-slate-200 leading-relaxed">
               Our future plans include expanding to other cities across the Democratic Republic of Congo to reach more children in need.
@@ -220,4 +220,7 @@ export default function About() {
     </main>
   );
 }
+
+
+
 

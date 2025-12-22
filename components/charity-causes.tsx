@@ -9,7 +9,7 @@ export function CharityCauses() {
       title: 'Nourriture pour les Affamés',
       image: 'https://images.unsplash.com/photo-1516627145497-ae6968895b74?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       icon: Utensils,
-      color: 'from-orange-500 to-red-500',
+      color: 'from-brand-orange to-brand-orange-dark',
     },
     {
       title: 'Éducation pour Tous',
@@ -36,19 +36,19 @@ export function CharityCauses() {
       <div className="container mx-auto px-4 lg:px-6">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="space-y-6">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-50 rounded-full border border-orange-100 mb-4">
-              <span className="w-2 h-2 bg-orange-500 rounded-full animate-pulse" />
-              <span className="text-sm font-semibold text-orange-600">OUR CAUSES</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream rounded-full border border-brand-cream mb-4">
+              <span className="w-2 h-2 bg-brand-orange rounded-full animate-pulse" />
+              <span className="text-sm font-semibold text-brand-orange-dark">OUR CAUSES</span>
             </div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 leading-tight">
               Our Charity{' '}
-              <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-brand-orange to-brand-orange-dark bg-clip-text text-transparent">
                 Causes
               </span>
             </h2>
             <p className="text-lg md:text-xl text-slate-600 leading-relaxed">
               <span className="text-slate-800 font-medium">If you want to work with Le Miel Havre charity?</span>{' '}
-              <span className="text-orange-500 font-semibold">Send your Details.</span>
+              <span className="text-brand-orange font-semibold">Send your Details.</span>
             </p>
             <p className="text-slate-600 leading-relaxed">
               Nous nous engageons à avoir un impact durable dans les communautés de la République Démocratique du Congo. 
@@ -57,7 +57,7 @@ export function CharityCauses() {
             </p>
             <Button
               variant="outline"
-              className="group border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white px-8 py-6 text-lg rounded-lg transition-all shadow-lg hover:shadow-xl hover:scale-105"
+              className="group border-2 border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-white px-8 py-6 text-lg rounded-lg transition-all shadow-lg hover:shadow-xl hover:scale-105"
             >
               Contactez-Nous
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -87,10 +87,10 @@ export function CharityCauses() {
                   </div>
                   
                   <div className="absolute inset-x-0 bottom-0 p-5 md:p-6">
-                    <h3 className="text-white text-lg md:text-xl font-bold mb-2 group-hover:text-orange-300 transition-colors">
+                    <h3 className="text-white text-lg md:text-xl font-bold mb-2 group-hover:text-brand-orange-light transition-colors">
                       {cause.title}
                     </h3>
-                    <div className="h-1 w-12 bg-orange-500 rounded-full group-hover:w-16 transition-all" />
+                    <div className="h-1 w-12 bg-brand-orange rounded-full group-hover:w-16 transition-all" />
                   </div>
                 </div>
               );

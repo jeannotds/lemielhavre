@@ -8,7 +8,7 @@ export function Stats() {
       value: '4,000', 
       label: 'Donors', 
       icon: Heart,
-      gradient: 'from-orange-500 to-red-500',
+      gradient: 'from-brand-orange to-brand-orange-dark',
       description: 'Generous supporters'
     },
     { 
