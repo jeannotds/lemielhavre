@@ -7,25 +7,25 @@ export function CharityCauses() {
   const causes = [
     {
       title: 'Nourriture pour les Affamés',
-      image: 'https://images.unsplash.com/photo-1516627145497-ae6968895b74?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: '/assets/WhatsApp Image 2025-12-15 at 19.57.25.jpeg',
       icon: Utensils,
       color: 'from-brand-orange to-brand-orange-dark',
     },
     {
       title: 'Éducation pour Tous',
-      image: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: '/assets/WhatsApp Image 2025-12-15 at 19.57.27.jpeg',
       icon: GraduationCap,
       color: 'from-blue-500 to-cyan-500',
     },
     {
       title: 'Aide Médicale',
-      image: 'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: '/assets/WhatsApp Image 2025-12-15 at 19.57.28.jpeg',
       icon: Heart,
       color: 'from-pink-500 to-rose-500',
     },
     {
       title: 'Eau Potable pour Tous',
-      image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: '/assets/WhatsApp Image 2025-12-15 at 19.57.29.jpeg',
       icon: Droplets,
       color: 'from-cyan-500 to-blue-500',
     },

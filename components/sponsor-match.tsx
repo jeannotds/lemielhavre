@@ -16,17 +16,17 @@ export function SponsorMatch() {
   const slides = [
     {
       id: 1,
-      image: 'https://images.unsplash.com/photo-1516627145497-ae6968895b74?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      image: '/assets/WhatsApp Image 2025-12-15 at 19.57.21 (1).jpeg',
       title: 'Rencontrez Votre Enfant Parrainé',
     },
     {
       id: 2,
-      image: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      image: '/assets/WhatsApp Image 2025-12-15 at 19.57.22 (1).jpeg',
       title: 'Construisez une Connexion Durable',
     },
     {
       id: 3,
-      image: 'https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      image: '/assets/WhatsApp Image 2025-12-15 at 19.57.23 (1).jpeg',
       title: 'Soutenez Leur Avenir',
     },
   ];

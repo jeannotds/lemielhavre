@@ -105,7 +105,7 @@ export default function About() {
             <div className="relative">
               <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                  src="/assets/WhatsApp Image 2025-12-15 at 19.57.30.jpeg"
                   alt="Children in DRC"
                   className="w-full h-full object-cover"
                 />
