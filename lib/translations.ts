@@ -37,7 +37,7 @@ export type TranslationKey =
   // Booklet
   | 'booklet.badge' | 'booklet.title' | 'booklet.description' | 'booklet.readButton' | 'booklet.openButton' | 'booklet.downloadButton'
   // Newsletter
-  | 'newsletter.title' | 'newsletter.description' | 'newsletter.placeholder' | 'newsletter.button'
+  | 'newsletter.title' | 'newsletter.subtitle' | 'newsletter.description' | 'newsletter.placeholder' | 'newsletter.button' | 'newsletter.subscribed' | 'newsletter.thankYou'
   // Footer
   | 'footer.description' | 'footer.address' | 'footer.callUs' | 'footer.mailUs' | 'footer.hours' | 'footer.copyright' | 'footer.privacy' | 'footer.terms'
   // About Page
@@ -162,10 +162,13 @@ export const translations = {
     'booklet.openButton': 'Ouvrir dans un nouvel onglet',
     'booklet.downloadButton': 'Télécharger',
     // Newsletter
-    'newsletter.title': 'Restez Informé',
+    'newsletter.title': 'Abonnez-vous à notre newsletter pour recevoir les dernières mises à jour',
+    'newsletter.subtitle': 'Restez connecté avec notre mission. Nous ne vous enverrons pas de courriers indésirables.',
     'newsletter.description': 'Abonnez-vous à notre newsletter pour recevoir les dernières nouvelles et mises à jour',
     'newsletter.placeholder': 'Entrez votre adresse email',
     'newsletter.button': 'S\'abonner',
+    'newsletter.subscribed': 'Abonné!',
+    'newsletter.thankYou': 'Merci de vous être abonné! Vérifiez votre email pour confirmation.',
     // Footer
     'footer.description': 'Faire une différence dans les communautés du monde entier grâce à l\'éducation, au soutien et à la compassion.',
     'footer.address': 'Notre Adresse',
@@ -331,10 +334,13 @@ export const translations = {
     'booklet.openButton': 'Open in New Tab',
     'booklet.downloadButton': 'Download',
     // Newsletter
-    'newsletter.title': 'Stay Informed',
+    'newsletter.title': 'Subscribe our Newsletter to receive latest updates from us',
+    'newsletter.subtitle': 'Stay connected with our mission. We won\'t give you spam mails.',
     'newsletter.description': 'Subscribe to our newsletter to receive the latest news and updates',
-    'newsletter.placeholder': 'Enter your email address',
-    'newsletter.button': 'Subscribe',
+    'newsletter.placeholder': 'Enter Your Email Address',
+    'newsletter.button': 'Subscribe Now',
+    'newsletter.subscribed': 'Subscribed!',
+    'newsletter.thankYou': 'Thank you for subscribing! Check your email for confirmation.',
     // Footer
     'footer.description': 'Making a difference in communities worldwide through education, support, and compassion.',
     'footer.address': 'Our Address',

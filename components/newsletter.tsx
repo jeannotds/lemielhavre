@@ -4,8 +4,12 @@ import { useState } from 'react';
 import { Send, Mail, Check } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { useLanguage } from '@/contexts/language-context';
+import { useTranslation } from '@/lib/translations';
 
 export function Newsletter() {
+  const { language } = useLanguage();
+  const t = useTranslation(language);
   const [email, setEmail] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -35,10 +39,10 @@ export function Newsletter() {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-2xl md:text-3xl font-bold text-slate-800 dark:text-slate-200 mb-3 leading-tight">
-                    Subscribe our Newsletter to receive latest updates from us
+                    {t('newsletter.title')}
                   </h3>
                   <p className="text-slate-600 dark:text-slate-400 text-base md:text-lg">
-                    Stay connected with our mission. We won't give you spam mails.
+                    {t('newsletter.subtitle')}
                   </p>
                 </div>
               </div>
@@ -48,7 +52,7 @@ export function Newsletter() {
               <div className="relative">
                 <Input
                   type="email"
-                  placeholder="Enter Your Email Address"
+                  placeholder={t('newsletter.placeholder')}
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   className="h-14 md:h-16 px-6 text-base md:text-lg border-2 border-slate-200 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 rounded-xl focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/20 transition-all"
@@ -63,18 +67,18 @@ export function Newsletter() {
                 {isSubmitted ? (
                   <>
                     <Check className="w-5 h-5 mr-2" />
-                    Subscribed!
+                    {t('newsletter.subscribed')}
                   </>
                 ) : (
                   <>
                     <Send className="w-5 h-5 mr-2" />
-                    Subscribe Now
+                    {t('newsletter.button')}
                   </>
                 )}
               </Button>
               {isSubmitted && (
                 <p className="text-green-600 text-sm text-center animate-in fade-in">
-                  Thank you for subscribing! Check your email for confirmation.
+                  {t('newsletter.thankYou')}
                 </p>
               )}
             </form>

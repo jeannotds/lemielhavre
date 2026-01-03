@@ -3,8 +3,12 @@
 import { BookOpen, Download, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { useLanguage } from '@/contexts/language-context';
+import { useTranslation } from '@/lib/translations';
 
 export function Booklet() {
+  const { language } = useLanguage();
+  const t = useTranslation(language);
   const pdfPath = '/assets/book/Le Miel Havre Booklet French.pdf';
 
   return (
@@ -24,16 +28,16 @@ export function Booklet() {
               <div className="flex-1 text-center md:text-left">
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-slate-700 rounded-full border border-brand-cream dark:border-slate-600 mb-4">
                   <span className="w-2 h-2 bg-brand-orange rounded-full animate-pulse" />
-                  <span className="text-sm font-semibold text-brand-orange-dark dark:text-brand-orange">NOTRE LIVRET</span>
+                  <span className="text-sm font-semibold text-brand-orange-dark dark:text-brand-orange">{t('booklet.badge')}</span>
                 </div>
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-slate-200 mb-4">
-                  Découvrez Notre{' '}
+                  {t('booklet.title')}{' '}
                   <span className="bg-gradient-to-r from-brand-orange to-brand-orange-dark bg-clip-text text-transparent">
                     Livret
                   </span>
                 </h2>
                 <p className="text-lg text-slate-600 dark:text-slate-400 mb-6 max-w-2xl">
-                  Téléchargez ou consultez notre livret complet pour en savoir plus sur notre mission, nos programmes et notre impact sur la vie des enfants en RDC.
+                  {t('booklet.description')}
                 </p>
 
                 {/* Buttons */}
@@ -41,7 +45,7 @@ export function Booklet() {
                   <Link href="/booklet">
                     <Button className="w-full sm:w-auto bg-gradient-to-r from-brand-orange to-brand-orange-dark hover:from-brand-orange-dark hover:to-brand-green text-white px-8 py-6 text-base font-semibold rounded-lg shadow-xl shadow-brand-orange/30 hover:shadow-2xl hover:shadow-brand-orange/40 transition-all transform hover:scale-105">
                       <BookOpen className="w-5 h-5 mr-2" />
-                      Lire le Livret
+                      {t('booklet.readButton')}
                     </Button>
                   </Link>
                   <a
@@ -55,7 +59,7 @@ export function Booklet() {
                       className="w-full sm:w-auto border-2 border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 px-8 py-6 text-base font-semibold rounded-lg transition-all transform hover:scale-105"
                     >
                       <ExternalLink className="w-5 h-5 mr-2" />
-                      Ouvrir dans un nouvel onglet
+                      {t('booklet.openButton')}
                     </Button>
                   </a>
                   <a
@@ -68,7 +72,7 @@ export function Booklet() {
                       className="w-full sm:w-auto border-2 border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 px-8 py-6 text-base font-semibold rounded-lg transition-all transform hover:scale-105"
                     >
                       <Download className="w-5 h-5 mr-2" />
-                      Télécharger
+                      {t('booklet.downloadButton')}
                     </Button>
                   </a>
                 </div>
