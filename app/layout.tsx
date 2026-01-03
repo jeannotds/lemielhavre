@@ -1,6 +1,7 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { LanguageProvider } from '@/contexts/language-context';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -23,8 +24,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
-      <body className={`${inter.className} antialiased`}>{children}</body>
+    <html lang="fr" className="scroll-smooth" suppressHydrationWarning>
+      <body className={`${inter.className} antialiased`}>
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
+      </body>
     </html>
   );
 }

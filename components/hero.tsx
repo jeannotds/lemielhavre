@@ -3,30 +3,35 @@
 import { useState, useEffect } from 'react';
 import { Heart, ChevronLeft, ChevronRight, Target, Users, MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import { useLanguage } from '@/contexts/language-context';
+import { useTranslation } from '@/lib/translations';
 
 export function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const { language } = useLanguage();
+  const t = useTranslation(language);
 
   const slides = [
     {
       id: 1,
       image: '/assets/WhatsApp Image 2025-12-15 at 19.57.21.jpeg',
-      title: 'Charity, Faith and Hope',
+      title: t('hero.slide1'),
     },
     {
       id: 2,
       image: '/assets/WhatsApp Image 2025-12-15 at 19.57.22.jpeg',
-      title: 'Help the Homeless',
+      title: t('hero.slide2'),
     },
     {
       id: 3,
       image: '/assets/WhatsApp Image 2025-12-15 at 19.57.23.jpeg',
-      title: 'Charity life',
+      title: t('hero.slide3'),
     },
     {
       id: 4,
       image: '/assets/WhatsApp Image 2025-12-15 at 19.57.24.jpeg',
-      title: 'Making a Difference',
+      title: t('hero.slide4'),
     },
   ];
 
@@ -56,21 +61,21 @@ export function Hero() {
 
   const features = [
     { 
-      title: 'View our Mission', 
+      title: t('hero.feature1'), 
       // icon: Target,
       icon:"",
       description: '',
       gradient: 'from-blue-500 to-cyan-500'
     },
     { 
-      title: 'Top Founders', 
+      title: t('hero.feature2'), 
       // icon: Users,
       icon:"",
       description: '',
       gradient: 'from-purple-500 to-pink-500'
     },
     { 
-      title: 'Request a Quote', 
+      title: t('hero.feature3'), 
       // icon: MessageCircle,
       description: '',
       gradient: 'from-brand-orange to-brand-orange-dark'
@@ -79,9 +84,13 @@ export function Hero() {
 
   return (
     <>
-     <section style={{borderRadius: '0 0 10% 10%'}} className="relative mt-20 pt-32 md:pt-48 pb-24 md:pb-40 flex items-center justify-start min-h-[500px] md:min-h-[780px] overflow-hidden">
+     <section 
+    //  style={{borderRadius: '0 0 10% 10%'}} 
+     className="relative lg:mt-0 h-[100vh] pt-32 lg:pt-48 pb-24 lg:pb-0 flex items-center justify-start overflow-hidden">
         {/* Slides Container */}
-        <div className="absolute inset-0" style={{ borderRadius: '0 0 10% 10%' }}>
+        <div className="absolute inset-0"
+        //  style={{ borderRadius: '0 0 10% 10%' }}
+         >
           {slides.map((slide, index) => (
             <div
               key={slide.id}
@@ -92,36 +101,40 @@ export function Hero() {
                 backgroundImage: `url(${encodeImageUrl(slide.image)})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                borderRadius: '0 0 10% 10%',
+                // borderRadius: '0 0 10% 10%',
               }}
             />
           ))}
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-slate-800/70 to-slate-900/80 z-10" style={{ borderRadius: '0 0 10% 10%' }} />
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-slate-800/70 to-slate-900/80 z-10" 
+        // style={{ borderRadius: '0 0 10% 10%' }}
+         />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(251,146,60,0.1),transparent_50%)] z-10" style={{ borderRadius: '0 0 10% 10%' }} />
 
         <div className="relative z-10 container mx-auto px-6 lg:px-10">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-6 animate-in fade-in slide-in-from-top-4 duration-700">
+            <div className="inline-flex items-center gap-2 px-4 md:py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-6 animate-in fade-in slide-in-from-top-4 duration-700">
               <Heart className="w-4 h-4 text-brand-orange-light fill-brand-orange-light" />
-              <p className="text-white text-sm font-semibold tracking-wider">CHARITY LIFE</p>
+              <p className="text-white text-sm font-semibold tracking-wider">{t('hero.badge')}</p>
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold mb-6 leading-tight text-white animate-in fade-in slide-in-from-left duration-1000">
               <span className="bg-gradient-to-r from-white via-brand-cream to-brand-orange bg-clip-text text-transparent">
-                Charity, Faith and Hope.
+                {t('hero.title1')}
               </span>
               <br />
-              <span className="text-white">Help the Homeless.</span>
+              <span className="text-white">{t('hero.title2')}</span>
               <br />
-              <span className="text-brand-orange-light">Charity life.</span>
+              <span className="text-brand-orange-light">{t('hero.title3')}</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-200 mb-8 max-w-2xl leading-relaxed animate-in fade-in slide-in-from-left duration-1000 delay-200">
-              Rejoignez-nous pour faire une différence significative dans la vie des enfants de la RDC. Ensemble, nous pouvons construire un avenir meilleur pour les enfants du Congo.
+              {t('hero.description')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in slide-in-from-left duration-1000 delay-300">
-              <Button className="bg-gradient-to-r from-brand-orange to-brand-orange-dark hover:from-brand-orange-dark hover:to-brand-green text-white px-8 py-6 text-base font-semibold rounded-lg shadow-xl shadow-brand-orange/30 hover:shadow-2xl hover:shadow-brand-orange/40 transition-all transform hover:scale-105">
-                Read More
-              </Button>
+              <Link href="/booklet">
+                <Button className="bg-gradient-to-r from-brand-orange to-brand-orange-dark hover:from-brand-orange-dark hover:to-brand-green text-white px-8 py-6 text-base font-semibold rounded-lg shadow-xl shadow-brand-orange/30 hover:shadow-2xl hover:shadow-brand-orange/40 transition-all transform hover:scale-105">
+                  {t('hero.button')}
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

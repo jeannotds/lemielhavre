@@ -1,8 +1,12 @@
 'use client';
 
 import { Anchor, Compass, Waves, Ship, Shield, Globe, Handshake } from 'lucide-react';
+import { useLanguage } from '@/contexts/language-context';
+import { useTranslation } from '@/lib/translations';
 
 export function Partners() {
+  const { language } = useLanguage();
+  const t = useTranslation(language);
   const partners = [
     { icon: Anchor, name: 'Summer Partner 1', gradient: 'from-blue-500 to-cyan-500' },
     { icon: Compass, name: 'Summer Partner 2', gradient: 'from-purple-500 to-pink-500' },
@@ -18,13 +22,13 @@ export function Partners() {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-slate-800 rounded-full border border-brand-cream dark:border-slate-700 mb-4">
             <Handshake className="w-4 h-4 text-brand-orange" />
-            <span className="text-sm font-semibold text-brand-orange-dark dark:text-brand-orange">OUR PARTNERS</span>
+            <span className="text-sm font-semibold text-brand-orange-dark dark:text-brand-orange">{t('partners.badge')}</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-slate-800 dark:text-slate-200 mb-4">
-            Whom we work with
+            {t('partners.title')}
           </h2>
           <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-            Together with our trusted partners, we create lasting impact in communities worldwide
+            {t('partners.description')}
           </p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 md:gap-8 items-center justify-items-center">

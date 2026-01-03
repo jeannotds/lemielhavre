@@ -2,29 +2,35 @@
 
 import { ArrowRight, Utensils, GraduationCap, Heart, Droplets } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useLanguage } from '@/contexts/language-context';
+import { useTranslation } from '@/lib/translations';
+import Link from 'next/link';
 
 export function CharityCauses() {
+  const { language } = useLanguage();
+  const t = useTranslation(language);
+
   const causes = [
     {
-      title: 'Nourriture pour les Affamés',
+      titleKey: 'causes.food' as const,
       image: '/assets/WhatsApp Image 2025-12-15 at 19.57.25.jpeg',
       icon: Utensils,
       color: 'from-brand-orange to-brand-orange-dark',
     },
     {
-      title: 'Éducation pour Tous',
+      titleKey: 'causes.education' as const,
       image: '/assets/WhatsApp Image 2025-12-15 at 19.57.27.jpeg',
       icon: GraduationCap,
       color: 'from-blue-500 to-cyan-500',
     },
     {
-      title: 'Aide Médicale',
+      titleKey: 'causes.medical' as const,
       image: '/assets/WhatsApp Image 2025-12-15 at 19.57.28.jpeg',
       icon: Heart,
       color: 'from-pink-500 to-rose-500',
     },
     {
-      title: 'Eau Potable pour Tous',
+      titleKey: 'causes.water' as const,
       image: '/assets/WhatsApp Image 2025-12-15 at 19.57.29.jpeg',
       icon: Droplets,
       color: 'from-cyan-500 to-blue-500',
@@ -38,30 +44,30 @@ export function CharityCauses() {
           <div className="space-y-6">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-slate-800 rounded-full border border-brand-cream dark:border-slate-700 mb-4">
               <span className="w-2 h-2 bg-brand-orange rounded-full animate-pulse" />
-              <span className="text-sm font-semibold text-brand-orange-dark dark:text-brand-orange">OUR CAUSES</span>
+              <span className="text-sm font-semibold text-brand-orange-dark dark:text-brand-orange">{t('causes.badge')}</span>
             </div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 dark:text-slate-200 leading-tight">
-              Our Charity{' '}
+              {t('causes.title')}{' '}
               <span className="bg-gradient-to-r from-brand-orange to-brand-orange-dark bg-clip-text text-transparent">
                 Causes
               </span>
             </h2>
             <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 leading-relaxed">
-              <span className="text-slate-800 dark:text-slate-200 font-medium">If you want to work with Le Miel Havre charity?</span>{' '}
+              <span className="text-slate-800 dark:text-slate-200 font-medium">{t('causes.subtitle')}</span>{' '}
               <span className="text-brand-orange font-semibold">Send your Details.</span>
             </p>
             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-              Nous nous engageons à avoir un impact durable dans les communautés de la République Démocratique du Congo. 
-              Grâce à nos différents programmes, nous répondons aux besoins critiques et permettons aux enfants 
-              de construire de meilleurs avenirs pour eux-mêmes et leurs familles.
+              {t('causes.description')}
             </p>
-            <Button
-              variant="outline"
-              className="group border-2 border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-white px-8 py-6 text-lg rounded-lg transition-all shadow-lg hover:shadow-xl hover:scale-105"
-            >
-              Contactez-Nous
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            <Link href="/contact">
+              <Button
+                variant="outline"
+                className="group border-2 border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-white px-8 py-6 text-lg rounded-lg transition-all shadow-lg hover:shadow-xl hover:scale-105"
+              >
+                {t('causes.button')}
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
           </div>
 
           <div className="grid grid-cols-2 gap-4 md:gap-6">
@@ -74,7 +80,7 @@ export function CharityCauses() {
                 >
                   <img
                     src={cause.image}
-                    alt={cause.title}
+                    alt={t(cause.titleKey)}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
@@ -88,7 +94,7 @@ export function CharityCauses() {
                   
                   <div className="absolute inset-x-0 bottom-0 p-5 md:p-6">
                     <h3 className="text-white text-lg md:text-xl font-bold mb-2 group-hover:text-brand-orange-light transition-colors">
-                      {cause.title}
+                      {t(cause.titleKey)}
                     </h3>
                     <div className="h-1 w-12 bg-brand-orange rounded-full group-hover:w-16 transition-all" />
                   </div>
