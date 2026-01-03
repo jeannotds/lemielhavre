@@ -9,90 +9,83 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
+import { useLanguage } from '@/contexts/language-context';
+import { useTranslation } from '@/lib/translations';
 
 export function SponsorMatch() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const { language } = useLanguage();
+  const t = useTranslation(language);
 
   const slides = [
     {
       id: 1,
       image: '/assets/WhatsApp Image 2025-12-15 at 19.57.21 (1).jpeg',
-      title: 'Rencontrez Votre Enfant Parrainé',
+      titleKey: 'sponsor.slide1' as const,
     },
     {
       id: 2,
       image: '/assets/WhatsApp Image 2025-12-15 at 19.57.22 (1).jpeg',
-      title: 'Construisez une Connexion Durable',
+      titleKey: 'sponsor.slide2' as const,
     },
     {
       id: 3,
       image: '/assets/WhatsApp Image 2025-12-15 at 19.57.23 (1).jpeg',
-      title: 'Soutenez Leur Avenir',
+      titleKey: 'sponsor.slide3' as const,
     },
   ];
 
   const steps = [
     {
       number: 1,
-      title: 'CHILDREN REFERRAL & ASSESSMENT',
-      description:
-        'Children are usually referred to the orphanage supported by Le Miel Havre scholarship program through local churches, community organizations, social services.',
+      titleKey: 'sponsor.howStep1' as const,
+      descKey: 'sponsor.howStep1Desc' as const,
     },
     {
       number: 2,
-      title: 'FUND ALLOCATION PROCESS',
-      description:
-        'Each child is connected to a sponsor who commits to providing monthly or annual financial support. While sponsorship is personalized, contributions are aggregated within the program to ensure every child living in a partner orphanage supported by Le Miel Havre benefits equally.',
+      titleKey: 'sponsor.howStep2' as const,
+      descKey: 'sponsor.howStep2Desc' as const,
     },
     {
       number: 3,
-      title: "CHILDREN'S PLACEMENT",
-      description:
-        "Every child is provided with access to education, including school uniforms, books, supplies, and tutoring when needed. Alongside their studies, they receive balanced meals, regular health checkups, and medical care to support healthy growth and development.",
+      titleKey: 'sponsor.howStep3' as const,
+      descKey: 'sponsor.howStep3Desc' as const,
     },
     {
       number: 4,
-      title: 'LIFE AFTER THE PROGRAM',
-      description:
-        'By the time they graduate, children in partner orphanages supported by Le Miel Havre scholarship program have usually completed formal education or vocational training, equipping them with tools for self-sufficiency.',
+      titleKey: 'sponsor.howStep4' as const,
+      descKey: 'sponsor.howStep4Desc' as const,
     },
   ];
 
   const faqs = [
     {
-      question: 'Why should you sponsor a child through Le Miel Havre scholarship program?',
-      answer:
-        "Since its beginning in 2025, Le Miel Havre's goal is to improve the lives through education of children who come from extreme poverty and/or have been abandoned or removed from their families. Your support will allow these children to heal, thrive and grow in a stable and loving group home environment.",
+      questionKey: 'sponsor.faq1Q' as const,
+      answerKey: 'sponsor.faq1A' as const,
     },
     {
-      question: 'How many children are in Le Miel Havre scholarship program?',
-      answer:
-        'We have started with 5 children, teenagers and young adults living in an orphanage in Goma. The children range in age from infants to 21 years old. Our future goal is that we estimate more than 500 children living in different orphanages will become beneficiaries of Le Miel Havre scholarship program.',
+      questionKey: 'sponsor.faq2Q' as const,
+      answerKey: 'sponsor.faq2A' as const,
     },
     {
-      question: 'Where does Le Miel Havre operate?',
-      answer:
-        'Our Head Office is in Kinshasa, DR Congo. We work with in-country partners who help us administrate the program in Goma. Plans in the future will be to expand to other cities in the country.',
+      questionKey: 'sponsor.faq3Q' as const,
+      answerKey: 'sponsor.faq3A' as const,
     },
     {
-      question: 'How many sponsors for each child?',
-      answer:
-        'Le Miel Havre connects one sponsor to one child. We encourage you to regularly write to your child to develop a special bond and relationship. The children cannot wait to receive your letters!',
+      questionKey: 'sponsor.faq4Q' as const,
+      answerKey: 'sponsor.faq4A' as const,
     },
     {
-      question: 'How much does it cost to sponsor a child?',
-      answer:
-        '$400 per school year, which is closer to $35 per month. Your ongoing commitment will help to change a child\'s life. You can pay monthly, quarterly, semiannually or annually. You can also sponsor more than one child.',
+      questionKey: 'sponsor.faq5Q' as const,
+      answerKey: 'sponsor.faq5A' as const,
     },
     {
-      question: 'Does my sponsored child know my full name and address?',
-      answer:
-        'In order to protect your privacy, we only share your first name with your sponsored child. We do not provide your address, city or state location.',
+      questionKey: 'sponsor.faq6Q' as const,
+      answerKey: 'sponsor.faq6A' as const,
     },
     {
-      question: 'What will I receive when I sponsor a child?',
-      answer:
-        'You will receive a Welcome Packet via email with a brief bio and photo of your child within 3 weeks. You will also receive an updated annual photo and bio of your child, and can communicate through letters or email.',
+      questionKey: 'sponsor.faq7Q' as const,
+      answerKey: 'sponsor.faq7A' as const,
     },
   ];
 
@@ -119,16 +112,16 @@ export function SponsorMatch() {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-slate-800 rounded-full border border-brand-cream dark:border-slate-700 mb-4">
             <span className="w-2 h-2 bg-brand-orange rounded-full animate-pulse" />
-            <span className="text-sm font-semibold text-brand-orange-dark dark:text-brand-orange">SPONSORSHIP PROGRAM</span>
+            <span className="text-sm font-semibold text-brand-orange-dark dark:text-brand-orange">{t('sponsor.badge')}</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center text-slate-900 dark:text-slate-200 mb-4">
-            How the Sponsor-Child{' '}
+            {t('sponsor.title')}{' '}
             <span className="bg-gradient-to-r from-brand-orange to-brand-orange-dark bg-clip-text text-transparent">
               Match Works?
             </span>
           </h2>
           <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg">
-            Discover how we connect caring sponsors with children in need
+            {t('sponsor.description')}
           </p>
         </div>
 
@@ -144,7 +137,7 @@ export function SponsorMatch() {
               >
                 <img
                   src={slide.image}
-                  alt={slide.title}
+                  alt={t(slide.titleKey)}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -154,7 +147,7 @@ export function SponsorMatch() {
             
             <div className="absolute inset-x-0 bottom-0 p-8 md:p-12 z-20">
               <h3 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-                {slides[currentSlide].title}
+                {t(slides[currentSlide].titleKey)}
               </h3>
               <div className="h-1 w-20 bg-brand-orange rounded-full" />
             </div>
@@ -193,13 +186,13 @@ export function SponsorMatch() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <h3 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-slate-200 mb-3">
-                The{' '}
+                {t('sponsor.processTitle')}{' '}
                 <span className="bg-gradient-to-r from-brand-orange to-brand-orange-dark bg-clip-text text-transparent">
                   Sponsorship Process
                 </span>
               </h3>
               <p className="text-slate-600 dark:text-slate-400 text-lg max-w-2xl mx-auto">
-                Discover how we create lasting connections between sponsors and children
+                {t('sponsor.processDescription')}
               </p>
             </div>
 
@@ -212,10 +205,10 @@ export function SponsorMatch() {
                     <FileText className="w-7 h-7 text-white" />
                   </div>
                   <h4 className="text-xl font-bold text-slate-900 dark:text-slate-200 mb-3 group-hover:text-brand-orange-dark dark:group-hover:text-brand-orange transition-colors">
-                    Assessment & Profile
+                    {t('sponsor.step1Title')}
                   </h4>
                   <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                    The matching process may take several months. Our team carefully collects information on each child&apos;s background, health, and education to create a detailed personal profile.
+                    {t('sponsor.step1Desc')}
                   </p>
                 </div>
               </div>
@@ -228,10 +221,10 @@ export function SponsorMatch() {
                     <UserCheck className="w-7 h-7 text-white" />
                   </div>
                   <h4 className="text-xl font-bold text-slate-900 dark:text-slate-200 mb-3 group-hover:text-blue-600 transition-colors">
-                    Confirmation & Onboarding
+                    {t('sponsor.step2Title')}
                   </h4>
                   <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                    Once the match is confirmed, the onboarding process begins. Sponsors receive a welcome packet with the child&apos;s photo, personal story, background details, and Le Miel Havre identification number.
+                    {t('sponsor.step2Desc')}
                   </p>
                 </div>
               </div>
@@ -244,10 +237,10 @@ export function SponsorMatch() {
                     <Mail className="w-7 h-7 text-white" />
                   </div>
                   <h4 className="text-xl font-bold text-slate-900 dark:text-slate-200 mb-3 group-hover:text-green-600 transition-colors">
-                    Communication & Follow-up
+                    {t('sponsor.step3Title')}
                   </h4>
                   <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                    After onboarding is complete, sponsors will begin receiving letters from their assigned child and can communicate through letters or via email using the child&apos;s scholarship identification number.
+                    {t('sponsor.step3Desc')}
                   </p>
                 </div>
               </div>
@@ -267,13 +260,13 @@ export function SponsorMatch() {
         <div className="mb-20">
           <div className="text-center mb-12">
             <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-slate-200 mb-4">
-              HOW DOES IT{' '}
+              {t('sponsor.howTitle')}{' '}
               <span className="bg-gradient-to-r from-brand-orange to-brand-orange-dark bg-clip-text text-transparent">
                 WORK?
               </span>
             </h3>
             <p className="text-center text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto leading-relaxed">
-              Le Miel Havre scholarship program connects children with safe, and good school. Each child's basic needs are met with clothing, personal care items. They receive education including school supplies, and tutoring.
+              {t('sponsor.howDescription')}
             </p>
           </div>
 
@@ -291,11 +284,11 @@ export function SponsorMatch() {
                       )}
                     </div>
                     <h4 className="text-slate-900 dark:text-slate-200 font-bold text-base md:text-lg leading-tight pt-1 group-hover:text-brand-orange-dark transition-colors">
-                      {step.title}
+                      {t(step.titleKey)}
                     </h4>
                   </div>
                   <p className="text-slate-600 dark:text-slate-400 text-sm md:text-base leading-relaxed">
-                    {step.description}
+                    {t(step.descKey)}
                   </p>
                 </div>
               </div>
@@ -306,18 +299,18 @@ export function SponsorMatch() {
         {/* Section FAQ Moderne */}
         <div className="mt-20">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream rounded-full border border-brand-cream mb-4">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-slate-800 rounded-full border border-brand-cream dark:border-slate-700 mb-4">
               <span className="w-2 h-2 bg-brand-orange rounded-full animate-pulse" />
-              <span className="text-sm font-semibold text-brand-orange-dark">QUESTIONS FRÉQUENTES</span>
+              <span className="text-sm font-semibold text-brand-orange-dark dark:text-brand-orange">{t('sponsor.faqBadge')}</span>
             </div>
             <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-slate-200 mb-4">
-              Questions{' '}
+              {t('sponsor.faqTitle')}{' '}
               <span className="bg-gradient-to-r from-brand-orange to-brand-orange-dark bg-clip-text text-transparent">
-                Fréquentes
+                Questions
               </span>
             </h3>
             <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg">
-              Trouvez des réponses aux questions courantes sur notre programme de parrainage
+              {t('sponsor.faqDescription')}
             </p>
           </div>
 
@@ -349,14 +342,14 @@ export function SponsorMatch() {
                           </div>
                         </div>
                         <span className="text-lg md:text-xl font-bold text-slate-900 dark:text-slate-200 group-hover:text-brand-orange-dark transition-colors">
-                          {faq.question}
+                          {t(faq.questionKey)}
                         </span>
                       </div>
                     </AccordionTrigger>
                     <AccordionContent className="pb-6">
                       <div className="ml-14">
                         <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-lg">
-                          {faq.answer}
+                          {t(faq.answerKey)}
                         </p>
                       </div>
                     </AccordionContent>
@@ -369,7 +362,7 @@ export function SponsorMatch() {
 
         <div className="mt-16 text-center">
           <Button className="bg-gradient-to-r from-brand-orange to-brand-orange-dark hover:from-brand-orange-dark hover:to-brand-green text-white px-10 py-6 text-lg font-semibold rounded-xl shadow-xl shadow-brand-orange/30 hover:shadow-2xl hover:shadow-brand-orange/40 transition-all transform hover:scale-105">
-            Sponsor a Child Today
+            {t('sponsor.button')}
           </Button>
         </div>
       </div>
