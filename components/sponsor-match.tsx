@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Check, FileText, Mail, UserCheck, Clock, Users, MapPin, DollarSign, Shield, Gift } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
@@ -96,6 +96,15 @@ export function SponsorMatch() {
     },
   ];
 
+  // Auto-slide functionality
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000); // Change slide every 5 seconds
+
+    return () => clearInterval(interval);
+  }, [slides.length]);
+
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
@@ -125,15 +134,25 @@ export function SponsorMatch() {
 
         <div className="mb-20">
           <div className="relative h-96 md:h-[500px] lg:h-[600px] rounded-2xl overflow-hidden mb-8 shadow-2xl">
-            <img
-              src={slides[currentSlide].image}
-              alt={slides[currentSlide].title}
-              className="w-full h-full object-cover transition-opacity duration-500"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_80%,rgba(251,146,60,0.2),transparent_70%)]" />
+            {/* Slides Container */}
+            {slides.map((slide, index) => (
+              <div
+                key={slide.id}
+                className={`absolute inset-0 transition-opacity duration-1000 ${
+                  index === currentSlide ? 'opacity-100 z-0' : 'opacity-0 z-0'
+                }`}
+              >
+                <img
+                  src={slide.image}
+                  alt={slide.title}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            ))}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent z-10" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_80%,rgba(251,146,60,0.2),transparent_70%)] z-10" />
             
-            <div className="absolute inset-x-0 bottom-0 p-8 md:p-12">
+            <div className="absolute inset-x-0 bottom-0 p-8 md:p-12 z-20">
               <h3 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
                 {slides[currentSlide].title}
               </h3>
