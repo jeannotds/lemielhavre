@@ -79,9 +79,13 @@ export function Hero() {
 
   return (
     <>
-     <section style={{borderRadius: '0 0 10% 10%'}} className="relative mt-20 pt-32 md:pt-48 pb-24 md:pb-40 flex items-center justify-start min-h-[500px] md:min-h-[780px] overflow-hidden">
+     <section 
+    //  style={{borderRadius: '0 0 10% 10%'}} 
+     className="relative lg:mt-0 h-[100vh] pt-32 lg:pt-48 pb-24 lg:pb-0 flex items-center justify-start overflow-hidden">
         {/* Slides Container */}
-        <div className="absolute inset-0" style={{ borderRadius: '0 0 10% 10%' }}>
+        <div className="absolute inset-0"
+        //  style={{ borderRadius: '0 0 10% 10%' }}
+         >
           {slides.map((slide, index) => (
             <div
               key={slide.id}
@@ -92,17 +96,19 @@ export function Hero() {
                 backgroundImage: `url(${encodeImageUrl(slide.image)})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
-                borderRadius: '0 0 10% 10%',
+                // borderRadius: '0 0 10% 10%',
               }}
             />
           ))}
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-slate-800/70 to-slate-900/80 z-10" style={{ borderRadius: '0 0 10% 10%' }} />
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-slate-800/70 to-slate-900/80 z-10" 
+        // style={{ borderRadius: '0 0 10% 10%' }}
+         />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(251,146,60,0.1),transparent_50%)] z-10" style={{ borderRadius: '0 0 10% 10%' }} />
 
         <div className="relative z-10 container mx-auto px-6 lg:px-10">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-6 animate-in fade-in slide-in-from-top-4 duration-700">
+            <div className="inline-flex items-center gap-2 px-4 md:py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-6 animate-in fade-in slide-in-from-top-4 duration-700">
               <Heart className="w-4 h-4 text-brand-orange-light fill-brand-orange-light" />
               <p className="text-white text-sm font-semibold tracking-wider">CHARITY LIFE</p>
             </div>

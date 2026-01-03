@@ -7,7 +7,7 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 
-export function Header() {
+export function     Header() {
   const [isDark, setIsDark] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
@@ -57,7 +57,7 @@ export function Header() {
                 alt="Le Miel Havre Logo"
                 width={80}
                 height={80}
-                className="object-contain"
+                className="object-contain w-14 h-14 lg:w-20 lg:h-20"
                 priority
               />
             </div>
@@ -84,16 +84,16 @@ export function Header() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <button
+            {/* <button
               className="hidden md:flex w-10 h-10 items-center justify-center text-brand-green dark:text-slate-300 hover:text-brand-orange dark:hover:text-brand-orange-light hover:bg-brand-cream dark:hover:bg-slate-800 rounded-lg transition-all"
               aria-label="Search"
             >
               <Search className="w-5 h-5" />
-            </button>
-            <Button className="hidden md:flex bg-gradient-to-r from-brand-green to-brand-green-dark hover:from-brand-green-dark hover:to-brand-green text-white px-6 py-2.5 rounded-lg shadow-lg shadow-brand-green/30 hover:shadow-xl hover:shadow-brand-green/40 transition-all">
+            </button> */}
+            {/* <Button className="hidden md:flex bg-gradient-to-r from-brand-green to-brand-green-dark hover:from-brand-green-dark hover:to-brand-green text-white px-6 py-2.5 rounded-lg shadow-lg shadow-brand-green/30 hover:shadow-xl hover:shadow-brand-green/40 transition-all">
               <Heart className="w-4 h-4 mr-2 fill-white" />
               Donate
-            </Button>
+            </Button> */}
             <button
               onClick={toggleDarkMode}
               className="hidden md:flex w-10 h-10 rounded-lg border border-slate-200 dark:border-slate-700 items-center justify-center hover:border-brand-orange hover:bg-brand-cream dark:hover:bg-slate-800 transition-all text-brand-green dark:text-slate-300"
@@ -122,7 +122,8 @@ export function Header() {
                     key={index}
                     href={link.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className={`px-4 py-3 rounded-lg text-sm font-medium transition-all ${
+                    className={`px-4 py-3 rounded-lg text-sm font-medium transition-all 
+                      ${
                       isActive
                         ? 'bg-brand-cream dark:bg-slate-800 text-brand-orange dark:text-brand-orange-light'
                         : 'text-brand-green dark:text-slate-300 hover:bg-brand-cream dark:hover:bg-slate-800 hover:text-brand-orange dark:hover:text-brand-orange-light'
