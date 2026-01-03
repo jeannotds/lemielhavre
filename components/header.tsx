@@ -6,11 +6,16 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
+import { LanguageSwitcher } from '@/components/language-switcher';
+import { useLanguage } from '@/contexts/language-context';
+import { useTranslation } from '@/lib/translations';
 
-export function     Header() {
+export function Header() {
   const [isDark, setIsDark] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
+  const { language } = useLanguage();
+  const t = useTranslation(language);
 
   // Charger la préférence depuis localStorage au démarrage
   useEffect(() => {
@@ -41,9 +46,9 @@ export function     Header() {
   };
 
   const navLinks = [
-    { href: '/', label: 'Home' },
-    { href: '/about', label: 'About' },
-    { href: '/contact', label: 'Contact' },
+    { href: '/', label: t('nav.home') },
+    { href: '/about', label: t('nav.about') },
+    { href: '/contact', label: t('nav.contact') },
   ];
 
   return (
@@ -94,6 +99,7 @@ export function     Header() {
               <Heart className="w-4 h-4 mr-2 fill-white" />
               Donate
             </Button> */}
+            <LanguageSwitcher />
             <button
               onClick={toggleDarkMode}
               className="hidden md:flex w-10 h-10 rounded-lg border border-slate-200 dark:border-slate-700 items-center justify-center hover:border-brand-orange hover:bg-brand-cream dark:hover:bg-slate-800 transition-all text-brand-green dark:text-slate-300"
@@ -134,10 +140,7 @@ export function     Header() {
                 );
               })}
               <div className="flex items-center gap-3 px-4 pt-2">
-                <Button className="flex-1 bg-gradient-to-r from-brand-green to-brand-green-dark hover:from-brand-green-dark hover:to-brand-green text-white py-2.5 rounded-lg">
-                  <Heart className="w-4 h-4 mr-2 fill-white" />
-                  Donate
-                </Button>
+                <LanguageSwitcher />
                 <button
                   onClick={toggleDarkMode}
                   className="w-10 h-10 rounded-lg border border-slate-200 dark:border-slate-700 flex items-center justify-center hover:border-brand-orange hover:bg-brand-cream dark:hover:bg-slate-800 transition-all text-brand-green dark:text-slate-300"
