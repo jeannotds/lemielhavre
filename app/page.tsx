@@ -6,6 +6,7 @@ import { Stats } from '@/components/stats';
 import { CharityCauses } from '@/components/charity-causes';
 import { SponsorMatch } from '@/components/sponsor-match';
 import { Partners } from '@/components/partners';
+import { Booklet } from '@/components/booklet';
 import { Newsletter } from '@/components/newsletter';
 import { Footer } from '@/components/footer';
 import { ScrollToTop } from '@/components/scroll-to-top';
@@ -19,6 +20,7 @@ export default function Home() {
       <CharityCauses />
       <SponsorMatch />
       <Partners />
+      <Booklet />
       <Newsletter />
       <Footer />
       <ScrollToTop />
