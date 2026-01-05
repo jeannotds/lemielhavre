@@ -10,28 +10,28 @@ export function Stats() {
 
   const stats = [
     { 
-      value: '4,000', 
-      labelKey: 'stats.donors' as const,
-      descKey: 'stats.donorsDesc' as const,
+      value: t('stats.donors'), 
+      labelKey: 'stats.schoolsClosed' as const,
+      descKey: 'stats.schoolsClosedDesc' as const,
       icon: Heart,
       gradient: 'from-brand-orange to-brand-orange-dark',
     },
     { 
-      value: '2,200', 
-      labelKey: 'stats.volunteers' as const,
-      descKey: 'stats.volunteersDesc' as const,
+      value: t('stats.volunteers'), 
+      labelKey: 'stats.childrenOutOfSchool' as const,
+      descKey: 'stats.childrenOutOfSchoolDesc' as const,
       icon: Users,
       gradient: 'from-blue-500 to-cyan-500',
     },
     { 
-      value: '4,000', 
-      labelKey: 'stats.beneficiaries' as const,
-      descKey: 'stats.beneficiariesDesc' as const,
+      value: t('stats.beneficiaries'), 
+      labelKey: 'stats.minimumLevel' as const,
+      descKey: 'stats.minimumLevelDesc' as const,
       icon: UserCheck,
       gradient: 'from-purple-500 to-pink-500',
     },
     { 
-      value: '200', 
+      value: t('stats.projects'), 
       labelKey: 'stats.projects' as const,
       descKey: 'stats.projectsDesc' as const,
       icon: Target,

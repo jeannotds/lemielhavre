@@ -4,52 +4,33 @@ import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { ScrollToTop } from '@/components/scroll-to-top';
 import { Heart, Target, Users, Award, Globe, HandHeart } from 'lucide-react';
+import { useLanguage } from '@/contexts/language-context';
+import { useTranslation } from '@/lib/translations';
 
 export default function About() {
+  const { language } = useLanguage();
+  const t = useTranslation(language);
+
   const values = [
     {
       icon: Heart,
-      title: 'Compassion',
-      description: 'We approach every child with empathy, understanding, and genuine care for their well-being.',
       color: 'from-brand-orange to-brand-orange-dark',
     },
     {
       icon: Target,
-      title: 'Education',
-      description: 'We believe education is the key to breaking the cycle of poverty and creating lasting change.',
       color: 'from-blue-500 to-cyan-500',
     },
     {
       icon: Users,
-      title: 'Community',
-      description: 'We work together with local communities to build sustainable solutions for children in need.',
       color: 'from-purple-500 to-pink-500',
     },
     {
       icon: Award,
-      title: 'Excellence',
-      description: 'We maintain the highest standards in all our programs and services for the children we serve.',
       color: 'from-green-500 to-emerald-500',
     },
   ];
 
-  const milestones = [
-    {
-      year: '2025',
-      title: 'Foundation',
-      description: 'Le Miel Havre was established with a mission to support children in the Democratic Republic of Congo.',
-    },
-    {
-      year: '2025',
-      title: 'First Program',
-      description: 'Launched our scholarship program in Goma, starting with 5 children in partner orphanages.',
-    },
-    {
-      year: 'Future',
-      title: 'Expansion',
-      description: 'Our goal is to support over 500 children across different orphanages in the DRC.',
-    },
-  ];
+  const milestones = [1, 2, 3];
 
   return (
     <main className="min-h-screen bg-white dark:bg-slate-900">
@@ -65,13 +46,13 @@ export default function About() {
               <p className="text-white text-sm font-semibold tracking-wider">ABOUT US</p>
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white">
-              About{' '}
+              {t('about.title')}{' '}
               <span className="bg-gradient-to-r from-brand-orange-light to-brand-orange bg-clip-text text-transparent">
                 Le Miel Havre
               </span>
             </h1>
             <p className="text-lg md:text-xl text-slate-200 max-w-2xl mx-auto leading-relaxed">
-              We are dedicated to transforming the lives of children in the Democratic Republic of Congo through education, support, and compassion.
+              {t('about.description')}
             </p>
           </div>
         </div>
@@ -84,22 +65,22 @@ export default function About() {
             <div className="space-y-6">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-slate-800 rounded-full border border-brand-cream dark:border-slate-700 mb-4">
                 <span className="w-2 h-2 bg-brand-orange rounded-full animate-pulse" />
-                <span className="text-sm font-semibold text-brand-orange-dark dark:text-brand-orange">OUR MISSION</span>
+                <span className="text-sm font-semibold text-brand-orange-dark dark:text-brand-orange">{t('about.missionBadge')}</span>
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-slate-800 dark:text-slate-200 leading-tight">
-                Our Mission &{' '}
+                {t('about.missionTitle')}{' '}
                 <span className="bg-gradient-to-r from-brand-orange to-brand-orange-dark bg-clip-text text-transparent">
                   Vision
                 </span>
               </h2>
               <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-                Le Miel Havre is a non-profit organization committed to improving the lives of children in the Democratic Republic of Congo through education and comprehensive support programs.
+                {t('about.missionP1')}
               </p>
               <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-                Our mission is to provide educational opportunities, essential resources, and a stable, loving environment for children who come from extreme poverty or have been abandoned or removed from their families.
+                {t('about.missionP2')}
               </p>
               <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-                We envision a future where every child in the DRC has access to quality education, proper healthcare, and the support they need to thrive and become self-sufficient adults.
+                {t('about.missionP3')}
               </p>
             </div>
             <div className="relative">
@@ -118,18 +99,117 @@ export default function About() {
         </div>
       </section>
 
+      {/* History Section */}
+      <section className="bg-white dark:bg-slate-900 py-20 md:py-28">
+        <div className="container mx-auto px-6 lg:px-10">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-800 dark:text-slate-200 mb-8 text-center">
+              {t('about.historyTitle')}
+            </h2>
+            <div className="space-y-6 text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+              <p>{t('about.historyP1')}</p>
+              <p>{t('about.historyP2')}</p>
+              <p>{t('about.historyP3')}</p>
+              <p>{t('about.historyP3b')}</p>
+              <p>{t('about.historyP4')}</p>
+              <p className="font-semibold text-slate-800 dark:text-slate-200">{t('about.historyP5')}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Founder Message Section */}
+      <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20 md:py-28">
+        <div className="container mx-auto px-6 lg:px-10">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-12 text-center">
+              {t('about.founderTitle')}
+            </h2>
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+              {/* Image à gauche */}
+              <div className="relative order-2 lg:order-1">
+                <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
+                  <img
+                    src="/assets/director/laetitia-2.jpeg"
+                    alt={t('about.founderName')}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-brand-orange to-brand-orange-dark rounded-2xl shadow-xl flex items-center justify-center hidden lg:flex">
+                  <Heart className="w-16 h-16 text-white" />
+                </div>
+              </div>
+              
+              {/* Texte à droite */}
+              <div className="order-1 lg:order-2">
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-white/20">
+                  <p className="text-lg md:text-xl text-slate-200 mb-6 leading-relaxed italic">
+                    "{t('about.founderMessage')}"
+                  </p>
+                  <div className="pt-6 border-t border-white/20">
+                    <p className="text-xl font-bold text-brand-orange-light mb-2">
+                      {t('about.founderName')}
+                    </p>
+                    <p className="text-slate-300">
+                      {t('about.founderRole')}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Challenges Section */}
+      <section className="bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-800 py-20 md:py-28">
+        <div className="container mx-auto px-6 lg:px-10">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-800 dark:text-slate-200 mb-8 text-center">
+              {t('about.challengesTitle')}
+            </h2>
+            <div className="space-y-6">
+              <div className="bg-white dark:bg-slate-800 rounded-xl p-6 border border-slate-200 dark:border-slate-700">
+                <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                  <span className="font-bold text-brand-orange-dark dark:text-brand-orange">1. </span>
+                  {t('about.challenge1')}
+                </p>
+              </div>
+              <div className="bg-white dark:bg-slate-800 rounded-xl p-6 border border-slate-200 dark:border-slate-700">
+                <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                  <span className="font-bold text-brand-orange-dark dark:text-brand-orange">2. </span>
+                  {t('about.challenge2')}
+                </p>
+              </div>
+              <div className="bg-white dark:bg-slate-800 rounded-xl p-6 border border-slate-200 dark:border-slate-700">
+                <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                  <span className="font-bold text-brand-orange-dark dark:text-brand-orange">3. </span>
+                  {t('about.challenge3')}
+                </p>
+              </div>
+              <div className="bg-white dark:bg-slate-800 rounded-xl p-6 border border-slate-200 dark:border-slate-700">
+                <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                  <span className="font-bold text-brand-orange-dark dark:text-brand-orange">4. </span>
+                  {t('about.challenge4')}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Values Section */}
       <section className="bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-800 py-20 md:py-28">
         <div className="container mx-auto px-6 lg:px-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-800 dark:text-slate-200 mb-4">
-              Our Core{' '}
+              {t('about.valuesTitle')}{' '}
               <span className="bg-gradient-to-r from-brand-orange to-brand-orange-dark bg-clip-text text-transparent">
                 Values
               </span>
             </h2>
             <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg">
-              The principles that guide everything we do
+              {t('about.valuesDescription')}
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -144,10 +224,10 @@ export default function About() {
                     <Icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-slate-800 dark:text-slate-200 mb-3 group-hover:text-brand-orange transition-colors">
-                    {value.title}
+                    {t(`about.value${index + 1}Title` as any)}
                   </h3>
                   <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                    {value.description}
+                    {t(`about.value${index + 1}Desc` as any)}
                   </p>
                 </div>
               );
@@ -161,13 +241,13 @@ export default function About() {
         <div className="container mx-auto px-6 lg:px-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-800 dark:text-slate-200 mb-4">
-              Our{' '}
+              {t('about.timelineTitle')}{' '}
               <span className="bg-gradient-to-r from-brand-orange to-brand-orange-dark bg-clip-text text-transparent">
                 Journey
               </span>
             </h2>
             <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg">
-              Key milestones in our mission to help children in the DRC
+              {t('about.timelineDescription')}
             </p>
           </div>
           <div className="max-w-4xl mx-auto">
@@ -176,15 +256,15 @@ export default function About() {
                 <div key={index} className="flex gap-6">
                   <div className="flex-shrink-0">
                     <div className="w-16 h-16 bg-gradient-to-br from-brand-orange to-brand-orange-dark rounded-xl flex items-center justify-center shadow-lg">
-                      <span className="text-white font-bold text-lg">{milestone.year}</span>
+                      <span className="text-white font-bold text-lg">{t(`about.timeline${index + 1}Year` as any)}</span>
                     </div>
                   </div>
                   <div className="flex-1 pb-8 border-b border-slate-200 dark:border-slate-700 last:border-0">
                     <h3 className="text-2xl font-bold text-slate-800 dark:text-slate-200 mb-2">
-                      {milestone.title}
+                      {t(`about.timeline${index + 1}Title` as any)}
                     </h3>
                     <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                      {milestone.description}
+                      {t(`about.timeline${index + 1}Desc` as any)}
                     </p>
                   </div>
                 </div>
@@ -202,14 +282,10 @@ export default function About() {
               <Globe className="w-10 h-10 text-white" />
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Where We Operate
+              {t('about.locationTitle')}
             </h2>
             <p className="text-lg md:text-xl text-slate-200 mb-8 leading-relaxed">
-              Our Head Office is located in <span className="text-brand-orange-light font-semibold">Kinshasa, DR Congo</span>. 
-              We work with in-country partners who help us administrate our scholarship program in <span className="text-brand-orange-light font-semibold">Goma</span>.
-            </p>
-            <p className="text-lg md:text-xl text-slate-200 leading-relaxed">
-              Our future plans include expanding to other cities across the Democratic Republic of Congo to reach more children in need.
+              {t('about.locationDescription')}
             </p>
           </div>
         </div>
