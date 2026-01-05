@@ -1,6 +1,6 @@
 export type TranslationKey = 
   // Navigation
-  | 'nav.home' | 'nav.about' | 'nav.contact'
+  | 'nav.home' | 'nav.about' | 'nav.parrainage' | 'nav.contact'
   // Hero
   | 'hero.badge' | 'hero.title1' | 'hero.title2' | 'hero.title3' | 'hero.description' | 'hero.button'
   | 'hero.feature1' | 'hero.feature2' | 'hero.feature3'
@@ -36,7 +36,7 @@ export type TranslationKey =
   | 'sponsor.howStep3' | 'sponsor.howStep3Desc'
   | 'sponsor.howStep4' | 'sponsor.howStep4Desc'
   | 'sponsor.benefitsTitle' | 'sponsor.benefit1' | 'sponsor.benefit2' | 'sponsor.benefit3' | 'sponsor.benefit4'
-  | 'sponsor.benefit5' | 'sponsor.benefit6' | 'sponsor.benefit7' | 'sponsor.cost'
+  | 'sponsor.benefit5' | 'sponsor.benefit6' | 'sponsor.benefit7' | 'sponsor.cost' | 'sponsor.costFull'
   | 'sponsor.faqBadge' | 'sponsor.faqTitle' | 'sponsor.faqDescription'
   | 'sponsor.faq1Q' | 'sponsor.faq1A'
   | 'sponsor.faq2Q' | 'sponsor.faq2A'
@@ -90,6 +90,7 @@ export const translations = {
     // Navigation
     'nav.home': 'Accueil',
     'nav.about': 'À propos',
+    'nav.parrainage': 'Parrainage',
     'nav.contact': 'Contact',
     // Hero
     'hero.badge': 'TRANSFORMER DES VIES',
@@ -195,6 +196,7 @@ export const translations = {
     'sponsor.benefit6': 'Trousse d\'hygiène - Savon, dentifrice, serviettes hygiéniques pour les filles, lotion et autres articles de soins personnels.',
     'sponsor.benefit7': 'Mises à jour régulières pour le parrain - Photos, progrès scolaires et mises à jour sur le bien-être.',
     'sponsor.cost': 'Le coût est de 400 $ par année scolaire, soit environ 35 $ par mois. Votre engagement continu contribuera à changer la vie d\'un enfant. Vous pouvez payer mensuellement, trimestriellement, semestriellement ou annuellement. Vous pouvez également parrainer plusieurs enfants.',
+    'sponsor.costFull': 'Le coût est de 400 $ par année scolaire, soit environ 35 $ par mois. Votre engagement continu contribuera à changer la vie d\'un enfant. Vous pouvez payer mensuellement, trimestriellement, semestriellement ou annuellement. Vous pouvez également parrainer plusieurs enfants. Quelle bénédiction de savoir que vous partagez l\'amour du Christ avec ces enfants précieux !',
     'sponsor.faqBadge': 'QUESTIONS FRÉQUENTES',
     'sponsor.faqTitle': 'Questions',
     'sponsor.faqDescription': 'Trouvez des réponses aux questions courantes sur notre programme de parrainage',
@@ -326,6 +328,7 @@ export const translations = {
     // Navigation
     'nav.home': 'Home',
     'nav.about': 'About',
+    'nav.parrainage': 'Sponsorship',
     'nav.contact': 'Contact',
     // Hero
     'hero.badge': 'TRANSFORM LIVES',
@@ -431,6 +434,7 @@ export const translations = {
     'sponsor.benefit6': 'Hygiene kit - Soap, toothpaste, sanitary pads for girls, lotion, and other personal care items.',
     'sponsor.benefit7': 'Regular updates for the sponsor - Photos, academic progress, and updates on well-being.',
     'sponsor.cost': 'The cost is $400 per school year, which is approximately $35 per month. Your ongoing commitment will help change a child\'s life. You can pay monthly, quarterly, semestrially, or annually. You can also sponsor multiple children.',
+    'sponsor.costFull': 'The cost is $400 per school year, which is approximately $35 per month. Your ongoing commitment will help change a child\'s life. You can pay monthly, quarterly, semestrially, or annually. You can also sponsor multiple children. What a blessing to know that you are sharing Christ\'s love with these precious children!',
     'sponsor.faqBadge': 'FREQUENTLY ASKED QUESTIONS',
     'sponsor.faqTitle': 'Frequently Asked',
     'sponsor.faqDescription': 'Find answers to common questions about our sponsorship program',

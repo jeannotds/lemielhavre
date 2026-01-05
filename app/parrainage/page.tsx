@@ -1,0 +1,342 @@
+'use client';
+
+import { Header } from '@/components/header';
+import { Footer } from '@/components/footer';
+import { ScrollToTop } from '@/components/scroll-to-top';
+import { useLanguage } from '@/contexts/language-context';
+import { useTranslation } from '@/lib/translations';
+import { Heart, DollarSign, GraduationCap, Utensils, Stethoscope, Sparkles, Mail, Check, Users, MapPin, UserCheck, Shield, Gift } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
+
+export default function Parrainage() {
+  const { language } = useLanguage();
+  const t = useTranslation(language);
+
+  const benefits = [
+    {
+      number: 1,
+      titleKey: 'sponsor.benefit1' as const,
+      icon: GraduationCap,
+      gradient: 'from-blue-500 to-cyan-500',
+    },
+    {
+      number: 2,
+      titleKey: 'sponsor.benefit2' as const,
+      icon: Heart,
+      gradient: 'from-brand-orange to-brand-orange-dark',
+    },
+    {
+      number: 3,
+      titleKey: 'sponsor.benefit3' as const,
+      icon: DollarSign,
+      gradient: 'from-green-500 to-emerald-500',
+    },
+    {
+      number: 4,
+      titleKey: 'sponsor.benefit4' as const,
+      icon: Utensils,
+      gradient: 'from-purple-500 to-pink-500',
+    },
+    {
+      number: 5,
+      titleKey: 'sponsor.benefit5' as const,
+      icon: Stethoscope,
+      gradient: 'from-red-500 to-orange-500',
+    },
+    {
+      number: 6,
+      titleKey: 'sponsor.benefit6' as const,
+      icon: Sparkles,
+      gradient: 'from-cyan-500 to-blue-500',
+    },
+    {
+      number: 7,
+      titleKey: 'sponsor.benefit7' as const,
+      icon: Mail,
+      gradient: 'from-indigo-500 to-purple-500',
+    },
+  ];
+
+  const faqs = [
+    {
+      questionKey: 'sponsor.faq1Q' as const,
+      answerKey: 'sponsor.faq1A' as const,
+    },
+    {
+      questionKey: 'sponsor.faq2Q' as const,
+      answerKey: 'sponsor.faq2A' as const,
+    },
+    {
+      questionKey: 'sponsor.faq3Q' as const,
+      answerKey: 'sponsor.faq3A' as const,
+    },
+    {
+      questionKey: 'sponsor.faq4Q' as const,
+      answerKey: 'sponsor.faq4A' as const,
+    },
+    {
+      questionKey: 'sponsor.faq5Q' as const,
+      answerKey: 'sponsor.faq5A' as const,
+    },
+    {
+      questionKey: 'sponsor.faq6Q' as const,
+      answerKey: 'sponsor.faq6A' as const,
+    },
+    {
+      questionKey: 'sponsor.faq7Q' as const,
+      answerKey: 'sponsor.faq7A' as const,
+    },
+    {
+      questionKey: 'sponsor.faq8Q' as const,
+      answerKey: 'sponsor.faq8A' as const,
+    },
+    {
+      questionKey: 'sponsor.faq9Q' as const,
+      answerKey: 'sponsor.faq9A' as const,
+    },
+  ];
+
+  return (
+    <main className="min-h-screen bg-white dark:bg-slate-900">
+      <Header />
+      
+      {/* Hero Section */}
+      <section className="relative mt-20 pt-32 md:pt-48 pb-24 md:pb-40 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(251,146,60,0.1),transparent_50%)]" />
+        <div className="relative z-10 container mx-auto px-6 lg:px-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-6">
+              <Heart className="w-4 h-4 text-brand-orange fill-brand-orange" />
+              <p className="text-white text-sm font-semibold tracking-wider">PARRAINAGE</p>
+            </div>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white">
+              {t('sponsor.title')}{' '}
+              <span className="bg-gradient-to-r from-brand-orange to-brand-orange-dark bg-clip-text text-transparent">
+                Programme
+              </span>
+            </h1>
+            <p className="text-lg md:text-xl text-slate-200 max-w-2xl mx-auto leading-relaxed">
+              {t('sponsor.description')}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-800 py-20 md:py-28">
+        <div className="container mx-auto px-6 lg:px-10">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-slate-800 rounded-full border border-brand-cream dark:border-slate-700 mb-4">
+                <span className="w-2 h-2 bg-brand-orange rounded-full animate-pulse" />
+                <span className="text-sm font-semibold text-brand-orange-dark dark:text-brand-orange">BÉNÉFICES</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 dark:text-slate-200 mb-6">
+                {t('sponsor.benefitsTitle')}
+              </h2>
+            </div>
+
+            {/* Benefits Grid */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+              {benefits.map((benefit) => {
+                const Icon = benefit.icon;
+                const benefitText = t(benefit.titleKey);
+                const [title, ...descParts] = benefitText.split(' - ');
+                const description = descParts.join(' - ');
+                return (
+                  <div
+                    key={benefit.number}
+                    className="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group"
+                  >
+                    <div className="flex items-start gap-4">
+                      <div className={`flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br ${benefit.gradient} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform`}>
+                        <Icon className="w-7 h-7 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2 mb-2">
+                          <span className="text-brand-orange-dark dark:text-brand-orange font-bold text-lg">{benefit.number}.</span>
+                          <h3 className="text-base font-bold text-slate-800 dark:text-slate-200 group-hover:text-brand-orange-dark dark:group-hover:text-brand-orange transition-colors">
+                            {title}
+                          </h3>
+                        </div>
+                        {description && (
+                          <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                            {description}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Cost Section */}
+            <div className="bg-gradient-to-br from-brand-orange/10 to-brand-orange-dark/10 dark:from-brand-orange/20 dark:to-brand-orange-dark/20 rounded-3xl p-8 md:p-12 border border-brand-orange/20 text-center">
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-brand-orange to-brand-orange-dark rounded-2xl mb-6 shadow-xl">
+                <DollarSign className="w-10 h-10 text-white" />
+              </div>
+              <p className="text-lg md:text-xl text-slate-700 dark:text-slate-300 leading-relaxed max-w-4xl mx-auto">
+                {t('sponsor.costFull')}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Program Steps Section */}
+      <section className="bg-white dark:bg-slate-900 py-20 md:py-28">
+        <div className="container mx-auto px-6 lg:px-10">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-slate-800 rounded-full border border-brand-cream dark:border-slate-700 mb-4">
+                <span className="w-2 h-2 bg-brand-orange rounded-full animate-pulse" />
+                <span className="text-sm font-semibold text-brand-orange-dark dark:text-brand-orange">NOTRE PROGRAMME</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 dark:text-slate-200 mb-6">
+                {t('program.title')}
+              </h2>
+              <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+                {t('program.description')}
+              </p>
+            </div>
+
+            {/* Steps Grid 2x2 */}
+            <div className="grid md:grid-cols-2 gap-8 md:gap-10 lg:gap-12">
+              {[
+                { number: 1, titleKey: 'program.step1Title' as const, descKey: 'program.step1Desc' as const, gradient: 'from-blue-500 to-cyan-500', icon: UserCheck },
+                { number: 2, titleKey: 'program.step2Title' as const, descKey: 'program.step2Desc' as const, gradient: 'from-brand-orange to-brand-orange-dark', icon: DollarSign },
+                { number: 3, titleKey: 'program.step3Title' as const, descKey: 'program.step3Desc' as const, gradient: 'from-green-500 to-emerald-500', icon: GraduationCap },
+                { number: 4, titleKey: 'program.step4Title' as const, descKey: 'program.step4Desc' as const, gradient: 'from-purple-500 to-pink-500', icon: Gift },
+              ].map((step) => {
+                const Icon = step.icon;
+                return (
+                  <div
+                    key={step.number}
+                    className="group bg-white dark:bg-slate-800 rounded-3xl p-6 md:p-8 border border-slate-200 dark:border-slate-700 hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+                  >
+                    <div className="flex items-start gap-4 mb-6">
+                      <div className={`relative flex-shrink-0 w-20 h-20 rounded-2xl bg-gradient-to-br ${step.gradient} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform`}>
+                        <Icon className="w-10 h-10 text-white" />
+                        <div className="absolute -top-2 -right-2 w-8 h-8 bg-white dark:bg-slate-800 rounded-full flex items-center justify-center shadow-md border-2 border-brand-orange">
+                          <span className="text-sm font-bold text-brand-orange">{step.number}</span>
+                        </div>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-xl md:text-2xl font-bold text-slate-800 dark:text-slate-200 mb-2 group-hover:text-brand-orange-dark dark:group-hover:text-brand-orange transition-colors">
+                          {t(step.titleKey)}
+                        </h3>
+                        <div className="h-1 w-16 bg-gradient-to-r from-brand-orange to-brand-orange-dark rounded-full group-hover:w-24 transition-all" />
+                      </div>
+                    </div>
+                    <div className="bg-slate-50 dark:bg-slate-700/50 rounded-2xl p-5 border border-slate-100 dark:border-slate-600">
+                      <p className="text-sm md:text-base text-slate-600 dark:text-slate-400 leading-relaxed">
+                        {t(step.descKey)}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="bg-gradient-to-b from-slate-50 to-white dark:from-slate-800 dark:to-slate-900 py-20 md:py-28">
+        <div className="container mx-auto px-6 lg:px-10">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-slate-800 rounded-full border border-brand-cream dark:border-slate-700 mb-4">
+                <span className="w-2 h-2 bg-brand-orange rounded-full animate-pulse" />
+                <span className="text-sm font-semibold text-brand-orange-dark dark:text-brand-orange">{t('sponsor.faqBadge')}</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-slate-200 mb-4">
+                {t('sponsor.faqTitle')}{' '}
+                <span className="bg-gradient-to-r from-brand-orange to-brand-orange-dark bg-clip-text text-transparent">
+                  Questions
+                </span>
+              </h2>
+              <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg">
+                {t('sponsor.faqDescription')}
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              <Accordion type="single" collapsible className="w-full">
+                {faqs.map((faq, index) => {
+                  const icons = [
+                    <Users className="w-5 h-5" key="users" />,
+                    <Users className="w-5 h-5" key="users2" />,
+                    <MapPin className="w-5 h-5" key="map" />,
+                    <UserCheck className="w-5 h-5" key="usercheck" />,
+                    <DollarSign className="w-5 h-5" key="dollar" />,
+                    <Shield className="w-5 h-5" key="shield" />,
+                    <Gift className="w-5 h-5" key="gift" />,
+                    <Gift className="w-5 h-5" key="gift2" />,
+                    <Mail className="w-5 h-5" key="mail" />,
+                  ];
+
+                  return (
+                    <AccordionItem
+                      key={index}
+                      value={`item-${index}`}
+                      className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-6 hover:border-brand-orange-dark transition-all duration-300 hover:shadow-lg"
+                    >
+                      <AccordionTrigger className="hover:no-underline py-6">
+                        <div className="flex items-start gap-4 text-left">
+                          <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-gradient-to-br from-brand-orange to-brand-orange-dark flex items-center justify-center mt-1 shadow-md">
+                            <div className="text-white">
+                              {icons[index] || <Check className="w-5 h-5" />}
+                            </div>
+                          </div>
+                          <span className="text-lg md:text-xl font-bold text-slate-900 dark:text-slate-200 group-hover:text-brand-orange-dark transition-colors">
+                            {t(faq.questionKey)}
+                          </span>
+                        </div>
+                      </AccordionTrigger>
+                      <AccordionContent className="pb-6">
+                        <div className="ml-14">
+                          <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-lg">
+                            {t(faq.answerKey)}
+                          </p>
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+                  );
+                })}
+              </Accordion>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20 md:py-28">
+        <div className="container mx-auto px-6 lg:px-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+              Prêt à changer une vie ?
+            </h2>
+            <p className="text-lg md:text-xl text-slate-200 mb-8 max-w-2xl mx-auto">
+              Rejoignez-nous dans notre mission de transformer la vie des enfants en RDC grâce au parrainage.
+            </p>
+            <Button className="bg-gradient-to-r from-brand-orange to-brand-orange-dark hover:from-brand-orange-dark hover:to-brand-green text-white px-10 py-6 text-lg font-semibold rounded-xl shadow-xl shadow-brand-orange/30 hover:shadow-2xl hover:shadow-brand-orange/40 transition-all transform hover:scale-105">
+              {t('sponsor.button')}
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+      <ScrollToTop />
+    </main>
+  );
+}
+
