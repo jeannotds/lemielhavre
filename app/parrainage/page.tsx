@@ -24,7 +24,6 @@ export default function Parrainage() {
   const processImages = [
     '/assets/WhatsApp Image 2025-12-15 at 19.57.21 (1).jpeg',
     '/assets/WhatsApp Image 2025-12-15 at 19.57.22 (1).jpeg',
-    '/assets/director/laetitia-1.jpeg',
     '/assets/WhatsApp Image 2025-12-15 at 19.57.23 (1).jpeg',
     '/assets/WhatsApp Image 2025-12-15 at 19.57.24 (1).jpeg',
     '/assets/WhatsApp Image 2025-12-15 at 19.57.25 (1).jpeg',
@@ -35,7 +34,6 @@ export default function Parrainage() {
   const processSlides = [
     t('sponsor.howProcessSlide1'), // Notre fondateur avec l'orphelinat Flammme D'amour
     t('sponsor.howProcessSlide2'), // Notre fondateur avec les enfants de l'orphelinat
-    t('sponsor.howProcessSlide2'), // Notre fondateur avec les enfants de l'orphelinat (laetitia-1.jpeg)
     t('sponsor.howProcessSlide3'), // Les enfants se préparent pour l'école
     t('sponsor.howProcessSlide3'), // Les enfants se préparent pour l'école
     t('sponsor.howProcessSlide3'), // Les enfants se préparent pour l'école
