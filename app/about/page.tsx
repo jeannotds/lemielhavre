@@ -110,6 +110,7 @@ export default function About() {
               <p>{t('about.historyP1')}</p>
               <p>{t('about.historyP2')}</p>
               <p>{t('about.historyP3')}</p>
+              <p>{t('about.historyP3b')}</p>
               <p>{t('about.historyP4')}</p>
               <p className="font-semibold text-slate-800 dark:text-slate-200">{t('about.historyP5')}</p>
             </div>

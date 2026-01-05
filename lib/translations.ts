@@ -5,6 +5,7 @@ export type TranslationKey =
   | 'hero.badge' | 'hero.title1' | 'hero.title2' | 'hero.title3' | 'hero.description' | 'hero.button'
   | 'hero.feature1' | 'hero.feature2' | 'hero.feature3'
   | 'hero.slide1' | 'hero.slide2' | 'hero.slide3' | 'hero.slide4'
+  | 'hero.welcomeTitle' | 'hero.welcomeMessage'
   // Stats
   | 'stats.title' | 'stats.description' | 'stats.donors' | 'stats.volunteers' | 'stats.beneficiaries' | 'stats.projects'
   | 'stats.donorsDesc' | 'stats.volunteersDesc' | 'stats.beneficiariesDesc' | 'stats.projectsDesc'
@@ -13,6 +14,11 @@ export type TranslationKey =
   // Charity Causes
   | 'causes.badge' | 'causes.title' | 'causes.subtitle' | 'causes.description' | 'causes.button'
   | 'causes.food' | 'causes.education' | 'causes.medical' | 'causes.water'
+  // Why Sponsor
+  | 'whySponsor.title' | 'whySponsor.subtitle' | 'whySponsor.challenge1Title' | 'whySponsor.challenge1Desc'
+  | 'whySponsor.challenge2Title' | 'whySponsor.challenge2Desc' | 'whySponsor.challenge3Title' | 'whySponsor.challenge3Desc'
+  | 'whySponsor.challenge4Title' | 'whySponsor.challenge4Desc' | 'whySponsor.stat1' | 'whySponsor.stat2' | 'whySponsor.stat3'
+  | 'whySponsor.message' | 'whySponsor.childrenTitle'
   // Sponsor Match
   | 'sponsor.badge' | 'sponsor.title' | 'sponsor.description'
   | 'sponsor.slide1' | 'sponsor.slide2' | 'sponsor.slide3'
@@ -49,7 +55,7 @@ export type TranslationKey =
   // About Page
   | 'about.badge' | 'about.title' | 'about.description'
   | 'about.missionBadge' | 'about.missionTitle' | 'about.missionP1' | 'about.missionP2' | 'about.missionP3'
-  | 'about.historyTitle' | 'about.historyP1' | 'about.historyP2' | 'about.historyP3' | 'about.historyP4' | 'about.historyP5'
+  | 'about.historyTitle' | 'about.historyP1' | 'about.historyP2' | 'about.historyP3' | 'about.historyP3b' | 'about.historyP4' | 'about.historyP5'
   | 'about.founderTitle' | 'about.founderName' | 'about.founderRole' | 'about.founderMessage'
   | 'about.valuesTitle' | 'about.valuesDescription'
   | 'about.value1Title' | 'about.value1Desc'
@@ -95,6 +101,8 @@ export const translations = {
     'hero.slide2': 'Aidez les Sans-Abri',
     'hero.slide3': 'Vie de charité',
     'hero.slide4': 'Faire une Différence',
+    'hero.welcomeTitle': 'Bienvenue au Le Miel Havre',
+    'hero.welcomeMessage': 'Bienvenue à la fondation Le Miel Havre. Nous sommes très honorés que vous vous joigniez à notre mission visant à autonomiser les enfants défavorisés grâce à l\'éducation. Votre décision de participer à ce programme contribue à ouvrir la voie à un avenir meilleur, un enfant à la fois.',
     // Stats
     'stats.title': 'Notre Impact en Chiffres',
     'stats.description': 'Les défis auxquels les enfants de l\'est de la RDC sont confrontés',
@@ -122,6 +130,22 @@ export const translations = {
     'causes.education': 'Éducation pour Tous',
     'causes.medical': 'Aide Médicale',
     'causes.water': 'Eau Potable pour Tous',
+    // Why Sponsor
+    'whySponsor.title': 'Pourquoi le parrainage est-il nécessaire ?',
+    'whySponsor.subtitle': 'Les principaux défis auxquels les enfants sont confrontés sont les suivants :',
+    'whySponsor.stat1': '2 500',
+    'whySponsor.stat2': '1,6 million',
+    'whySponsor.stat3': '27 %',
+    'whySponsor.challenge1Title': 'Conflits et déplacements',
+    'whySponsor.challenge1Desc': 'Les violences incessantes ont entraîné la fermeture de nombreuses écoles et le déplacement de familles, privant ainsi des milliers d\'enfants d\'accès à l\'éducation.',
+    'whySponsor.challenge2Title': 'Obstacles économiques',
+    'whySponsor.challenge2Desc': 'Malgré la gratuité de l\'enseignement primaire, les familles n\'ont pas les moyens d\'acheter les fournitures et les uniformes scolaires en raison de la crise économique.',
+    'whySponsor.challenge3Title': 'Infrastructures et ressources limitées',
+    'whySponsor.challenge3Desc': 'Les classes surpeuplées, les installations médiocres et la pénurie d\'enseignants qualifiés nuisent à la qualité de l\'enseignement.',
+    'whySponsor.challenge4Title': 'Faibles résultats scolaires',
+    'whySponsor.challenge4Desc': 'De nombreux élèves ont du mal à atteindre le niveau de compétence de base en raison de la perturbation de leur scolarité et du soutien pédagogique insuffisant.',
+    'whySponsor.message': 'Faire un don n\'est pas seulement un acte de charité. C\'est aussi donner de l\'espoir à ces enfants qui n\'ont pas la possibilité ni la chance d\'aller dans de bonnes écoles. Ce faisant, nous leur faisons comprendre que, quelle que soit leur situation, ils ne doivent jamais renoncer à leurs rêves.',
+    'whySponsor.childrenTitle': 'Nos Enfants',
     // Sponsor Match
     'sponsor.badge': 'PROGRAMME DE PARRAINAGE',
     'sponsor.title': 'Comment Fonctionne le Parrainage Enfant-Parrain ?',
@@ -219,6 +243,7 @@ export const translations = {
     'about.historyP1': 'De nombreux enfants à Goma sont confrontés à des difficultés financières, à des guerres incessantes et à une instabilité politique qui les empêchent de recevoir une éducation adéquate.',
     'about.historyP2': 'Inspirée par cette situation, notre fondatrice, qui a grandi à Goma, a vu sa mère venir en aide aux orphelins dès son plus jeune âge. Cette expérience précoce a suscité en elle une passion durable pour le don et l\'aide aux enfants dans le besoin.',
     'about.historyP3': 'Après avoir étudié et voyagé à l\'étranger, elle a réalisé à quel point l\'éducation pouvait transformer des vies. Déterminée à offrir la même chance aux enfants de son pays natal, elle a créé le Miel Design et consacre 10 % de chaque vente au lancement de la Fondation le Miel Havre en 2025.',
+    'about.historyP3b': 'Depuis sa création, Le Miel Havre\'s a pour objectif d\'améliorer la vie des enfants issus de milieux extrêmement pauvres et/ou abandonnés ou séparés de leur famille en raison d\'une situation à risque, grâce à l\'éducation.',
     'about.historyP4': 'Nous avons commencé par aider cinq enfants vivant à Flamme D\'amour, à Goma. Aujourd\'hui, nous opérons depuis notre siège social à Kinshasa et travaillons avec des partenaires locaux pour gérer et développer nos programmes. Nous prévoyons d\'étendre bientôt nos activités à d\'autres villes.',
     'about.historyP5': 'À la Fondation Le Miel Havre, nous pensons que chaque enfant mérite d\'avoir accès à une éducation de qualité, quelle que soit son origine. Ensemble, nous construisons un avenir meilleur, un enfant à la fois.',
     'about.founderTitle': 'Message de la Fondatrice',
@@ -301,6 +326,8 @@ export const translations = {
     'hero.slide2': 'Help the Homeless',
     'hero.slide3': 'Charity life',
     'hero.slide4': 'Making a Difference',
+    'hero.welcomeTitle': 'Welcome to Le Miel Havre',
+    'hero.welcomeMessage': 'Welcome to Le Miel Havre Foundation. We are very honored that you are joining our mission to empower disadvantaged children through education. Your decision to participate in this program helps pave the way for a better future, one child at a time.',
     // Stats
     'stats.title': 'Our Impact in Numbers',
     'stats.description': 'The challenges children in eastern DRC face',
@@ -328,6 +355,22 @@ export const translations = {
     'causes.education': 'Education for All',
     'causes.medical': 'Medical Assistance',
     'causes.water': 'Clean Water for All',
+    // Why Sponsor
+    'whySponsor.title': 'Why is sponsorship necessary?',
+    'whySponsor.subtitle': 'The main challenges children face are as follows:',
+    'whySponsor.stat1': '2,500',
+    'whySponsor.stat2': '1.6 million',
+    'whySponsor.stat3': '27%',
+    'whySponsor.challenge1Title': 'Conflicts and displacement',
+    'whySponsor.challenge1Desc': 'Incessant violence has led to the closure of many schools and the displacement of families, depriving thousands of children of access to education.',
+    'whySponsor.challenge2Title': 'Economic obstacles',
+    'whySponsor.challenge2Desc': 'Despite free primary education, families cannot afford to buy supplies and school uniforms due to the economic crisis.',
+    'whySponsor.challenge3Title': 'Limited infrastructure and resources',
+    'whySponsor.challenge3Desc': 'Overcrowded classrooms, poor facilities, and a shortage of qualified teachers undermine the quality of education.',
+    'whySponsor.challenge4Title': 'Low academic performance',
+    'whySponsor.challenge4Desc': 'Many students struggle to reach basic competency levels due to disrupted schooling and insufficient educational support.',
+    'whySponsor.message': 'Making a donation is not just an act of charity. It is also giving hope to these children who do not have the opportunity or chance to attend good schools. In doing so, we make them understand that, whatever their situation, they must never give up on their dreams.',
+    'whySponsor.childrenTitle': 'Our Children',
     // Sponsor Match
     'sponsor.badge': 'SPONSORSHIP PROGRAM',
     'sponsor.title': 'How the Sponsor-Child',
@@ -425,6 +468,7 @@ export const translations = {
     'about.historyP1': 'Many children in Goma face financial difficulties, incessant wars, and political instability that prevent them from receiving adequate education.',
     'about.historyP2': 'Inspired by this situation, our founder, who grew up in Goma, saw her mother helping orphans from a young age. This early experience instilled in her a lasting passion for giving and helping children in need.',
     'about.historyP3': 'After studying and traveling abroad, she realized how education could transform lives. Determined to offer the same opportunity to children in her home country, she created Miel Design and dedicates 10% of each sale to launch the Le Miel Havre Foundation in 2025.',
+    'about.historyP3b': 'Since its creation, Le Miel Havre\'s goal has been to improve the lives of children from extremely poor backgrounds and/or abandoned or separated from their families due to a risky situation, through education.',
     'about.historyP4': 'We started by helping five children living at Flamme D\'amour in Goma. Today, we operate from our headquarters in Kinshasa and work with local partners to manage and develop our programs. We plan to expand to other cities soon.',
     'about.historyP5': 'At Le Miel Havre Foundation, we believe that every child deserves access to quality education, regardless of their background. Together, we are building a better future, one child at a time.',
     'about.founderTitle': 'Message from the Founder',
