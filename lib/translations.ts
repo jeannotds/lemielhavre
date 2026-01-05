@@ -19,6 +19,10 @@ export type TranslationKey =
   | 'whySponsor.challenge2Title' | 'whySponsor.challenge2Desc' | 'whySponsor.challenge3Title' | 'whySponsor.challenge3Desc'
   | 'whySponsor.challenge4Title' | 'whySponsor.challenge4Desc' | 'whySponsor.stat1' | 'whySponsor.stat2' | 'whySponsor.stat3'
   | 'whySponsor.message' | 'whySponsor.childrenTitle'
+  // Program Section
+  | 'program.title' | 'program.description' | 'program.step1Title' | 'program.step1Desc'
+  | 'program.step2Title' | 'program.step2Desc' | 'program.step3Title' | 'program.step3Desc'
+  | 'program.step4Title' | 'program.step4Desc'
   // Sponsor Match
   | 'sponsor.badge' | 'sponsor.title' | 'sponsor.description'
   | 'sponsor.slide1' | 'sponsor.slide2' | 'sponsor.slide3'
@@ -130,6 +134,17 @@ export const translations = {
     'causes.education': 'Éducation pour Tous',
     'causes.medical': 'Aide Médicale',
     'causes.water': 'Eau Potable pour Tous',
+    // Program Section
+    'program.title': 'Notre programme de parrainage',
+    'program.description': 'Le programme de bourses Le Miel Havre permet aux enfants d\'accéder à une école sûre, de qualité et performante. Les besoins fondamentaux de chaque enfant sont satisfaits.',
+    'program.step1Title': 'Orientation et évaluation des enfants',
+    'program.step1Desc': 'Les enfants sont généralement orientés vers l\'orphelinat soutenu par le programme de bourses Le Miel Havre soutenu par l\'intermédiaire des églises locales, des organisations communautaires et des services sociaux.',
+    'program.step2Title': 'Processus d\'allocation des fonds',
+    'program.step2Desc': 'Chaque enfant est lié à un parrain qui s\'engage à lui fournir un soutien financier mensuel ou annuel. Bien que le parrainage soit personnalisé, les contributions sont regroupées au sein du programme afin de garantir que tous les enfants vivant dans un orphelinat partenaire soutenu par Le Miel Havre bénéficient d\'un soutien égal. Le soutien peut provenir de parrains d\'enfants, de sympathisants du programme, etc.',
+    'program.step3Title': 'Placement des enfants',
+    'program.step3Desc': 'Chaque enfant a accès à l\'éducation, y compris aux uniformes scolaires, aux livres, aux fournitures et au soutien scolaire si nécessaire. Parallèlement à leurs études, ils bénéficient de repas équilibrés, de bilans de santé réguliers et de soins médicaux afin de favoriser leur croissance et leur développement. Au sein de l\'orphelinat, les enfants apprennent également les valeurs du travail d\'équipe, de l\'empathie et de la coopération.',
+    'program.step4Title': 'La vie après le programme',
+    'program.step4Desc': 'Au moment où ils obtiennent leur diplôme, les enfants des orphelinats partenaires soutenus par le programme de bourses Le Miel Havre ont généralement terminé leur scolarité ou leur formation professionnelle. Cela leur permet d\'acquérir les outils nécessaires à leur autonomie, tels que des connaissances financières, des compétences en matière de résolution de problèmes et de prise de décision. Les diplômés repartent avec une base solide en matière de foi et de résilience.',
     // Why Sponsor
     'whySponsor.title': 'Pourquoi le parrainage est-il nécessaire ?',
     'whySponsor.subtitle': 'Les principaux défis auxquels les enfants sont confrontés sont les suivants :',
@@ -355,6 +370,17 @@ export const translations = {
     'causes.education': 'Education for All',
     'causes.medical': 'Medical Assistance',
     'causes.water': 'Clean Water for All',
+    // Program Section
+    'program.title': 'Our Sponsorship Program',
+    'program.description': 'The Le Miel Havre scholarship program allows children to access a safe, quality, and high-performing school. The fundamental needs of each child are met.',
+    'program.step1Title': 'Children\'s Referral and Assessment',
+    'program.step1Desc': 'Children are usually referred to the orphanage supported by the Le Miel Havre scholarship program through local churches, community organizations, and social services.',
+    'program.step2Title': 'Fund Allocation Process',
+    'program.step2Desc': 'Each child is linked to a sponsor who commits to providing monthly or annual financial support. Although sponsorship is personalized, contributions are pooled within the program to ensure that all children living in a partner orphanage supported by Le Miel Havre benefit from equal support. Support can come from child sponsors, program supporters, etc.',
+    'program.step3Title': 'Children\'s Placement',
+    'program.step3Desc': 'Each child has access to education, including school uniforms, books, supplies, and tutoring if necessary. Alongside their studies, they benefit from balanced meals, regular health checkups, and medical care to promote their growth and development. Within the orphanage, children also learn the values of teamwork, empathy, and cooperation.',
+    'program.step4Title': 'Life After the Program',
+    'program.step4Desc': 'By the time they graduate, children in partner orphanages supported by the Le Miel Havre scholarship program have generally completed their schooling or vocational training. This enables them to acquire the tools necessary for their autonomy, such as financial knowledge, problem-solving and decision-making skills. Graduates leave with a solid foundation in faith and resilience.',
     // Why Sponsor
     'whySponsor.title': 'Why is sponsorship necessary?',
     'whySponsor.subtitle': 'The main challenges children face are as follows:',
