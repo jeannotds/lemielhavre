@@ -22,7 +22,7 @@ export default function BookletPage() {
             className="inline-flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-brand-orange dark:hover:text-brand-orange transition-colors mb-6"
           >
             <ArrowLeft className="w-4 h-4" />
-            <span>Retour à l'accueil</span>
+            <span>Retour à l&apos;accueil</span>
           </Link>
 
           <div className="max-w-4xl mx-auto text-center mb-8">
@@ -81,7 +81,7 @@ export default function BookletPage() {
                   title="Le Miel Havre Booklet"
                 >
                   <p className="p-8 text-center text-slate-600 dark:text-slate-400">
-                    Votre navigateur ne supporte pas l'affichage des PDFs.{' '}
+                    Votre navigateur ne supporte pas l&apos;affichage des PDFs.{' '}
                     <a
                       href={pdfPath}
                       target="_blank"
