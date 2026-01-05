@@ -7,6 +7,7 @@ import { useLanguage } from '@/contexts/language-context';
 import { useTranslation } from '@/lib/translations';
 import { Heart, DollarSign, GraduationCap, Utensils, Stethoscope, Sparkles, Mail, Check, Users, MapPin, UserCheck, Shield, Gift } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 import {
   Accordion,
   AccordionContent,
@@ -22,43 +23,43 @@ export default function Parrainage() {
     {
       number: 1,
       titleKey: 'sponsor.benefit1' as const,
-      icon: GraduationCap,
+      image: '/assets/parrainage/fraissocial.png',
       gradient: 'from-blue-500 to-cyan-500',
     },
     {
       number: 2,
       titleKey: 'sponsor.benefit2' as const,
-      icon: Heart,
+      image: '/assets/parrainage/uniforme.png',
       gradient: 'from-brand-orange to-brand-orange-dark',
     },
     {
       number: 3,
       titleKey: 'sponsor.benefit3' as const,
-      icon: DollarSign,
+      image: '/assets/parrainage/cahier.png',
       gradient: 'from-green-500 to-emerald-500',
     },
     {
       number: 4,
       titleKey: 'sponsor.benefit4' as const,
-      icon: Utensils,
+      image: '/assets/parrainage/repas.png',
       gradient: 'from-purple-500 to-pink-500',
     },
     {
       number: 5,
       titleKey: 'sponsor.benefit5' as const,
-      icon: Stethoscope,
+      image: '/assets/parrainage/soins.png',
       gradient: 'from-red-500 to-orange-500',
     },
     {
       number: 6,
       titleKey: 'sponsor.benefit6' as const,
-      icon: Sparkles,
+      image: '/assets/parrainage/trousse.png',
       gradient: 'from-cyan-500 to-blue-500',
     },
     {
       number: 7,
       titleKey: 'sponsor.benefit7' as const,
-      icon: Mail,
+      image: '/assets/parrainage/miseajour.png',
       gradient: 'from-indigo-500 to-purple-500',
     },
   ];
@@ -145,7 +146,6 @@ export default function Parrainage() {
             {/* Benefits Grid */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
               {benefits.map((benefit) => {
-                const Icon = benefit.icon;
                 const benefitText = t(benefit.titleKey);
                 const [title, ...descParts] = benefitText.split(' - ');
                 const description = descParts.join(' - ');
@@ -155,8 +155,14 @@ export default function Parrainage() {
                     className="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group"
                   >
                     <div className="flex items-start gap-4">
-                      <div className={`flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br ${benefit.gradient} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform`}>
-                        <Icon className="w-7 h-7 text-white" />
+                      <div className="flex-shrink-0 w-16 h-16 rounded-xl bg-white dark:bg-slate-700 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform overflow-hidden">
+                        <Image
+                          src={benefit.image}
+                          alt={title}
+                          width={64}
+                          height={64}
+                          className="w-full h-full object-contain p-2"
+                        />
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center gap-2 mb-2">
