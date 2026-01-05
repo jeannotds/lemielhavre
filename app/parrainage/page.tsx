@@ -5,7 +5,7 @@ import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { ScrollToTop } from '@/components/scroll-to-top';
 import { useLanguage } from '@/contexts/language-context';
-import { useTranslation } from '@/lib/translations';
+import { useTranslation, type TranslationKey } from '@/lib/translations';
 import { Heart, DollarSign, GraduationCap, Utensils, Stethoscope, Sparkles, Mail, Check, Users, MapPin, UserCheck, Shield, Gift, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
@@ -52,43 +52,43 @@ export default function Parrainage() {
   const benefits = [
     {
       number: 1,
-      titleKey: 'sponsor.benefit1' as const,
+      titleKey: 'sponsor.benefit1',
       image: '/assets/parrainage/fraissocial.png',
       gradient: 'from-blue-500 to-cyan-500',
     },
     {
       number: 2,
-      titleKey: 'sponsor.benefit2' as const,
+      titleKey: 'sponsor.benefit2',
       image: '/assets/parrainage/uniforme.png',
       gradient: 'from-brand-orange to-brand-orange-dark',
     },
     {
       number: 3,
-      titleKey: 'sponsor.benefit3' as const,
+      titleKey: 'sponsor.benefit3',
       image: '/assets/parrainage/cahier.png',
       gradient: 'from-green-500 to-emerald-500',
     },
     {
       number: 4,
-      titleKey: 'sponsor.benefit4' as const,
+      titleKey: 'sponsor.benefit4',
       image: '/assets/parrainage/repas.png',
       gradient: 'from-purple-500 to-pink-500',
     },
     {
       number: 5,
-      titleKey: 'sponsor.benefit5' as const,
+      titleKey: 'sponsor.benefit5',
       image: '/assets/parrainage/soins.png',
       gradient: 'from-red-500 to-orange-500',
     },
     {
       number: 6,
-      titleKey: 'sponsor.benefit6' as const,
+      titleKey: 'sponsor.benefit6',
       image: '/assets/parrainage/trousse.png',
       gradient: 'from-cyan-500 to-blue-500',
     },
     {
       number: 7,
-      titleKey: 'sponsor.benefit7' as const,
+      titleKey: 'sponsor.benefit7',
       image: '/assets/parrainage/miseajour.png',
       gradient: 'from-indigo-500 to-purple-500',
     },
@@ -96,40 +96,40 @@ export default function Parrainage() {
 
   const faqs = [
     {
-      questionKey: 'sponsor.faq1Q' as const,
-      answerKey: 'sponsor.faq1A' as const,
+      questionKey: 'sponsor.faq1Q',
+      answerKey: 'sponsor.faq1A',
     },
     {
-      questionKey: 'sponsor.faq2Q' as const,
-      answerKey: 'sponsor.faq2A' as const,
+      questionKey: 'sponsor.faq2Q',
+      answerKey: 'sponsor.faq2A',
     },
     {
-      questionKey: 'sponsor.faq3Q' as const,
-      answerKey: 'sponsor.faq3A' as const,
+      questionKey: 'sponsor.faq3Q',
+      answerKey: 'sponsor.faq3A',
     },
     {
-      questionKey: 'sponsor.faq4Q' as const,
-      answerKey: 'sponsor.faq4A' as const,
+      questionKey: 'sponsor.faq4Q',
+      answerKey: 'sponsor.faq4A',
     },
     {
-      questionKey: 'sponsor.faq5Q' as const,
-      answerKey: 'sponsor.faq5A' as const,
+      questionKey: 'sponsor.faq5Q',
+      answerKey: 'sponsor.faq5A',
     },
     {
-      questionKey: 'sponsor.faq6Q' as const,
-      answerKey: 'sponsor.faq6A' as const,
+      questionKey: 'sponsor.faq6Q',
+      answerKey: 'sponsor.faq6A',
     },
     {
-      questionKey: 'sponsor.faq7Q' as const,
-      answerKey: 'sponsor.faq7A' as const,
+      questionKey: 'sponsor.faq7Q',
+      answerKey: 'sponsor.faq7A',
     },
     {
-      questionKey: 'sponsor.faq8Q' as const,
-      answerKey: 'sponsor.faq8A' as const,
+      questionKey: 'sponsor.faq8Q',
+      answerKey: 'sponsor.faq8A',
     },
     {
-      questionKey: 'sponsor.faq9Q' as const,
-      answerKey: 'sponsor.faq9A' as const,
+      questionKey: 'sponsor.faq9Q',
+      answerKey: 'sponsor.faq9A',
     },
   ];
 
@@ -176,7 +176,7 @@ export default function Parrainage() {
             {/* Benefits Grid */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
               {benefits.map((benefit) => {
-                const benefitText = t(benefit.titleKey);
+                const benefitText = t(benefit.titleKey as TranslationKey);
                 const [title, ...descParts] = benefitText.split(' - ');
                 const description = descParts.join(' - ');
                 return (
@@ -246,10 +246,10 @@ export default function Parrainage() {
             {/* Steps Grid 2x2 */}
             <div className="grid md:grid-cols-2 gap-8 md:gap-10 lg:gap-12">
               {[
-                { number: 1, titleKey: 'program.step1Title' as const, descKey: 'program.step1Desc' as const, gradient: 'from-blue-500 to-cyan-500', icon: UserCheck },
-                { number: 2, titleKey: 'program.step2Title' as const, descKey: 'program.step2Desc' as const, gradient: 'from-brand-orange to-brand-orange-dark', icon: DollarSign },
-                { number: 3, titleKey: 'program.step3Title' as const, descKey: 'program.step3Desc' as const, gradient: 'from-green-500 to-emerald-500', icon: GraduationCap },
-                { number: 4, titleKey: 'program.step4Title' as const, descKey: 'program.step4Desc' as const, gradient: 'from-purple-500 to-pink-500', icon: Gift },
+                { number: 1, titleKey: 'program.step1Title', descKey: 'program.step1Desc', gradient: 'from-blue-500 to-cyan-500', icon: UserCheck },
+                { number: 2, titleKey: 'program.step2Title', descKey: 'program.step2Desc', gradient: 'from-brand-orange to-brand-orange-dark', icon: DollarSign },
+                { number: 3, titleKey: 'program.step3Title', descKey: 'program.step3Desc', gradient: 'from-green-500 to-emerald-500', icon: GraduationCap },
+                { number: 4, titleKey: 'program.step4Title', descKey: 'program.step4Desc', gradient: 'from-purple-500 to-pink-500', icon: Gift },
               ].map((step) => {
                 const Icon = step.icon;
                 return (
@@ -266,14 +266,14 @@ export default function Parrainage() {
                       </div>
                       <div className="flex-1">
                         <h3 className="text-xl md:text-2xl font-bold text-slate-800 dark:text-slate-200 mb-2 group-hover:text-brand-orange-dark dark:group-hover:text-brand-orange transition-colors">
-                          {t(step.titleKey)}
+                          {t(step.titleKey as TranslationKey)}
                         </h3>
                         <div className="h-1 w-16 bg-gradient-to-r from-brand-orange to-brand-orange-dark rounded-full group-hover:w-24 transition-all" />
                       </div>
                     </div>
                     <div className="bg-slate-50 dark:bg-slate-700/50 rounded-2xl p-5 border border-slate-100 dark:border-slate-600">
                       <p className="text-sm md:text-base text-slate-600 dark:text-slate-400 leading-relaxed">
-                        {t(step.descKey)}
+                        {t(step.descKey as TranslationKey)}
                       </p>
                     </div>
                   </div>
@@ -303,7 +303,7 @@ export default function Parrainage() {
               />
             </div>
           ))}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/85 to-black/95 z-10" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/80 to-black/80 z-10" />
         </div>
 
         {/* Navigation Buttons for Background Carousel */}
@@ -435,14 +435,14 @@ export default function Parrainage() {
                             </div>
                           </div>
                           <span className="text-lg md:text-xl font-bold text-slate-900 dark:text-slate-200 group-hover:text-brand-orange-dark transition-colors">
-                            {t(faq.questionKey)}
+                            {t(faq.questionKey as TranslationKey)}
                           </span>
                         </div>
                       </AccordionTrigger>
                       <AccordionContent className="pb-6">
                         <div className="ml-14">
                           <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-lg">
-                            {t(faq.answerKey)}
+                            {t(faq.answerKey as TranslationKey)}
                           </p>
                         </div>
                       </AccordionContent>
