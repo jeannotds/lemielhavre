@@ -459,12 +459,12 @@ export default function Parrainage() {
       <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20 md:py-28">
         <div className="container mx-auto px-6 lg:px-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Prêt à changer une vie ?
-            </h2>
-            <p className="text-lg md:text-xl text-slate-200 mb-8 max-w-2xl mx-auto">
-              Rejoignez-nous dans notre mission de transformer la vie des enfants en RDC grâce au parrainage.
-            </p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+            Pr&ecirc;t &agrave; changer une vie ?
+          </h2>
+          <p className="text-lg md:text-xl text-slate-200 mb-8 max-w-2xl mx-auto">
+            Rejoignez&#8209;nous dans notre mission de transformer la vie des enfants en RDC gr&acirc;ce au parrainage.
+          </p>
             <Button className="bg-gradient-to-r from-brand-orange to-brand-orange-dark hover:from-brand-orange-dark hover:to-brand-green text-white px-10 py-6 text-lg font-semibold rounded-xl shadow-xl shadow-brand-orange/30 hover:shadow-2xl hover:shadow-brand-orange/40 transition-all transform hover:scale-105">
               {t('sponsor.button')}
             </Button>
