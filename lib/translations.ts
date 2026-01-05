@@ -30,6 +30,8 @@ export type TranslationKey =
   | 'sponsor.step1Title' | 'sponsor.step1Desc'
   | 'sponsor.step2Title' | 'sponsor.step2Desc'
   | 'sponsor.step3Title' | 'sponsor.step3Desc'
+  | 'sponsor.howProcessTitle' | 'sponsor.howProcessStep1' | 'sponsor.howProcessStep2' | 'sponsor.howProcessStep3' | 'sponsor.howProcessStep4'
+  | 'sponsor.howProcessSlide1' | 'sponsor.howProcessSlide2' | 'sponsor.howProcessSlide3' | 'sponsor.howProcessNote'
   | 'sponsor.howTitle' | 'sponsor.howDescription'
   | 'sponsor.howStep1' | 'sponsor.howStep1Desc'
   | 'sponsor.howStep2' | 'sponsor.howStep2Desc'
@@ -177,6 +179,15 @@ export const translations = {
     'sponsor.step2Desc': 'Une fois le jumelage confirmé, le processus d\'intégration commence. Les parrains reçoivent un paquet de bienvenue avec la photo de l\'enfant, son histoire personnelle, les détails de son passé et le numéro d\'identification Le Miel Havre.',
     'sponsor.step3Title': 'Communication et Suivi',
     'sponsor.step3Desc': 'Une fois l\'intégration terminée, les parrains commenceront à recevoir des lettres de leur enfant assigné et pourront communiquer par lettres ou par email en utilisant le numéro d\'identification de bourse de l\'enfant.',
+    'sponsor.howProcessTitle': 'Comment fonctionne le programme de parrainage d\'enfants?',
+    'sponsor.howProcessStep1': 'Le processus de jumelage peut prendre quelques mois, car le personnel s\'efforce de trouver l\'enfant qui convient à chaque parrain.',
+    'sponsor.howProcessStep2': 'Une fois qu\'un enfant rejoint le programme de bourses Le Miel Havre, le personnel recueille des informations personnelles, médicales et scolaires afin de créer son profil.',
+    'sponsor.howProcessStep3': 'Une fois le parrain jumelé, celui-ci reçoit un dossier de bienvenue contenant la photo, l\'histoire, le parcours et le numéro d\'identification de l\'enfant.',
+    'sponsor.howProcessStep4': 'À partir de là, les parrains peuvent commencer à communiquer avec l\'enfant par courrier ou par e-mail en utilisant le numéro d\'identification de la bourse.',
+    'sponsor.howProcessSlide1': 'Notre fondateur avec l\'orphelinat Flammme D\'amour',
+    'sponsor.howProcessSlide2': 'Notre fondateur avec les enfants de l\'orphelinat',
+    'sponsor.howProcessSlide3': 'Les enfants se préparent pour l\'école',
+    'sponsor.howProcessNote': 'Remarque : le jumelage n\'est disponible que pour les parrains qui satisfont au niveau de financement requis.',
     'sponsor.howTitle': 'COMMENT ÇA FONCTIONNE ?',
     'sponsor.howDescription': 'Le programme de bourses Le Miel Havre connecte les enfants avec des écoles sûres et de qualité. Les besoins de base de chaque enfant sont satisfaits avec des vêtements, des articles de soins personnels. Ils reçoivent une éducation comprenant des fournitures scolaires et du tutorat.',
     'sponsor.howStep1': 'RÉFÉRENCE ET ÉVALUATION DES ENFANTS',
@@ -415,6 +426,15 @@ export const translations = {
     'sponsor.step2Desc': 'Once the match is confirmed, the onboarding process begins. Sponsors receive a welcome packet with the child\'s photo, personal story, background details, and Le Miel Havre identification number.',
     'sponsor.step3Title': 'Communication & Follow-up',
     'sponsor.step3Desc': 'After onboarding is complete, sponsors will begin receiving letters from their assigned child and can communicate through letters or via email using the child\'s scholarship identification number.',
+    'sponsor.howProcessTitle': 'How Does the Children\'s Sponsorship Program Work?',
+    'sponsor.howProcessStep1': 'The matching process can take several months, as staff work to find the child who is right for each sponsor.',
+    'sponsor.howProcessStep2': 'Once a child joins the Le Miel Havre scholarship program, staff gather personal, medical, and academic information to create their profile.',
+    'sponsor.howProcessStep3': 'Once the sponsor is matched, they receive a welcome packet containing the child\'s photo, story, background, and identification number.',
+    'sponsor.howProcessStep4': 'From there, sponsors can begin communicating with the child by mail or email using the scholarship identification number.',
+    'sponsor.howProcessSlide1': 'Our founder with Flammme D\'amour orphanage',
+    'sponsor.howProcessSlide2': 'Our founder with the children of the orphanage',
+    'sponsor.howProcessSlide3': 'Children preparing for school',
+    'sponsor.howProcessNote': 'Note: Matching is only available for sponsors who meet the required funding level.',
     'sponsor.howTitle': 'HOW DOES IT',
     'sponsor.howDescription': 'Le Miel Havre scholarship program connects children with safe, and good school. Each child\'s basic needs are met with clothing, personal care items. They receive education including school supplies, and tutoring.',
     'sponsor.howStep1': 'CHILDREN REFERRAL & ASSESSMENT',

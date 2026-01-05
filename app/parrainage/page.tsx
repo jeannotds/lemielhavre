@@ -1,11 +1,12 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import { Header } from '@/components/header';
 import { Footer } from '@/components/footer';
 import { ScrollToTop } from '@/components/scroll-to-top';
 import { useLanguage } from '@/contexts/language-context';
 import { useTranslation } from '@/lib/translations';
-import { Heart, DollarSign, GraduationCap, Utensils, Stethoscope, Sparkles, Mail, Check, Users, MapPin, UserCheck, Shield, Gift } from 'lucide-react';
+import { Heart, DollarSign, GraduationCap, Utensils, Stethoscope, Sparkles, Mail, Check, Users, MapPin, UserCheck, Shield, Gift, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import {
@@ -18,6 +19,37 @@ import {
 export default function Parrainage() {
   const { language } = useLanguage();
   const t = useTranslation(language);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const processImages = [
+    '/assets/WhatsApp Image 2025-12-15 at 19.57.21 (1).jpeg',
+    '/assets/WhatsApp Image 2025-12-15 at 19.57.22 (1).jpeg',
+    '/assets/director/laetitia-1.jpeg',
+    '/assets/WhatsApp Image 2025-12-15 at 19.57.23 (1).jpeg',
+    '/assets/WhatsApp Image 2025-12-15 at 19.57.24 (1).jpeg',
+    '/assets/WhatsApp Image 2025-12-15 at 19.57.25 (1).jpeg',
+    '/assets/WhatsApp Image 2025-12-15 at 19.57.29 (1).jpeg',
+    '/assets/WhatsApp Image 2025-12-15 at 19.57.30 (1).jpeg',
+  ];
+
+  const processSlides = [
+    t('sponsor.howProcessSlide1'), // Notre fondateur avec l'orphelinat Flammme D'amour
+    t('sponsor.howProcessSlide2'), // Notre fondateur avec les enfants de l'orphelinat
+    t('sponsor.howProcessSlide2'), // Notre fondateur avec les enfants de l'orphelinat (laetitia-1.jpeg)
+    t('sponsor.howProcessSlide3'), // Les enfants se préparent pour l'école
+    t('sponsor.howProcessSlide3'), // Les enfants se préparent pour l'école
+    t('sponsor.howProcessSlide3'), // Les enfants se préparent pour l'école
+    t('sponsor.howProcessSlide3'), // Les enfants se préparent pour l'école
+    t('sponsor.howProcessSlide3'), // Les enfants se préparent pour l'école
+  ];
+
+  // Auto-slide for process images
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % processImages.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [processImages.length]);
 
   const benefits = [
     {
@@ -254,6 +286,110 @@ export default function Parrainage() {
         </div>
       </section>
 
+      {/* How It Works Section */}
+      <section className="bg-white dark:bg-slate-900 py-20 md:py-28">
+        <div className="container mx-auto px-6 lg:px-10">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-slate-800 rounded-full border border-brand-cream dark:border-slate-700 mb-4">
+                <span className="w-2 h-2 bg-brand-orange rounded-full animate-pulse" />
+                <span className="text-sm font-semibold text-brand-orange-dark dark:text-brand-orange">PROCESSUS</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 dark:text-slate-200 mb-6">
+                {t('sponsor.howProcessTitle')}
+              </h2>
+            </div>
+
+            {/* Process Steps Description */}
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6 mb-12 max-w-7xl mx-auto">
+              <div className="bg-slate-50 dark:bg-slate-800 rounded-2xl p-6 md:p-8 border border-slate-200 dark:border-slate-700 hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-xl hover:shadow-brand-orange/20 hover:-translate-y-2 transition-all duration-300 cursor-pointer group">
+                <p className="text-base md:text-lg text-slate-700 dark:text-slate-300 leading-relaxed group-hover:text-brand-orange-dark dark:group-hover:text-brand-orange transition-colors duration-300">
+                  {t('sponsor.howProcessStep1')}
+                </p>
+              </div>
+              <div className="bg-slate-50 dark:bg-slate-800 rounded-2xl p-6 md:p-8 border border-slate-200 dark:border-slate-700 hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-xl hover:shadow-brand-orange/20 hover:-translate-y-2 transition-all duration-300 cursor-pointer group">
+                <p className="text-base md:text-lg text-slate-700 dark:text-slate-300 leading-relaxed group-hover:text-brand-orange-dark dark:group-hover:text-brand-orange transition-colors duration-300">
+                  {t('sponsor.howProcessStep2')}
+                </p>
+              </div>
+              <div className="bg-slate-50 dark:bg-slate-800 rounded-2xl p-6 md:p-8 border border-slate-200 dark:border-slate-700 hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-xl hover:shadow-brand-orange/20 hover:-translate-y-2 transition-all duration-300 cursor-pointer group">
+                <p className="text-base md:text-lg text-slate-700 dark:text-slate-300 leading-relaxed group-hover:text-brand-orange-dark dark:group-hover:text-brand-orange transition-colors duration-300">
+                  {t('sponsor.howProcessStep3')}
+                </p>
+              </div>
+              <div className="bg-slate-50 dark:bg-slate-800 rounded-2xl p-6 md:p-8 border border-slate-200 dark:border-slate-700 hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-xl hover:shadow-brand-orange/20 hover:-translate-y-2 transition-all duration-300 cursor-pointer group">
+                <p className="text-base md:text-lg text-slate-700 dark:text-slate-300 leading-relaxed group-hover:text-brand-orange-dark dark:group-hover:text-brand-orange transition-colors duration-300">
+                  {t('sponsor.howProcessStep4')}
+                </p>
+              </div>
+            </div>
+
+            {/* Image Carousel */}
+            <div className="relative h-96 md:h-[500px] lg:h-[600px] rounded-2xl overflow-hidden mb-8 shadow-2xl">
+              {processImages.map((image, index) => (
+                <div
+                  key={index}
+                  className={`absolute inset-0 transition-opacity duration-1000 ${
+                    index === currentImageIndex ? 'opacity-100 z-0' : 'opacity-0 z-0'
+                  }`}
+                >
+                  <Image
+                    src={image}
+                    alt={processSlides[index]}
+                    fill
+                    className="object-cover w-full h-full"
+                  />
+                </div>
+              ))}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent z-10" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_80%,rgba(251,146,60,0.2),transparent_70%)] z-10" />
+
+              <div className="absolute inset-x-0 bottom-0 p-8 md:p-12 z-20">
+                <h3 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+                  {processSlides[currentImageIndex]}
+                </h3>
+              </div>
+
+              <button
+                onClick={() => setCurrentImageIndex((prev) => (prev - 1 + processImages.length) % processImages.length)}
+                className="absolute left-4 md:left-6 top-1/2 -translate-y-1/2 bg-white dark:bg-slate-800/90 hover:bg-white dark:hover:bg-slate-800 backdrop-blur-sm p-3 rounded-full transition-all shadow-lg hover:scale-110 z-30"
+                aria-label="Previous slide"
+              >
+                <ChevronLeft className="w-6 h-6 text-slate-900 dark:text-slate-200" />
+              </button>
+
+              <button
+                onClick={() => setCurrentImageIndex((prev) => (prev + 1) % processImages.length)}
+                className="absolute right-4 md:right-6 top-1/2 -translate-y-1/2 bg-white dark:bg-slate-800/90 hover:bg-white dark:hover:bg-slate-800 backdrop-blur-sm p-3 rounded-full transition-all shadow-lg hover:scale-110 z-30"
+                aria-label="Next slide"
+              >
+                <ChevronRight className="w-6 h-6 text-slate-900 dark:text-slate-200" />
+              </button>
+
+              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-30">
+                {processImages.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentImageIndex(index)}
+                    className={`h-2 rounded-full transition-all ${
+                      index === currentImageIndex ? 'w-8 bg-brand-orange' : 'w-2 bg-slate-400/50 hover:bg-brand-orange'
+                    }`}
+                    aria-label={`Go to slide ${index + 1}`}
+                  />
+                ))}
+              </div>
+            </div>
+
+            {/* Note */}
+            <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl p-6 md:p-8 text-center max-w-4xl mx-auto">
+              <p className="text-base md:text-lg text-amber-800 dark:text-amber-200 font-medium">
+                {t('sponsor.howProcessNote')}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="bg-gradient-to-b from-slate-50 to-white dark:from-slate-800 dark:to-slate-900 py-20 md:py-28">
         <div className="container mx-auto px-6 lg:px-10">
@@ -274,6 +410,7 @@ export default function Parrainage() {
               </p>
             </div>
 
+            {/* Prêt à changer une vie ? */}
             <div className="space-y-4">
               <Accordion type="single" collapsible className="w-full">
                 {faqs.map((faq, index) => {
