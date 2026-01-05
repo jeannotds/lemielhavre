@@ -8,6 +8,8 @@ export type TranslationKey =
   // Stats
   | 'stats.title' | 'stats.description' | 'stats.donors' | 'stats.volunteers' | 'stats.beneficiaries' | 'stats.projects'
   | 'stats.donorsDesc' | 'stats.volunteersDesc' | 'stats.beneficiariesDesc' | 'stats.projectsDesc'
+  | 'stats.schoolsClosed' | 'stats.schoolsClosedDesc' | 'stats.childrenOutOfSchool' | 'stats.childrenOutOfSchoolDesc'
+  | 'stats.minimumLevel' | 'stats.minimumLevelDesc'
   // Charity Causes
   | 'causes.badge' | 'causes.title' | 'causes.subtitle' | 'causes.description' | 'causes.button'
   | 'causes.food' | 'causes.education' | 'causes.medical' | 'causes.water'
@@ -23,6 +25,8 @@ export type TranslationKey =
   | 'sponsor.howStep2' | 'sponsor.howStep2Desc'
   | 'sponsor.howStep3' | 'sponsor.howStep3Desc'
   | 'sponsor.howStep4' | 'sponsor.howStep4Desc'
+  | 'sponsor.benefitsTitle' | 'sponsor.benefit1' | 'sponsor.benefit2' | 'sponsor.benefit3' | 'sponsor.benefit4'
+  | 'sponsor.benefit5' | 'sponsor.benefit6' | 'sponsor.benefit7' | 'sponsor.cost'
   | 'sponsor.faqBadge' | 'sponsor.faqTitle' | 'sponsor.faqDescription'
   | 'sponsor.faq1Q' | 'sponsor.faq1A'
   | 'sponsor.faq2Q' | 'sponsor.faq2A'
@@ -31,6 +35,8 @@ export type TranslationKey =
   | 'sponsor.faq5Q' | 'sponsor.faq5A'
   | 'sponsor.faq6Q' | 'sponsor.faq6A'
   | 'sponsor.faq7Q' | 'sponsor.faq7A'
+  | 'sponsor.faq8Q' | 'sponsor.faq8A'
+  | 'sponsor.faq9Q' | 'sponsor.faq9A'
   | 'sponsor.button'
   // Partners
   | 'partners.badge' | 'partners.title' | 'partners.description'
@@ -43,6 +49,8 @@ export type TranslationKey =
   // About Page
   | 'about.badge' | 'about.title' | 'about.description'
   | 'about.missionBadge' | 'about.missionTitle' | 'about.missionP1' | 'about.missionP2' | 'about.missionP3'
+  | 'about.historyTitle' | 'about.historyP1' | 'about.historyP2' | 'about.historyP3' | 'about.historyP4' | 'about.historyP5'
+  | 'about.founderTitle' | 'about.founderName' | 'about.founderRole' | 'about.founderMessage'
   | 'about.valuesTitle' | 'about.valuesDescription'
   | 'about.value1Title' | 'about.value1Desc'
   | 'about.value2Title' | 'about.value2Desc'
@@ -53,6 +61,7 @@ export type TranslationKey =
   | 'about.timeline2Year' | 'about.timeline2Title' | 'about.timeline2Desc'
   | 'about.timeline3Year' | 'about.timeline3Title' | 'about.timeline3Desc'
   | 'about.locationTitle' | 'about.locationDescription'
+  | 'about.challengesTitle' | 'about.challenge1' | 'about.challenge2' | 'about.challenge3' | 'about.challenge4'
   // Contact Page
   | 'contact.badge' | 'contact.title' | 'contact.description'
   | 'contact.waysTitle' | 'contact.waysDescription'
@@ -73,11 +82,11 @@ export const translations = {
     'nav.about': 'À propos',
     'nav.contact': 'Contact',
     // Hero
-    'hero.badge': 'VIE DE CHARITÉ',
-    'hero.title1': 'Charité, Foi et Espoir.',
-    'hero.title2': 'Aidez les Sans-Abri.',
-    'hero.title3': 'Vie de charité.',
-    'hero.description': 'Rejoignez-nous pour faire une différence significative dans la vie des enfants de la RDC. Ensemble, nous pouvons construire un avenir meilleur pour les enfants du Congo.',
+    'hero.badge': 'TRANSFORMER DES VIES',
+    'hero.title1': 'Transformer la vie',
+    'hero.title2': "d'un enfant grâce à",
+    'hero.title3': "l'éducation",
+    'hero.description': 'Devenez sponsor dès aujourd\'hui et contribuez à ouvrir la voie à un avenir meilleur, un enfant à la fois.',
     'hero.button': 'Lire le Livret',
     'hero.feature1': 'Voir notre Mission',
     'hero.feature2': 'Top Fondateurs',
@@ -88,15 +97,21 @@ export const translations = {
     'hero.slide4': 'Faire une Différence',
     // Stats
     'stats.title': 'Notre Impact en Chiffres',
-    'stats.description': 'Ensemble, nous faisons une vraie différence dans les communautés du monde entier',
-    'stats.donors': 'Donateurs',
-    'stats.volunteers': 'Bénévoles',
-    'stats.beneficiaries': 'Bénéficiaires',
-    'stats.projects': 'Projets',
-    'stats.donorsDesc': 'Généreux donateurs',
-    'stats.volunteersDesc': 'Aides dévoués',
-    'stats.beneficiariesDesc': 'Vies transformées',
-    'stats.projectsDesc': 'Initiatives actives',
+    'stats.description': 'Les défis auxquels les enfants de l\'est de la RDC sont confrontés',
+    'stats.donors': '2,500',
+    'stats.volunteers': '1.6M',
+    'stats.beneficiaries': '27%',
+    'stats.projects': '5',
+    'stats.donorsDesc': 'Écoles fermées',
+    'stats.volunteersDesc': 'Enfants non scolarisés',
+    'stats.beneficiariesDesc': 'Niveau minimum atteint',
+    'stats.projectsDesc': 'Enfants dans le programme',
+    'stats.schoolsClosed': '2,500',
+    'stats.schoolsClosedDesc': 'Écoles et lieux d\'apprentissage fermés',
+    'stats.childrenOutOfSchool': '1.6M',
+    'stats.childrenOutOfSchoolDesc': 'Enfants dans l\'est de la RDC ne sont pas scolarisés',
+    'stats.minimumLevel': '27%',
+    'stats.minimumLevelDesc': 'Des élèves ont atteint le niveau minimum requis',
     // Charity Causes
     'causes.badge': 'NOS CAUSES',
     'causes.title': 'Nos Causes',
@@ -132,6 +147,15 @@ export const translations = {
     'sponsor.howStep3Desc': 'Chaque enfant a accès à l\'éducation, y compris les uniformes scolaires, les livres, les fournitures et le tutorat si nécessaire. En plus de leurs études, ils reçoivent des repas équilibrés, des examens de santé réguliers et des soins médicaux pour soutenir une croissance et un développement sains.',
     'sponsor.howStep4': 'LA VIE APRÈS LE PROGRAMME',
     'sponsor.howStep4Desc': 'Au moment de leur diplôme, les enfants dans les orphelinats partenaires soutenus par le programme de bourses Le Miel Havre ont généralement terminé une éducation formelle ou une formation professionnelle, les équipant d\'outils pour l\'autosuffisance.',
+    'sponsor.benefitsTitle': 'Ce Que Votre Parrainage Apporte',
+    'sponsor.benefit1': 'Frais de scolarité et frais d\'examen - Permet à l\'enfant de fréquenter l\'école sans interruption.',
+    'sponsor.benefit2': 'Uniforme scolaire et chaussures - Fournit à l\'enfant des vêtements adaptés à l\'école.',
+    'sponsor.benefit3': 'Livres et fournitures scolaires - Cahiers, stylos, crayons et tout le matériel scolaire nécessaire.',
+    'sponsor.benefit4': 'Repas quotidiens - Aide l\'enfant à rester en bonne santé et concentré en classe.',
+    'sponsor.benefit5': 'Soins de santé de base - Couvre les examens médicaux essentiels et les traitements nécessaires.',
+    'sponsor.benefit6': 'Trousse d\'hygiène - Savon, dentifrice, serviettes hygiéniques pour les filles, lotion et autres articles de soins personnels.',
+    'sponsor.benefit7': 'Mises à jour régulières pour le parrain - Photos, progrès scolaires et mises à jour sur le bien-être.',
+    'sponsor.cost': 'Le coût est de 400 $ par année scolaire, soit environ 35 $ par mois. Votre engagement continu contribuera à changer la vie d\'un enfant. Vous pouvez payer mensuellement, trimestriellement, semestriellement ou annuellement. Vous pouvez également parrainer plusieurs enfants.',
     'sponsor.faqBadge': 'QUESTIONS FRÉQUENTES',
     'sponsor.faqTitle': 'Questions',
     'sponsor.faqDescription': 'Trouvez des réponses aux questions courantes sur notre programme de parrainage',
@@ -148,7 +172,11 @@ export const translations = {
     'sponsor.faq6Q': 'Mon enfant parrainé connaît-il mon nom complet et mon adresse ?',
     'sponsor.faq6A': 'Afin de protéger votre vie privée, nous ne partageons que votre prénom avec votre enfant parrainé. Nous ne fournissons pas votre adresse, votre ville ou votre localisation d\'état.',
     'sponsor.faq7Q': 'Que vais-je recevoir lorsque je parraine un enfant ?',
-    'sponsor.faq7A': 'Vous recevrez un paquet de bienvenue par email avec une courte biographie et une photo de votre enfant dans les 3 semaines. Vous recevrez également une photo et une biographie annuelles mises à jour de votre enfant, et pouvez communiquer par lettres ou email.',
+    'sponsor.faq7A': '1) Dossier de bienvenue – Une fois votre premier paiement traité, vous recevrez un dossier de bienvenue par e-mail dans un délai d\'environ trois semaines. Ce dossier contient une brève biographie et une photo de votre enfant, ainsi que des informations sur le programme. 2) Photo et biographie mises à jour – Vous recevrez également chaque année une photo et une biographie mises à jour de votre enfant. 3) Newsletter – Nous envoyons également deux fois par an notre newsletter par e-mail.',
+    'sponsor.faq8Q': 'Puis-je envoyer des cadeaux à mon enfant parrainé ?',
+    'sponsor.faq8A': 'Dans le cadre du parrainage Le Miel Havre, le foyer pour enfants où vit votre enfant parrainé, Flamme D\'amour, vous aidera à célébrer l\'anniversaire de votre enfant ainsi que Noël, deux occasions spéciales dans la vie de chaque enfant. Vous pouvez envoyer un don supplémentaire pour rendre ces événements encore plus festifs.',
+    'sponsor.faq9Q': 'Pourrai-je communiquer ou écrire à l\'enfant que je parraine ?',
+    'sponsor.faq9A': 'Écrire à l\'enfant que vous parrainez est un moyen privilégié de nouer des liens durables et de construire une relation. Les enfants trop jeunes pour écrire ou ayant des besoins particuliers vous enverront une empreinte de leur main ou un dessin. Un membre du personnel du foyer écrira un message à votre intention au nom de l\'enfant.',
     'sponsor.button': 'Parrainez un Enfant Aujourd\'hui',
     // Partners
     'partners.badge': 'NOS PARTENAIRES',
@@ -187,6 +215,21 @@ export const translations = {
     'about.missionP1': 'Le Miel Havre est une organisation à but non lucratif engagée à améliorer les vies des enfants en République Démocratique du Congo grâce à l\'éducation et aux programmes de soutien complets.',
     'about.missionP2': 'Notre mission est de fournir des opportunités éducatives, des ressources essentielles et un environnement stable et aimant pour les enfants qui viennent de l\'extrême pauvreté ou ont été abandonnés ou retirés de leurs familles.',
     'about.missionP3': 'Nous envisageons un avenir où chaque enfant en RDC a accès à une éducation de qualité, des soins de santé appropriés et le soutien dont ils ont besoin pour s\'épanouir et devenir des adultes autosuffisants.',
+    'about.historyTitle': 'Notre Histoire',
+    'about.historyP1': 'De nombreux enfants à Goma sont confrontés à des difficultés financières, à des guerres incessantes et à une instabilité politique qui les empêchent de recevoir une éducation adéquate.',
+    'about.historyP2': 'Inspirée par cette situation, notre fondatrice, qui a grandi à Goma, a vu sa mère venir en aide aux orphelins dès son plus jeune âge. Cette expérience précoce a suscité en elle une passion durable pour le don et l\'aide aux enfants dans le besoin.',
+    'about.historyP3': 'Après avoir étudié et voyagé à l\'étranger, elle a réalisé à quel point l\'éducation pouvait transformer des vies. Déterminée à offrir la même chance aux enfants de son pays natal, elle a créé le Miel Design et consacre 10 % de chaque vente au lancement de la Fondation le Miel Havre en 2025.',
+    'about.historyP4': 'Nous avons commencé par aider cinq enfants vivant à Flamme D\'amour, à Goma. Aujourd\'hui, nous opérons depuis notre siège social à Kinshasa et travaillons avec des partenaires locaux pour gérer et développer nos programmes. Nous prévoyons d\'étendre bientôt nos activités à d\'autres villes.',
+    'about.historyP5': 'À la Fondation Le Miel Havre, nous pensons que chaque enfant mérite d\'avoir accès à une éducation de qualité, quelle que soit son origine. Ensemble, nous construisons un avenir meilleur, un enfant à la fois.',
+    'about.founderTitle': 'Message de la Fondatrice',
+    'about.founderName': 'Laetitia',
+    'about.founderRole': 'Fondatrice de Le Miel Havre',
+    'about.founderMessage': 'Bienvenue à la fondation Le Miel Havre. Nous sommes très honorés que vous vous joigniez à notre mission visant à autonomiser les enfants défavorisés grâce à l\'éducation. Votre décision de participer à ce programme contribue à ouvrir la voie à un avenir meilleur, un enfant à la fois.',
+    'about.challengesTitle': 'Pourquoi le Parrainage Est-il Nécessaire ?',
+    'about.challenge1': 'Conflits et déplacements : Les violences incessantes ont entraîné la fermeture de nombreuses écoles et le déplacement de familles, privant ainsi des milliers d\'enfants d\'accès à l\'éducation.',
+    'about.challenge2': 'Obstacles économiques : Malgré la gratuité de l\'enseignement primaire, les familles n\'ont pas les moyens d\'acheter les fournitures et les uniformes scolaires en raison de la crise économique.',
+    'about.challenge3': 'Infrastructures et ressources limitées : Les classes surpeuplées, les installations médiocres et la pénurie d\'enseignants qualifiés nuisent à la qualité de l\'enseignement.',
+    'about.challenge4': 'Faibles résultats scolaires : De nombreux élèves ont du mal à atteindre le niveau de compétence de base en raison de la perturbation de leur scolarité et du soutien pédagogique insuffisant.',
     'about.valuesTitle': 'Nos Valeurs',
     'about.valuesDescription': 'Les principes qui guident tout ce que nous faisons',
     'about.value1Title': 'Compassion',
@@ -245,11 +288,11 @@ export const translations = {
     'nav.about': 'About',
     'nav.contact': 'Contact',
     // Hero
-    'hero.badge': 'CHARITY LIFE',
-    'hero.title1': 'Charity, Faith and Hope.',
-    'hero.title2': 'Help the Homeless.',
-    'hero.title3': 'Charity life.',
-    'hero.description': 'Join us to make a meaningful difference in the lives of children in the DRC. Together, we can build a better future for the children of Congo.',
+    'hero.badge': 'TRANSFORM LIVES',
+    'hero.title1': 'Transform the life',
+    'hero.title2': 'of a child through',
+    'hero.title3': 'education',
+    'hero.description': 'Become a sponsor today and help pave the way for a better future, one child at a time.',
     'hero.button': 'Read the Booklet',
     'hero.feature1': 'View our Mission',
     'hero.feature2': 'Top Founders',
@@ -260,15 +303,21 @@ export const translations = {
     'hero.slide4': 'Making a Difference',
     // Stats
     'stats.title': 'Our Impact in Numbers',
-    'stats.description': 'Together, we\'re making a real difference in communities around the world',
-    'stats.donors': 'Donors',
-    'stats.volunteers': 'Volunteers',
-    'stats.beneficiaries': 'Beneficiaries',
-    'stats.projects': 'Projects',
-    'stats.donorsDesc': 'Generous supporters',
-    'stats.volunteersDesc': 'Dedicated helpers',
-    'stats.beneficiariesDesc': 'Lives changed',
-    'stats.projectsDesc': 'Active initiatives',
+    'stats.description': 'The challenges children in eastern DRC face',
+    'stats.donors': '2,500',
+    'stats.volunteers': '1.6M',
+    'stats.beneficiaries': '27%',
+    'stats.projects': '5',
+    'stats.donorsDesc': 'Schools closed',
+    'stats.volunteersDesc': 'Children out of school',
+    'stats.beneficiariesDesc': 'Reached minimum level',
+    'stats.projectsDesc': 'Children in program',
+    'stats.schoolsClosed': '2,500',
+    'stats.schoolsClosedDesc': 'Schools and learning places closed',
+    'stats.childrenOutOfSchool': '1.6M',
+    'stats.childrenOutOfSchoolDesc': 'Children in eastern DRC are not in school',
+    'stats.minimumLevel': '27%',
+    'stats.minimumLevelDesc': 'Of students have reached the minimum required level',
     // Charity Causes
     'causes.badge': 'OUR CAUSES',
     'causes.title': 'Our Charity',
@@ -304,6 +353,15 @@ export const translations = {
     'sponsor.howStep3Desc': 'Every child is provided with access to education, including school uniforms, books, supplies, and tutoring when needed. Alongside their studies, they receive balanced meals, regular health checkups, and medical care to support healthy growth and development.',
     'sponsor.howStep4': 'LIFE AFTER THE PROGRAM',
     'sponsor.howStep4Desc': 'By the time they graduate, children in partner orphanages supported by Le Miel Havre scholarship program have usually completed formal education or vocational training, equipping them with tools for self-sufficiency.',
+    'sponsor.benefitsTitle': 'What Your Sponsorship Provides',
+    'sponsor.benefit1': 'School fees and examination fees - Allows the child to attend school without interruption.',
+    'sponsor.benefit2': 'School uniform and shoes - Provides the child with appropriate school clothing.',
+    'sponsor.benefit3': 'Books and school supplies - Notebooks, pens, pencils, and all necessary school materials.',
+    'sponsor.benefit4': 'Daily meals - Helps the child stay healthy and focused in class.',
+    'sponsor.benefit5': 'Basic health care - Covers essential medical exams and necessary treatments.',
+    'sponsor.benefit6': 'Hygiene kit - Soap, toothpaste, sanitary pads for girls, lotion, and other personal care items.',
+    'sponsor.benefit7': 'Regular updates for the sponsor - Photos, academic progress, and updates on well-being.',
+    'sponsor.cost': 'The cost is $400 per school year, which is approximately $35 per month. Your ongoing commitment will help change a child\'s life. You can pay monthly, quarterly, semestrially, or annually. You can also sponsor multiple children.',
     'sponsor.faqBadge': 'FREQUENTLY ASKED QUESTIONS',
     'sponsor.faqTitle': 'Frequently Asked',
     'sponsor.faqDescription': 'Find answers to common questions about our sponsorship program',
@@ -320,7 +378,11 @@ export const translations = {
     'sponsor.faq6Q': 'Does my sponsored child know my full name and address?',
     'sponsor.faq6A': 'In order to protect your privacy, we only share your first name with your sponsored child. We do not provide your address, city or state location.',
     'sponsor.faq7Q': 'What will I receive when I sponsor a child?',
-    'sponsor.faq7A': 'You will receive a Welcome Packet via email with a brief bio and photo of your child within 3 weeks. You will also receive an updated annual photo and bio of your child, and can communicate through letters or email.',
+    'sponsor.faq7A': '1) Welcome Packet – Once your first payment is processed, you will receive a welcome packet via email within approximately three weeks. This packet contains a brief biography and photo of your child, as well as information about the program. 2) Updated photo and biography – You will also receive an updated annual photo and biography of your child. 3) Newsletter – We also send our newsletter via email twice a year.',
+    'sponsor.faq8Q': 'Can I send gifts to my sponsored child?',
+    'sponsor.faq8A': 'As part of Le Miel Havre sponsorship, the children\'s home where your sponsored child lives, Flamme D\'amour, will help you celebrate your child\'s birthday as well as Christmas, two special occasions in every child\'s life. You can send an additional donation to make these events even more festive.',
+    'sponsor.faq9Q': 'Will I be able to communicate or write to the child I sponsor?',
+    'sponsor.faq9A': 'Writing to the child you sponsor is a privileged way to build lasting bonds and build a relationship. Children too young to write or with special needs will send you a handprint or drawing. A staff member from the home will write a message on behalf of the child.',
     'sponsor.button': 'Sponsor a Child Today',
     // Partners
     'partners.badge': 'OUR PARTNERS',
@@ -359,6 +421,21 @@ export const translations = {
     'about.missionP1': 'Le Miel Havre is a non-profit organization committed to improving the lives of children in the Democratic Republic of Congo through education and comprehensive support programs.',
     'about.missionP2': 'Our mission is to provide educational opportunities, essential resources, and a stable, loving environment for children who come from extreme poverty or have been abandoned or removed from their families.',
     'about.missionP3': 'We envision a future where every child in the DRC has access to quality education, proper healthcare, and the support they need to thrive and become self-sufficient adults.',
+    'about.historyTitle': 'Our History',
+    'about.historyP1': 'Many children in Goma face financial difficulties, incessant wars, and political instability that prevent them from receiving adequate education.',
+    'about.historyP2': 'Inspired by this situation, our founder, who grew up in Goma, saw her mother helping orphans from a young age. This early experience instilled in her a lasting passion for giving and helping children in need.',
+    'about.historyP3': 'After studying and traveling abroad, she realized how education could transform lives. Determined to offer the same opportunity to children in her home country, she created Miel Design and dedicates 10% of each sale to launch the Le Miel Havre Foundation in 2025.',
+    'about.historyP4': 'We started by helping five children living at Flamme D\'amour in Goma. Today, we operate from our headquarters in Kinshasa and work with local partners to manage and develop our programs. We plan to expand to other cities soon.',
+    'about.historyP5': 'At Le Miel Havre Foundation, we believe that every child deserves access to quality education, regardless of their background. Together, we are building a better future, one child at a time.',
+    'about.founderTitle': 'Message from the Founder',
+    'about.founderName': 'Laetitia',
+    'about.founderRole': 'Founder of Le Miel Havre',
+    'about.founderMessage': 'Welcome to Le Miel Havre Foundation. We are very honored that you are joining our mission to empower disadvantaged children through education. Your decision to participate in this program helps pave the way for a better future, one child at a time.',
+    'about.challengesTitle': 'Why is Sponsorship Necessary?',
+    'about.challenge1': 'Conflicts and displacement: Incessant violence has led to the closure of many schools and the displacement of families, depriving thousands of children of access to education.',
+    'about.challenge2': 'Economic obstacles: Despite free primary education, families cannot afford to buy supplies and school uniforms due to the economic crisis.',
+    'about.challenge3': 'Limited infrastructure and resources: Overcrowded classrooms, poor facilities, and a shortage of qualified teachers undermine the quality of education.',
+    'about.challenge4': 'Low academic performance: Many students struggle to reach basic competency levels due to disrupted schooling and insufficient educational support.',
     'about.valuesTitle': 'Our Core',
     'about.valuesDescription': 'The principles that guide everything we do',
     'about.value1Title': 'Compassion',

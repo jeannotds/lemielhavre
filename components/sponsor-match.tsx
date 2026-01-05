@@ -87,6 +87,14 @@ export function SponsorMatch() {
       questionKey: 'sponsor.faq7Q' as const,
       answerKey: 'sponsor.faq7A' as const,
     },
+    {
+      questionKey: 'sponsor.faq8Q' as const,
+      answerKey: 'sponsor.faq8A' as const,
+    },
+    {
+      questionKey: 'sponsor.faq9Q' as const,
+      answerKey: 'sponsor.faq9A' as const,
+    },
   ];
 
   // Auto-slide functionality
@@ -296,6 +304,39 @@ export function SponsorMatch() {
           </div>
         </div>
 
+        {/* Benefits Section */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-slate-200 mb-4">
+              {t('sponsor.benefitsTitle')}
+            </h3>
+          </div>
+          <div className="max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-6 mb-8">
+              {[1, 2, 3, 4, 5, 6, 7].map((num) => (
+                <div
+                  key={num}
+                  className="bg-white dark:bg-slate-800 rounded-xl p-6 border border-slate-200 dark:border-slate-700 hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-lg transition-all"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-brand-orange to-brand-orange-dark rounded-lg flex items-center justify-center">
+                      <span className="text-white font-bold">{num}</span>
+                    </div>
+                    <p className="text-slate-600 dark:text-slate-400 leading-relaxed pt-1">
+                      {t(`sponsor.benefit${num}` as any)}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="bg-gradient-to-br from-brand-orange/10 to-brand-orange-dark/10 dark:from-brand-orange/20 dark:to-brand-orange-dark/20 rounded-2xl p-8 border border-brand-orange/20 text-center">
+              <p className="text-lg md:text-xl text-slate-800 dark:text-slate-200 leading-relaxed">
+                {t('sponsor.cost')}
+              </p>
+            </div>
+          </div>
+        </div>
+
         {/* Section FAQ Moderne */}
         <div className="mt-20">
           <div className="text-center mb-12">
@@ -326,6 +367,8 @@ export function SponsorMatch() {
                   <DollarSign className="w-5 h-5" key="dollar" />,
                   <Shield className="w-5 h-5" key="shield" />,
                   <Gift className="w-5 h-5" key="gift" />,
+                  <Gift className="w-5 h-5" key="gift2" />,
+                  <Mail className="w-5 h-5" key="mail" />,
                 ];
 
                 return (
