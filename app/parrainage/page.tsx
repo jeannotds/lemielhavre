@@ -400,50 +400,50 @@ export default function Parrainage() {
             </div>
 
             {/* Children Cards */}
-            <div className="space-y-12 md:space-y-16">
+            <div className="space-y-8 md:space-y-10">
               {/* Child 1 - Image Left */}
               <div className="group">
-                <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 bg-white dark:bg-slate-800 rounded-3xl p-6 md:p-10 border border-slate-200 dark:border-slate-700 hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-2xl transition-all duration-300">
-                  <div className="flex-shrink-0 w-full md:w-96 h-80 md:h-96 rounded-2xl overflow-hidden shadow-xl group-hover:scale-105 transition-transform duration-300">
+                <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8 bg-white dark:bg-slate-800 rounded-2xl p-5 md:p-7 border border-slate-200 dark:border-slate-700 hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-2xl transition-all duration-300">
+                  <div className="flex-shrink-0 w-full md:w-64 h-64 md:h-80 rounded-xl overflow-hidden shadow-xl group-hover:scale-105 transition-transform duration-300">
                     <Image
                       src="/assets/WhatsApp Image 2025-12-15 at 19.57.21 (1).jpeg"
                       alt={t('sponsor.child1Name')}
-                      width={400}
-                      height={400}
+                      width={300}
+                      height={300}
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="flex-1 text-center md:text-left">
-                    <h3 className="text-2xl md:text-3xl font-bold text-slate-800 dark:text-slate-200 mb-4 group-hover:text-brand-orange-dark dark:group-hover:text-brand-orange transition-colors">
+                    <h3 className="text-xl md:text-2xl font-bold text-slate-800 dark:text-slate-200 mb-3 group-hover:text-brand-orange-dark dark:group-hover:text-brand-orange transition-colors">
                       {t('sponsor.child1Meet')}
                     </h3>
-                    <div className="space-y-3 mb-6">
-                      <div className="flex items-center justify-center md:justify-start gap-3">
-                        <Users className="w-5 h-5 text-brand-orange" />
-                        <p className="text-lg text-slate-700 dark:text-slate-300">
+                    <div className="space-y-2 mb-5">
+                      <div className="flex items-center justify-center md:justify-start gap-2">
+                        <Users className="w-4 h-4 text-brand-orange flex-shrink-0" />
+                        <p className="text-base text-slate-700 dark:text-slate-300">
                           <span className="font-semibold">Nom:</span> {t('sponsor.child1Name')}
                         </p>
                       </div>
-                      <div className="flex items-center justify-center md:justify-start gap-3">
-                        <GraduationCap className="w-5 h-5 text-brand-orange" />
-                        <p className="text-lg text-slate-700 dark:text-slate-300">
+                      <div className="flex items-center justify-center md:justify-start gap-2">
+                        <GraduationCap className="w-4 h-4 text-brand-orange flex-shrink-0" />
+                        <p className="text-base text-slate-700 dark:text-slate-300">
                           <span className="font-semibold">Âge:</span> {t('sponsor.child1Age')}
                         </p>
                       </div>
-                      <div className="flex items-center justify-center md:justify-start gap-3">
-                        <Mail className="w-5 h-5 text-brand-orange" />
-                        <p className="text-lg text-slate-700 dark:text-slate-300">
+                      <div className="flex items-center justify-center md:justify-start gap-2">
+                        <Mail className="w-4 h-4 text-brand-orange flex-shrink-0" />
+                        <p className="text-base text-slate-700 dark:text-slate-300">
                           <span className="font-semibold">Date de naissance:</span> {t('sponsor.child1Birthdate')}
                         </p>
                       </div>
-                      <div className="flex items-center justify-center md:justify-start gap-3">
-                        <Check className="w-5 h-5 text-brand-orange" />
-                        <p className="text-lg text-slate-700 dark:text-slate-300">
+                      <div className="flex items-center justify-center md:justify-start gap-2">
+                        <Check className="w-4 h-4 text-brand-orange flex-shrink-0" />
+                        <p className="text-base text-slate-700 dark:text-slate-300">
                           <span className="font-semibold">Classe actuelle:</span> {t('sponsor.child1Class')}
                         </p>
                       </div>
                     </div>
-                    <Button className="bg-gradient-to-r from-brand-orange to-brand-orange-dark hover:from-brand-orange-dark hover:to-brand-green text-white px-8 py-6 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105">
+                    <Button className="bg-gradient-to-r from-brand-orange to-brand-orange-dark hover:from-brand-orange-dark hover:to-brand-green text-white px-6 py-4 text-base font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105">
                       {t('sponsor.button')}
                     </Button>
                   </div>
@@ -452,47 +452,47 @@ export default function Parrainage() {
 
               {/* Child 2 - Image Right */}
               <div className="group">
-                <div className="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-12 bg-white dark:bg-slate-800 rounded-3xl p-6 md:p-10 border border-slate-200 dark:border-slate-700 hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-2xl transition-all duration-300">
-                  <div className="flex-shrink-0 w-full md:w-96 h-80 md:h-96 rounded-2xl overflow-hidden shadow-xl group-hover:scale-105 transition-transform duration-300">
+                <div className="flex flex-col md:flex-row-reverse items-center gap-6 md:gap-8 bg-white dark:bg-slate-800 rounded-2xl p-5 md:p-7 border border-slate-200 dark:border-slate-700 hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-2xl transition-all duration-300">
+                  <div className="flex-shrink-0 w-full md:w-64 h-64 md:h-80 rounded-xl overflow-hidden shadow-xl group-hover:scale-105 transition-transform duration-300">
                     <Image
                       src="/assets/WhatsApp Image 2025-12-15 at 19.57.22 (1).jpeg"
                       alt={t('sponsor.child2Name')}
-                      width={400}
-                      height={400}
+                      width={300}
+                      height={300}
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="flex-1 text-center md:text-left">
-                    <h3 className="text-2xl md:text-3xl font-bold text-slate-800 dark:text-slate-200 mb-4 group-hover:text-brand-orange-dark dark:group-hover:text-brand-orange transition-colors">
+                    <h3 className="text-xl md:text-2xl font-bold text-slate-800 dark:text-slate-200 mb-3 group-hover:text-brand-orange-dark dark:group-hover:text-brand-orange transition-colors">
                       {t('sponsor.child2Meet')}
                     </h3>
-                    <div className="space-y-3 mb-6">
-                      <div className="flex items-center justify-center md:justify-start gap-3">
-                        <Users className="w-5 h-5 text-brand-orange" />
-                        <p className="text-lg text-slate-700 dark:text-slate-300">
+                    <div className="space-y-2 mb-5">
+                      <div className="flex items-center justify-center md:justify-start gap-2">
+                        <Users className="w-4 h-4 text-brand-orange flex-shrink-0" />
+                        <p className="text-base text-slate-700 dark:text-slate-300">
                           <span className="font-semibold">Nom:</span> {t('sponsor.child2Name')}
                         </p>
                       </div>
-                      <div className="flex items-center justify-center md:justify-start gap-3">
-                        <GraduationCap className="w-5 h-5 text-brand-orange" />
-                        <p className="text-lg text-slate-700 dark:text-slate-300">
+                      <div className="flex items-center justify-center md:justify-start gap-2">
+                        <GraduationCap className="w-4 h-4 text-brand-orange flex-shrink-0" />
+                        <p className="text-base text-slate-700 dark:text-slate-300">
                           <span className="font-semibold">Âge:</span> {t('sponsor.child2Age')}
                         </p>
                       </div>
-                      <div className="flex items-center justify-center md:justify-start gap-3">
-                        <Mail className="w-5 h-5 text-brand-orange" />
-                        <p className="text-lg text-slate-700 dark:text-slate-300">
+                      <div className="flex items-center justify-center md:justify-start gap-2">
+                        <Mail className="w-4 h-4 text-brand-orange flex-shrink-0" />
+                        <p className="text-base text-slate-700 dark:text-slate-300">
                           <span className="font-semibold">Date de naissance:</span> {t('sponsor.child2Birthdate')}
                         </p>
                       </div>
-                      <div className="flex items-center justify-center md:justify-start gap-3">
-                        <Check className="w-5 h-5 text-brand-orange" />
-                        <p className="text-lg text-slate-700 dark:text-slate-300">
+                      <div className="flex items-center justify-center md:justify-start gap-2">
+                        <Check className="w-4 h-4 text-brand-orange flex-shrink-0" />
+                        <p className="text-base text-slate-700 dark:text-slate-300">
                           <span className="font-semibold">Classe actuelle:</span> {t('sponsor.child2Class')}
                         </p>
                       </div>
                     </div>
-                    <Button className="bg-gradient-to-r from-brand-orange to-brand-orange-dark hover:from-brand-orange-dark hover:to-brand-green text-white px-8 py-6 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105">
+                    <Button className="bg-gradient-to-r from-brand-orange to-brand-orange-dark hover:from-brand-orange-dark hover:to-brand-green text-white px-6 py-4 text-base font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105">
                       {t('sponsor.button')}
                     </Button>
                   </div>
@@ -501,47 +501,47 @@ export default function Parrainage() {
 
               {/* Child 3 - Image Left */}
               <div className="group">
-                <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 bg-white dark:bg-slate-800 rounded-3xl p-6 md:p-10 border border-slate-200 dark:border-slate-700 hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-2xl transition-all duration-300">
-                  <div className="flex-shrink-0 w-full md:w-96 h-80 md:h-96 rounded-2xl overflow-hidden shadow-xl group-hover:scale-105 transition-transform duration-300">
+                <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8 bg-white dark:bg-slate-800 rounded-2xl p-5 md:p-7 border border-slate-200 dark:border-slate-700 hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-2xl transition-all duration-300">
+                  <div className="flex-shrink-0 w-full md:w-64 h-64 md:h-80 rounded-xl overflow-hidden shadow-xl group-hover:scale-105 transition-transform duration-300">
                     <Image
                       src="/assets/WhatsApp Image 2025-12-15 at 19.57.23 (1).jpeg"
                       alt={t('sponsor.child3Name')}
-                      width={400}
-                      height={400}
+                      width={300}
+                      height={300}
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="flex-1 text-center md:text-left">
-                    <h3 className="text-2xl md:text-3xl font-bold text-slate-800 dark:text-slate-200 mb-4 group-hover:text-brand-orange-dark dark:group-hover:text-brand-orange transition-colors">
+                    <h3 className="text-xl md:text-2xl font-bold text-slate-800 dark:text-slate-200 mb-3 group-hover:text-brand-orange-dark dark:group-hover:text-brand-orange transition-colors">
                       {t('sponsor.child3Meet')}
                     </h3>
-                    <div className="space-y-3 mb-6">
-                      <div className="flex items-center justify-center md:justify-start gap-3">
-                        <Users className="w-5 h-5 text-brand-orange" />
-                        <p className="text-lg text-slate-700 dark:text-slate-300">
+                    <div className="space-y-2 mb-5">
+                      <div className="flex items-center justify-center md:justify-start gap-2">
+                        <Users className="w-4 h-4 text-brand-orange flex-shrink-0" />
+                        <p className="text-base text-slate-700 dark:text-slate-300">
                           <span className="font-semibold">Nom:</span> {t('sponsor.child3Name')}
                         </p>
                       </div>
-                      <div className="flex items-center justify-center md:justify-start gap-3">
-                        <GraduationCap className="w-5 h-5 text-brand-orange" />
-                        <p className="text-lg text-slate-700 dark:text-slate-300">
+                      <div className="flex items-center justify-center md:justify-start gap-2">
+                        <GraduationCap className="w-4 h-4 text-brand-orange flex-shrink-0" />
+                        <p className="text-base text-slate-700 dark:text-slate-300">
                           <span className="font-semibold">Âge:</span> {t('sponsor.child3Age')}
                         </p>
                       </div>
-                      <div className="flex items-center justify-center md:justify-start gap-3">
-                        <Mail className="w-5 h-5 text-brand-orange" />
-                        <p className="text-lg text-slate-700 dark:text-slate-300">
+                      <div className="flex items-center justify-center md:justify-start gap-2">
+                        <Mail className="w-4 h-4 text-brand-orange flex-shrink-0" />
+                        <p className="text-base text-slate-700 dark:text-slate-300">
                           <span className="font-semibold">Date de naissance:</span> {t('sponsor.child3Birthdate')}
                         </p>
                       </div>
-                      <div className="flex items-center justify-center md:justify-start gap-3">
-                        <Check className="w-5 h-5 text-brand-orange" />
-                        <p className="text-lg text-slate-700 dark:text-slate-300">
+                      <div className="flex items-center justify-center md:justify-start gap-2">
+                        <Check className="w-4 h-4 text-brand-orange flex-shrink-0" />
+                        <p className="text-base text-slate-700 dark:text-slate-300">
                           <span className="font-semibold">Classe actuelle:</span> {t('sponsor.child3Class')}
                         </p>
                       </div>
                     </div>
-                    <Button className="bg-gradient-to-r from-brand-orange to-brand-orange-dark hover:from-brand-orange-dark hover:to-brand-green text-white px-8 py-6 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105">
+                    <Button className="bg-gradient-to-r from-brand-orange to-brand-orange-dark hover:from-brand-orange-dark hover:to-brand-green text-white px-6 py-4 text-base font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105">
                       {t('sponsor.button')}
                     </Button>
                   </div>
@@ -550,47 +550,47 @@ export default function Parrainage() {
 
               {/* Child 4 - Image Right */}
               <div className="group">
-                <div className="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-12 bg-white dark:bg-slate-800 rounded-3xl p-6 md:p-10 border border-slate-200 dark:border-slate-700 hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-2xl transition-all duration-300">
-                  <div className="flex-shrink-0 w-full md:w-96 h-80 md:h-96 rounded-2xl overflow-hidden shadow-xl group-hover:scale-105 transition-transform duration-300">
+                <div className="flex flex-col md:flex-row-reverse items-center gap-6 md:gap-8 bg-white dark:bg-slate-800 rounded-2xl p-5 md:p-7 border border-slate-200 dark:border-slate-700 hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-2xl transition-all duration-300">
+                  <div className="flex-shrink-0 w-full md:w-64 h-64 md:h-80 rounded-xl overflow-hidden shadow-xl group-hover:scale-105 transition-transform duration-300">
                     <Image
                       src="/assets/WhatsApp Image 2025-12-15 at 19.57.24 (1).jpeg"
                       alt={t('sponsor.child4Name')}
-                      width={400}
-                      height={400}
+                      width={300}
+                      height={300}
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="flex-1 text-center md:text-left">
-                    <h3 className="text-2xl md:text-3xl font-bold text-slate-800 dark:text-slate-200 mb-4 group-hover:text-brand-orange-dark dark:group-hover:text-brand-orange transition-colors">
+                    <h3 className="text-xl md:text-2xl font-bold text-slate-800 dark:text-slate-200 mb-3 group-hover:text-brand-orange-dark dark:group-hover:text-brand-orange transition-colors">
                       {t('sponsor.child4Meet')}
                     </h3>
-                    <div className="space-y-3 mb-6">
-                      <div className="flex items-center justify-center md:justify-start gap-3">
-                        <Users className="w-5 h-5 text-brand-orange" />
-                        <p className="text-lg text-slate-700 dark:text-slate-300">
+                    <div className="space-y-2 mb-5">
+                      <div className="flex items-center justify-center md:justify-start gap-2">
+                        <Users className="w-4 h-4 text-brand-orange flex-shrink-0" />
+                        <p className="text-base text-slate-700 dark:text-slate-300">
                           <span className="font-semibold">Nom:</span> {t('sponsor.child4Name')}
                         </p>
                       </div>
-                      <div className="flex items-center justify-center md:justify-start gap-3">
-                        <GraduationCap className="w-5 h-5 text-brand-orange" />
-                        <p className="text-lg text-slate-700 dark:text-slate-300">
+                      <div className="flex items-center justify-center md:justify-start gap-2">
+                        <GraduationCap className="w-4 h-4 text-brand-orange flex-shrink-0" />
+                        <p className="text-base text-slate-700 dark:text-slate-300">
                           <span className="font-semibold">Âge:</span> {t('sponsor.child4Age')}
                         </p>
                       </div>
-                      <div className="flex items-center justify-center md:justify-start gap-3">
-                        <Mail className="w-5 h-5 text-brand-orange" />
-                        <p className="text-lg text-slate-700 dark:text-slate-300">
+                      <div className="flex items-center justify-center md:justify-start gap-2">
+                        <Mail className="w-4 h-4 text-brand-orange flex-shrink-0" />
+                        <p className="text-base text-slate-700 dark:text-slate-300">
                           <span className="font-semibold">Date de naissance:</span> {t('sponsor.child4Birthdate')}
                         </p>
                       </div>
-                      <div className="flex items-center justify-center md:justify-start gap-3">
-                        <Check className="w-5 h-5 text-brand-orange" />
-                        <p className="text-lg text-slate-700 dark:text-slate-300">
+                      <div className="flex items-center justify-center md:justify-start gap-2">
+                        <Check className="w-4 h-4 text-brand-orange flex-shrink-0" />
+                        <p className="text-base text-slate-700 dark:text-slate-300">
                           <span className="font-semibold">Classe actuelle:</span> {t('sponsor.child4Class')}
                         </p>
                       </div>
                     </div>
-                    <Button className="bg-gradient-to-r from-brand-orange to-brand-orange-dark hover:from-brand-orange-dark hover:to-brand-green text-white px-8 py-6 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105">
+                    <Button className="bg-gradient-to-r from-brand-orange to-brand-orange-dark hover:from-brand-orange-dark hover:to-brand-green text-white px-6 py-4 text-base font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105">
                       {t('sponsor.button')}
                     </Button>
                   </div>
@@ -599,47 +599,47 @@ export default function Parrainage() {
 
               {/* Child 5 - Image Left */}
               <div className="group">
-                <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 bg-white dark:bg-slate-800 rounded-3xl p-6 md:p-10 border border-slate-200 dark:border-slate-700 hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-2xl transition-all duration-300">
-                  <div className="flex-shrink-0 w-full md:w-96 h-80 md:h-96 rounded-2xl overflow-hidden shadow-xl group-hover:scale-105 transition-transform duration-300">
+                <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8 bg-white dark:bg-slate-800 rounded-2xl p-5 md:p-7 border border-slate-200 dark:border-slate-700 hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-2xl transition-all duration-300">
+                  <div className="flex-shrink-0 w-full md:w-64 h-64 md:h-80 rounded-xl overflow-hidden shadow-xl group-hover:scale-105 transition-transform duration-300">
                     <Image
                       src="/assets/WhatsApp Image 2025-12-15 at 19.57.25 (1).jpeg"
                       alt={t('sponsor.child5Name')}
-                      width={400}
-                      height={400}
+                      width={300}
+                      height={300}
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="flex-1 text-center md:text-left">
-                    <h3 className="text-2xl md:text-3xl font-bold text-slate-800 dark:text-slate-200 mb-4 group-hover:text-brand-orange-dark dark:group-hover:text-brand-orange transition-colors">
+                    <h3 className="text-xl md:text-2xl font-bold text-slate-800 dark:text-slate-200 mb-3 group-hover:text-brand-orange-dark dark:group-hover:text-brand-orange transition-colors">
                       {t('sponsor.child5Meet')}
                     </h3>
-                    <div className="space-y-3 mb-6">
-                      <div className="flex items-center justify-center md:justify-start gap-3">
-                        <Users className="w-5 h-5 text-brand-orange" />
-                        <p className="text-lg text-slate-700 dark:text-slate-300">
+                    <div className="space-y-2 mb-5">
+                      <div className="flex items-center justify-center md:justify-start gap-2">
+                        <Users className="w-4 h-4 text-brand-orange flex-shrink-0" />
+                        <p className="text-base text-slate-700 dark:text-slate-300">
                           <span className="font-semibold">Nom:</span> {t('sponsor.child5Name')}
                         </p>
                       </div>
-                      <div className="flex items-center justify-center md:justify-start gap-3">
-                        <GraduationCap className="w-5 h-5 text-brand-orange" />
-                        <p className="text-lg text-slate-700 dark:text-slate-300">
+                      <div className="flex items-center justify-center md:justify-start gap-2">
+                        <GraduationCap className="w-4 h-4 text-brand-orange flex-shrink-0" />
+                        <p className="text-base text-slate-700 dark:text-slate-300">
                           <span className="font-semibold">Âge:</span> {t('sponsor.child5Age')}
                         </p>
                       </div>
-                      <div className="flex items-center justify-center md:justify-start gap-3">
-                        <Mail className="w-5 h-5 text-brand-orange" />
-                        <p className="text-lg text-slate-700 dark:text-slate-300">
+                      <div className="flex items-center justify-center md:justify-start gap-2">
+                        <Mail className="w-4 h-4 text-brand-orange flex-shrink-0" />
+                        <p className="text-base text-slate-700 dark:text-slate-300">
                           <span className="font-semibold">Date de naissance:</span> {t('sponsor.child5Birthdate')}
                         </p>
                       </div>
-                      <div className="flex items-center justify-center md:justify-start gap-3">
-                        <Check className="w-5 h-5 text-brand-orange" />
-                        <p className="text-lg text-slate-700 dark:text-slate-300">
+                      <div className="flex items-center justify-center md:justify-start gap-2">
+                        <Check className="w-4 h-4 text-brand-orange flex-shrink-0" />
+                        <p className="text-base text-slate-700 dark:text-slate-300">
                           <span className="font-semibold">Classe actuelle:</span> {t('sponsor.child5Class')}
                         </p>
                       </div>
                     </div>
-                    <Button className="bg-gradient-to-r from-brand-orange to-brand-orange-dark hover:from-brand-orange-dark hover:to-brand-green text-white px-8 py-6 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105">
+                    <Button className="bg-gradient-to-r from-brand-orange to-brand-orange-dark hover:from-brand-orange-dark hover:to-brand-green text-white px-6 py-4 text-base font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105">
                       {t('sponsor.button')}
                     </Button>
                   </div>
