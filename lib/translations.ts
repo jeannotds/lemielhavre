@@ -5,7 +5,7 @@ export type TranslationKey =
   | 'hero.badge' | 'hero.title1' | 'hero.title2' | 'hero.title3' | 'hero.description' | 'hero.button'
   | 'hero.feature1' | 'hero.feature2' | 'hero.feature3'
   | 'hero.slide1' | 'hero.slide2' | 'hero.slide3' | 'hero.slide4'
-  | 'hero.welcomeTitle' | 'hero.welcomeMessage'
+  | 'hero.welcomeTitle' | 'hero.welcomeMessage' | 'hero.togetherText'
   // Stats
   | 'stats.title' | 'stats.description' | 'stats.donors' | 'stats.volunteers' | 'stats.beneficiaries' | 'stats.projects'
   | 'stats.donorsDesc' | 'stats.volunteersDesc' | 'stats.beneficiariesDesc' | 'stats.projectsDesc'
@@ -74,6 +74,7 @@ export type TranslationKey =
   | 'newsletter.title' | 'newsletter.subtitle' | 'newsletter.description' | 'newsletter.placeholder' | 'newsletter.button' | 'newsletter.subscribed' | 'newsletter.thankYou'
   // Footer
   | 'footer.description' | 'footer.address' | 'footer.callUs' | 'footer.mailUs' | 'footer.hours' | 'footer.copyright' | 'footer.privacy' | 'footer.terms'
+  | 'footer.email' | 'footer.phone' | 'footer.location' | 'footer.followUs' | 'footer.companyName'
   // About Page
   | 'about.badge' | 'about.title' | 'about.description'
   | 'about.missionBadge' | 'about.missionTitle' | 'about.missionP1' | 'about.missionP2' | 'about.missionP3'
@@ -126,6 +127,7 @@ export const translations = {
     'hero.slide4': 'Faire une Différence',
     'hero.welcomeTitle': 'Bienvenue au Le Miel Havre',
     'hero.welcomeMessage': 'Bienvenue à la fondation Le Miel Havre. Nous sommes très honorés que vous vous joigniez à notre mission visant à autonomiser les enfants défavorisés grâce à l\'éducation. Votre décision de participer à ce programme contribue à ouvrir la voie à un avenir meilleur, un enfant à la fois.',
+    'hero.togetherText': 'Ensemble, nous pouvons changer la vie d\'un enfant.',
     // Stats
     'stats.title': 'Notre Impact en Chiffres',
     'stats.description': 'Les défis auxquels les enfants de l\'est de la RDC sont confrontés',
@@ -319,6 +321,11 @@ export const translations = {
     'footer.copyright': 'Tous droits réservés.',
     'footer.privacy': 'Politique de Confidentialité',
     'footer.terms': 'Conditions d\'Utilisation',
+    'footer.companyName': 'Le Miel Havre',
+    'footer.email': 'Lemielhavre@gmail.com',
+    'footer.phone': '+243 976 752 660',
+    'footer.location': 'Goma • Kinshasa',
+    'footer.followUs': 'Suivez-nous',
     // About Page
     'about.badge': 'À PROPOS DE NOUS',
     'about.title': 'À propos de',
@@ -418,6 +425,7 @@ export const translations = {
     'hero.slide4': 'Making a Difference',
     'hero.welcomeTitle': 'Welcome to Le Miel Havre',
     'hero.welcomeMessage': 'Welcome to Le Miel Havre Foundation. We are very honored that you are joining our mission to empower disadvantaged children through education. Your decision to participate in this program helps pave the way for a better future, one child at a time.',
+    'hero.togetherText': 'Together, we can change a child\'s life.',
     // Stats
     'stats.title': 'Our Impact in Numbers',
     'stats.description': 'The challenges children in eastern DRC face',
@@ -611,6 +619,11 @@ export const translations = {
     'footer.copyright': 'All rights reserved.',
     'footer.privacy': 'Privacy Policy',
     'footer.terms': 'Terms of Service',
+    'footer.companyName': 'Le Miel Havre',
+    'footer.email': 'Lemielhavre@gmail.com',
+    'footer.phone': '+243 976 752 660',
+    'footer.location': 'Goma • Kinshasa',
+    'footer.followUs': 'Follow Us',
     // About Page
     'about.badge': 'ABOUT US',
     'about.title': 'About',
