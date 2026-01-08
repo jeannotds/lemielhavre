@@ -50,6 +50,12 @@ export type TranslationKey =
   | 'sponsor.faq8Q' | 'sponsor.faq8A'
   | 'sponsor.faq9Q' | 'sponsor.faq9A'
   | 'sponsor.button'
+  | 'sponsor.sponsorThemTitle'
+  | 'sponsor.child1Name' | 'sponsor.child1Age' | 'sponsor.child1Birthdate' | 'sponsor.child1Class' | 'sponsor.child1Meet'
+  | 'sponsor.child2Name' | 'sponsor.child2Age' | 'sponsor.child2Birthdate' | 'sponsor.child2Class' | 'sponsor.child2Meet'
+  | 'sponsor.child3Name' | 'sponsor.child3Age' | 'sponsor.child3Birthdate' | 'sponsor.child3Class' | 'sponsor.child3Meet'
+  | 'sponsor.child4Name' | 'sponsor.child4Age' | 'sponsor.child4Birthdate' | 'sponsor.child4Class' | 'sponsor.child4Meet'
+  | 'sponsor.child5Name' | 'sponsor.child5Age' | 'sponsor.child5Birthdate' | 'sponsor.child5Class' | 'sponsor.child5Meet'
   // Partners
   | 'partners.badge' | 'partners.title' | 'partners.description'
   // Booklet
@@ -230,6 +236,32 @@ export const translations = {
     'sponsor.faq9Q': 'Pourrai-je communiquer ou écrire à l\'enfant que je parraine ?',
     'sponsor.faq9A': 'Écrire à l\'enfant que vous parrainez est un moyen privilégié de nouer des liens durables et de construire une relation. Les enfants trop jeunes pour écrire ou ayant des besoins particuliers vous enverront une empreinte de leur main ou un dessin. Un membre du personnel du foyer écrira un message à votre intention au nom de l\'enfant.',
     'sponsor.button': 'Parrainez un Enfant Aujourd\'hui',
+    'sponsor.sponsorThemTitle': 'Parrainez-les dès aujourd\'hui',
+    'sponsor.child1Meet': 'Rencontrez Prosper Muhubiri Ciririmbo',
+    'sponsor.child1Name': 'Prosper Muhubiri Ciririmbo',
+    'sponsor.child1Age': '10 ans',
+    'sponsor.child1Birthdate': '05/05/2015',
+    'sponsor.child1Class': '5e primaire',
+    'sponsor.child2Meet': 'Rencontrez Arléne Tumusifu Ciririmbo',
+    'sponsor.child2Name': 'Arléne Tumusifu Ciririmbo',
+    'sponsor.child2Age': '12 ans',
+    'sponsor.child2Birthdate': '04/04/2013',
+    'sponsor.child2Class': '5e primaire',
+    'sponsor.child3Meet': 'Rencontrez François Matuko Birekeraho',
+    'sponsor.child3Name': 'François Matuko Birekeraho',
+    'sponsor.child3Age': '11 ans',
+    'sponsor.child3Birthdate': '16/06/2014',
+    'sponsor.child3Class': '5e primaire',
+    'sponsor.child4Meet': 'Rencontrez Elie Mapendo Espoir',
+    'sponsor.child4Name': 'Elie Mapendo Espoir',
+    'sponsor.child4Age': '9 ans',
+    'sponsor.child4Birthdate': '11/07/2016',
+    'sponsor.child4Class': '2e primaire',
+    'sponsor.child5Meet': 'Rencontrez Justin Maisha Semirama',
+    'sponsor.child5Name': 'Justin Maisha Semirama',
+    'sponsor.child5Age': '9 ans',
+    'sponsor.child5Birthdate': '16/06/2016',
+    'sponsor.child5Class': '5e primaire',
     // Partners
     'partners.badge': 'NOS PARTENAIRES',
     'partners.title': 'Avec qui nous travaillons',
@@ -477,6 +509,32 @@ export const translations = {
     'sponsor.faq9Q': 'Will I be able to communicate or write to the child I sponsor?',
     'sponsor.faq9A': 'Writing to the child you sponsor is a privileged way to build lasting bonds and build a relationship. Children too young to write or with special needs will send you a handprint or drawing. A staff member from the home will write a message on behalf of the child.',
     'sponsor.button': 'Sponsor a Child Today',
+    'sponsor.sponsorThemTitle': 'Sponsor Them Today',
+    'sponsor.child1Meet': 'Meet Prosper Muhubiri Ciririmbo',
+    'sponsor.child1Name': 'Prosper Muhubiri Ciririmbo',
+    'sponsor.child1Age': '10 years old',
+    'sponsor.child1Birthdate': '05/05/2015',
+    'sponsor.child1Class': '5th grade',
+    'sponsor.child2Meet': 'Meet Arléne Tumusifu Ciririmbo',
+    'sponsor.child2Name': 'Arléne Tumusifu Ciririmbo',
+    'sponsor.child2Age': '12 years old',
+    'sponsor.child2Birthdate': '04/04/2013',
+    'sponsor.child2Class': '5th grade',
+    'sponsor.child3Meet': 'Meet François Matuko Birekeraho',
+    'sponsor.child3Name': 'François Matuko Birekeraho',
+    'sponsor.child3Age': '11 years old',
+    'sponsor.child3Birthdate': '16/06/2014',
+    'sponsor.child3Class': '5th grade',
+    'sponsor.child4Meet': 'Meet Elie Mapendo Espoir',
+    'sponsor.child4Name': 'Elie Mapendo Espoir',
+    'sponsor.child4Age': '9 years old',
+    'sponsor.child4Birthdate': '11/07/2016',
+    'sponsor.child4Class': '2nd grade',
+    'sponsor.child5Meet': 'Meet Justin Maisha Semirama',
+    'sponsor.child5Name': 'Justin Maisha Semirama',
+    'sponsor.child5Age': '9 years old',
+    'sponsor.child5Birthdate': '16/06/2016',
+    'sponsor.child5Class': '5th grade',
     // Partners
     'partners.badge': 'OUR PARTNERS',
     'partners.title': 'Whom we work with',

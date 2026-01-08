@@ -385,8 +385,273 @@ export default function Parrainage() {
         </div>
       </section>
 
+      {/* Sponsor Them Today Section */}
+      <section className="bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-800 py-20 md:py-28">
+        <div className="container mx-auto px-6 lg:px-10">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-slate-800 rounded-full border border-brand-cream dark:border-slate-700 mb-4">
+                <span className="w-2 h-2 bg-brand-orange rounded-full animate-pulse" />
+                <span className="text-sm font-semibold text-brand-orange-dark dark:text-brand-orange">PARRAINAGE</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 dark:text-slate-200 mb-6">
+                {t('sponsor.sponsorThemTitle')}
+              </h2>
+            </div>
+
+            {/* Children Cards */}
+            <div className="space-y-12 md:space-y-16">
+              {/* Child 1 - Image Left */}
+              <div className="group">
+                <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 bg-white dark:bg-slate-800 rounded-3xl p-6 md:p-10 border border-slate-200 dark:border-slate-700 hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-2xl transition-all duration-300">
+                  <div className="flex-shrink-0 w-full md:w-96 h-80 md:h-96 rounded-2xl overflow-hidden shadow-xl group-hover:scale-105 transition-transform duration-300">
+                    <Image
+                      src="/assets/WhatsApp Image 2025-12-15 at 19.57.21 (1).jpeg"
+                      alt={t('sponsor.child1Name')}
+                      width={400}
+                      height={400}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="flex-1 text-center md:text-left">
+                    <h3 className="text-2xl md:text-3xl font-bold text-slate-800 dark:text-slate-200 mb-4 group-hover:text-brand-orange-dark dark:group-hover:text-brand-orange transition-colors">
+                      {t('sponsor.child1Meet')}
+                    </h3>
+                    <div className="space-y-3 mb-6">
+                      <div className="flex items-center justify-center md:justify-start gap-3">
+                        <Users className="w-5 h-5 text-brand-orange" />
+                        <p className="text-lg text-slate-700 dark:text-slate-300">
+                          <span className="font-semibold">Nom:</span> {t('sponsor.child1Name')}
+                        </p>
+                      </div>
+                      <div className="flex items-center justify-center md:justify-start gap-3">
+                        <GraduationCap className="w-5 h-5 text-brand-orange" />
+                        <p className="text-lg text-slate-700 dark:text-slate-300">
+                          <span className="font-semibold">Âge:</span> {t('sponsor.child1Age')}
+                        </p>
+                      </div>
+                      <div className="flex items-center justify-center md:justify-start gap-3">
+                        <Mail className="w-5 h-5 text-brand-orange" />
+                        <p className="text-lg text-slate-700 dark:text-slate-300">
+                          <span className="font-semibold">Date de naissance:</span> {t('sponsor.child1Birthdate')}
+                        </p>
+                      </div>
+                      <div className="flex items-center justify-center md:justify-start gap-3">
+                        <Check className="w-5 h-5 text-brand-orange" />
+                        <p className="text-lg text-slate-700 dark:text-slate-300">
+                          <span className="font-semibold">Classe actuelle:</span> {t('sponsor.child1Class')}
+                        </p>
+                      </div>
+                    </div>
+                    <Button className="bg-gradient-to-r from-brand-orange to-brand-orange-dark hover:from-brand-orange-dark hover:to-brand-green text-white px-8 py-6 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105">
+                      {t('sponsor.button')}
+                    </Button>
+                  </div>
+                </div>
+              </div>
+
+              {/* Child 2 - Image Right */}
+              <div className="group">
+                <div className="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-12 bg-white dark:bg-slate-800 rounded-3xl p-6 md:p-10 border border-slate-200 dark:border-slate-700 hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-2xl transition-all duration-300">
+                  <div className="flex-shrink-0 w-full md:w-96 h-80 md:h-96 rounded-2xl overflow-hidden shadow-xl group-hover:scale-105 transition-transform duration-300">
+                    <Image
+                      src="/assets/WhatsApp Image 2025-12-15 at 19.57.22 (1).jpeg"
+                      alt={t('sponsor.child2Name')}
+                      width={400}
+                      height={400}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="flex-1 text-center md:text-left">
+                    <h3 className="text-2xl md:text-3xl font-bold text-slate-800 dark:text-slate-200 mb-4 group-hover:text-brand-orange-dark dark:group-hover:text-brand-orange transition-colors">
+                      {t('sponsor.child2Meet')}
+                    </h3>
+                    <div className="space-y-3 mb-6">
+                      <div className="flex items-center justify-center md:justify-start gap-3">
+                        <Users className="w-5 h-5 text-brand-orange" />
+                        <p className="text-lg text-slate-700 dark:text-slate-300">
+                          <span className="font-semibold">Nom:</span> {t('sponsor.child2Name')}
+                        </p>
+                      </div>
+                      <div className="flex items-center justify-center md:justify-start gap-3">
+                        <GraduationCap className="w-5 h-5 text-brand-orange" />
+                        <p className="text-lg text-slate-700 dark:text-slate-300">
+                          <span className="font-semibold">Âge:</span> {t('sponsor.child2Age')}
+                        </p>
+                      </div>
+                      <div className="flex items-center justify-center md:justify-start gap-3">
+                        <Mail className="w-5 h-5 text-brand-orange" />
+                        <p className="text-lg text-slate-700 dark:text-slate-300">
+                          <span className="font-semibold">Date de naissance:</span> {t('sponsor.child2Birthdate')}
+                        </p>
+                      </div>
+                      <div className="flex items-center justify-center md:justify-start gap-3">
+                        <Check className="w-5 h-5 text-brand-orange" />
+                        <p className="text-lg text-slate-700 dark:text-slate-300">
+                          <span className="font-semibold">Classe actuelle:</span> {t('sponsor.child2Class')}
+                        </p>
+                      </div>
+                    </div>
+                    <Button className="bg-gradient-to-r from-brand-orange to-brand-orange-dark hover:from-brand-orange-dark hover:to-brand-green text-white px-8 py-6 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105">
+                      {t('sponsor.button')}
+                    </Button>
+                  </div>
+                </div>
+              </div>
+
+              {/* Child 3 - Image Left */}
+              <div className="group">
+                <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 bg-white dark:bg-slate-800 rounded-3xl p-6 md:p-10 border border-slate-200 dark:border-slate-700 hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-2xl transition-all duration-300">
+                  <div className="flex-shrink-0 w-full md:w-96 h-80 md:h-96 rounded-2xl overflow-hidden shadow-xl group-hover:scale-105 transition-transform duration-300">
+                    <Image
+                      src="/assets/WhatsApp Image 2025-12-15 at 19.57.23 (1).jpeg"
+                      alt={t('sponsor.child3Name')}
+                      width={400}
+                      height={400}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="flex-1 text-center md:text-left">
+                    <h3 className="text-2xl md:text-3xl font-bold text-slate-800 dark:text-slate-200 mb-4 group-hover:text-brand-orange-dark dark:group-hover:text-brand-orange transition-colors">
+                      {t('sponsor.child3Meet')}
+                    </h3>
+                    <div className="space-y-3 mb-6">
+                      <div className="flex items-center justify-center md:justify-start gap-3">
+                        <Users className="w-5 h-5 text-brand-orange" />
+                        <p className="text-lg text-slate-700 dark:text-slate-300">
+                          <span className="font-semibold">Nom:</span> {t('sponsor.child3Name')}
+                        </p>
+                      </div>
+                      <div className="flex items-center justify-center md:justify-start gap-3">
+                        <GraduationCap className="w-5 h-5 text-brand-orange" />
+                        <p className="text-lg text-slate-700 dark:text-slate-300">
+                          <span className="font-semibold">Âge:</span> {t('sponsor.child3Age')}
+                        </p>
+                      </div>
+                      <div className="flex items-center justify-center md:justify-start gap-3">
+                        <Mail className="w-5 h-5 text-brand-orange" />
+                        <p className="text-lg text-slate-700 dark:text-slate-300">
+                          <span className="font-semibold">Date de naissance:</span> {t('sponsor.child3Birthdate')}
+                        </p>
+                      </div>
+                      <div className="flex items-center justify-center md:justify-start gap-3">
+                        <Check className="w-5 h-5 text-brand-orange" />
+                        <p className="text-lg text-slate-700 dark:text-slate-300">
+                          <span className="font-semibold">Classe actuelle:</span> {t('sponsor.child3Class')}
+                        </p>
+                      </div>
+                    </div>
+                    <Button className="bg-gradient-to-r from-brand-orange to-brand-orange-dark hover:from-brand-orange-dark hover:to-brand-green text-white px-8 py-6 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105">
+                      {t('sponsor.button')}
+                    </Button>
+                  </div>
+                </div>
+              </div>
+
+              {/* Child 4 - Image Right */}
+              <div className="group">
+                <div className="flex flex-col md:flex-row-reverse items-center gap-8 md:gap-12 bg-white dark:bg-slate-800 rounded-3xl p-6 md:p-10 border border-slate-200 dark:border-slate-700 hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-2xl transition-all duration-300">
+                  <div className="flex-shrink-0 w-full md:w-96 h-80 md:h-96 rounded-2xl overflow-hidden shadow-xl group-hover:scale-105 transition-transform duration-300">
+                    <Image
+                      src="/assets/WhatsApp Image 2025-12-15 at 19.57.24 (1).jpeg"
+                      alt={t('sponsor.child4Name')}
+                      width={400}
+                      height={400}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="flex-1 text-center md:text-left">
+                    <h3 className="text-2xl md:text-3xl font-bold text-slate-800 dark:text-slate-200 mb-4 group-hover:text-brand-orange-dark dark:group-hover:text-brand-orange transition-colors">
+                      {t('sponsor.child4Meet')}
+                    </h3>
+                    <div className="space-y-3 mb-6">
+                      <div className="flex items-center justify-center md:justify-start gap-3">
+                        <Users className="w-5 h-5 text-brand-orange" />
+                        <p className="text-lg text-slate-700 dark:text-slate-300">
+                          <span className="font-semibold">Nom:</span> {t('sponsor.child4Name')}
+                        </p>
+                      </div>
+                      <div className="flex items-center justify-center md:justify-start gap-3">
+                        <GraduationCap className="w-5 h-5 text-brand-orange" />
+                        <p className="text-lg text-slate-700 dark:text-slate-300">
+                          <span className="font-semibold">Âge:</span> {t('sponsor.child4Age')}
+                        </p>
+                      </div>
+                      <div className="flex items-center justify-center md:justify-start gap-3">
+                        <Mail className="w-5 h-5 text-brand-orange" />
+                        <p className="text-lg text-slate-700 dark:text-slate-300">
+                          <span className="font-semibold">Date de naissance:</span> {t('sponsor.child4Birthdate')}
+                        </p>
+                      </div>
+                      <div className="flex items-center justify-center md:justify-start gap-3">
+                        <Check className="w-5 h-5 text-brand-orange" />
+                        <p className="text-lg text-slate-700 dark:text-slate-300">
+                          <span className="font-semibold">Classe actuelle:</span> {t('sponsor.child4Class')}
+                        </p>
+                      </div>
+                    </div>
+                    <Button className="bg-gradient-to-r from-brand-orange to-brand-orange-dark hover:from-brand-orange-dark hover:to-brand-green text-white px-8 py-6 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105">
+                      {t('sponsor.button')}
+                    </Button>
+                  </div>
+                </div>
+              </div>
+
+              {/* Child 5 - Image Left */}
+              <div className="group">
+                <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 bg-white dark:bg-slate-800 rounded-3xl p-6 md:p-10 border border-slate-200 dark:border-slate-700 hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-2xl transition-all duration-300">
+                  <div className="flex-shrink-0 w-full md:w-96 h-80 md:h-96 rounded-2xl overflow-hidden shadow-xl group-hover:scale-105 transition-transform duration-300">
+                    <Image
+                      src="/assets/WhatsApp Image 2025-12-15 at 19.57.25 (1).jpeg"
+                      alt={t('sponsor.child5Name')}
+                      width={400}
+                      height={400}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="flex-1 text-center md:text-left">
+                    <h3 className="text-2xl md:text-3xl font-bold text-slate-800 dark:text-slate-200 mb-4 group-hover:text-brand-orange-dark dark:group-hover:text-brand-orange transition-colors">
+                      {t('sponsor.child5Meet')}
+                    </h3>
+                    <div className="space-y-3 mb-6">
+                      <div className="flex items-center justify-center md:justify-start gap-3">
+                        <Users className="w-5 h-5 text-brand-orange" />
+                        <p className="text-lg text-slate-700 dark:text-slate-300">
+                          <span className="font-semibold">Nom:</span> {t('sponsor.child5Name')}
+                        </p>
+                      </div>
+                      <div className="flex items-center justify-center md:justify-start gap-3">
+                        <GraduationCap className="w-5 h-5 text-brand-orange" />
+                        <p className="text-lg text-slate-700 dark:text-slate-300">
+                          <span className="font-semibold">Âge:</span> {t('sponsor.child5Age')}
+                        </p>
+                      </div>
+                      <div className="flex items-center justify-center md:justify-start gap-3">
+                        <Mail className="w-5 h-5 text-brand-orange" />
+                        <p className="text-lg text-slate-700 dark:text-slate-300">
+                          <span className="font-semibold">Date de naissance:</span> {t('sponsor.child5Birthdate')}
+                        </p>
+                      </div>
+                      <div className="flex items-center justify-center md:justify-start gap-3">
+                        <Check className="w-5 h-5 text-brand-orange" />
+                        <p className="text-lg text-slate-700 dark:text-slate-300">
+                          <span className="font-semibold">Classe actuelle:</span> {t('sponsor.child5Class')}
+                        </p>
+                      </div>
+                    </div>
+                    <Button className="bg-gradient-to-r from-brand-orange to-brand-orange-dark hover:from-brand-orange-dark hover:to-brand-green text-white px-8 py-6 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:scale-105">
+                      {t('sponsor.button')}
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
-      <section className="bg-gradient-to-b from-slate-50 to-white dark:from-slate-800 dark:to-slate-900 py-20 md:py-28">
+      {/* <section className="bg-gradient-to-b from-slate-50 to-white dark:from-slate-800 dark:to-slate-900 py-20 md:py-28">
         <div className="container mx-auto px-6 lg:px-10">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
@@ -405,7 +670,6 @@ export default function Parrainage() {
               </p>
             </div>
 
-            {/* Prêt à changer une vie ? */}
             <div className="space-y-4">
               <Accordion type="single" collapsible className="w-full">
                 {faqs.map((faq, index) => {
@@ -453,7 +717,7 @@ export default function Parrainage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20 md:py-28">
