@@ -214,14 +214,14 @@ export default function Parrainage() {
             </div>
 
             {/* Cost Section */}
-            <div className="bg-gradient-to-br from-brand-orange/10 to-brand-orange-dark/10 dark:from-brand-orange/20 dark:to-brand-orange-dark/20 rounded-3xl p-8 md:p-12 border border-brand-orange/20 text-center">
+            {/* <div className="bg-gradient-to-br from-brand-orange/10 to-brand-orange-dark/10 dark:from-brand-orange/20 dark:to-brand-orange-dark/20 rounded-3xl p-8 md:p-12 border border-brand-orange/20 text-center">
               <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-brand-orange to-brand-orange-dark rounded-2xl mb-6 shadow-xl">
                 <DollarSign className="w-10 h-10 text-white" />
               </div>
               <p className="text-lg md:text-xl text-slate-700 dark:text-slate-300 leading-relaxed max-w-4xl mx-auto">
                 {t('sponsor.costFull')}
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
