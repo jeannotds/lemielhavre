@@ -5,7 +5,7 @@ export type TranslationKey =
   | 'hero.badge' | 'hero.title1' | 'hero.title2' | 'hero.title3' | 'hero.description' | 'hero.button'
   | 'hero.feature1' | 'hero.feature2' | 'hero.feature3'
   | 'hero.slide1' | 'hero.slide2' | 'hero.slide3' | 'hero.slide4'
-  | 'hero.welcomeTitle' | 'hero.welcomeMessage'
+  | 'hero.welcomeTitle' | 'hero.welcomeMessage' | 'hero.togetherText'
   // Stats
   | 'stats.title' | 'stats.description' | 'stats.donors' | 'stats.volunteers' | 'stats.beneficiaries' | 'stats.projects'
   | 'stats.donorsDesc' | 'stats.volunteersDesc' | 'stats.beneficiariesDesc' | 'stats.projectsDesc'
@@ -49,7 +49,23 @@ export type TranslationKey =
   | 'sponsor.faq7Q' | 'sponsor.faq7A'
   | 'sponsor.faq8Q' | 'sponsor.faq8A'
   | 'sponsor.faq9Q' | 'sponsor.faq9A'
+  | 'sponsor.faqIntro'
+  | 'sponsor.faqNew1Q' | 'sponsor.faqNew1A'
+  | 'sponsor.faqNew2Q' | 'sponsor.faqNew2A'
+  | 'sponsor.faqNew3Q' | 'sponsor.faqNew3A'
+  | 'sponsor.faqNew4Q' | 'sponsor.faqNew4A'
+  | 'sponsor.faqNew5Q' | 'sponsor.faqNew5A'
+  | 'sponsor.faqNew6Q' | 'sponsor.faqNew6A'
+  | 'sponsor.faqNew7Q' | 'sponsor.faqNew7A'
+  | 'sponsor.faqNew8Q' | 'sponsor.faqNew8A'
+  | 'sponsor.faqNew9Q' | 'sponsor.faqNew9A'
   | 'sponsor.button'
+  | 'sponsor.sponsorThemTitle'
+  | 'sponsor.child1Name' | 'sponsor.child1Age' | 'sponsor.child1Birthdate' | 'sponsor.child1Class' | 'sponsor.child1Meet'
+  | 'sponsor.child2Name' | 'sponsor.child2Age' | 'sponsor.child2Birthdate' | 'sponsor.child2Class' | 'sponsor.child2Meet'
+  | 'sponsor.child3Name' | 'sponsor.child3Age' | 'sponsor.child3Birthdate' | 'sponsor.child3Class' | 'sponsor.child3Meet'
+  | 'sponsor.child4Name' | 'sponsor.child4Age' | 'sponsor.child4Birthdate' | 'sponsor.child4Class' | 'sponsor.child4Meet'
+  | 'sponsor.child5Name' | 'sponsor.child5Age' | 'sponsor.child5Birthdate' | 'sponsor.child5Class' | 'sponsor.child5Meet'
   // Partners
   | 'partners.badge' | 'partners.title' | 'partners.description'
   // Booklet
@@ -58,6 +74,7 @@ export type TranslationKey =
   | 'newsletter.title' | 'newsletter.subtitle' | 'newsletter.description' | 'newsletter.placeholder' | 'newsletter.button' | 'newsletter.subscribed' | 'newsletter.thankYou'
   // Footer
   | 'footer.description' | 'footer.address' | 'footer.callUs' | 'footer.mailUs' | 'footer.hours' | 'footer.copyright' | 'footer.privacy' | 'footer.terms'
+  | 'footer.email' | 'footer.phone' | 'footer.location' | 'footer.followUs' | 'footer.companyName'
   // About Page
   | 'about.badge' | 'about.title' | 'about.description'
   | 'about.missionBadge' | 'about.missionTitle' | 'about.missionP1' | 'about.missionP2' | 'about.missionP3'
@@ -110,6 +127,7 @@ export const translations = {
     'hero.slide4': 'Faire une Différence',
     'hero.welcomeTitle': 'Bienvenue au Le Miel Havre',
     'hero.welcomeMessage': 'Bienvenue à la fondation Le Miel Havre. Nous sommes très honorés que vous vous joigniez à notre mission visant à autonomiser les enfants défavorisés grâce à l\'éducation. Votre décision de participer à ce programme contribue à ouvrir la voie à un avenir meilleur, un enfant à la fois.',
+    'hero.togetherText': 'Ensemble, nous pouvons changer la vie d\'un enfant.',
     // Stats
     'stats.title': 'Notre Impact en Chiffres',
     'stats.description': 'Les défis auxquels les enfants de l\'est de la RDC sont confrontés',
@@ -229,7 +247,52 @@ export const translations = {
     'sponsor.faq8A': 'Dans le cadre du parrainage Le Miel Havre, le foyer pour enfants où vit votre enfant parrainé, Flamme D\'amour, vous aidera à célébrer l\'anniversaire de votre enfant ainsi que Noël, deux occasions spéciales dans la vie de chaque enfant. Vous pouvez envoyer un don supplémentaire pour rendre ces événements encore plus festifs.',
     'sponsor.faq9Q': 'Pourrai-je communiquer ou écrire à l\'enfant que je parraine ?',
     'sponsor.faq9A': 'Écrire à l\'enfant que vous parrainez est un moyen privilégié de nouer des liens durables et de construire une relation. Les enfants trop jeunes pour écrire ou ayant des besoins particuliers vous enverront une empreinte de leur main ou un dessin. Un membre du personnel du foyer écrira un message à votre intention au nom de l\'enfant.',
+    'sponsor.faqIntro': 'Chaque enfant est un cadeau précieux de Dieu, en particulier ceux qui ont besoin de savoir qu\'ils ne sont pas oubliés. Ils ont besoin d\'anges ici-bas pour veiller sur eux et s\'assurer que leurs besoins sont satisfaits.',
+    'sponsor.faqNew1Q': 'Combien de parrains pour chaque enfant ?',
+    'sponsor.faqNew1A': 'Les parrains peuvent parrainer plusieurs enfants. Nous vous encourageons à écrire régulièrement à votre enfant parrainé afin de développer un lien et une relation privilégiés. Les enfants sont impatients de recevoir vos lettres !',
+    'sponsor.faqNew2Q': 'Combien d\'enfants participent au programme de bourses Le Miel Havre ?',
+    'sponsor.faqNew2A': 'Nous avons commencé avec 5 enfants vivant dans un orphelinat de Goma appelé Flamme D\'amour. Notre objectif à terme est que plus de 500 enfants vivant dans différents orphelinats puissent bénéficier du programme de bourses Le Miel Havre.',
+    'sponsor.faqNew3Q': 'Où Le Miel Havre est-il présent ?',
+    'sponsor.faqNew3A': 'Notre siège social se trouve à Kinshasa, en République démocratique du Congo. Nous travaillons avec des partenaires locaux qui nous aident à gérer le programme à Goma. À l\'avenir, nous prévoyons de nous étendre à d\'autres villes du pays.',
+    'sponsor.faqNew4Q': 'Puis-je envoyer des cadeaux à mon enfant parrainé ?',
+    'sponsor.faqNew4A': 'Dans le cadre du parrainage Le Miel Havre, le foyer pour enfants où vit votre enfant parrainé, Flamme D\'amour, vous aidera à célébrer l\'anniversaire de votre enfant ainsi que Noël, deux occasions spéciales dans la vie de chaque enfant. Vous pouvez envoyer un don supplémentaire pour rendre ces événements encore plus festifs.',
+    'sponsor.faqNew5Q': 'Pourrai-je communiquer ou écrire à l\'enfant que je parraine ?',
+    'sponsor.faqNew5A': 'Écrire à l\'enfant que vous parrainez est un moyen privilégié de nouer des liens durables et de construire une relation. Les enfants trop jeunes pour écrire ou ayant des besoins particuliers vous enverront une empreinte de leur main ou un dessin. Un membre du personnel du foyer écrira un message à votre intention au nom de l\'enfant.',
+    'sponsor.faqNew6Q': 'Pourquoi parrainer un enfant dans le cadre du programme de bourses Le Miel Havre?',
+    'sponsor.faqNew6A': 'Depuis sa création en 2025, Le Miel Havre a pour objectif d\'améliorer la vie des enfants issus de milieux extrêmement pauvres et/ou abandonnés ou retirés de leur famille en raison d\'une situation à risque, grâce à l\'éducation. Votre soutien permettra à ces enfants de guérir, de s\'épanouir et de grandir dans un environnement familial stable et aimant. C\'est uniquement grâce à nos parrains que nous pouvons offrir une bonne éducation avec les éléments de base indispensables (nourriture, vêtements, fournitures scolaires, etc.), organiser des événements spéciaux pour les anniversaires et Noël, effectuer de petites réparations dans les maisons, et bien plus encore.',
+    'sponsor.faqNew7Q': 'Mon enfant parrainé connaît-il mon nom complet et mon adresse ?',
+    'sponsor.faqNew7A': 'Afin de protéger votre vie privée, nous ne communiquons que votre prénom à votre enfant parrainé. Nous ne lui fournissons pas votre adresse, votre ville ou votre état de résidence.',
+    'sponsor.faqNew8Q': 'Pourrai-je choisir mon enfant ?',
+    'sponsor.faqNew8A': 'Tous les enfants participant à ce programme ont besoin et méritent amour et soutien. Afin d\'être aussi équitables et utiles que possible, nous sélectionnons avec soin un enfant pour vous en fonction de ses besoins les plus urgents. Cette méthode de sélection nous permet non seulement de répondre en priorité aux besoins les plus urgents, mais également de réduire nos frais administratifs en évitant d\'avoir à faire correspondre les critères demandés à un enfant en particulier. Si l\'enfant que vous parrainez quitte l\'orphelinat, est adopté, va vivre chez des proches ou atteint l\'âge adulte, vous en serez informé et aurez la possibilité de parrainer un autre enfant.',
+    'sponsor.faqNew9Q': 'Que vais-je recevoir lorsque je parraine un enfant ?',
+    'sponsor.faqNew9A': '1) Dossier de bienvenue – Une fois votre premier paiement traité, vous recevrez un dossier de bienvenue par e-mail dans un délai d\'environ trois semaines. Ce dossier contient une brève biographie et une photo de votre enfant, ainsi que des informations sur le programme. 2) Photo et biographie mises à jour – Vous recevrez également chaque année une photo et une biographie mises à jour de votre enfant. Quel bonheur de voir votre enfant grandir et mûrir d\'année en année ! 3) Newsletter – Nous envoyons également deux fois par an notre newsletter par e-mail. Elle regorge de belles histoires et de photos des enfants bénéficiant du programme de bourses Le Miel Havre.',
     'sponsor.button': 'Parrainez un Enfant Aujourd\'hui',
+    'sponsor.sponsorThemTitle': 'Parrainez-les dès aujourd\'hui',
+    'sponsor.child1Meet': 'Rencontrez Prosper Muhubiri Ciririmbo',
+    'sponsor.child1Name': 'Prosper Muhubiri Ciririmbo',
+    'sponsor.child1Age': '10 ans',
+    'sponsor.child1Birthdate': '05/05/2015',
+    'sponsor.child1Class': '5e primaire',
+    'sponsor.child2Meet': 'Rencontrez Arléne Tumusifu Ciririmbo',
+    'sponsor.child2Name': 'Arléne Tumusifu Ciririmbo',
+    'sponsor.child2Age': '12 ans',
+    'sponsor.child2Birthdate': '04/04/2013',
+    'sponsor.child2Class': '5e primaire',
+    'sponsor.child3Meet': 'Rencontrez François Matuko Birekeraho',
+    'sponsor.child3Name': 'François Matuko Birekeraho',
+    'sponsor.child3Age': '11 ans',
+    'sponsor.child3Birthdate': '16/06/2014',
+    'sponsor.child3Class': '5e primaire',
+    'sponsor.child4Meet': 'Rencontrez Elie Mapendo Espoir',
+    'sponsor.child4Name': 'Elie Mapendo Espoir',
+    'sponsor.child4Age': '9 ans',
+    'sponsor.child4Birthdate': '11/07/2016',
+    'sponsor.child4Class': '2e primaire',
+    'sponsor.child5Meet': 'Rencontrez Justin Maisha Semirama',
+    'sponsor.child5Name': 'Justin Maisha Semirama',
+    'sponsor.child5Age': '9 ans',
+    'sponsor.child5Birthdate': '16/06/2016',
+    'sponsor.child5Class': '5e primaire',
     // Partners
     'partners.badge': 'NOS PARTENAIRES',
     'partners.title': 'Avec qui nous travaillons',
@@ -258,6 +321,11 @@ export const translations = {
     'footer.copyright': 'Tous droits réservés.',
     'footer.privacy': 'Politique de Confidentialité',
     'footer.terms': 'Conditions d\'Utilisation',
+    'footer.companyName': 'Le Miel Havre',
+    'footer.email': 'Lemielhavre@gmail.com',
+    'footer.phone': '+243 976 752 660',
+    'footer.location': 'Goma • Kinshasa',
+    'footer.followUs': 'Suivez-nous',
     // About Page
     'about.badge': 'À PROPOS DE NOUS',
     'about.title': 'À propos de',
@@ -357,6 +425,7 @@ export const translations = {
     'hero.slide4': 'Making a Difference',
     'hero.welcomeTitle': 'Welcome to Le Miel Havre',
     'hero.welcomeMessage': 'Welcome to Le Miel Havre Foundation. We are very honored that you are joining our mission to empower disadvantaged children through education. Your decision to participate in this program helps pave the way for a better future, one child at a time.',
+    'hero.togetherText': 'Together, we can change a child\'s life.',
     // Stats
     'stats.title': 'Our Impact in Numbers',
     'stats.description': 'The challenges children in eastern DRC face',
@@ -476,7 +545,52 @@ export const translations = {
     'sponsor.faq8A': 'As part of Le Miel Havre sponsorship, the children\'s home where your sponsored child lives, Flamme D\'amour, will help you celebrate your child\'s birthday as well as Christmas, two special occasions in every child\'s life. You can send an additional donation to make these events even more festive.',
     'sponsor.faq9Q': 'Will I be able to communicate or write to the child I sponsor?',
     'sponsor.faq9A': 'Writing to the child you sponsor is a privileged way to build lasting bonds and build a relationship. Children too young to write or with special needs will send you a handprint or drawing. A staff member from the home will write a message on behalf of the child.',
+    'sponsor.faqIntro': 'Each child is a precious gift from God, especially those who need to know they are not forgotten. They need angels here on earth to watch over them and ensure their needs are met.',
+    'sponsor.faqNew1Q': 'How many sponsors per child?',
+    'sponsor.faqNew1A': 'Sponsors can sponsor multiple children. We encourage you to write regularly to your sponsored child to develop a special bond and relationship. Children are eager to receive your letters!',
+    'sponsor.faqNew2Q': 'How many children participate in the Le Miel Havre scholarship program?',
+    'sponsor.faqNew2A': 'We started with 5 children living in an orphanage in Goma called Flamme D\'amour. Our long-term goal is for more than 500 children living in different orphanages to benefit from the Le Miel Havre scholarship program.',
+    'sponsor.faqNew3Q': 'Where is Le Miel Havre located?',
+    'sponsor.faqNew3A': 'Our headquarters is in Kinshasa, Democratic Republic of Congo. We work with local partners who help us manage the program in Goma. In the future, we plan to expand to other cities in the country.',
+    'sponsor.faqNew4Q': 'Can I send gifts to my sponsored child?',
+    'sponsor.faqNew4A': 'As part of Le Miel Havre sponsorship, the children\'s home where your sponsored child lives, Flamme D\'amour, will help you celebrate your child\'s birthday and Christmas, two special occasions in every child\'s life. You can send an additional donation to make these events even more festive.',
+    'sponsor.faqNew5Q': 'Will I be able to communicate or write to the child I sponsor?',
+    'sponsor.faqNew5A': 'Writing to the child you sponsor is a privileged way to build lasting bonds and build a relationship. Children too young to write or with special needs will send you a handprint or drawing. A staff member from the home will write a message on behalf of the child.',
+    'sponsor.faqNew6Q': 'Why sponsor a child through the Le Miel Havre scholarship program?',
+    'sponsor.faqNew6A': 'Since its inception in 2025, Le Miel Havre has aimed to improve the lives of children from extremely poor backgrounds and/or abandoned or removed from their families due to risky situations, through education. Your support will enable these children to heal, thrive, and grow in a stable and loving family environment. It is only through our sponsors that we can provide a good education with essential basic items (food, clothing, school supplies, etc.), organize special events for birthdays and Christmas, make small repairs to homes, and much more.',
+    'sponsor.faqNew7Q': 'Does my sponsored child know my full name and address?',
+    'sponsor.faqNew7A': 'To protect your privacy, we only share your first name with your sponsored child. We do not provide them with your address, city, or state of residence.',
+    'sponsor.faqNew8Q': 'Can I choose my child?',
+    'sponsor.faqNew8A': 'All children participating in this program need and deserve love and support. To be as fair and helpful as possible, we carefully select a child for you based on their most urgent needs. This selection method allows us not only to prioritize the most urgent needs, but also to reduce our administrative costs by avoiding having to match requested criteria to a particular child. If the child you sponsor leaves the orphanage, is adopted, goes to live with relatives, or reaches adulthood, you will be informed and have the opportunity to sponsor another child.',
+    'sponsor.faqNew9Q': 'What will I receive when I sponsor a child?',
+    'sponsor.faqNew9A': '1) Welcome package – Once your first payment is processed, you will receive a welcome package by email within approximately three weeks. This package contains a brief biography and photo of your child, as well as information about the program. 2) Updated photo and biography – You will also receive an updated photo and biography of your child each year. What joy to see your child grow and mature year after year! 3) Newsletter – We also send our newsletter by email twice a year. It is full of beautiful stories and photos of children benefiting from the Le Miel Havre scholarship program.',
     'sponsor.button': 'Sponsor a Child Today',
+    'sponsor.sponsorThemTitle': 'Sponsor Them Today',
+    'sponsor.child1Meet': 'Meet Prosper Muhubiri Ciririmbo',
+    'sponsor.child1Name': 'Prosper Muhubiri Ciririmbo',
+    'sponsor.child1Age': '10 years old',
+    'sponsor.child1Birthdate': '05/05/2015',
+    'sponsor.child1Class': '5th grade',
+    'sponsor.child2Meet': 'Meet Arléne Tumusifu Ciririmbo',
+    'sponsor.child2Name': 'Arléne Tumusifu Ciririmbo',
+    'sponsor.child2Age': '12 years old',
+    'sponsor.child2Birthdate': '04/04/2013',
+    'sponsor.child2Class': '5th grade',
+    'sponsor.child3Meet': 'Meet François Matuko Birekeraho',
+    'sponsor.child3Name': 'François Matuko Birekeraho',
+    'sponsor.child3Age': '11 years old',
+    'sponsor.child3Birthdate': '16/06/2014',
+    'sponsor.child3Class': '5th grade',
+    'sponsor.child4Meet': 'Meet Elie Mapendo Espoir',
+    'sponsor.child4Name': 'Elie Mapendo Espoir',
+    'sponsor.child4Age': '9 years old',
+    'sponsor.child4Birthdate': '11/07/2016',
+    'sponsor.child4Class': '2nd grade',
+    'sponsor.child5Meet': 'Meet Justin Maisha Semirama',
+    'sponsor.child5Name': 'Justin Maisha Semirama',
+    'sponsor.child5Age': '9 years old',
+    'sponsor.child5Birthdate': '16/06/2016',
+    'sponsor.child5Class': '5th grade',
     // Partners
     'partners.badge': 'OUR PARTNERS',
     'partners.title': 'Whom we work with',
@@ -505,6 +619,11 @@ export const translations = {
     'footer.copyright': 'All rights reserved.',
     'footer.privacy': 'Privacy Policy',
     'footer.terms': 'Terms of Service',
+    'footer.companyName': 'Le Miel Havre',
+    'footer.email': 'Lemielhavre@gmail.com',
+    'footer.phone': '+243 976 752 660',
+    'footer.location': 'Goma • Kinshasa',
+    'footer.followUs': 'Follow Us',
     // About Page
     'about.badge': 'ABOUT US',
     'about.title': 'About',

@@ -129,7 +129,10 @@ export function Hero() {
             <p className="text-lg md:text-xl text-slate-200 mb-8 max-w-2xl leading-relaxed animate-in fade-in slide-in-from-left duration-1000 delay-200">
               {t('hero.description')}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in slide-in-from-left duration-1000 delay-300">
+            <p className="text-xl md:text-2xl font-semibold text-white mb-8 max-w-2xl leading-relaxed animate-in fade-in slide-in-from-left duration-1000 delay-300">
+              {t('hero.togetherText')}
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in slide-in-from-left duration-1000 delay-400">
               <Link href="/booklet">
                 <Button className="bg-gradient-to-r from-brand-orange to-brand-orange-dark hover:from-brand-orange-dark hover:to-brand-green text-white px-8 py-6 text-base font-semibold rounded-lg shadow-xl shadow-brand-orange/30 hover:shadow-2xl hover:shadow-brand-orange/40 transition-all transform hover:scale-105">
                   {t('hero.button')}

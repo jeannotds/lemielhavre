@@ -99,10 +99,7 @@ export function CharityCauses() {
               <span className="text-sm font-semibold text-brand-orange-dark dark:text-brand-orange">{t('causes.badge')}</span>
             </div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 dark:text-slate-200 leading-tight">
-              {t('causes.title')}{' '}
-              <span className="bg-gradient-to-r from-brand-orange to-brand-orange-dark bg-clip-text text-transparent">
-                Causes
-              </span>
+              {t('hero.togetherText')}
             </h2>
             <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 leading-relaxed">
               <span className="text-slate-800 dark:text-slate-200 font-medium">{t('causes.subtitle')}</span>{' '}
