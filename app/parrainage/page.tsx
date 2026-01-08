@@ -719,6 +719,74 @@ export default function Parrainage() {
         </div>
       </section> */}
 
+      {/* FAQ Section on Sponsorship */}
+      <section className="bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-800 py-20 md:py-28">
+        <div className="container mx-auto px-6 lg:px-10">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-slate-800 rounded-full border border-brand-cream dark:border-slate-700 mb-6">
+                <span className="w-2 h-2 bg-brand-orange rounded-full animate-pulse" />
+                <span className="text-sm font-semibold text-brand-orange-dark dark:text-brand-orange">FAQ SUR LE PARRAINAGE</span>
+              </div>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 dark:text-slate-200 mb-6">
+                FAQ sur le{' '}
+                <span className="bg-gradient-to-r from-brand-orange to-brand-orange-dark bg-clip-text text-transparent">
+                  Parrainage
+                </span>
+              </h2>
+              <div className="bg-gradient-to-br from-brand-orange/10 to-brand-orange-dark/10 dark:from-brand-orange/20 dark:to-brand-orange-dark/20 rounded-2xl p-6 md:p-8 border border-brand-orange/20 max-w-4xl mx-auto mb-12">
+                <p className="text-lg md:text-xl text-slate-700 dark:text-slate-300 leading-relaxed italic">
+                  {t('sponsor.faqIntro')}
+                </p>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <Accordion type="single" collapsible className="w-full">
+                {[
+                  { questionKey: 'sponsor.faqNew1Q', answerKey: 'sponsor.faqNew1A', icon: Users },
+                  { questionKey: 'sponsor.faqNew2Q', answerKey: 'sponsor.faqNew2A', icon: Users },
+                  { questionKey: 'sponsor.faqNew3Q', answerKey: 'sponsor.faqNew3A', icon: MapPin },
+                  { questionKey: 'sponsor.faqNew4Q', answerKey: 'sponsor.faqNew4A', icon: Gift },
+                  { questionKey: 'sponsor.faqNew5Q', answerKey: 'sponsor.faqNew5A', icon: Mail },
+                  { questionKey: 'sponsor.faqNew6Q', answerKey: 'sponsor.faqNew6A', icon: Heart },
+                  { questionKey: 'sponsor.faqNew7Q', answerKey: 'sponsor.faqNew7A', icon: Shield },
+                  { questionKey: 'sponsor.faqNew8Q', answerKey: 'sponsor.faqNew8A', icon: UserCheck },
+                  { questionKey: 'sponsor.faqNew9Q', answerKey: 'sponsor.faqNew9A', icon: Gift },
+                ].map((faq, index) => {
+                  const Icon = faq.icon;
+                  return (
+                    <AccordionItem
+                      key={index}
+                      value={`item-${index}`}
+                      className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-6 hover:border-brand-orange dark:hover:border-brand-orange transition-all duration-300 hover:shadow-lg"
+                    >
+                      <AccordionTrigger className="hover:no-underline py-6">
+                        <div className="flex items-start gap-4 text-left w-full">
+                          <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-gradient-to-br from-brand-orange to-brand-orange-dark flex items-center justify-center mt-1 shadow-md">
+                            <Icon className="w-5 h-5 text-white" />
+                          </div>
+                          <span className="text-lg md:text-xl font-bold text-slate-900 dark:text-slate-200 group-hover:text-brand-orange-dark dark:group-hover:text-brand-orange transition-colors flex-1">
+                            {t(faq.questionKey as TranslationKey)}
+                          </span>
+                        </div>
+                      </AccordionTrigger>
+                      <AccordionContent className="pb-6">
+                        <div className="ml-14">
+                          <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-base md:text-lg whitespace-pre-line">
+                            {t(faq.answerKey as TranslationKey)}
+                          </p>
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+                  );
+                })}
+              </Accordion>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20 md:py-28">
         <div className="container mx-auto px-6 lg:px-10">
