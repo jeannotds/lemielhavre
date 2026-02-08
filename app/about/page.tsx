@@ -125,9 +125,9 @@ export default function About() {
             ].map((member, index) => (
               <div
                 key={index}
-                className="group relative overflow-hidden rounded-2xl bg-white dark:bg-card shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-slate-100 dark:border-secondary"
+                className="group relative overflow-hidden rounded-[30%] bg-white dark:bg-card shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-slate-100 dark:border-secondary"
               >
-                <div className="aspect-square overflow-hidden">
+                <div className="aspect-square overflow-hidden rounded-[30%]">
                   <img
                     src={member.image}
                     alt={member.name}
