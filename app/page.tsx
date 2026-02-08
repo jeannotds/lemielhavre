@@ -26,17 +26,17 @@ export default function Home() {
       <Hero />
       
       {/* Welcome Section */}
-      <section className="bg-[#224434] py-16 md:py-24">
+      <section className="bg-white dark:bg-[#224434] py-16 md:py-24">
         <div className="container mx-auto px-6 lg:px-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-orange/10 dark:bg-brand-orange/20 rounded-full border border-brand-orange/20 mb-6">
               <Heart className="w-4 h-4 text-brand-orange fill-brand-orange" />
               <span className="text-sm font-semibold text-brand-orange-dark dark:text-brand-orange">BIENVENUE</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-slate-800 dark:text-white">
               {t('hero.welcomeTitle')}
             </h2>
-            <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-slate-600 dark:text-white/90 leading-relaxed max-w-3xl mx-auto">
               {t('hero.welcomeMessage')}
             </p>
           </div>
