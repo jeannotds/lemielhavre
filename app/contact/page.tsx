@@ -8,16 +8,16 @@ export default function Contact() {
     {
       icon: Phone,
       title: 'Téléphone',
-      content: '+243 976 752 660',
-      link: 'tel:+243976752660',
+      content: '+243 999 757 538',
+      link: 'tel:+243999757538',
       description: 'Appelez-nous directement',
       color: 'from-green-500 to-emerald-500',
     },
     {
       icon: MessageCircle,
       title: 'WhatsApp',
-      content: '+243 976 752 660',
-      link: 'https://wa.me/243976752660',
+      content: '+243 817 950 510',
+      link: 'https://wa.me/243817950510',
       description: 'Contactez-nous sur WhatsApp',
       color: 'from-green-500 to-teal-500',
     },
@@ -32,9 +32,9 @@ export default function Contact() {
     {
       icon: MapPin,
       title: 'Adresse',
-      content: 'Goma • Kinshasa',
+      content: '62 bis, avenue tombalbaye Gombe / Kinshasa',
       link: '#',
-      description: 'Nos bureaux',
+      description: 'Ref : Terrain Mama Yemo',
       color: 'from-brand-orange to-brand-orange-dark',
     },
   ];
@@ -175,7 +175,8 @@ export default function Contact() {
                 <div className="space-y-4">
                   <div className="bg-white/60 dark:bg-card/60 rounded-xl p-4 border border-green-100 dark:border-secondary">
                     <p className="font-bold text-slate-800 dark:text-slate-200 mb-2 text-base">Bureau principal :</p>
-                    <p className="text-slate-600 dark:text-slate-400">Kinshasa, République Démocratique du Congo</p>
+                    <p className="text-slate-600 dark:text-slate-400">62 bis, avenue tombalbaye Gombe / Kinshasa</p>
+                    <p className="text-slate-500 dark:text-slate-500 text-sm mt-1">Ref : Terrain Mama Yemo</p>
                   </div>
                   <div className="bg-white/60 dark:bg-card/60 rounded-xl p-4 border border-green-100 dark:border-secondary">
                     <p className="font-bold text-slate-800 dark:text-slate-200 mb-2 text-base">Programme actif :</p>
@@ -196,7 +197,7 @@ export default function Contact() {
                   Restez connecté avec nous sur nos réseaux sociaux pour suivre nos actualités et nos projets.
                 </p>
                 <a
-                  href="https://wa.me/243976752660"
+                  href="https://wa.me/243817950510"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white px-6 py-4 rounded-xl font-bold text-center transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
@@ -221,7 +222,7 @@ export default function Contact() {
               </span>
             </h2>
             <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg">
-              Notre bureau principal est situé à Kinshasa, et nous opérons également à Goma pour nos programmes de bourses.
+              Notre bureau principal est situé au 62 bis, avenue tombalbaye Gombe / Kinshasa (Ref : Terrain Mama Yemo), et nous opérons également à Goma pour nos programmes de bourses.
             </p>
           </div>
           <div className="max-w-5xl mx-auto">
@@ -235,7 +236,10 @@ export default function Contact() {
                   Carte interactive à venir
                 </p>
                 <p className="text-slate-600 dark:text-slate-400 text-base">
-                  Kinshasa, République Démocratique du Congo
+                  62 bis, avenue tombalbaye Gombe / Kinshasa
+                </p>
+                <p className="text-slate-500 dark:text-slate-500 text-sm mt-1">
+                  Ref : Terrain Mama Yemo
                 </p>
               </div>
             </div>
