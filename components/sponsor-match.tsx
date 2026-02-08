@@ -118,7 +118,7 @@ export function SponsorMatch() {
     <section className="bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-800 py-20 md:py-28">
       <div className="container mx-auto px-6 lg:px-10">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-slate-800 rounded-full border border-brand-cream dark:border-slate-700 mb-4">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-card rounded-full border border-brand-cream dark:border-secondary mb-4">
             <span className="w-2 h-2 bg-brand-orange rounded-full animate-pulse" />
             <span className="text-sm font-semibold text-brand-orange-dark dark:text-brand-orange">{t('sponsor.badge')}</span>
           </div>
@@ -162,7 +162,7 @@ export function SponsorMatch() {
 
             <button
               onClick={prevSlide}
-              className="absolute left-4 md:left-6 top-1/2 -translate-y-1/2 bg-white dark:bg-slate-800/90 hover:bg-white dark:bg-slate-800 backdrop-blur-sm p-3 rounded-full transition-all shadow-lg hover:scale-110 z-10"
+              className="absolute left-4 md:left-6 top-1/2 -translate-y-1/2 bg-white dark:bg-card/90 hover:bg-white dark:bg-card backdrop-blur-sm p-3 rounded-full transition-all shadow-lg hover:scale-110 z-10"
               aria-label="Previous slide"
             >
               <ChevronLeft className="w-6 h-6 text-slate-900 dark:text-slate-200" />
@@ -170,7 +170,7 @@ export function SponsorMatch() {
 
             <button
               onClick={nextSlide}
-              className="absolute right-4 md:right-6 top-1/2 -translate-y-1/2 bg-white dark:bg-slate-800/90 hover:bg-white dark:bg-slate-800 backdrop-blur-sm p-3 rounded-full transition-all shadow-lg hover:scale-110 z-10"
+              className="absolute right-4 md:right-6 top-1/2 -translate-y-1/2 bg-white dark:bg-card/90 hover:bg-white dark:bg-card backdrop-blur-sm p-3 rounded-full transition-all shadow-lg hover:scale-110 z-10"
               aria-label="Next slide"
             >
               <ChevronRight className="w-6 h-6 text-slate-900 dark:text-slate-200" />
@@ -182,7 +182,7 @@ export function SponsorMatch() {
                   key={index}
                   onClick={() => setCurrentSlide(index)}
                   className={`h-2 rounded-full transition-all ${
-                    index === currentSlide ? 'bg-white dark:bg-slate-800 w-10 shadow-lg' : 'bg-white dark:bg-slate-800/50 w-2 hover:bg-white dark:bg-slate-800/70'
+                    index === currentSlide ? 'bg-white dark:bg-card w-10 shadow-lg' : 'bg-white dark:bg-card/50 w-2 hover:bg-white dark:bg-card/70'
                   }`}
                   aria-label={`Go to slide ${index + 1}`}
                 />
@@ -206,7 +206,7 @@ export function SponsorMatch() {
 
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               {/* Step 1 */}
-              <div className="group relative bg-gradient-to-br from-white to-brand-cream dark:from-slate-800 dark:to-slate-700 rounded-2xl p-6 md:p-8 border border-brand-cream dark:border-slate-700 hover:border-brand-orange-dark dark:hover:border-brand-orange hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <div className="group relative bg-gradient-to-br from-white to-brand-cream dark:from-slate-800 dark:to-secondary rounded-2xl p-6 md:p-8 border border-brand-cream dark:border-secondary hover:border-brand-orange-dark dark:hover:border-brand-orange hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                 <div className="absolute top-4 right-4 w-16 h-16 bg-gradient-to-br from-brand-orange/10 to-brand-orange-dark/10 rounded-full blur-xl group-hover:blur-2xl transition-all" />
                 <div className="relative">
                   <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-brand-orange to-brand-orange-dark rounded-xl mb-4 shadow-lg group-hover:scale-110 transition-transform">
@@ -222,7 +222,7 @@ export function SponsorMatch() {
               </div>
 
               {/* Step 2 */}
-              <div className="group relative bg-gradient-to-br from-white dark:from-slate-800 to-blue-50 dark:to-slate-700 rounded-2xl p-6 md:p-8 border border-blue-100 dark:border-slate-700 hover:border-blue-300 dark:hover:border-blue-400 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <div className="group relative bg-gradient-to-br from-white dark:from-slate-800 to-blue-50 dark:to-secondary rounded-2xl p-6 md:p-8 border border-blue-100 dark:border-secondary hover:border-blue-300 dark:hover:border-blue-400 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                 <div className="absolute top-4 right-4 w-16 h-16 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-full blur-xl group-hover:blur-2xl transition-all" />
                 <div className="relative">
                   <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl mb-4 shadow-lg group-hover:scale-110 transition-transform">
@@ -238,7 +238,7 @@ export function SponsorMatch() {
               </div>
 
               {/* Step 3 */}
-              <div className="group relative bg-gradient-to-br from-white dark:from-slate-800 to-green-50 dark:to-slate-700 rounded-2xl p-6 md:p-8 border border-green-100 dark:border-slate-700 hover:border-green-300 dark:hover:border-green-400 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <div className="group relative bg-gradient-to-br from-white dark:from-slate-800 to-green-50 dark:to-secondary rounded-2xl p-6 md:p-8 border border-green-100 dark:border-secondary hover:border-green-300 dark:hover:border-green-400 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                 <div className="absolute top-4 right-4 w-16 h-16 bg-gradient-to-br from-green-500/10 to-emerald-500/10 rounded-full blur-xl group-hover:blur-2xl transition-all" />
                 <div className="relative">
                   <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl mb-4 shadow-lg group-hover:scale-110 transition-transform">
@@ -281,7 +281,7 @@ export function SponsorMatch() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {steps.map((step) => (
               <div key={step.number} className="group relative">
-                <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 md:p-8 h-full border border-slate-100 dark:border-slate-700 hover:border-brand-orange hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                <div className="bg-white dark:bg-card rounded-2xl p-6 md:p-8 h-full border border-slate-100 dark:border-secondary hover:border-brand-orange hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                   <div className="flex items-start gap-4 mb-4">
                     <div className="relative flex-shrink-0">
                       <div className="w-12 h-12 bg-gradient-to-br from-brand-orange to-brand-orange-dark rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
@@ -316,7 +316,7 @@ export function SponsorMatch() {
               {[1, 2, 3, 4, 5, 6, 7].map((num) => (
                 <div
                   key={num}
-                  className="bg-white dark:bg-slate-800 rounded-xl p-6 border border-slate-200 dark:border-slate-700 hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-lg transition-all"
+                  className="bg-white dark:bg-card rounded-xl p-6 border border-slate-200 dark:border-secondary hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-lg transition-all"
                 >
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-br from-brand-orange to-brand-orange-dark rounded-lg flex items-center justify-center">
@@ -340,7 +340,7 @@ export function SponsorMatch() {
         {/* Section FAQ Moderne */}
         <div className="mt-20">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-slate-800 rounded-full border border-brand-cream dark:border-slate-700 mb-4">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-card rounded-full border border-brand-cream dark:border-secondary mb-4">
               <span className="w-2 h-2 bg-brand-orange rounded-full animate-pulse" />
               <span className="text-sm font-semibold text-brand-orange-dark dark:text-brand-orange">{t('sponsor.faqBadge')}</span>
             </div>
@@ -375,7 +375,7 @@ export function SponsorMatch() {
                   <AccordionItem
                     key={index}
                     value={`item-${index}`}
-                    className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-6 hover:border-brand-orange-dark transition-all duration-300 hover:shadow-lg"
+                    className="bg-white dark:bg-card border border-slate-200 dark:border-secondary rounded-xl px-6 hover:border-brand-orange-dark transition-all duration-300 hover:shadow-lg"
                   >
                     <AccordionTrigger className="hover:no-underline py-6">
                       <div className="flex items-start gap-4 text-left">

@@ -40,7 +40,7 @@ export function SponsorProgram() {
   ];
 
   return (
-    <section className="bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-800 py-20 md:py-28 relative overflow-hidden">
+    <section className="bg-gradient-to-b from-white to-slate-50 dark:from-background dark:to-card py-20 md:py-28 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(251,146,60,0.05),transparent_50%)]" />
       
@@ -48,7 +48,7 @@ export function SponsorProgram() {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-slate-800 rounded-full border border-brand-cream dark:border-slate-700 mb-4">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-card rounded-full border border-brand-cream dark:border-secondary mb-4">
               <span className="w-2 h-2 bg-brand-orange rounded-full animate-pulse" />
               <span className="text-sm font-semibold text-brand-orange-dark dark:text-brand-orange">NOTRE PROGRAMME</span>
             </div>
@@ -68,13 +68,13 @@ export function SponsorProgram() {
               return (
                 <div
                   key={index}
-                  className="group bg-white dark:bg-slate-800 rounded-3xl p-6 md:p-8 border border-slate-200 dark:border-slate-700 hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+                  className="group bg-white dark:bg-card rounded-3xl p-6 md:p-8 border border-slate-200 dark:border-secondary hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
                 >
                   {/* Header with Icon and Number */}
                   <div className="flex items-start gap-4 mb-6">
                     <div className={`relative flex-shrink-0 w-20 h-20 rounded-2xl bg-gradient-to-br ${step.gradient} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform`}>
                       <Icon className="w-10 h-10 text-white" />
-                      <div className="absolute -top-2 -right-2 w-8 h-8 bg-white dark:bg-slate-800 rounded-full flex items-center justify-center shadow-md border-2 border-brand-orange">
+                      <div className="absolute -top-2 -right-2 w-8 h-8 bg-white dark:bg-card rounded-full flex items-center justify-center shadow-md border-2 border-brand-orange">
                         <span className="text-sm font-bold text-brand-orange">{step.number}</span>
                       </div>
                     </div>
@@ -87,7 +87,7 @@ export function SponsorProgram() {
                   </div>
 
                   {/* Description */}
-                  <div className="bg-slate-50 dark:bg-slate-700/50 rounded-2xl p-5 border border-slate-100 dark:border-slate-600">
+                  <div className="bg-slate-50 dark:bg-secondary/50 rounded-2xl p-5 border border-slate-100 dark:border-secondary">
                     <p className="text-sm md:text-base text-slate-600 dark:text-slate-400 leading-relaxed">
                       {t(step.descKey)}
                     </p>

@@ -134,7 +134,7 @@ export default function Parrainage() {
   ];
 
   return (
-    <main className="min-h-screen bg-white dark:bg-slate-900">
+    <main className="min-h-screen bg-white dark:bg-background">
       <Header />
       
       {/* Hero Section */}
@@ -160,11 +160,11 @@ export default function Parrainage() {
       </section>
 
       {/* Benefits Section */}
-      <section className="bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-800 py-20 md:py-28">
+      <section className="bg-gradient-to-b from-white to-slate-50 dark:from-background dark:to-card py-20 md:py-28">
         <div className="container mx-auto px-6 lg:px-10">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-slate-800 rounded-full border border-brand-cream dark:border-slate-700 mb-4">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-card rounded-full border border-brand-cream dark:border-secondary mb-4">
                 <span className="w-2 h-2 bg-brand-orange rounded-full animate-pulse" />
                 <span className="text-sm font-semibold text-brand-orange-dark dark:text-brand-orange">BÉNÉFICES</span>
               </div>
@@ -182,10 +182,10 @@ export default function Parrainage() {
                 return (
                   <div
                     key={benefit.number}
-                    className="bg-white dark:bg-slate-800 rounded-2xl p-6 border border-slate-200 dark:border-slate-700 hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group"
+                    className="bg-white dark:bg-card rounded-2xl p-6 border border-slate-200 dark:border-secondary hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group"
                   >
                     <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 w-16 h-16 rounded-xl bg-white dark:bg-slate-700 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform overflow-hidden">
+                      <div className="flex-shrink-0 w-16 h-16 rounded-xl bg-white dark:bg-secondary flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform overflow-hidden">
                         <Image
                           src={benefit.image}
                           alt={title}
@@ -227,11 +227,11 @@ export default function Parrainage() {
       </section>
 
       {/* Program Steps Section */}
-      <section className="bg-white dark:bg-slate-900 py-20 md:py-28">
+      <section className="bg-white dark:bg-background py-20 md:py-28">
         <div className="container mx-auto px-6 lg:px-10">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-slate-800 rounded-full border border-brand-cream dark:border-slate-700 mb-4">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-card rounded-full border border-brand-cream dark:border-secondary mb-4">
                 <span className="w-2 h-2 bg-brand-orange rounded-full animate-pulse" />
                 <span className="text-sm font-semibold text-brand-orange-dark dark:text-brand-orange">NOTRE PROGRAMME</span>
               </div>
@@ -255,12 +255,12 @@ export default function Parrainage() {
                 return (
                   <div
                     key={step.number}
-                    className="group bg-white dark:bg-slate-800 rounded-3xl p-6 md:p-8 border border-slate-200 dark:border-slate-700 hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+                    className="group bg-white dark:bg-card rounded-3xl p-6 md:p-8 border border-slate-200 dark:border-secondary hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
                   >
                     <div className="flex items-start gap-4 mb-6">
                       <div className={`relative flex-shrink-0 w-20 h-20 rounded-2xl bg-gradient-to-br ${step.gradient} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform`}>
                         <Icon className="w-10 h-10 text-white" />
-                        <div className="absolute -top-2 -right-2 w-8 h-8 bg-white dark:bg-slate-800 rounded-full flex items-center justify-center shadow-md border-2 border-brand-orange">
+                        <div className="absolute -top-2 -right-2 w-8 h-8 bg-white dark:bg-card rounded-full flex items-center justify-center shadow-md border-2 border-brand-orange">
                           <span className="text-sm font-bold text-brand-orange">{step.number}</span>
                         </div>
                       </div>
@@ -271,7 +271,7 @@ export default function Parrainage() {
                         <div className="h-1 w-16 bg-gradient-to-r from-brand-orange to-brand-orange-dark rounded-full group-hover:w-24 transition-all" />
                       </div>
                     </div>
-                    <div className="bg-slate-50 dark:bg-slate-700/50 rounded-2xl p-5 border border-slate-100 dark:border-slate-600">
+                    <div className="bg-slate-50 dark:bg-secondary/50 rounded-2xl p-5 border border-slate-100 dark:border-secondary">
                       <p className="text-sm md:text-base text-slate-600 dark:text-slate-400 leading-relaxed">
                         {t(step.descKey as TranslationKey)}
                       </p>
@@ -285,7 +285,7 @@ export default function Parrainage() {
       </section>
 
       {/* How It Works Section */}
-      <section className="relative bg-white dark:bg-slate-900 py-20 md:py-28 overflow-hidden">
+      <section className="relative bg-white dark:bg-background py-20 md:py-28 overflow-hidden">
         {/* Background Image Carousel */}
         <div className="absolute inset-0 z-0">
           {processImages.map((image, index) => (
@@ -309,7 +309,7 @@ export default function Parrainage() {
         {/* Navigation Buttons for Background Carousel */}
         <button
           onClick={() => setCurrentImageIndex((prev) => (prev - 1 + processImages.length) % processImages.length)}
-          className="absolute left-4 md:left-6 top-1/2 -translate-y-1/2 bg-white/90 dark:bg-slate-800/90 hover:bg-white dark:hover:bg-slate-800 backdrop-blur-sm p-3 rounded-full transition-all shadow-lg hover:scale-110 z-40"
+          className="absolute left-4 md:left-6 top-1/2 -translate-y-1/2 bg-white/90 dark:bg-card/90 hover:bg-white dark:hover:bg-slate-800 backdrop-blur-sm p-3 rounded-full transition-all shadow-lg hover:scale-110 z-40"
           aria-label="Previous slide"
         >
           <ChevronLeft className="w-6 h-6 text-slate-900 dark:text-slate-200" />
@@ -317,7 +317,7 @@ export default function Parrainage() {
 
         <button
           onClick={() => setCurrentImageIndex((prev) => (prev + 1) % processImages.length)}
-          className="absolute right-4 md:right-6 top-1/2 -translate-y-1/2 bg-white/90 dark:bg-slate-800/90 hover:bg-white dark:hover:bg-slate-800 backdrop-blur-sm p-3 rounded-full transition-all shadow-lg hover:scale-110 z-40"
+          className="absolute right-4 md:right-6 top-1/2 -translate-y-1/2 bg-white/90 dark:bg-card/90 hover:bg-white dark:hover:bg-slate-800 backdrop-blur-sm p-3 rounded-full transition-all shadow-lg hover:scale-110 z-40"
           aria-label="Next slide"
         >
           <ChevronRight className="w-6 h-6 text-slate-900 dark:text-slate-200" />
@@ -340,7 +340,7 @@ export default function Parrainage() {
         <div className="relative z-20 container mx-auto px-6 lg:px-10">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm rounded-full border border-white/20 dark:border-slate-700/50 mb-4">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/90 dark:bg-card/90 backdrop-blur-sm rounded-full border border-white/20 dark:border-secondary/50 mb-4">
                 <span className="w-2 h-2 bg-brand-orange rounded-full animate-pulse" />
                 <span className="text-sm font-semibold text-brand-orange-dark dark:text-brand-orange">PROCESSUS</span>
               </div>
@@ -351,22 +351,22 @@ export default function Parrainage() {
 
             {/* Process Steps Description */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6 mb-12 max-w-7xl mx-auto">
-              <div className="bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20 dark:border-slate-700/50 hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-xl hover:shadow-brand-orange/20 hover:-translate-y-2 transition-all duration-300 cursor-pointer group">
+              <div className="bg-white/95 dark:bg-card/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20 dark:border-secondary/50 hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-xl hover:shadow-brand-orange/20 hover:-translate-y-2 transition-all duration-300 cursor-pointer group">
                 <p className="text-base md:text-lg text-slate-700 dark:text-slate-300 leading-relaxed group-hover:text-brand-orange-dark dark:group-hover:text-brand-orange transition-colors duration-300">
                   {t('sponsor.howProcessStep1')}
                 </p>
               </div>
-              <div className="bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20 dark:border-slate-700/50 hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-xl hover:shadow-brand-orange/20 hover:-translate-y-2 transition-all duration-300 cursor-pointer group">
+              <div className="bg-white/95 dark:bg-card/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20 dark:border-secondary/50 hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-xl hover:shadow-brand-orange/20 hover:-translate-y-2 transition-all duration-300 cursor-pointer group">
                 <p className="text-base md:text-lg text-slate-700 dark:text-slate-300 leading-relaxed group-hover:text-brand-orange-dark dark:group-hover:text-brand-orange transition-colors duration-300">
                   {t('sponsor.howProcessStep2')}
                 </p>
               </div>
-              <div className="bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20 dark:border-slate-700/50 hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-xl hover:shadow-brand-orange/20 hover:-translate-y-2 transition-all duration-300 cursor-pointer group">
+              <div className="bg-white/95 dark:bg-card/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20 dark:border-secondary/50 hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-xl hover:shadow-brand-orange/20 hover:-translate-y-2 transition-all duration-300 cursor-pointer group">
                 <p className="text-base md:text-lg text-slate-700 dark:text-slate-300 leading-relaxed group-hover:text-brand-orange-dark dark:group-hover:text-brand-orange transition-colors duration-300">
                   {t('sponsor.howProcessStep3')}
                 </p>
               </div>
-              <div className="bg-white/95 dark:bg-slate-800/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20 dark:border-slate-700/50 hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-xl hover:shadow-brand-orange/20 hover:-translate-y-2 transition-all duration-300 cursor-pointer group">
+              <div className="bg-white/95 dark:bg-card/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20 dark:border-secondary/50 hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-xl hover:shadow-brand-orange/20 hover:-translate-y-2 transition-all duration-300 cursor-pointer group">
                 <p className="text-base md:text-lg text-slate-700 dark:text-slate-300 leading-relaxed group-hover:text-brand-orange-dark dark:group-hover:text-brand-orange transition-colors duration-300">
                   {t('sponsor.howProcessStep4')}
                 </p>
@@ -386,11 +386,11 @@ export default function Parrainage() {
       </section>
 
       {/* Sponsor Them Today Section */}
-      <section className="bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-800 py-20 md:py-28">
+      <section className="bg-gradient-to-b from-white to-slate-50 dark:from-background dark:to-card py-20 md:py-28">
         <div className="container mx-auto px-6 lg:px-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-slate-800 rounded-full border border-brand-cream dark:border-slate-700 mb-4">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-card rounded-full border border-brand-cream dark:border-secondary mb-4">
                 <span className="w-2 h-2 bg-brand-orange rounded-full animate-pulse" />
                 <span className="text-sm font-semibold text-brand-orange-dark dark:text-brand-orange">PARRAINAGE</span>
               </div>
@@ -403,7 +403,7 @@ export default function Parrainage() {
             <div className="space-y-8 md:space-y-10">
               {/* Child 1 - Image Left */}
               <div className="group">
-                <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8 bg-white dark:bg-slate-800 rounded-2xl p-5 md:p-7 border border-slate-200 dark:border-slate-700 hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-2xl transition-all duration-300">
+                <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8 bg-white dark:bg-card rounded-2xl p-5 md:p-7 border border-slate-200 dark:border-secondary hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-2xl transition-all duration-300">
                   <div className="flex-shrink-0 w-full md:w-64 h-64 md:h-80 rounded-xl overflow-hidden shadow-xl group-hover:scale-105 transition-transform duration-300">
                     <Image
                       src="/assets/WhatsApp Image 2025-12-15 at 19.57.21 (1).jpeg"
@@ -452,7 +452,7 @@ export default function Parrainage() {
 
               {/* Child 2 - Image Right */}
               <div className="group">
-                <div className="flex flex-col md:flex-row-reverse items-center gap-6 md:gap-8 bg-white dark:bg-slate-800 rounded-2xl p-5 md:p-7 border border-slate-200 dark:border-slate-700 hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-2xl transition-all duration-300">
+                <div className="flex flex-col md:flex-row-reverse items-center gap-6 md:gap-8 bg-white dark:bg-card rounded-2xl p-5 md:p-7 border border-slate-200 dark:border-secondary hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-2xl transition-all duration-300">
                   <div className="flex-shrink-0 w-full md:w-64 h-64 md:h-80 rounded-xl overflow-hidden shadow-xl group-hover:scale-105 transition-transform duration-300">
                     <Image
                       src="/assets/WhatsApp Image 2025-12-15 at 19.57.22 (1).jpeg"
@@ -501,7 +501,7 @@ export default function Parrainage() {
 
               {/* Child 3 - Image Left */}
               <div className="group">
-                <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8 bg-white dark:bg-slate-800 rounded-2xl p-5 md:p-7 border border-slate-200 dark:border-slate-700 hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-2xl transition-all duration-300">
+                <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8 bg-white dark:bg-card rounded-2xl p-5 md:p-7 border border-slate-200 dark:border-secondary hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-2xl transition-all duration-300">
                   <div className="flex-shrink-0 w-full md:w-64 h-64 md:h-80 rounded-xl overflow-hidden shadow-xl group-hover:scale-105 transition-transform duration-300">
                     <Image
                       src="/assets/WhatsApp Image 2025-12-15 at 19.57.23 (1).jpeg"
@@ -550,7 +550,7 @@ export default function Parrainage() {
 
               {/* Child 4 - Image Right */}
               <div className="group">
-                <div className="flex flex-col md:flex-row-reverse items-center gap-6 md:gap-8 bg-white dark:bg-slate-800 rounded-2xl p-5 md:p-7 border border-slate-200 dark:border-slate-700 hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-2xl transition-all duration-300">
+                <div className="flex flex-col md:flex-row-reverse items-center gap-6 md:gap-8 bg-white dark:bg-card rounded-2xl p-5 md:p-7 border border-slate-200 dark:border-secondary hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-2xl transition-all duration-300">
                   <div className="flex-shrink-0 w-full md:w-64 h-64 md:h-80 rounded-xl overflow-hidden shadow-xl group-hover:scale-105 transition-transform duration-300">
                     <Image
                       src="/assets/WhatsApp Image 2025-12-15 at 19.57.24 (1).jpeg"
@@ -599,7 +599,7 @@ export default function Parrainage() {
 
               {/* Child 5 - Image Left */}
               <div className="group">
-                <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8 bg-white dark:bg-slate-800 rounded-2xl p-5 md:p-7 border border-slate-200 dark:border-slate-700 hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-2xl transition-all duration-300">
+                <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8 bg-white dark:bg-card rounded-2xl p-5 md:p-7 border border-slate-200 dark:border-secondary hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-2xl transition-all duration-300">
                   <div className="flex-shrink-0 w-full md:w-64 h-64 md:h-80 rounded-xl overflow-hidden shadow-xl group-hover:scale-105 transition-transform duration-300">
                     <Image
                       src="/assets/WhatsApp Image 2025-12-15 at 19.57.25 (1).jpeg"
@@ -655,7 +655,7 @@ export default function Parrainage() {
         <div className="container mx-auto px-6 lg:px-10">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-slate-800 rounded-full border border-brand-cream dark:border-slate-700 mb-4">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-card rounded-full border border-brand-cream dark:border-secondary mb-4">
                 <span className="w-2 h-2 bg-brand-orange rounded-full animate-pulse" />
                 <span className="text-sm font-semibold text-brand-orange-dark dark:text-brand-orange">{t('sponsor.faqBadge')}</span>
               </div>
@@ -689,7 +689,7 @@ export default function Parrainage() {
                     <AccordionItem
                       key={index}
                       value={`item-${index}`}
-                      className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-6 hover:border-brand-orange-dark transition-all duration-300 hover:shadow-lg"
+                      className="bg-white dark:bg-card border border-slate-200 dark:border-secondary rounded-xl px-6 hover:border-brand-orange-dark transition-all duration-300 hover:shadow-lg"
                     >
                       <AccordionTrigger className="hover:no-underline py-6">
                         <div className="flex items-start gap-4 text-left">
@@ -720,11 +720,11 @@ export default function Parrainage() {
       </section> */}
 
       {/* FAQ Section on Sponsorship */}
-      <section className="bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-800 py-20 md:py-28">
+      <section className="bg-gradient-to-b from-white to-slate-50 dark:from-background dark:to-card py-20 md:py-28">
         <div className="container mx-auto px-6 lg:px-10">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-slate-800 rounded-full border border-brand-cream dark:border-slate-700 mb-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-card rounded-full border border-brand-cream dark:border-secondary mb-6">
                 <span className="w-2 h-2 bg-brand-orange rounded-full animate-pulse" />
                 <span className="text-sm font-semibold text-brand-orange-dark dark:text-brand-orange">FAQ SUR LE PARRAINAGE</span>
               </div>
@@ -759,7 +759,7 @@ export default function Parrainage() {
                     <AccordionItem
                       key={index}
                       value={`item-${index}`}
-                      className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl px-6 hover:border-brand-orange dark:hover:border-brand-orange transition-all duration-300 hover:shadow-lg"
+                      className="bg-white dark:bg-card border border-slate-200 dark:border-secondary rounded-xl px-6 hover:border-brand-orange dark:hover:border-brand-orange transition-all duration-300 hover:shadow-lg"
                     >
                       <AccordionTrigger className="hover:no-underline py-6">
                         <div className="flex items-start gap-4 text-left w-full">

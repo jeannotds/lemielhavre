@@ -53,7 +53,7 @@ export function Header() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md z-50 border-b border-slate-200/50 dark:border-slate-700/50 shadow-sm">
+    <header className="fixed top-0 left-0 right-0 bg-white/95 dark:bg-background/95 backdrop-blur-md z-50 border-b border-slate-200/50 dark:border-secondary/50 shadow-sm">
       <div className="container mx-auto px-6 lg:px-10">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center gap-3 hover:opacity-90 transition-opacity">
@@ -91,7 +91,7 @@ export function Header() {
 
           <div className="flex items-center gap-3">
             {/* <button
-              className="hidden md:flex w-10 h-10 items-center justify-center text-brand-green dark:text-slate-300 hover:text-brand-orange dark:hover:text-brand-orange-light hover:bg-brand-cream dark:hover:bg-slate-800 rounded-lg transition-all"
+              className="hidden md:flex w-10 h-10 items-center justify-center text-brand-green dark:text-slate-300 hover:text-brand-orange dark:hover:text-brand-orange-light hover:bg-brand-cream dark:hover:bg-card rounded-lg transition-all"
               aria-label="Search"
             >
               <Search className="w-5 h-5" />
@@ -103,14 +103,14 @@ export function Header() {
             <LanguageSwitcher />
             <button
               onClick={toggleDarkMode}
-              className="hidden md:flex w-10 h-10 rounded-lg border border-slate-200 dark:border-slate-700 items-center justify-center hover:border-brand-orange hover:bg-brand-cream dark:hover:bg-slate-800 transition-all text-brand-green dark:text-slate-300"
+              className="hidden md:flex w-10 h-10 rounded-lg border border-slate-200 dark:border-secondary items-center justify-center hover:border-brand-orange hover:bg-brand-cream dark:hover:bg-card transition-all text-brand-green dark:text-slate-300"
               aria-label="Toggle theme"
             >
               {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
             </button>
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden w-10 h-10 flex items-center justify-center text-brand-green dark:text-slate-300 hover:text-brand-orange dark:hover:text-brand-orange-light hover:bg-brand-cream dark:hover:bg-slate-800 rounded-lg transition-all"
+              className="lg:hidden w-10 h-10 flex items-center justify-center text-brand-green dark:text-slate-300 hover:text-brand-orange dark:hover:text-brand-orange-light hover:bg-brand-cream dark:hover:bg-card rounded-lg transition-all"
               aria-label="Toggle menu"
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -120,7 +120,7 @@ export function Header() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden border-t border-slate-200 dark:border-slate-700 py-4 animate-in slide-in-from-top-2 duration-200 bg-white dark:bg-slate-900">
+          <div className="lg:hidden border-t border-slate-200 dark:border-secondary py-4 animate-in slide-in-from-top-2 duration-200 bg-white dark:bg-background">
             <nav className="flex flex-col gap-2">
               {navLinks.map((link, index) => {
                 const isActive = pathname === link.href;
@@ -132,8 +132,8 @@ export function Header() {
                     className={`px-4 py-3 rounded-lg text-sm font-medium transition-all 
                       ${
                       isActive
-                        ? 'bg-brand-cream dark:bg-slate-800 text-brand-orange dark:text-brand-orange-light'
-                        : 'text-brand-green dark:text-slate-300 hover:bg-brand-cream dark:hover:bg-slate-800 hover:text-brand-orange dark:hover:text-brand-orange-light'
+                        ? 'bg-brand-cream dark:bg-card text-brand-orange dark:text-brand-orange-light'
+                        : 'text-brand-green dark:text-slate-300 hover:bg-brand-cream dark:hover:bg-card hover:text-brand-orange dark:hover:text-brand-orange-light'
                     }`}
                   >
                     {link.label}
@@ -144,7 +144,7 @@ export function Header() {
                 <LanguageSwitcher />
                 <button
                   onClick={toggleDarkMode}
-                  className="w-10 h-10 rounded-lg border border-slate-200 dark:border-slate-700 flex items-center justify-center hover:border-brand-orange hover:bg-brand-cream dark:hover:bg-slate-800 transition-all text-brand-green dark:text-slate-300"
+                  className="w-10 h-10 rounded-lg border border-slate-200 dark:border-secondary flex items-center justify-center hover:border-brand-orange hover:bg-brand-cream dark:hover:bg-card transition-all text-brand-green dark:text-slate-300"
                 >
                   {isDark ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
                 </button>
