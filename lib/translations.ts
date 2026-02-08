@@ -91,6 +91,7 @@ export type TranslationKey =
   | 'about.timeline3Year' | 'about.timeline3Title' | 'about.timeline3Desc'
   | 'about.locationTitle' | 'about.locationDescription'
   | 'about.challengesTitle' | 'about.challenge1' | 'about.challenge2' | 'about.challenge3' | 'about.challenge4'
+  | 'about.teamBadge' | 'about.teamTitle' | 'about.teamDescription'
   // Contact Page
   | 'contact.badge' | 'contact.title' | 'contact.description'
   | 'contact.waysTitle' | 'contact.waysDescription'
@@ -351,6 +352,9 @@ export const translations = {
     'about.challenge2': 'Obstacles économiques : Malgré la gratuité de l\'enseignement primaire, les familles n\'ont pas les moyens d\'acheter les fournitures et les uniformes scolaires en raison de la crise économique.',
     'about.challenge3': 'Infrastructures et ressources limitées : Les classes surpeuplées, les installations médiocres et la pénurie d\'enseignants qualifiés nuisent à la qualité de l\'enseignement.',
     'about.challenge4': 'Faibles résultats scolaires : De nombreux élèves ont du mal à atteindre le niveau de compétence de base en raison de la perturbation de leur scolarité et du soutien pédagogique insuffisant.',
+    'about.teamBadge': 'NOTRE ÉQUIPE',
+    'about.teamTitle': 'Notre Équipe',
+    'about.teamDescription': 'Rencontrez les membres dévoués qui font de Le Miel Havre une organisation exceptionnelle.',
     'about.valuesTitle': 'Nos Valeurs',
     'about.valuesDescription': 'Les principes qui guident tout ce que nous faisons',
     'about.value1Title': 'Compassion',
@@ -649,6 +653,9 @@ export const translations = {
     'about.challenge2': 'Economic obstacles: Despite free primary education, families cannot afford to buy supplies and school uniforms due to the economic crisis.',
     'about.challenge3': 'Limited infrastructure and resources: Overcrowded classrooms, poor facilities, and a shortage of qualified teachers undermine the quality of education.',
     'about.challenge4': 'Low academic performance: Many students struggle to reach basic competency levels due to disrupted schooling and insufficient educational support.',
+    'about.teamBadge': 'OUR TEAM',
+    'about.teamTitle': 'Our Team',
+    'about.teamDescription': 'Meet the dedicated members who make Le Miel Havre an exceptional organization.',
     'about.valuesTitle': 'Our Core',
     'about.valuesDescription': 'The principles that guide everything we do',
     'about.value1Title': 'Compassion',
