@@ -119,14 +119,13 @@ export default function About() {
       </section>
 
       {/* Founder Message Section */}
-      <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20 md:py-28">
+      {/* <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20 md:py-28">
         <div className="container mx-auto px-6 lg:px-10">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-12 text-center">
               {t('about.founderTitle')}
             </h2>
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-              {/* Image à gauche */}
               <div className="relative order-2 lg:order-1">
                 <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
                   <img
@@ -140,7 +139,6 @@ export default function About() {
                 </div>
               </div>
               
-              {/* Texte à droite */}
               <div className="order-1 lg:order-2">
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-white/20">
                   <p className="text-lg md:text-xl text-slate-200 mb-6 leading-relaxed italic">
@@ -159,7 +157,7 @@ export default function About() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Challenges Section */}
       <section className="bg-gradient-to-b from-white to-slate-50 dark:from-background dark:to-card py-20 md:py-28">
@@ -237,7 +235,7 @@ export default function About() {
       </section>
 
       {/* Timeline Section */}
-      <section className="bg-white dark:bg-background py-20 md:py-28">
+      {/* <section className="bg-white dark:bg-background py-20 md:py-28">
         <div className="container mx-auto px-6 lg:px-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-800 dark:text-slate-200 mb-4">
@@ -272,7 +270,7 @@ export default function About() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Location Section */}
       <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20 md:py-28">
