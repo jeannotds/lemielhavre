@@ -55,7 +55,7 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 bg-white/95 dark:bg-background/95 backdrop-blur-md z-50 border-b border-slate-200/50 dark:border-secondary/50 shadow-sm">
       <div className="container mx-auto px-6 lg:px-10">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16 lg:h-20">
           <Link href="/" className="flex items-center gap-3 hover:opacity-90 transition-opacity">
             <div className="relative w-50 h-50">
               <Image
