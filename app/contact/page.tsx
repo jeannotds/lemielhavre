@@ -46,7 +46,7 @@ export default function Contact() {
   ];
 
   return (
-    <main className="min-h-screen bg-white dark:bg-slate-900">
+    <main className="min-h-screen bg-white dark:bg-background">
       <Header />
       
       {/* Hero Section */}
@@ -72,7 +72,7 @@ export default function Contact() {
       </section>
 
       {/* Contact Information Cards */}
-      <section className="bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-800 py-20 md:py-28">
+      <section className="bg-gradient-to-b from-white to-slate-50 dark:from-background dark:to-card py-20 md:py-28">
         <div className="container mx-auto px-6 lg:px-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-800 dark:text-slate-200 mb-4">
@@ -95,9 +95,9 @@ export default function Contact() {
                   href={info.link}
                   target={info.link.startsWith('http') ? '_blank' : undefined}
                   rel={info.link.startsWith('http') ? 'noopener noreferrer' : undefined}
-                  className="group bg-white dark:bg-slate-800 rounded-2xl p-8 border-2 border-slate-100 dark:border-slate-700 hover:border-brand-orange-dark dark:hover:border-brand-orange hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 relative overflow-hidden"
+                  className="group bg-white dark:bg-card rounded-2xl p-8 border-2 border-slate-100 dark:border-secondary hover:border-brand-orange-dark dark:hover:border-brand-orange hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 relative overflow-hidden"
                 >
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-brand-cream/50 dark:from-slate-700/50 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-brand-cream/50 dark:from-secondary/50 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${info.color} mb-5 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}>
                     <Icon className="w-8 h-8 text-white" />
                   </div>
@@ -131,7 +131,7 @@ export default function Contact() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
               {/* Office Hours */}
-              <div className="bg-gradient-to-br from-white dark:from-slate-800 to-brand-cream/30 dark:to-slate-700/30 rounded-3xl p-8 border-2 border-brand-cream dark:border-slate-700 hover:border-brand-orange dark:hover:border-brand-orange shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="bg-gradient-to-br from-white dark:from-card to-brand-cream/30 dark:to-secondary/30 rounded-3xl p-8 border-2 border-brand-cream dark:border-secondary hover:border-brand-orange dark:hover:border-brand-orange shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-14 h-14 bg-gradient-to-br from-brand-orange to-brand-orange-dark rounded-2xl flex items-center justify-center shadow-lg">
                     <Clock className="w-7 h-7 text-white" />
@@ -140,7 +140,7 @@ export default function Contact() {
                 </div>
                 <div className="space-y-4">
                   {officeHours.map((schedule, index) => (
-                    <div key={index} className="flex justify-between items-center py-3 px-4 bg-white/60 dark:bg-slate-800/60 rounded-xl border border-brand-cream dark:border-slate-700">
+                    <div key={index} className="flex justify-between items-center py-3 px-4 bg-white/60 dark:bg-card/60 rounded-xl border border-brand-cream dark:border-secondary">
                       <span className="text-slate-700 dark:text-slate-300 font-semibold text-base">{schedule.day}</span>
                       <span className="text-slate-600 dark:text-slate-400 font-medium">{schedule.time}</span>
                     </div>
@@ -149,7 +149,7 @@ export default function Contact() {
               </div>
 
               {/* Response Time */}
-              <div className="bg-gradient-to-br from-white dark:from-slate-800 to-blue-50/30 dark:to-slate-700/30 rounded-3xl p-8 border-2 border-blue-100 dark:border-slate-700 hover:border-blue-200 dark:hover:border-blue-400 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="bg-gradient-to-br from-white dark:from-card to-blue-50/30 dark:to-secondary/30 rounded-3xl p-8 border-2 border-blue-100 dark:border-secondary hover:border-blue-200 dark:hover:border-blue-400 shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center shadow-lg">
                     <Mail className="w-7 h-7 text-white" />
@@ -165,7 +165,7 @@ export default function Contact() {
               </div>
 
               {/* Location Info */}
-              <div className="bg-gradient-to-br from-white dark:from-slate-800 to-green-50/30 dark:to-slate-700/30 rounded-3xl p-8 border-2 border-green-100 dark:border-slate-700 hover:border-green-200 dark:hover:border-green-400 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="bg-gradient-to-br from-white dark:from-card to-green-50/30 dark:to-secondary/30 rounded-3xl p-8 border-2 border-green-100 dark:border-secondary hover:border-green-200 dark:hover:border-green-400 shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center shadow-lg">
                     <MapPin className="w-7 h-7 text-white" />
@@ -173,11 +173,11 @@ export default function Contact() {
                   <h3 className="text-2xl font-bold text-slate-800 dark:text-slate-200">Nos bureaux</h3>
                 </div>
                 <div className="space-y-4">
-                  <div className="bg-white/60 dark:bg-slate-800/60 rounded-xl p-4 border border-green-100 dark:border-slate-700">
+                  <div className="bg-white/60 dark:bg-card/60 rounded-xl p-4 border border-green-100 dark:border-secondary">
                     <p className="font-bold text-slate-800 dark:text-slate-200 mb-2 text-base">Bureau principal :</p>
                     <p className="text-slate-600 dark:text-slate-400">Kinshasa, République Démocratique du Congo</p>
                   </div>
-                  <div className="bg-white/60 dark:bg-slate-800/60 rounded-xl p-4 border border-green-100 dark:border-slate-700">
+                  <div className="bg-white/60 dark:bg-card/60 rounded-xl p-4 border border-green-100 dark:border-secondary">
                     <p className="font-bold text-slate-800 dark:text-slate-200 mb-2 text-base">Programme actif :</p>
                     <p className="text-slate-600 dark:text-slate-400">Goma, République Démocratique du Congo</p>
                   </div>
@@ -185,7 +185,7 @@ export default function Contact() {
               </div>
 
               {/* Social Media */}
-              <div className="bg-gradient-to-br from-white dark:from-slate-800 to-purple-50/30 dark:to-slate-700/30 rounded-3xl p-8 border-2 border-purple-100 dark:border-slate-700 hover:border-purple-200 dark:hover:border-purple-400 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="bg-gradient-to-br from-white dark:from-card to-purple-50/30 dark:to-secondary/30 rounded-3xl p-8 border-2 border-purple-100 dark:border-secondary hover:border-purple-200 dark:hover:border-purple-400 shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center shadow-lg">
                     <MessageCircle className="w-7 h-7 text-white" />
@@ -211,7 +211,7 @@ export default function Contact() {
       </section>
 
       {/* Map Section */}
-      <section className="bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-800 py-20 md:py-28">
+      <section className="bg-gradient-to-b from-slate-50 to-white dark:from-background dark:to-card py-20 md:py-28">
         <div className="container mx-auto px-6 lg:px-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-800 dark:text-slate-200 mb-4">
@@ -225,7 +225,7 @@ export default function Contact() {
             </p>
           </div>
           <div className="max-w-5xl mx-auto">
-            <div className="bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-700 dark:to-slate-800 rounded-3xl h-[500px] flex items-center justify-center border-2 border-slate-200 dark:border-slate-700 shadow-xl relative overflow-hidden">
+            <div className="bg-gradient-to-br from-slate-100 to-slate-200 dark:from-secondary dark:to-card rounded-3xl h-[500px] flex items-center justify-center border-2 border-slate-200 dark:border-secondary shadow-xl relative overflow-hidden">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(251,146,60,0.1),transparent_70%)]" />
               <div className="text-center relative z-10">
                 <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-brand-orange to-brand-orange-dark rounded-2xl mb-6 shadow-lg">

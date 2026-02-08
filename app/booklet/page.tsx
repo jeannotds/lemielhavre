@@ -11,7 +11,7 @@ export default function BookletPage() {
   const pdfPath = '/assets/book/Le Miel Havre Booklet French.pdf';
 
   return (
-    <main className="min-h-screen bg-white dark:bg-slate-900">
+    <main className="min-h-screen bg-white dark:bg-background">
       <Header />
       
       {/* Hero Section */}
@@ -26,7 +26,7 @@ export default function BookletPage() {
           </Link>
 
           <div className="max-w-4xl mx-auto text-center mb-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-slate-800 rounded-full border border-brand-cream dark:border-slate-700 mb-4">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-card rounded-full border border-brand-cream dark:border-secondary mb-4">
               <BookOpen className="w-4 h-4 text-brand-orange" />
               <span className="text-sm font-semibold text-brand-orange-dark dark:text-brand-orange">NOTRE LIVRET</span>
             </div>
@@ -70,11 +70,11 @@ export default function BookletPage() {
       </section>
 
       {/* PDF Viewer Section */}
-      <section className="pb-20 bg-white dark:bg-slate-900">
+      <section className="pb-20 bg-white dark:bg-background">
         <div className="container mx-auto px-6 lg:px-10">
           <div className="max-w-6xl mx-auto">
-            <div className="bg-slate-100 dark:bg-slate-800 rounded-2xl p-4 md:p-6 shadow-2xl border border-slate-200 dark:border-slate-700">
-              <div className="bg-white dark:bg-slate-900 rounded-lg overflow-hidden shadow-lg">
+            <div className="bg-slate-100 dark:bg-card rounded-2xl p-4 md:p-6 shadow-2xl border border-slate-200 dark:border-secondary">
+              <div className="bg-white dark:bg-background rounded-lg overflow-hidden shadow-lg">
                 <iframe
                   src={`${pdfPath}#toolbar=1&navpanes=1&scrollbar=1`}
                   className="w-full h-[600px] md:h-[800px] lg:h-[900px] border-0"

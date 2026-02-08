@@ -56,7 +56,7 @@ export function Stats() {
             return (
               <div 
                 key={index} 
-                className="group relative bg-white dark:bg-slate-800 rounded-2xl p-6 md:p-8 text-center border border-slate-100 dark:border-slate-700 hover:border-transparent hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+                className="group relative bg-white dark:bg-card rounded-2xl p-6 md:p-8 text-center border border-slate-100 dark:border-secondary hover:border-transparent hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
               >
                 <div className={`inline-flex items-center justify-center w-14 h-14 md:w-16 md:h-16 rounded-xl bg-gradient-to-br ${stat.gradient} mb-4 shadow-lg group-hover:scale-110 transition-transform`}>
                   <Icon className="w-7 h-7 md:w-8 md:h-8 text-white" />

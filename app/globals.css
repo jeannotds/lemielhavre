@@ -11,8 +11,8 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-start-rgb: 34, 68, 52;
+    --background-end-rgb: 34, 68, 52;
   }
 }
 
@@ -45,25 +45,26 @@
     --radius: 0.5rem;
   }
   .dark {
-    --background: 0 0% 3.9%;
+    /* Couleur principale: #224434 (rgb(34, 68, 52)) = hsl(152, 33%, 20%) */
+    --background: 152 33% 20%;
     --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
+    --card: 152 33% 22%;
     --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
+    --popover: 152 33% 20%;
     --popover-foreground: 0 0% 98%;
     --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-    --secondary: 0 0% 14.9%;
+    --primary-foreground: 152 33% 20%;
+    --secondary: 152 33% 25%;
     --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%;
+    --muted: 152 33% 25%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 152 33% 25%;
     --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
+    --border: 152 33% 28%;
+    --input: 152 33% 25%;
+    --ring: 152 33% 50%;
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
@@ -183,7 +184,7 @@ html {
 }
 
 .dark ::-webkit-scrollbar-track {
-  background: #1e293b;
+  background: #224434;
 }
 
 ::-webkit-scrollbar-thumb {

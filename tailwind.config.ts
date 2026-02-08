@@ -78,6 +78,12 @@ const config: Config = {
             dark: '#e6e6d0',
           },
         },
+        // Couleur dark mode personnalisée: #224434 (rgb(34, 68, 52))
+        dark: {
+          DEFAULT: '#224434',
+          light: '#2d5a47',
+          lighter: '#3a6b5a',
+        },
       },
       keyframes: {
         'accordion-down': {

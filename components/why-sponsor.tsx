@@ -113,12 +113,12 @@ export function WhySponsor() {
   }, []);
 
   return (
-    <section className="bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-800 py-20 md:py-28">
+    <section className="bg-gradient-to-b from-white to-slate-50 dark:from-background dark:to-card py-20 md:py-28">
       <div className="container mx-auto px-6 lg:px-10">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-slate-800 rounded-full border border-brand-cream dark:border-slate-700 mb-4">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-card rounded-full border border-brand-cream dark:border-secondary mb-4">
               <span className="w-2 h-2 bg-brand-orange rounded-full animate-pulse" />
               <span className="text-sm font-semibold text-brand-orange-dark dark:text-brand-orange">PARRAINAGE</span>
             </div>
@@ -138,7 +138,7 @@ export function WhySponsor() {
                 <div key={index} className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                   {/* Stat à gauche */}
                   <div className="order-2 lg:order-1">
-                    <div className="bg-gradient-to-br from-white dark:from-slate-800 to-brand-cream/30 dark:to-slate-700 rounded-2xl p-8 md:p-12 border border-slate-200 dark:border-slate-700 shadow-lg">
+                    <div className="bg-gradient-to-br from-white dark:from-slate-800 to-brand-cream/30 dark:to-secondary rounded-2xl p-8 md:p-12 border border-slate-200 dark:border-secondary shadow-lg">
                       <div className="flex items-center gap-4 mb-6">
                         <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${challenge.gradient} flex items-center justify-center shadow-lg`}>
                           <Icon className="w-8 h-8 text-white" />

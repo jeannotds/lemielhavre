@@ -33,7 +33,7 @@ export default function About() {
   const milestones = [1, 2, 3];
 
   return (
-    <main className="min-h-screen bg-white dark:bg-slate-900">
+    <main className="min-h-screen bg-white dark:bg-background">
       <Header />
       
       {/* Hero Section */}
@@ -59,11 +59,11 @@ export default function About() {
       </section>
 
       {/* Mission Section */}
-      <section className="bg-white dark:bg-slate-900 py-20 md:py-28">
+      <section className="bg-white dark:bg-background py-20 md:py-28">
         <div className="container mx-auto px-6 lg:px-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-slate-800 rounded-full border border-brand-cream dark:border-slate-700 mb-4">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-card rounded-full border border-brand-cream dark:border-secondary mb-4">
                 <span className="w-2 h-2 bg-brand-orange rounded-full animate-pulse" />
                 <span className="text-sm font-semibold text-brand-orange-dark dark:text-brand-orange">{t('about.missionBadge')}</span>
               </div>
@@ -100,7 +100,7 @@ export default function About() {
       </section>
 
       {/* History Section */}
-      <section className="bg-white dark:bg-slate-900 py-20 md:py-28">
+      <section className="bg-white dark:bg-background py-20 md:py-28">
         <div className="container mx-auto px-6 lg:px-10">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-800 dark:text-slate-200 mb-8 text-center">
@@ -162,32 +162,32 @@ export default function About() {
       </section>
 
       {/* Challenges Section */}
-      <section className="bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-800 py-20 md:py-28">
+      <section className="bg-gradient-to-b from-white to-slate-50 dark:from-background dark:to-card py-20 md:py-28">
         <div className="container mx-auto px-6 lg:px-10">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-800 dark:text-slate-200 mb-8 text-center">
               {t('about.challengesTitle')}
             </h2>
             <div className="space-y-6">
-              <div className="bg-white dark:bg-slate-800 rounded-xl p-6 border border-slate-200 dark:border-slate-700">
+              <div className="bg-white dark:bg-card rounded-xl p-6 border border-slate-200 dark:border-secondary">
                 <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
                   <span className="font-bold text-brand-orange-dark dark:text-brand-orange">1. </span>
                   {t('about.challenge1')}
                 </p>
               </div>
-              <div className="bg-white dark:bg-slate-800 rounded-xl p-6 border border-slate-200 dark:border-slate-700">
+              <div className="bg-white dark:bg-card rounded-xl p-6 border border-slate-200 dark:border-secondary">
                 <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
                   <span className="font-bold text-brand-orange-dark dark:text-brand-orange">2. </span>
                   {t('about.challenge2')}
                 </p>
               </div>
-              <div className="bg-white dark:bg-slate-800 rounded-xl p-6 border border-slate-200 dark:border-slate-700">
+              <div className="bg-white dark:bg-card rounded-xl p-6 border border-slate-200 dark:border-secondary">
                 <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
                   <span className="font-bold text-brand-orange-dark dark:text-brand-orange">3. </span>
                   {t('about.challenge3')}
                 </p>
               </div>
-              <div className="bg-white dark:bg-slate-800 rounded-xl p-6 border border-slate-200 dark:border-slate-700">
+              <div className="bg-white dark:bg-card rounded-xl p-6 border border-slate-200 dark:border-secondary">
                 <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
                   <span className="font-bold text-brand-orange-dark dark:text-brand-orange">4. </span>
                   {t('about.challenge4')}
@@ -199,7 +199,7 @@ export default function About() {
       </section>
 
       {/* Values Section */}
-      <section className="bg-gradient-to-b from-white to-slate-50 dark:from-slate-900 dark:to-slate-800 py-20 md:py-28">
+      <section className="bg-gradient-to-b from-white to-slate-50 dark:from-background dark:to-card py-20 md:py-28">
         <div className="container mx-auto px-6 lg:px-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-800 dark:text-slate-200 mb-4">
@@ -218,7 +218,7 @@ export default function About() {
               return (
                 <div
                   key={index}
-                  className="group bg-white dark:bg-slate-800 rounded-2xl p-6 md:p-8 border border-slate-100 dark:border-slate-700 hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+                  className="group bg-white dark:bg-card rounded-2xl p-6 md:p-8 border border-slate-100 dark:border-secondary hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
                 >
                   <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${value.color} mb-6 shadow-lg group-hover:scale-110 transition-transform`}>
                     <Icon className="w-8 h-8 text-white" />
@@ -237,7 +237,7 @@ export default function About() {
       </section>
 
       {/* Timeline Section */}
-      <section className="bg-white dark:bg-slate-900 py-20 md:py-28">
+      <section className="bg-white dark:bg-background py-20 md:py-28">
         <div className="container mx-auto px-6 lg:px-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-800 dark:text-slate-200 mb-4">
@@ -259,7 +259,7 @@ export default function About() {
                       <span className="text-white font-bold text-lg">{t(`about.timeline${index + 1}Year` as any)}</span>
                     </div>
                   </div>
-                  <div className="flex-1 pb-8 border-b border-slate-200 dark:border-slate-700 last:border-0">
+                  <div className="flex-1 pb-8 border-b border-slate-200 dark:border-secondary last:border-0">
                     <h3 className="text-2xl font-bold text-slate-800 dark:text-slate-200 mb-2">
                       {t(`about.timeline${index + 1}Title` as any)}
                     </h3>

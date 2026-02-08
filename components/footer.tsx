@@ -44,7 +44,7 @@ export function Footer() {
                     key={index}
                     href={social.href}
                     aria-label={social.label}
-                    className={`w-11 h-11 bg-slate-800 dark:bg-slate-700 rounded-lg flex items-center justify-center ${social.color} transition-all hover:scale-110 hover:shadow-lg`}
+                    className={`w-11 h-11 bg-slate-800 dark:bg-secondary rounded-lg flex items-center justify-center ${social.color} transition-all hover:scale-110 hover:shadow-lg`}
                   >
                     <Icon className="w-5 h-5" />
                   </a>
@@ -100,7 +100,7 @@ export function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={social.label}
-                    className={`w-11 h-11 bg-slate-800 dark:bg-slate-700 rounded-lg flex items-center justify-center ${social.color} transition-all hover:scale-110 hover:shadow-lg`}
+                    className={`w-11 h-11 bg-slate-800 dark:bg-secondary rounded-lg flex items-center justify-center ${social.color} transition-all hover:scale-110 hover:shadow-lg`}
                   >
                     <Icon className="w-5 h-5" />
                   </a>
