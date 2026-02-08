@@ -8,33 +8,33 @@ export default function Contact() {
     {
       icon: Phone,
       title: 'Téléphone',
-      content: '+243 852 105 668',
-      link: 'tel:+243852105668',
+      content: '+243 976 752 660',
+      link: 'tel:+243976752660',
       description: 'Appelez-nous directement',
       color: 'from-green-500 to-emerald-500',
     },
     {
       icon: MessageCircle,
       title: 'WhatsApp',
-      content: '+243 825 910 778',
-      link: 'https://wa.me/243825910778',
+      content: '+243 976 752 660',
+      link: 'https://wa.me/243976752660',
       description: 'Contactez-nous sur WhatsApp',
       color: 'from-green-500 to-teal-500',
     },
     {
       icon: Mail,
       title: 'Email',
-      content: 'diambujeannotarobalse@gmail.com',
-      link: 'mailto:diambujeannotarobalse@gmail.com',
+      content: 'Lemielhavre@gmail.com',
+      link: 'mailto:Lemielhavre@gmail.com',
       description: 'Envoyez-nous un email',
       color: 'from-blue-500 to-cyan-500',
     },
     {
       icon: MapPin,
       title: 'Adresse',
-      content: 'Kinshasa, DR Congo',
+      content: 'Goma • Kinshasa',
       link: '#',
-      description: 'Bureau principal',
+      description: 'Nos bureaux',
       color: 'from-brand-orange to-brand-orange-dark',
     },
   ];
@@ -196,7 +196,7 @@ export default function Contact() {
                   Restez connecté avec nous sur nos réseaux sociaux pour suivre nos actualités et nos projets.
                 </p>
                 <a
-                  href="https://wa.me/243825910778"
+                  href="https://wa.me/243976752660"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white px-6 py-4 rounded-xl font-bold text-center transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
