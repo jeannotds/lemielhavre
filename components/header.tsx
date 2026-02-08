@@ -59,11 +59,11 @@ export function Header() {
           <Link href="/" className="flex items-center gap-3 hover:opacity-90 transition-opacity">
             <div className="relative w-50 h-50">
               <Image
-                src="/logo-white.svg"
+                src={isDark ? "/logos/LOGO LE MIEL HAVRE_Plan de travail 1 copie 3.png" : "/logos/LOGO LE MIEL HAVRE_Plan de travail 1 copie 2.png"}
                 alt="Le Miel Havre Logo"
-                width={80}
-                height={80}
-                className="object-contain w-14 h-14 lg:w-20 lg:h-20"
+                width={160}
+                height={160}
+                className="object-contain w-20 h-20 lg:w-40 lg:h-40 transition-opacity duration-300"
                 priority
               />
             </div>
