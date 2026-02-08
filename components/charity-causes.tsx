@@ -22,7 +22,8 @@ export function CharityCauses() {
     },
     {
       titleKey: 'causes.education' as const,
-      image: '/assets/WhatsApp Image 2025-12-15 at 19.57.27.jpeg',
+      // image: '/assets/WhatsApp Image 2025-12-15 at 19.57.27.jpeg',
+      image: '/assets/WhatsApp Image 2025-12-15 at 19.57.29.jpeg',
       icon: GraduationCap,
       color: 'from-blue-500 to-cyan-500',
     },
@@ -34,7 +35,7 @@ export function CharityCauses() {
     },
     {
       titleKey: 'causes.water' as const,
-      image: '/assets/WhatsApp Image 2025-12-15 at 19.57.29.jpeg',
+      image: '/assets/director/laetitia-1.jpeg',
       icon: Droplets,
       color: 'from-cyan-500 to-blue-500',
     },
