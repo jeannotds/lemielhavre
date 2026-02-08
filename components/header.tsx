@@ -63,7 +63,7 @@ export function Header() {
                 alt="Le Miel Havre Logo"
                 width={160}
                 height={160}
-                className="object-contain w-20 h-20 lg:w-40 lg:h-40 transition-opacity duration-300"
+                className="object-contain w-24 h-24 lg:w-40 lg:h-40 transition-opacity duration-300"
                 priority
               />
             </div>
