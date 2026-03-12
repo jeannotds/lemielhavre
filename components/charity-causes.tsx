@@ -41,7 +41,6 @@ export function CharityCauses() {
       icon: GraduationCap,
       color: 'from-blue-500 to-cyan-500',
       images: [
-        '/team/education/education-1.jpeg',
         '/team/education/education-2.jpeg',
         '/team/education/education-3.jpeg',
         '/team/education/education-4.jpeg',
@@ -56,13 +55,9 @@ export function CharityCauses() {
         '/team/noel-child.jpg',
         '/team/noel/noel-1.jpg',
         '/team/noel/noel-2.jpg',
-        '/team/noel/noel-4.jpg',
         '/team/noel/noel-5.jpg',
-        '/team/noel/noel-6.jpg',
         '/team/noel/noel-9.jpg',
         '/team/noel/noel-11.jpg',
-        '/team/noel/noel-12.jpg',
-        '/team/noel/noel-14.jpg',
       ]
     },
     {
@@ -74,10 +69,7 @@ export function CharityCauses() {
         '/team/our-tem.jpeg',
         '/team/h-alice.png',
         '/team/h-aline.png',
-        '/team/h-france.png',
         '/team/h-laetitia.png',
-        '/team/h-queen.png',
-        '/team/h-stevee.png',
       ]
     },
   ];
