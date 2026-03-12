@@ -45,7 +45,6 @@ export function CharityCauses() {
         '/team/education/education-2.jpeg',
         '/team/education/education-3.jpeg',
         '/team/education/education-4.jpeg',
-        '/team/education/education-5.jpeg',
       ]
     },
     {
@@ -57,22 +56,13 @@ export function CharityCauses() {
         '/team/noel-child.jpg',
         '/team/noel/noel-1.jpg',
         '/team/noel/noel-2.jpg',
-        '/team/noel/noel-3.jpg',
         '/team/noel/noel-4.jpg',
         '/team/noel/noel-5.jpg',
         '/team/noel/noel-6.jpg',
-        '/team/noel/noel-7.jpg',
-        '/team/noel/noel-8.jpg',
         '/team/noel/noel-9.jpg',
-        '/team/noel/noel-10.jpg',
         '/team/noel/noel-11.jpg',
         '/team/noel/noel-12.jpg',
-        '/team/noel/noel-13.jpg',
         '/team/noel/noel-14.jpg',
-        '/team/noel/noel-15.jpg',
-        '/team/noel/noel-16.jpg',
-        '/team/noel/noel-17.jpg',
-        '/team/noel/noel-18.jpg',
       ]
     },
     {
