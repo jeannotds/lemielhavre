@@ -47,6 +47,7 @@ export function CharityCauses() {
       icon: Heart,
       color: 'from-pink-500 to-rose-500',
       images: [
+        '/team/noel-child.jpg',
         '/team/noel/noel-1.jpg',
         '/team/noel/noel-2.jpg',
         '/team/noel/noel-3.jpg',
@@ -72,6 +73,15 @@ export function CharityCauses() {
       image: '/team/our-tem.jpeg',
       icon: Droplets,
       color: 'from-cyan-500 to-blue-500',
+      images: [
+        '/team/our-tem.jpeg',
+        '/team/h-alice.png',
+        '/team/h-aline.png',
+        '/team/h-france.png',
+        '/team/h-laetitia.png',
+        '/team/h-queen.png',
+        '/team/h-stevee.png',
+      ]
     },
   ];
 
