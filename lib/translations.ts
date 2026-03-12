@@ -153,7 +153,7 @@ export const translations = {
     'causes.description': 'Nous nous engageons à avoir un impact durable dans les communautés de la République Démocratique du Congo. Grâce à nos différents programmes, nous répondons aux besoins critiques et permettons aux enfants de construire de meilleurs avenirs pour eux-mêmes et leurs familles.',
     'causes.button': 'Contactez-Nous',
     'causes.food': 'Devenez sponsor',
-    'causes.education': 'Photos des enfants en uniforme',
+    'causes.education': 'Education',
     'causes.medical': 'Noel pour enfants année2025',
     'causes.water': 'Notre equipe',
     // Program Section
