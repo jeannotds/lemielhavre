@@ -1,20 +1,31 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { ArrowRight, Utensils, GraduationCap, Heart, Droplets, X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowRight, Utensils, GraduationCap, Heart, Droplets, X, ChevronLeft, ChevronRight, type LucideIcon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/language-context';
 import { useTranslation } from '@/lib/translations';
 import Link from 'next/link';
-import Image from 'next/image';
+import NextImage from 'next/image';
+
+type Cause = {
+  titleKey: 'causes.food' | 'causes.education' | 'causes.medical' | 'causes.water';
+  image: string;
+  imageIcone?: boolean;
+  icon?: LucideIcon;
+  color: string;
+  images?: string[];
+};
 
 export function CharityCauses() {
   const { language } = useLanguage();
   const t = useTranslation(language);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [lightboxImages, setLightboxImages] = useState<string[]>([]);
+  const [lightboxTitleKey, setLightboxTitleKey] = useState<Cause['titleKey'] | null>(null);
 
-  const causes = [
+  const causes: Cause[] = [
     {
       titleKey: 'causes.food' as const,
       // image: '/assets/WhatsApp Image 2025-12-15 at 19.57.25.jpeg',
@@ -29,25 +40,63 @@ export function CharityCauses() {
       image: '/assets/WhatsApp Image 2025-12-15 at 19.57.29.jpeg',
       icon: GraduationCap,
       color: 'from-blue-500 to-cyan-500',
+      images: [
+        '/team/education/education-1.jpeg',
+        '/team/education/education-2.jpeg',
+        '/team/education/education-3.jpeg',
+        '/team/education/education-4.jpeg',
+        '/team/education/education-5.jpeg',
+      ]
     },
     {
       titleKey: 'causes.medical' as const,
       image: '/team/noel-child.jpg',
       icon: Heart,
       color: 'from-pink-500 to-rose-500',
+      images: [
+        '/team/noel-child.jpg',
+        '/team/noel/noel-1.jpg',
+        '/team/noel/noel-2.jpg',
+        '/team/noel/noel-3.jpg',
+        '/team/noel/noel-4.jpg',
+        '/team/noel/noel-5.jpg',
+        '/team/noel/noel-6.jpg',
+        '/team/noel/noel-7.jpg',
+        '/team/noel/noel-8.jpg',
+        '/team/noel/noel-9.jpg',
+        '/team/noel/noel-10.jpg',
+        '/team/noel/noel-11.jpg',
+        '/team/noel/noel-12.jpg',
+        '/team/noel/noel-13.jpg',
+        '/team/noel/noel-14.jpg',
+        '/team/noel/noel-15.jpg',
+        '/team/noel/noel-16.jpg',
+        '/team/noel/noel-17.jpg',
+        '/team/noel/noel-18.jpg',
+      ]
     },
     {
       titleKey: 'causes.water' as const,
       image: '/team/our-tem.jpeg',
       icon: Droplets,
       color: 'from-cyan-500 to-blue-500',
+      images: [
+        '/team/our-tem.jpeg',
+        '/team/h-alice.png',
+        '/team/h-aline.png',
+        '/team/h-france.png',
+        '/team/h-laetitia.png',
+        '/team/h-queen.png',
+        '/team/h-stevee.png',
+      ]
     },
   ];
 
-  const causesImages = causes.map(cause => cause.image);
-
-  const openLightbox = (index: number) => {
-    setCurrentImageIndex(index);
+  const openLightbox = (cause: Cause) => {
+    const imagesForLightbox = cause.images && cause.images.length > 0 ? cause.images : [cause.image];
+    setLightboxImages(imagesForLightbox);
+    setLightboxTitleKey(cause.titleKey);
+    setCurrentImageIndex(0);
     setLightboxOpen(true);
     document.body.style.overflow = 'hidden';
   };
@@ -58,11 +107,11 @@ export function CharityCauses() {
   };
 
   const nextImage = () => {
-    setCurrentImageIndex((prev) => (prev + 1) % causesImages.length);
+    setCurrentImageIndex((prev) => (prev + 1) % lightboxImages.length);
   };
 
   const prevImage = () => {
-    setCurrentImageIndex((prev) => (prev - 1 + causesImages.length) % causesImages.length);
+    setCurrentImageIndex((prev) => (prev - 1 + lightboxImages.length) % lightboxImages.length);
   };
 
   // Gérer les événements clavier
@@ -75,16 +124,16 @@ export function CharityCauses() {
         document.body.style.overflow = 'unset';
       }
       if (e.key === 'ArrowRight') {
-        setCurrentImageIndex((prev) => (prev + 1) % causesImages.length);
+        setCurrentImageIndex((prev) => (prev + 1) % lightboxImages.length);
       }
       if (e.key === 'ArrowLeft') {
-        setCurrentImageIndex((prev) => (prev - 1 + causesImages.length) % causesImages.length);
+        setCurrentImageIndex((prev) => (prev - 1 + lightboxImages.length) % lightboxImages.length);
       }
     };
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [lightboxOpen]);
+  }, [lightboxOpen, lightboxImages.length]);
 
   // Nettoyer le style du body quand le composant se démonte
   useEffect(() => {
@@ -125,13 +174,13 @@ export function CharityCauses() {
 
           <div className="grid grid-cols-2 gap-4 md:gap-6">
             {causes.map((cause, index) => {
-              const Icon =  cause.icon;
+              const Icon = cause.icon;
               const ImageIcone = cause.imageIcone ? "/logos/LOGO LE MIEL HAVRE_Plan de travail 1 copie 3.png" : null;
               // const ImageIcone = cause.imageIcone ? "/logos/LOGO LE MIEL HAVRE_Plan de travail 1 copie 2.png" : null;
               return (
                 <div
                   key={index}
-                  onClick={() => openLightbox(index)}
+                  onClick={() => openLightbox(cause)}
                   className="relative overflow-hidden rounded-2xl aspect-square group cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
                 >
                   <img
@@ -148,11 +197,13 @@ export function CharityCauses() {
                     </div> */}
                      {ImageIcone ? 
                     <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${cause.color} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform`}>
-                      <Image src={ImageIcone} alt="Le Miel Havre Logo" width={100} height={100} />
+                      <NextImage src={ImageIcone} alt="Le Miel Havre Logo" width={100} height={100} />
                     </div> :
-                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${cause.color} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform`}>
-                      <Icon className="w-6 h-6 text-white" />
-                    </div>
+                    (Icon && (
+                      <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${cause.color} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform`}>
+                        <Icon className="w-6 h-6 text-white" />
+                      </div>
+                    ))
                   }
                   </div>
                   
@@ -214,20 +265,20 @@ export function CharityCauses() {
             onClick={(e) => e.stopPropagation()}
           >
             <img
-              src={causesImages[currentImageIndex]}
-              alt={t(causes[currentImageIndex].titleKey)}
+              src={lightboxImages[currentImageIndex]}
+              alt={lightboxTitleKey ? t(lightboxTitleKey) : ''}
               className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
             />
           </div>
 
           {/* Image Counter */}
           <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-white text-sm">
-            {currentImageIndex + 1} / {causesImages.length}
+            {currentImageIndex + 1} / {lightboxImages.length}
           </div>
 
           {/* Thumbnails */}
           <div className="absolute bottom-20 left-1/2 -translate-x-1/2 flex gap-2">
-            {causesImages.map((image, index) => (
+            {lightboxImages.map((image, index) => (
               <button
                 key={index}
                 onClick={(e) => {
@@ -242,7 +293,7 @@ export function CharityCauses() {
               >
                 <img
                   src={image}
-                  alt={t(causes[index].titleKey)}
+                  alt={lightboxTitleKey ? t(lightboxTitleKey) : ''}
                   className="w-full h-full object-cover"
                 />
               </button>
