@@ -40,6 +40,13 @@ export function CharityCauses() {
       image: '/assets/WhatsApp Image 2025-12-15 at 19.57.29.jpeg',
       icon: GraduationCap,
       color: 'from-blue-500 to-cyan-500',
+      images: [
+        '/team/education/education-1.jpeg',
+        '/team/education/education-2.jpeg',
+        '/team/education/education-3.jpeg',
+        '/team/education/education-4.jpeg',
+        '/team/education/education-5.jpeg',
+      ]
     },
     {
       titleKey: 'causes.medical' as const,
