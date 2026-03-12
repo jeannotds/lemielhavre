@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/language-context';
 import { useTranslation } from '@/lib/translations';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export function CharityCauses() {
   const { language } = useLanguage();
@@ -17,8 +18,8 @@ export function CharityCauses() {
     {
       titleKey: 'causes.food' as const,
       image: '/assets/WhatsApp Image 2025-12-15 at 19.57.25.jpeg',
-      icon: Utensils,
-      color: 'from-brand-orange to-brand-orange-dark',
+      imageIcone:  true,
+      color: 'from-pink-500 to-rose-500',
     },
     {
       titleKey: 'causes.education' as const,
@@ -35,7 +36,7 @@ export function CharityCauses() {
     },
     {
       titleKey: 'causes.water' as const,
-      image: '/assets/director/laetitia-1.jpeg',
+      image: '/team/our-tem.jpeg',
       icon: Droplets,
       color: 'from-cyan-500 to-blue-500',
     },
@@ -122,7 +123,9 @@ export function CharityCauses() {
 
           <div className="grid grid-cols-2 gap-4 md:gap-6">
             {causes.map((cause, index) => {
-              const Icon = cause.icon;
+              const Icon =  cause.icon;
+              const ImageIcone = cause.imageIcone ? "/logos/LOGO LE MIEL HAVRE_Plan de travail 1 copie 3.png" : null;
+              // const ImageIcone = cause.imageIcone ? "/logos/LOGO LE MIEL HAVRE_Plan de travail 1 copie 2.png" : null;
               return (
                 <div
                   key={index}
@@ -138,9 +141,17 @@ export function CharityCauses() {
                   <div className="absolute inset-0 bg-gradient-to-br from-transparent to-black/20 group-hover:to-black/40 transition-all" />
                   
                   <div className="absolute top-4 right-4">
+                    {/* <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${cause.color} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform`}>
+                      {ImageIcone ? <Image src={ImageIcone} alt="Le Miel Havre Logo" width={48} height={48} /> : <Icon type="icon" className="w-6 h-6 text-white" />}
+                    </div> */}
+                     {ImageIcone ? 
                     <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${cause.color} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform`}>
-                      <Icon className="w-6 h-6 text-white" />
+                      <Image src={ImageIcone} alt="Le Miel Havre Logo" width={100} height={100} />
+                    </div> :
+                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${cause.color} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform`}>
+                      <Icon type="icon" className="w-6 h-6 text-white" />
                     </div>
+                  }
                   </div>
                   
                   <div className="absolute inset-x-0 bottom-0 p-5 md:p-6">
