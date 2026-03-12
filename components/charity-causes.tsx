@@ -17,7 +17,8 @@ export function CharityCauses() {
   const causes = [
     {
       titleKey: 'causes.food' as const,
-      image: '/assets/WhatsApp Image 2025-12-15 at 19.57.25.jpeg',
+      // image: '/assets/WhatsApp Image 2025-12-15 at 19.57.25.jpeg',
+      image: '/logos/LOGO LE MIEL HAVRE_Plan de travail 1 copie 3.png',
       imageIcone:  true,
       icon: Utensils,
       color: 'from-brand-orange to-brand-orange-dark',
@@ -31,7 +32,7 @@ export function CharityCauses() {
     },
     {
       titleKey: 'causes.medical' as const,
-      image: '/assets/WhatsApp Image 2025-12-15 at 19.57.28.jpeg',
+      image: '/team/noel-child.jpg',
       icon: Heart,
       color: 'from-pink-500 to-rose-500',
     },
