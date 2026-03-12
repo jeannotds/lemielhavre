@@ -56,13 +56,9 @@ export function CharityCauses() {
         '/team/noel-child.jpg',
         '/team/noel/noel-1.jpg',
         '/team/noel/noel-2.jpg',
-        '/team/noel/noel-4.jpg',
         '/team/noel/noel-5.jpg',
-        '/team/noel/noel-6.jpg',
         '/team/noel/noel-9.jpg',
         '/team/noel/noel-11.jpg',
-        '/team/noel/noel-12.jpg',
-        '/team/noel/noel-14.jpg',
       ]
     },
     {
