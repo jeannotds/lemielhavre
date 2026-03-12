@@ -19,7 +19,8 @@ export function CharityCauses() {
       titleKey: 'causes.food' as const,
       image: '/assets/WhatsApp Image 2025-12-15 at 19.57.25.jpeg',
       imageIcone:  true,
-      color: 'from-pink-500 to-rose-500',
+      icon: Utensils,
+      color: 'from-brand-orange to-brand-orange-dark',
     },
     {
       titleKey: 'causes.education' as const,
@@ -149,7 +150,7 @@ export function CharityCauses() {
                       <Image src={ImageIcone} alt="Le Miel Havre Logo" width={100} height={100} />
                     </div> :
                     <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${cause.color} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform`}>
-                      <Icon type="icon" className="w-6 h-6 text-white" />
+                      <Icon className="w-6 h-6 text-white" />
                     </div>
                   }
                   </div>
