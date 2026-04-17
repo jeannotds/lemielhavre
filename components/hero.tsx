@@ -106,30 +106,31 @@ export function Hero() {
             />
           ))}
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-950/85 via-emerald-900/75 to-emerald-950/85 z-10" 
-        // style={{ borderRadius: '0 0 10% 10%' }}
-         />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(251,146,60,0.1),transparent_50%)] z-10" style={{ borderRadius: '0 0 10% 10%' }} />
+        {/* Voile sombre uniforme sur toute la section (lisibilité du texte sur toutes les slides) */}
+        <div className="absolute inset-0 bg-black/45 z-10" />
+        {/* Légère teinte charte (vert) très douce, même sur toute la surface */}
+        <div className="absolute inset-0 bg-emerald-950/20 z-10" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(251,146,60,0.08),transparent_55%)] z-10" />
 
         <div className="relative z-10 container mx-auto px-6 lg:px-10">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl p-6 md:p-8">
             <div className="inline-flex items-center gap-2 px-4 md:py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-6 animate-in fade-in slide-in-from-top-4 duration-700">
               <Heart className="w-4 h-4 text-brand-orange-light fill-brand-orange-light" />
               <p className="text-white text-sm font-semibold tracking-wider">{t('hero.badge')}</p>
             </div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold mb-6 leading-tight text-white animate-in fade-in slide-in-from-left duration-1000">
-              <span className="bg-gradient-to-r from-white via-brand-cream to-brand-orange bg-clip-text text-transparent">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold mb-6 leading-tight text-white animate-in fade-in slide-in-from-left duration-1000 [text-shadow:0_2px_10px_rgba(0,0,0,0.55)]">
+              <span className="text-white">
                 {t('hero.title1')}
               </span>
               <br />
               <span className="text-white">{t('hero.title2')}</span>
               <br />
-              <span className="text-brand-orange-light">{t('hero.title3')}</span>
+              <span className="text-white">{t('hero.title3')}</span>
             </h1>
-            <p className="text-lg md:text-xl text-slate-200 mb-8 max-w-2xl leading-relaxed animate-in fade-in slide-in-from-left duration-1000 delay-200">
+            <p className="text-lg md:text-xl text-slate-100 mb-8 max-w-2xl leading-relaxed animate-in fade-in slide-in-from-left duration-1000 delay-200 [text-shadow:0_2px_10px_rgba(0,0,0,0.5)]">
               {t('hero.description')}
             </p>
-            <p className="text-xl md:text-2xl font-semibold text-white mb-8 max-w-2xl leading-relaxed animate-in fade-in slide-in-from-left duration-1000 delay-300">
+            <p className="text-xl md:text-2xl font-semibold text-white mb-8 max-w-2xl leading-relaxed animate-in fade-in slide-in-from-left duration-1000 delay-300 [text-shadow:0_2px_10px_rgba(0,0,0,0.5)]">
               {t('hero.togetherText')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in slide-in-from-left duration-1000 delay-400">

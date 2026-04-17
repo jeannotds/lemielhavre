@@ -27,16 +27,16 @@ export function Booklet() {
               {/* Text Content */}
               <div className="flex-1 text-center md:text-left">
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-secondary rounded-full border border-brand-cream dark:border-secondary mb-4">
-                  <span className="w-2 h-2 bg-brand-orange rounded-full animate-pulse" />
+                  <span className="w-2 h-2 bg-brand-green rounded-full animate-pulse" />
                   <span className="text-sm font-semibold text-brand-orange-dark dark:text-brand-orange">{t('booklet.badge')}</span>
                 </div>
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-slate-200 mb-4">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-green dark:text-slate-200 mb-4">
                   {t('booklet.title')}{' '}
-                  <span className="bg-gradient-to-r from-brand-orange to-brand-orange-dark bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-brand-orange via-brand-green to-brand-orange-dark bg-clip-text text-transparent">
                     Livret
                   </span>
                 </h2>
-                <p className="text-lg text-slate-600 dark:text-slate-400 mb-6 max-w-2xl">
+                <p className="text-lg text-slate-700 dark:text-slate-400 mb-6 max-w-2xl">
                   {t('booklet.description')}
                 </p>
 
@@ -56,7 +56,7 @@ export function Booklet() {
                   >
                     <Button
                       variant="outline"
-                      className="w-full sm:w-auto border-2 border-slate-300 dark:border-secondary text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-secondary px-8 py-6 text-base font-semibold rounded-lg transition-all transform hover:scale-105"
+                      className="w-full sm:w-auto border-2 border-brand-green/30 dark:border-secondary text-brand-green dark:text-slate-300 hover:bg-emerald-50 dark:hover:bg-secondary px-8 py-6 text-base font-semibold rounded-lg transition-all transform hover:scale-105"
                     >
                       <ExternalLink className="w-5 h-5 mr-2" />
                       {t('booklet.openButton')}
@@ -69,7 +69,7 @@ export function Booklet() {
                   >
                     <Button
                       variant="outline"
-                      className="w-full sm:w-auto border-2 border-slate-300 dark:border-secondary text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-secondary px-8 py-6 text-base font-semibold rounded-lg transition-all transform hover:scale-105"
+                      className="w-full sm:w-auto border-2 border-brand-green/30 dark:border-secondary text-brand-green dark:text-slate-300 hover:bg-emerald-50 dark:hover:bg-secondary px-8 py-6 text-base font-semibold rounded-lg transition-all transform hover:scale-105"
                     >
                       <Download className="w-5 h-5 mr-2" />
                       {t('booklet.downloadButton')}

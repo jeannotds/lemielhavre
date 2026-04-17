@@ -130,23 +130,23 @@ export function CharityCauses() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="space-y-6">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-card rounded-full border border-brand-cream dark:border-secondary mb-4">
-              <span className="w-2 h-2 bg-brand-orange rounded-full animate-pulse" />
+              <span className="w-2 h-2 bg-brand-green rounded-full animate-pulse" />
               <span className="text-sm font-semibold text-brand-orange-dark dark:text-brand-orange">{t('causes.badge')}</span>
             </div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 dark:text-slate-200 leading-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-green dark:text-slate-200 leading-tight">
               {t('hero.togetherText')}
             </h2>
             <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 leading-relaxed">
-              <span className="text-slate-800 dark:text-slate-200 font-medium">{t('causes.subtitle')}</span>{' '}
-              <span className="text-brand-orange font-semibold">Send your Details.</span>
+              <span className="text-brand-green dark:text-slate-200 font-medium">{t('causes.subtitle')}</span>{' '}
+              <span className="bg-gradient-to-r from-brand-orange to-brand-green bg-clip-text text-transparent font-semibold">Send your Details.</span>
             </p>
-            <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+            <p className="text-slate-700 dark:text-slate-400 leading-relaxed">
               {t('causes.description')}
             </p>
             <Link href="/contact">
               <Button
                 variant="outline"
-                className="group border-2 border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-white px-8 py-6 text-lg rounded-lg transition-all shadow-lg hover:shadow-xl hover:scale-105"
+                className="group border-2 border-brand-green text-brand-green hover:bg-gradient-to-r hover:from-brand-orange hover:to-brand-green hover:text-white px-8 py-6 text-lg rounded-lg transition-all shadow-lg hover:shadow-xl hover:scale-105"
               >
                 {t('causes.button')}
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />

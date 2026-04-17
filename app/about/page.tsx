@@ -48,7 +48,7 @@ export default function About() {
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white">
               {t('about.title')}{' '}
-              <span className="bg-gradient-to-r from-brand-orange-light to-brand-orange bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-brand-orange-light via-brand-green to-brand-orange bg-clip-text text-transparent">
                 Le Miel Havre
               </span>
             </h1>
@@ -65,22 +65,22 @@ export default function About() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-card rounded-full border border-brand-cream dark:border-secondary mb-4">
-                <span className="w-2 h-2 bg-brand-orange rounded-full animate-pulse" />
+                <span className="w-2 h-2 bg-brand-green rounded-full animate-pulse" />
                 <span className="text-sm font-semibold text-brand-orange-dark dark:text-brand-orange">{t('about.missionBadge')}</span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold text-slate-800 dark:text-slate-200 leading-tight">
+              <h2 className="text-4xl md:text-5xl font-bold text-brand-green dark:text-slate-200 leading-tight">
                 {t('about.missionTitle')}{' '}
-                <span className="bg-gradient-to-r from-brand-orange to-brand-orange-dark bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-brand-orange via-brand-green to-brand-orange-dark bg-clip-text text-transparent">
                   Vision
                 </span>
               </h2>
-              <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+              <p className="text-lg text-slate-700 dark:text-slate-400 leading-relaxed">
                 {t('about.missionP1')}
               </p>
-              <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+              <p className="text-lg text-slate-700 dark:text-slate-400 leading-relaxed">
                 {t('about.missionP2')}
               </p>
-              <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+              <p className="text-lg text-slate-700 dark:text-slate-400 leading-relaxed">
                 {t('about.missionP3')}
               </p>
             </div>
@@ -105,10 +105,10 @@ export default function About() {
         <div className="container mx-auto px-6 lg:px-10">
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-card rounded-full border border-brand-cream dark:border-secondary mb-4">
-              <Users className="w-4 h-4 text-brand-orange" />
+              <Users className="w-4 h-4 text-brand-green" />
               <span className="text-sm font-semibold text-brand-orange-dark dark:text-brand-orange">{t('about.teamBadge')}</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-800 dark:text-slate-200 mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-brand-green dark:text-slate-200 mb-4">
               {t('about.teamTitle')}
             </h2>
             <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg">
@@ -152,7 +152,7 @@ export default function About() {
       <section className="bg-white dark:bg-background py-20 md:py-28">
         <div className="container mx-auto px-6 lg:px-10">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-800 dark:text-slate-200 mb-8 text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-brand-green dark:text-slate-200 mb-8 text-center">
               {t('about.historyTitle')}
             </h2>
             <div className="space-y-6 text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
@@ -212,7 +212,7 @@ export default function About() {
       <section className="bg-gradient-to-b from-white to-slate-50 dark:from-background dark:to-card py-20 md:py-28">
         <div className="container mx-auto px-6 lg:px-10">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-800 dark:text-slate-200 mb-8 text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-brand-green dark:text-slate-200 mb-8 text-center">
               {t('about.challengesTitle')}
             </h2>
             <div className="space-y-6">
@@ -249,9 +249,9 @@ export default function About() {
       <section className="bg-gradient-to-b from-white to-slate-50 dark:from-background dark:to-card py-20 md:py-28">
         <div className="container mx-auto px-6 lg:px-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-800 dark:text-slate-200 mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold text-brand-green dark:text-slate-200 mb-4">
               {t('about.valuesTitle')}{' '}
-              <span className="bg-gradient-to-r from-brand-orange to-brand-orange-dark bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-brand-orange via-brand-green to-brand-orange-dark bg-clip-text text-transparent">
                 Values
               </span>
             </h2>

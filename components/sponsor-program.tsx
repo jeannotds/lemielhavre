@@ -49,13 +49,13 @@ export function SponsorProgram() {
           {/* Header */}
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-card rounded-full border border-brand-cream dark:border-secondary mb-4">
-              <span className="w-2 h-2 bg-brand-orange rounded-full animate-pulse" />
+              <span className="w-2 h-2 bg-brand-green rounded-full animate-pulse" />
               <span className="text-sm font-semibold text-brand-orange-dark dark:text-brand-orange">NOTRE PROGRAMME</span>
             </div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 dark:text-slate-200 mb-6">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-green dark:text-slate-200 mb-6">
               {t('program.title')}
             </h2>
-            <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-slate-700 dark:text-slate-400 max-w-3xl mx-auto leading-relaxed">
               {t('program.description')}
             </p>
           </div>

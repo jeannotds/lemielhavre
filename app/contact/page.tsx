@@ -61,7 +61,7 @@ export default function Contact() {
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white">
               Contactez{' '}
-              <span className="bg-gradient-to-r from-brand-orange-light to-brand-orange bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-brand-orange-light via-brand-green to-brand-orange bg-clip-text text-transparent">
                 Le Miel Havre
               </span>
             </h1>
@@ -76,13 +76,13 @@ export default function Contact() {
       <section className="bg-gradient-to-b from-white to-slate-50 dark:from-background dark:to-card py-20 md:py-28">
         <div className="container mx-auto px-6 lg:px-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 dark:text-slate-200 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-brand-green dark:text-slate-200 mb-4">
               Nos{' '}
-              <span className="bg-gradient-to-r from-brand-orange to-brand-orange-dark bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-brand-orange via-brand-green to-brand-orange-dark bg-clip-text text-transparent">
                 Moyens de Contact
               </span>
             </h2>
-            <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg">
+            <p className="text-slate-700 dark:text-slate-400 max-w-2xl mx-auto text-lg">
               Choisissez le moyen qui vous convient le mieux pour nous joindre. Nous sommes disponibles pour répondre à toutes vos questions.
             </p>
           </div>
@@ -96,13 +96,13 @@ export default function Contact() {
                   href={info.link}
                   target={info.link.startsWith('http') ? '_blank' : undefined}
                   rel={info.link.startsWith('http') ? 'noopener noreferrer' : undefined}
-                  className="group bg-white dark:bg-card rounded-2xl p-8 border-2 border-slate-100 dark:border-secondary hover:border-brand-orange-dark dark:hover:border-brand-orange hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 relative overflow-hidden"
+                  className="group bg-white dark:bg-card rounded-2xl p-8 border-2 border-slate-100 dark:border-secondary hover:border-brand-green dark:hover:border-brand-orange hover:shadow-2xl transition-all duration-300 hover:-translate-y-3 relative overflow-hidden"
                 >
                   <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-brand-cream/50 dark:from-secondary/50 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${info.color} mb-5 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}>
                     <Icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-slate-800 dark:text-slate-200 mb-3 group-hover:text-brand-orange dark:group-hover:text-brand-orange-light transition-colors">
+                  <h3 className="text-xl font-bold text-slate-800 dark:text-slate-200 mb-3 group-hover:text-brand-green dark:group-hover:text-brand-orange-light transition-colors">
                     {info.title}
                   </h3>
                   <p className="text-slate-700 dark:text-slate-300 text-base mb-2 font-semibold">
@@ -119,13 +119,13 @@ export default function Contact() {
           {/* Additional Information Section */}
           <div className="mb-16">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-800 dark:text-slate-200 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-brand-green dark:text-slate-200 mb-4">
                 Informations{' '}
-                <span className="bg-gradient-to-r from-brand-orange to-brand-orange-dark bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-brand-orange via-brand-green to-brand-orange-dark bg-clip-text text-transparent">
                   Pratiques
                 </span>
               </h2>
-              <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg">
+              <p className="text-slate-700 dark:text-slate-400 max-w-2xl mx-auto text-lg">
                 Tout ce que vous devez savoir pour nous contacter efficacement.
               </p>
             </div>
@@ -216,7 +216,7 @@ export default function Contact() {
       <section className="bg-gradient-to-b from-slate-50 to-white dark:from-background dark:to-card py-20 md:py-28">
         <div className="container mx-auto px-6 lg:px-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 dark:text-slate-200 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-brand-green dark:text-slate-200 mb-4">
               Où nous{' '}
               <span className="bg-gradient-to-r from-brand-orange to-brand-orange-dark bg-clip-text text-transparent">
                 trouver

@@ -149,7 +149,7 @@ export default function Parrainage() {
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-white">
               {t('sponsor.title')}{' '}
-              <span className="bg-gradient-to-r from-brand-orange to-brand-orange-dark bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-brand-orange via-brand-green to-brand-orange-dark bg-clip-text text-transparent">
                 Programme
               </span>
             </h1>
@@ -166,10 +166,10 @@ export default function Parrainage() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-card rounded-full border border-brand-cream dark:border-secondary mb-4">
-                <span className="w-2 h-2 bg-brand-orange rounded-full animate-pulse" />
+                <span className="w-2 h-2 bg-brand-green rounded-full animate-pulse" />
                 <span className="text-sm font-semibold text-brand-orange-dark dark:text-brand-orange">BÉNÉFICES</span>
               </div>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 dark:text-slate-200 mb-6">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-green dark:text-slate-200 mb-6">
                 {t('sponsor.benefitsTitle')}
               </h2>
             </div>
@@ -236,10 +236,10 @@ export default function Parrainage() {
                 <span className="w-2 h-2 bg-brand-green rounded-full animate-pulse" />
                 <span className="text-sm font-semibold text-brand-orange-dark dark:text-brand-orange">NOTRE PROGRAMME</span>
               </div>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 dark:text-slate-200 mb-6">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-green dark:text-slate-200 mb-6">
                 {t('program.title')}
               </h2>
-              <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+              <p className="text-lg md:text-xl text-slate-700 dark:text-slate-400 max-w-3xl mx-auto">
                 {t('program.description')}
               </p>
             </div>
@@ -343,7 +343,7 @@ export default function Parrainage() {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/90 dark:bg-card/90 backdrop-blur-sm rounded-full border border-white/20 dark:border-secondary/50 mb-4">
-                <span className="w-2 h-2 bg-brand-orange rounded-full animate-pulse" />
+                <span className="w-2 h-2 bg-brand-green rounded-full animate-pulse" />
                 <span className="text-sm font-semibold text-brand-orange-dark dark:text-brand-orange">PROCESSUS</span>
               </div>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 drop-shadow-lg">
@@ -393,10 +393,10 @@ export default function Parrainage() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-card rounded-full border border-brand-cream dark:border-secondary mb-4">
-                <span className="w-2 h-2 bg-brand-orange rounded-full animate-pulse" />
+                <span className="w-2 h-2 bg-brand-green rounded-full animate-pulse" />
                 <span className="text-sm font-semibold text-brand-orange-dark dark:text-brand-orange">PARRAINAGE</span>
               </div>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 dark:text-slate-200 mb-6">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-green dark:text-slate-200 mb-6">
                 {t('sponsor.sponsorThemTitle')}
               </h2>
             </div>
@@ -727,12 +727,12 @@ export default function Parrainage() {
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-card rounded-full border border-brand-cream dark:border-secondary mb-6">
-                <span className="w-2 h-2 bg-brand-orange rounded-full animate-pulse" />
+                <span className="w-2 h-2 bg-brand-green rounded-full animate-pulse" />
                 <span className="text-sm font-semibold text-brand-orange-dark dark:text-brand-orange">FAQ SUR LE PARRAINAGE</span>
               </div>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 dark:text-slate-200 mb-6">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-green dark:text-slate-200 mb-6">
                 FAQ sur le{' '}
-                <span className="bg-gradient-to-r from-brand-orange to-brand-orange-dark bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-brand-orange via-brand-green to-brand-orange-dark bg-clip-text text-transparent">
                   Parrainage
                 </span>
               </h2>

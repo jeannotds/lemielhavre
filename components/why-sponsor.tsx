@@ -119,13 +119,13 @@ export function WhySponsor() {
           {/* Header */}
           <div className="text-center mb-16">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-card rounded-full border border-brand-cream dark:border-secondary mb-4">
-              <span className="w-2 h-2 bg-brand-orange rounded-full animate-pulse" />
+              <span className="w-2 h-2 bg-brand-green rounded-full animate-pulse" />
               <span className="text-sm font-semibold text-brand-orange-dark dark:text-brand-orange">PARRAINAGE</span>
             </div>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 dark:text-slate-200 mb-4">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-green dark:text-slate-200 mb-4">
               {t('whySponsor.title')}
             </h2>
-            <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-slate-700 dark:text-slate-400 max-w-3xl mx-auto">
               {t('whySponsor.subtitle')}
             </p>
           </div>
@@ -182,7 +182,7 @@ export function WhySponsor() {
           </div>
 
           {/* Message */}
-          <div className="bg-gradient-to-br from-brand-orange/10 to-brand-orange-dark/10 dark:from-brand-orange/20 dark:to-brand-orange-dark/20 rounded-2xl p-8 md:p-12 border border-brand-orange/20 mb-16">
+          <div className="bg-gradient-to-br from-brand-orange/10 via-emerald-50 to-brand-orange-dark/10 dark:from-brand-orange/20 dark:to-brand-orange-dark/20 rounded-2xl p-8 md:p-12 border border-brand-orange/20 mb-16">
             <div className="flex items-start gap-4">
               <Heart className="w-8 h-8 text-brand-orange flex-shrink-0 mt-1" />
               <p className="text-lg md:text-xl text-slate-700 dark:text-slate-300 leading-relaxed italic">
@@ -193,7 +193,7 @@ export function WhySponsor() {
 
           {/* Images des enfants */}
           <div>
-            <h3 className="text-3xl md:text-4xl font-bold text-slate-800 dark:text-slate-200 mb-8 text-center">
+            <h3 className="text-3xl md:text-4xl font-bold text-brand-green dark:text-slate-200 mb-8 text-center">
               {t('whySponsor.childrenTitle')}
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
