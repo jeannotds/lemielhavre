@@ -39,7 +39,7 @@ export function CharityCauses() {
       // image: '/assets/WhatsApp Image 2025-12-15 at 19.57.27.jpeg',
       image: '/assets/WhatsApp Image 2025-12-15 at 19.57.29.jpeg',
       icon: GraduationCap,
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-emerald-500 to-green-600',
       images: [
         '/team/education/education-2.jpeg',
         '/team/education/education-3.jpeg',
@@ -64,7 +64,7 @@ export function CharityCauses() {
       titleKey: 'causes.water' as const,
       image: '/team/our-tem.jpeg',
       icon: Droplets,
-      color: 'from-cyan-500 to-blue-500',
+      color: 'from-green-500 to-emerald-500',
       images: [
         '/team/our-tem.jpeg',
         '/team/h-alice.png',

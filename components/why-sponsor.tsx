@@ -28,7 +28,7 @@ export function WhySponsor() {
       icon: DollarSign,
       titleKey: 'whySponsor.challenge2Title' as const,
       descKey: 'whySponsor.challenge2Desc' as const,
-      gradient: 'from-blue-500 to-cyan-500',
+      gradient: 'from-emerald-500 to-green-600',
       additionalTitleKey: 'whySponsor.challenge3Title' as const,
       additionalDescKey: 'whySponsor.challenge3Desc' as const,
     },

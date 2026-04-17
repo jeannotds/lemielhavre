@@ -65,7 +65,7 @@ export function Hero() {
       // icon: Target,
       icon:"",
       description: '',
-      gradient: 'from-blue-500 to-cyan-500'
+      gradient: 'from-emerald-500 to-green-600'
     },
     { 
       title: t('hero.feature2'), 
@@ -106,7 +106,7 @@ export function Hero() {
             />
           ))}
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/80 via-slate-800/70 to-slate-900/80 z-10" 
+        <div className="absolute inset-0 bg-gradient-to-r from-emerald-950/85 via-emerald-900/75 to-emerald-950/85 z-10" 
         // style={{ borderRadius: '0 0 10% 10%' }}
          />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(251,146,60,0.1),transparent_50%)] z-10" style={{ borderRadius: '0 0 10% 10%' }} />

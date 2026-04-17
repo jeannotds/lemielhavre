@@ -21,7 +21,7 @@ export function Stats() {
       labelKey: 'stats.childrenOutOfSchool' as const,
       descKey: 'stats.childrenOutOfSchoolDesc' as const,
       icon: Users,
-      gradient: 'from-blue-500 to-cyan-500',
+      gradient: 'from-emerald-500 to-green-600',
     },
     { 
       value: t('stats.beneficiaries'), 

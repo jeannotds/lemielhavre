@@ -8,12 +8,12 @@ export function Partners() {
   const { language } = useLanguage();
   const t = useTranslation(language);
   const partners = [
-    { icon: Anchor, name: 'Summer Partner 1', gradient: 'from-blue-500 to-cyan-500' },
+    { icon: Anchor, name: 'Summer Partner 1', gradient: 'from-emerald-500 to-green-600' },
     { icon: Compass, name: 'Summer Partner 2', gradient: 'from-purple-500 to-pink-500' },
-    { icon: Waves, name: 'Summer Partner 3', gradient: 'from-cyan-500 to-blue-500' },
+    { icon: Waves, name: 'Summer Partner 3', gradient: 'from-green-500 to-emerald-500' },
     { icon: Ship, name: 'Summer Partner 4', gradient: 'from-brand-orange to-brand-orange-dark' },
     { icon: Shield, name: 'Summer Partner 5', gradient: 'from-green-500 to-emerald-500' },
-    { icon: Globe, name: 'Summer Partner 6', gradient: 'from-indigo-500 to-purple-500' },
+    { icon: Globe, name: 'Summer Partner 6', gradient: 'from-emerald-600 to-teal-600' },
   ];
 
   return (

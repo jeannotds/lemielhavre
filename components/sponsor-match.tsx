@@ -222,13 +222,13 @@ export function SponsorMatch() {
               </div>
 
               {/* Step 2 */}
-              <div className="group relative bg-gradient-to-br from-white dark:from-slate-800 to-blue-50 dark:to-secondary rounded-2xl p-6 md:p-8 border border-blue-100 dark:border-secondary hover:border-blue-300 dark:hover:border-blue-400 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-                <div className="absolute top-4 right-4 w-16 h-16 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-full blur-xl group-hover:blur-2xl transition-all" />
+              <div className="group relative bg-gradient-to-br from-white dark:from-slate-800 to-emerald-50 dark:to-secondary rounded-2xl p-6 md:p-8 border border-emerald-100 dark:border-secondary hover:border-emerald-300 dark:hover:border-emerald-400 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                <div className="absolute top-4 right-4 w-16 h-16 bg-gradient-to-br from-emerald-500/10 to-green-600/10 rounded-full blur-xl group-hover:blur-2xl transition-all" />
                 <div className="relative">
-                  <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl mb-4 shadow-lg group-hover:scale-110 transition-transform">
+                  <div className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-emerald-500 to-green-600 rounded-xl mb-4 shadow-lg group-hover:scale-110 transition-transform">
                     <UserCheck className="w-7 h-7 text-white" />
                   </div>
-                  <h4 className="text-xl font-bold text-slate-900 dark:text-slate-200 mb-3 group-hover:text-blue-600 transition-colors">
+                  <h4 className="text-xl font-bold text-slate-900 dark:text-slate-200 mb-3 group-hover:text-emerald-600 transition-colors">
                     {t('sponsor.step2Title')}
                   </h4>
                   <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
@@ -256,9 +256,9 @@ export function SponsorMatch() {
 
             {/* Timeline visuelle */}
             <div className="hidden md:flex items-center justify-center gap-4 mb-8">
-              <div className="flex-1 h-1 bg-gradient-to-r from-brand-orange to-blue-500 rounded-full" />
+              <div className="flex-1 h-1 bg-gradient-to-r from-brand-orange to-emerald-500 rounded-full" />
               <div className="w-3 h-3 bg-brand-orange rounded-full border-2 border-white shadow-lg" />
-              <div className="flex-1 h-1 bg-gradient-to-r from-blue-500 to-green-500 rounded-full" />
+              <div className="flex-1 h-1 bg-gradient-to-r from-emerald-500 to-green-500 rounded-full" />
               <div className="w-3 h-3 bg-green-500 rounded-full border-2 border-white shadow-lg" />
               <div className="flex-1 h-1 bg-gradient-to-r from-green-500 to-transparent rounded-full" />
             </div>
