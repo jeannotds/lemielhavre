@@ -22,8 +22,9 @@ export function Newsletter() {
   };
 
   return (
-    <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20 md:py-28 relative overflow-hidden">
+    <section className="bg-gradient-to-br from-emerald-950 via-emerald-900 to-slate-900 py-20 md:py-28 relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(251,146,60,0.1),transparent_70%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(16,185,129,0.2),transparent_55%)]" />
       <div className="container mx-auto px-6 lg:px-10 relative z-10">
         <div className="max-w-6xl mx-auto bg-white/95 dark:bg-card/95 backdrop-blur-sm rounded-3xl shadow-2xl p-8 md:p-12 lg:p-16 border border-white/20 dark:border-secondary/20">
           <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
