@@ -14,7 +14,7 @@ export function SponsorProgram() {
       icon: UserCheck,
       titleKey: 'program.step1Title' as const,
       descKey: 'program.step1Desc' as const,
-      gradient: 'from-blue-500 to-cyan-500',
+      gradient: 'from-emerald-500 to-green-600',
     },
     {
       number: 2,
@@ -35,7 +35,7 @@ export function SponsorProgram() {
       icon: Award,
       titleKey: 'program.step4Title' as const,
       descKey: 'program.step4Desc' as const,
-      gradient: 'from-purple-500 to-pink-500',
+      gradient: 'from-emerald-600 to-teal-600',
     },
   ];
 

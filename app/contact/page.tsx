@@ -27,7 +27,7 @@ export default function Contact() {
       content: 'Lemielhavre@gmail.com',
       link: 'mailto:Lemielhavre@gmail.com',
       description: 'Envoyez-nous un email',
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-emerald-500 to-green-600',
     },
     {
       icon: MapPin,
@@ -50,7 +50,7 @@ export default function Contact() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative mt-20 pt-32 md:pt-48 pb-24 md:pb-40 bg-gradient-to-br from-emerald-950 via-emerald-900 to-slate-900">
+      <section className="relative mt-20 pt-32 md:pt-48 pb-24 md:pb-40 bg-gradient-to-br from-emerald-950 via-emerald-900 to-emerald-950">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(251,146,60,0.1),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(16,185,129,0.2),transparent_55%)]" />
         <div className="relative z-10 container mx-auto px-6 lg:px-10">
@@ -150,9 +150,9 @@ export default function Contact() {
               </div>
 
               {/* Response Time */}
-              <div className="bg-gradient-to-br from-white dark:from-card to-blue-50/30 dark:to-secondary/30 rounded-3xl p-8 border-2 border-blue-100 dark:border-secondary hover:border-blue-200 dark:hover:border-blue-400 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="bg-gradient-to-br from-white dark:from-card to-emerald-50/30 dark:to-secondary/30 rounded-3xl p-8 border-2 border-emerald-100 dark:border-secondary hover:border-emerald-200 dark:hover:border-emerald-400 shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center shadow-lg">
+                  <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-green-600 rounded-2xl flex items-center justify-center shadow-lg">
                     <Mail className="w-7 h-7 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-slate-800 dark:text-slate-200">Temps de réponse</h3>

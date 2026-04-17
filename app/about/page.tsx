@@ -18,7 +18,7 @@ export default function About() {
     },
     {
       icon: Target,
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-emerald-500 to-green-600',
     },
     {
       icon: Users,
@@ -37,7 +37,7 @@ export default function About() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative mt-20 pt-32 md:pt-48 pb-24 md:pb-40 bg-gradient-to-br from-emerald-950 via-emerald-900 to-slate-900">
+      <section className="relative mt-20 pt-32 md:pt-48 pb-24 md:pb-40 bg-gradient-to-br from-emerald-950 via-emerald-900 to-emerald-950">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(251,146,60,0.1),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(16,185,129,0.2),transparent_55%)]" />
         <div className="relative z-10 container mx-auto px-6 lg:px-10">
@@ -322,7 +322,7 @@ export default function About() {
       </section> */}
 
       {/* Location Section */}
-      <section className="bg-gradient-to-br from-emerald-950 via-emerald-900 to-slate-900 py-20 md:py-28">
+      <section className="bg-gradient-to-br from-emerald-950 via-emerald-900 to-emerald-950 py-20 md:py-28">
         <div className="container mx-auto px-6 lg:px-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-brand-orange to-brand-orange-dark rounded-2xl mb-6 shadow-xl">

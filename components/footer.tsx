@@ -11,12 +11,12 @@ export function Footer() {
 
   const socialLinks = [
     { icon: Instagram, href: 'https://instagram.com/lemielhavre', label: 'Instagram', color: 'hover:bg-pink-500' },
-    { icon: Facebook, href: 'https://facebook.com/lemielhavre', label: 'Facebook', color: 'hover:bg-blue-500' },
-    { icon: Twitter, href: 'https://twitter.com/lemielhavre', label: 'Twitter', color: 'hover:bg-cyan-500' },
+    { icon: Facebook, href: 'https://facebook.com/lemielhavre', label: 'Facebook', color: 'hover:bg-emerald-500' },
+    { icon: Twitter, href: 'https://twitter.com/lemielhavre', label: 'Twitter', color: 'hover:bg-green-500' },
   ];
 
   return (
-    <footer className="bg-gradient-to-br from-emerald-950 via-emerald-900 to-slate-900 text-white pt-20 pb-8 relative overflow-hidden">
+    <footer className="bg-gradient-to-br from-emerald-950 via-emerald-900 to-emerald-950 text-white pt-20 pb-8 relative overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(251,146,60,0.1),transparent_50%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_15%,rgba(16,185,129,0.2),transparent_55%)]" />
       <div className="container mx-auto px-6 lg:px-10 relative z-10">

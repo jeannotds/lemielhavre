@@ -54,7 +54,7 @@ export default function Parrainage() {
       number: 1,
       titleKey: 'sponsor.benefit1',
       image: '/assets/parrainage/fraissocial.png',
-      gradient: 'from-blue-500 to-cyan-500',
+      gradient: 'from-emerald-500 to-green-600',
     },
     {
       number: 2,
@@ -84,13 +84,13 @@ export default function Parrainage() {
       number: 6,
       titleKey: 'sponsor.benefit6',
       image: '/assets/parrainage/trousse.png',
-      gradient: 'from-cyan-500 to-blue-500',
+      gradient: 'from-green-500 to-emerald-500',
     },
     {
       number: 7,
       titleKey: 'sponsor.benefit7',
       image: '/assets/parrainage/miseajour.png',
-      gradient: 'from-indigo-500 to-purple-500',
+      gradient: 'from-emerald-600 to-teal-600',
     },
   ];
 
@@ -138,7 +138,7 @@ export default function Parrainage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative mt-20 pt-32 md:pt-48 pb-24 md:pb-40 bg-gradient-to-br from-emerald-950 via-emerald-900 to-slate-900">
+      <section className="relative mt-20 pt-32 md:pt-48 pb-24 md:pb-40 bg-gradient-to-br from-emerald-950 via-emerald-900 to-emerald-950">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(251,146,60,0.1),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(16,185,129,0.2),transparent_55%)]" />
         <div className="relative z-10 container mx-auto px-6 lg:px-10">
@@ -304,7 +304,7 @@ export default function Parrainage() {
               />
             </div>
           ))}
-          <div className="absolute inset-0 bg-gradient-to-b from-emerald-950/85 via-emerald-900/80 to-slate-900/85 z-10" />
+          <div className="absolute inset-0 bg-gradient-to-b from-emerald-950/85 via-emerald-900/80 to-emerald-950/85 z-10" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(16,185,129,0.25),transparent_55%)] z-10" />
         </div>
 
@@ -790,7 +790,7 @@ export default function Parrainage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-br from-emerald-950 via-emerald-900 to-slate-900 py-20 md:py-28">
+      <section className="bg-gradient-to-br from-emerald-950 via-emerald-900 to-emerald-950 py-20 md:py-28">
         <div className="container mx-auto px-6 lg:px-10">
           <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
