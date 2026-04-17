@@ -138,8 +138,9 @@ export default function Parrainage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative mt-20 pt-32 md:pt-48 pb-24 md:pb-40 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <section className="relative mt-20 pt-32 md:pt-48 pb-24 md:pb-40 bg-gradient-to-br from-emerald-950 via-emerald-900 to-slate-900">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(251,146,60,0.1),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(16,185,129,0.2),transparent_55%)]" />
         <div className="relative z-10 container mx-auto px-6 lg:px-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-6">
@@ -227,12 +228,12 @@ export default function Parrainage() {
       </section>
 
       {/* Program Steps Section */}
-      <section className="bg-white dark:bg-background py-20 md:py-28">
+      <section className="bg-gradient-to-b from-white via-emerald-50/50 to-slate-50 dark:from-background dark:to-card py-20 md:py-28">
         <div className="container mx-auto px-6 lg:px-10">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-card rounded-full border border-brand-cream dark:border-secondary mb-4">
-                <span className="w-2 h-2 bg-brand-orange rounded-full animate-pulse" />
+                <span className="w-2 h-2 bg-brand-green rounded-full animate-pulse" />
                 <span className="text-sm font-semibold text-brand-orange-dark dark:text-brand-orange">NOTRE PROGRAMME</span>
               </div>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 dark:text-slate-200 mb-6">
@@ -245,11 +246,11 @@ export default function Parrainage() {
 
             {/* Steps Grid 2x2 */}
             <div className="grid md:grid-cols-2 gap-8 md:gap-10 lg:gap-12">
-              {[
-                { number: 1, titleKey: 'program.step1Title', descKey: 'program.step1Desc', gradient: 'from-blue-500 to-cyan-500', icon: UserCheck },
+                {[
+                { number: 1, titleKey: 'program.step1Title', descKey: 'program.step1Desc', gradient: 'from-emerald-500 to-green-600', icon: UserCheck },
                 { number: 2, titleKey: 'program.step2Title', descKey: 'program.step2Desc', gradient: 'from-brand-orange to-brand-orange-dark', icon: DollarSign },
                 { number: 3, titleKey: 'program.step3Title', descKey: 'program.step3Desc', gradient: 'from-green-500 to-emerald-500', icon: GraduationCap },
-                { number: 4, titleKey: 'program.step4Title', descKey: 'program.step4Desc', gradient: 'from-purple-500 to-pink-500', icon: Gift },
+                { number: 4, titleKey: 'program.step4Title', descKey: 'program.step4Desc', gradient: 'from-emerald-600 to-teal-600', icon: Gift },
               ].map((step) => {
                 const Icon = step.icon;
                 return (
@@ -303,7 +304,8 @@ export default function Parrainage() {
               />
             </div>
           ))}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/80 to-black/80 z-10" />
+          <div className="absolute inset-0 bg-gradient-to-b from-emerald-950/85 via-emerald-900/80 to-slate-900/85 z-10" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(16,185,129,0.25),transparent_55%)] z-10" />
         </div>
 
         {/* Navigation Buttons for Background Carousel */}
@@ -788,7 +790,7 @@ export default function Parrainage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20 md:py-28">
+      <section className="bg-gradient-to-br from-emerald-950 via-emerald-900 to-slate-900 py-20 md:py-28">
         <div className="container mx-auto px-6 lg:px-10">
           <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
