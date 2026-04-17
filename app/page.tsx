@@ -33,7 +33,7 @@ export default function Home() {
               <Heart className="w-4 h-4 text-brand-green fill-brand-green" />
               <span className="text-sm font-semibold text-brand-orange-dark dark:text-brand-orange">BIENVENUE</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-slate-800 dark:text-white">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-brand-green dark:text-slate-200">
               {t('hero.welcomeTitle')}
             </h2>
             <p className="text-lg md:text-xl text-slate-600 dark:text-white/90 leading-relaxed max-w-3xl mx-auto">
