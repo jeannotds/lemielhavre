@@ -29,8 +29,8 @@ export default function Home() {
       <section className="bg-white dark:bg-[#224434] py-16 md:py-24">
         <div className="container mx-auto px-6 lg:px-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-orange/10 dark:bg-brand-orange/20 rounded-full border border-brand-orange/20 mb-6">
-              <Heart className="w-4 h-4 text-brand-orange fill-brand-orange" />
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-brand-cream to-emerald-50 dark:bg-brand-orange/20 rounded-full border border-brand-cream/70 mb-6">
+              <Heart className="w-4 h-4 text-brand-green fill-brand-green" />
               <span className="text-sm font-semibold text-brand-orange-dark dark:text-brand-orange">BIENVENUE</span>
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-slate-800 dark:text-white">

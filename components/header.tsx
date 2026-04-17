@@ -76,13 +76,13 @@ export function Header() {
                 <Link
                   key={index}
                   href={link.href}
-                  className={`relative text-sm font-medium transition-colors hover:text-brand-orange dark:hover:text-brand-orange-light ${
+                  className={`relative text-sm font-medium transition-colors hover:text-brand-green dark:hover:text-brand-orange-light ${
                     isActive ? 'text-brand-orange dark:text-brand-orange-light' : 'text-brand-green dark:text-slate-300'
                   }`}
                 >
                   {link.label}
                   {isActive && (
-                    <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-brand-orange rounded-full" />
+                    <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-brand-orange to-brand-green rounded-full" />
                   )}
                 </Link>
               );

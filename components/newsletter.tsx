@@ -56,7 +56,7 @@ export function Newsletter() {
                   placeholder={t('newsletter.placeholder')}
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="h-14 md:h-16 px-6 text-base md:text-lg border-2 border-slate-200 dark:border-secondary dark:bg-background dark:text-slate-200 rounded-xl focus:border-brand-orange focus:ring-2 focus:ring-brand-orange/20 transition-all"
+                  className="h-14 md:h-16 px-6 text-base md:text-lg border-2 border-slate-200 dark:border-secondary dark:bg-background dark:text-slate-200 rounded-xl focus:border-brand-green focus:ring-2 focus:ring-brand-green/20 transition-all"
                   required
                 />
                 <Mail className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400 dark:text-slate-500" />

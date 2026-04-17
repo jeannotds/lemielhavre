@@ -56,7 +56,7 @@ export function Footer() {
 
           <div className="space-y-6">
             <h3 className="text-xl font-bold">{t('footer.companyName')}:</h3>
-            <div className="h-1 w-12 bg-gradient-to-r from-brand-orange to-brand-orange-dark rounded-full" />
+            <div className="h-1 w-12 bg-gradient-to-r from-brand-orange to-brand-green rounded-full" />
             <div className="space-y-3">
               <div className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-brand-orange flex-shrink-0 mt-0.5" />
@@ -79,7 +79,7 @@ export function Footer() {
 
           <div className="space-y-6">
             <h3 className="text-xl font-bold">{t('footer.followUs')}</h3>
-            <div className="h-1 w-12 bg-gradient-to-r from-brand-orange to-brand-orange-dark rounded-full" />
+            <div className="h-1 w-12 bg-gradient-to-r from-brand-orange to-brand-green rounded-full" />
             <div className="space-y-2">
               <a href="https://instagram.com/lemielhavre" target="_blank" rel="noopener noreferrer" className="block text-slate-400 hover:text-brand-orange-light transition-colors">
                 @lemielhavre

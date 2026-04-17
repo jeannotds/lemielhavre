@@ -19,7 +19,7 @@ export default function BookletPage() {
         <div className="container mx-auto px-6 lg:px-10">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-brand-orange dark:hover:text-brand-orange transition-colors mb-6"
+            className="inline-flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-brand-green dark:hover:text-brand-orange transition-colors mb-6"
           >
             <ArrowLeft className="w-4 h-4" />
             <span>Retour à l&apos;accueil</span>
@@ -27,16 +27,16 @@ export default function BookletPage() {
 
           <div className="max-w-4xl mx-auto text-center mb-8">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream dark:bg-card rounded-full border border-brand-cream dark:border-secondary mb-4">
-              <BookOpen className="w-4 h-4 text-brand-orange" />
+              <BookOpen className="w-4 h-4 text-brand-green" />
               <span className="text-sm font-semibold text-brand-orange-dark dark:text-brand-orange">NOTRE LIVRET</span>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-slate-200 mb-4">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-green dark:text-slate-200 mb-4">
               Le Miel Havre{' '}
-              <span className="bg-gradient-to-r from-brand-orange to-brand-orange-dark bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-brand-orange via-brand-green to-brand-orange-dark bg-clip-text text-transparent">
                 Booklet
               </span>
             </h1>
-            <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+            <p className="text-lg text-slate-700 dark:text-slate-400 max-w-2xl mx-auto">
               Découvrez notre mission, nos programmes et notre impact dans ce livret complet.
             </p>
 
@@ -49,7 +49,7 @@ export default function BookletPage() {
               >
                 <Button
                   variant="outline"
-                  className="border-2 border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 px-6 py-3 font-semibold rounded-lg transition-all"
+                  className="border-2 border-brand-green/30 dark:border-slate-600 text-brand-green dark:text-slate-300 hover:bg-emerald-50 dark:hover:bg-slate-700 px-6 py-3 font-semibold rounded-lg transition-all"
                 >
                   <ExternalLink className="w-5 h-5 mr-2" />
                   Ouvrir dans un nouvel onglet
@@ -58,7 +58,7 @@ export default function BookletPage() {
               <a href={pdfPath} download>
                 <Button
                   variant="outline"
-                  className="border-2 border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-700 px-6 py-3 font-semibold rounded-lg transition-all"
+                  className="border-2 border-brand-green/30 dark:border-slate-600 text-brand-green dark:text-slate-300 hover:bg-emerald-50 dark:hover:bg-slate-700 px-6 py-3 font-semibold rounded-lg transition-all"
                 >
                   <Download className="w-5 h-5 mr-2" />
                   Télécharger
