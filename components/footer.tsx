@@ -23,13 +23,13 @@ export function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 mb-16">
           <div className="space-y-6">
             <div className="flex items-center gap-3">
-              <div className="relative w-24 h-24 lg:w-40 lg:h-40">
+              <div className="relative w-20 lg:w-30">
                 <Image
-                  src="/logos/LOGO LE MIEL HAVRE_Plan de travail 1 copie 3.png"
+                  src="https://res.cloudinary.com/dwxnmwhdl/image/upload/v1776520560/logo-footer_fkdck9.png"
                   alt="Le Miel Havre Logo"
-                  width={160}
-                  height={160}
-                  className="object-contain w-24 h-24 lg:w-40 lg:h-40"
+                  width={130}
+                  height={130}
+                  className="object-contain w-24 lg:w-40 h-auto"
                 />
               </div>
             </div>
