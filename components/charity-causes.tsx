@@ -158,13 +158,20 @@ export function CharityCauses() {
             {causes.map((cause, index) => {
               const Icon = cause.icon;
               const ImageIcone = cause.imageIcone ? "/logos/LOGO LE MIEL HAVRE_Plan de travail 1 copie 3.png" : null;
+              const isSponsorCard = cause.titleKey === 'causes.food';
               // const ImageIcone = cause.imageIcone ? "/logos/LOGO LE MIEL HAVRE_Plan de travail 1 copie 2.png" : null;
               return (
                 <div
                   key={index}
-                  onClick={() => openLightbox(cause)}
+                  onClick={() => {
+                    if (isSponsorCard) return;
+                    openLightbox(cause);
+                  }}
                   className="relative overflow-hidden rounded-2xl aspect-square group cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
                 >
+                  {isSponsorCard && (
+                    <Link href="/parrainage" className="absolute inset-0 z-10" aria-label={t(cause.titleKey)} />
+                  )}
                   <img
                     src={cause.image}
                     alt={t(cause.titleKey)}
