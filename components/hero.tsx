@@ -23,24 +23,64 @@ export function Hero() {
       image: '/assets/WhatsApp Image 2025-12-15 at 19.57.22.jpeg',
       title: t('hero.slide2'),
     },
-    {
-      id: 3,
-      image: '/assets/WhatsApp Image 2025-12-15 at 19.57.23.jpeg',
-      title: t('hero.slide3'),
-    },
+    // {
+    //   id: 3,
+    //   image: 'https://res.cloudinary.com/dwxnmwhdl/image/upload/v1776519261/lemiel-eleve-5_ivycp1.jpg',
+    //   title: t('hero.slide3'),
+    // },
     {
       id: 4,
       image: '/assets/WhatsApp Image 2025-12-15 at 19.57.24.jpeg',
       title: t('hero.slide4'),
     },
+    // {
+    //   id: 5,
+    //   image: 'https://res.cloudinary.com/dwxnmwhdl/image/upload/v1776519262/lemiel-eleve-1_yxxope.jpg',
+    //   title: t('hero.slide4'),
+    // },
+    // {
+    //   id: 6,
+    //   image: 'https://res.cloudinary.com/dwxnmwhdl/image/upload/v1776519264/lemiel-eleve-2_cqfops.jpg',
+    //   title: t('hero.slide4'),
+    // },
+    // {
+    //   id: 7,
+    //   image: 'https://res.cloudinary.com/dwxnmwhdl/image/upload/v1776519268/lemiel-eleve-4_pk9ynk.jpg',
+    //   title: t('hero.slide4'),
+    // },
+    {
+      id: 8,
+      image: 'https://res.cloudinary.com/dwxnmwhdl/image/upload/v1776516228/lemiel-slide-2_spl5q2.jpg',
+      title: t('hero.slide4'),
+    },
+    {
+      id: 9,
+      image: 'https://res.cloudinary.com/dwxnmwhdl/image/upload/v1776519280/lemiel-eleve-3_prgeud.jpg',
+      title: t('hero.slide4'),
+    },
+    {
+      id: 10,
+      image: 'https://res.cloudinary.com/dwxnmwhdl/image/upload/v1776516224/lemiel-slide-5_adlc45.jpg',
+      title: t('hero.slide4'),
+    },
+    {
+      id: 11,
+      image: 'https://res.cloudinary.com/dwxnmwhdl/image/upload/v1776519260/lemiel-eleve-6_wedmsq.jpg',
+      title: t('hero.slide4'),
+    },
   ];
 
-  // Helper function to encode image URLs for CSS background
+  /** Local paths (/foo/bar.jpg): encode segments for spaces etc. Absolute URLs (https://…): use as-is. */
   const encodeImageUrl = (url: string) => {
-    // Encode the path parts but keep the leading slash
-    const parts = url.split('/').filter(part => part !== '');
-    return '/' + parts.map(part => encodeURIComponent(part)).join('/');
+    if (/^https?:\/\//i.test(url)) {
+      return url;
+    }
+    const parts = url.split('/').filter((part) => part !== '');
+    return '/' + parts.map((part) => encodeURIComponent(part)).join('/');
   };
+
+  const backgroundImageUrl = (url: string | undefined) =>
+    url ? `url(${JSON.stringify(encodeImageUrl(url))})` : 'none';
 
   // Auto-slide functionality
   useEffect(() => {
@@ -98,7 +138,7 @@ export function Hero() {
                 index === currentSlide ? 'opacity-100 z-0' : 'opacity-0 z-0'
               }`}
               style={{
-                backgroundImage: `url(${encodeImageUrl(slide.image)})`,
+                backgroundImage: backgroundImageUrl(slide.image),
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 // borderRadius: '0 0 10% 10%',
