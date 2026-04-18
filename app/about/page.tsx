@@ -87,7 +87,7 @@ export default function About() {
             <div className="relative">
               <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="/assets/WhatsApp Image 2025-12-15 at 19.57.30.jpeg"
+                  src="https://res.cloudinary.com/dwxnmwhdl/image/upload/v1776519260/lemiel-eleve-6_wedmsq.jpg"
                   alt="Children in DRC"
                   className="w-full h-full object-cover"
                 />
