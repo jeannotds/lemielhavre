@@ -408,7 +408,7 @@ export default function Parrainage() {
                 <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8 bg-white dark:bg-card rounded-2xl p-5 md:p-7 border border-slate-200 dark:border-secondary hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-2xl transition-all duration-300">
                   <div className="flex-shrink-0 w-full md:w-64 h-64 md:h-80 rounded-xl overflow-hidden shadow-xl group-hover:scale-105 transition-transform duration-300">
                     <Image
-                      src="/assets/WhatsApp Image 2025-12-15 at 19.57.21 (1).jpeg"
+                      src="https://res.cloudinary.com/dfhyy4nxl/image/upload/v1791313042/Justin_Maisha_Semirama_zimrc5.png"
                       alt={t('sponsor.child1Name')}
                       width={300}
                       height={300}
@@ -457,7 +457,7 @@ export default function Parrainage() {
                 <div className="flex flex-col md:flex-row-reverse items-center gap-6 md:gap-8 bg-white dark:bg-card rounded-2xl p-5 md:p-7 border border-slate-200 dark:border-secondary hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-2xl transition-all duration-300">
                   <div className="flex-shrink-0 w-full md:w-64 h-64 md:h-80 rounded-xl overflow-hidden shadow-xl group-hover:scale-105 transition-transform duration-300">
                     <Image
-                      src="/assets/WhatsApp Image 2025-12-15 at 19.57.22 (1).jpeg"
+                      src="https://res.cloudinary.com/dfhyy4nxl/image/upload/v1791313042/Franc%CC%A7ois_Matuko_Birekeraho._hw9lsu.png"
                       alt={t('sponsor.child2Name')}
                       width={300}
                       height={300}
@@ -506,7 +506,7 @@ export default function Parrainage() {
                 <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8 bg-white dark:bg-card rounded-2xl p-5 md:p-7 border border-slate-200 dark:border-secondary hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-2xl transition-all duration-300">
                   <div className="flex-shrink-0 w-full md:w-64 h-64 md:h-80 rounded-xl overflow-hidden shadow-xl group-hover:scale-105 transition-transform duration-300">
                     <Image
-                      src="/assets/WhatsApp Image 2025-12-15 at 19.57.23 (1).jpeg"
+                      src="https://res.cloudinary.com/dfhyy4nxl/image/upload/v1791313042/Elie_Mapendo_Espoir_n08f4q.png"
                       alt={t('sponsor.child3Name')}
                       width={300}
                       height={300}
@@ -555,7 +555,7 @@ export default function Parrainage() {
                 <div className="flex flex-col md:flex-row-reverse items-center gap-6 md:gap-8 bg-white dark:bg-card rounded-2xl p-5 md:p-7 border border-slate-200 dark:border-secondary hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-2xl transition-all duration-300">
                   <div className="flex-shrink-0 w-full md:w-64 h-64 md:h-80 rounded-xl overflow-hidden shadow-xl group-hover:scale-105 transition-transform duration-300">
                     <Image
-                      src="/assets/WhatsApp Image 2025-12-15 at 19.57.24 (1).jpeg"
+                      src="https://res.cloudinary.com/dfhyy4nxl/image/upload/v1791313042/Prosper_Muhubiri_Ciririmbo_ru8owx.png"
                       alt={t('sponsor.child4Name')}
                       width={300}
                       height={300}
@@ -604,7 +604,7 @@ export default function Parrainage() {
                 <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8 bg-white dark:bg-card rounded-2xl p-5 md:p-7 border border-slate-200 dark:border-secondary hover:border-brand-orange dark:hover:border-brand-orange hover:shadow-2xl transition-all duration-300">
                   <div className="flex-shrink-0 w-full md:w-64 h-64 md:h-80 rounded-xl overflow-hidden shadow-xl group-hover:scale-105 transition-transform duration-300">
                     <Image
-                      src="/assets/WhatsApp Image 2025-12-15 at 19.57.25 (1).jpeg"
+                      src="https://res.cloudinary.com/dfhyy4nxl/image/upload/v1791313042/Arle%CC%81ne_Tumusifu_Ciririmbo_c103e3.png"
                       alt={t('sponsor.child5Name')}
                       width={300}
                       height={300}
